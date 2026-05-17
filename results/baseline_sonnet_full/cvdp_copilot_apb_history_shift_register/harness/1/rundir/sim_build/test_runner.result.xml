@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917854" />
+    <testcase name="test_APBGlobalHistoryRegister" classname="test_APBGlobalHistoryRegister" file="/src/test_APBGlobalHistoryRegister.py" lineno="62" time="0.0020012855529785156" sim_time_ns="310.0" ratio_time="154900.4336430784">
+      <failure error_type="AssertionError" error_msg="pslverr not asserted on invalid address&#10;assert Logic('0') == 1&#10; +  where Logic('0') = LogicObject(APBGlobalHistoryRegister.pslverr).value&#10; +    where LogicObject(APBGlobalHistoryRegister.pslverr) = HierarchyObject(APBGlobalHistoryRegister).pslverr" />
+    </testcase>
+  </testsuite>
+</testsuites>

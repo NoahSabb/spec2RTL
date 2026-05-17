@@ -1,0 +1,554 @@
+Running harness with project name: cvdp_copilot_moving_average_1_1778917890
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_moving_rndm[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917891
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_moving_average.test_moving_average (1/1)
+                                                            Test the functionality of the moving average module.
+[INFO] WIDTH = 12, WINDOW_SIZE = 8
+[INFO] Total cycles = 50, Reset will be applied at cycle 25
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: DUT average = 339
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: Testbench average = 339
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: DUT average = 483
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: Testbench average = 483
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: DUT average = 802
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: Testbench average = 802
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: DUT average = 1231
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: Testbench average = 1231
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: DUT average = 1336
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: Testbench average = 1336
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: DUT average = 1696
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: Testbench average = 1696
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: DUT average = 2098
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: Testbench average = 2098
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: DUT average = 2161
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: Testbench average = 2161
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: DUT average = 1955
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: Testbench average = 1955
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: DUT average = 2185
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: Testbench average = 2185
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: DUT average = 1992
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: Testbench average = 1992
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: DUT average = 1886
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: Testbench average = 1886
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: DUT average = 2263
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: Testbench average = 2263
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: DUT average = 2165
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: Testbench average = 2165
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: DUT average = 2195
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: Testbench average = 2195
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: DUT average = 2199
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: Testbench average = 2199
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: DUT average = 2468
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: Testbench average = 2468
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: DUT average = 2130
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: Testbench average = 2130
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: DUT average = 2475
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: Testbench average = 2475
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: DUT average = 2631
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: Testbench average = 2631
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: DUT average = 2203
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: Testbench average = 2203
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: DUT average = 2041
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: Testbench average = 2041
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: DUT average = 1927
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: Testbench average = 1927
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: DUT average = 2261
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: Testbench average = 2261
+[INFO] Applying reset at cycle 25
+[INFO] Starting fresh operation after reset
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: DUT average = 431
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: Testbench average = 431
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: DUT average = 692
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: Testbench average = 692
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: DUT average = 963
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: Testbench average = 963
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: DUT average = 1198
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: Testbench average = 1198
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: DUT average = 1226
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: Testbench average = 1226
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: DUT average = 1657
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: Testbench average = 1657
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: DUT average = 2080
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: Testbench average = 2080
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: DUT average = 2457
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: Testbench average = 2457
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: DUT average = 2422
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: Testbench average = 2422
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: DUT average = 2376
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: Testbench average = 2376
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: DUT average = 2519
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: Testbench average = 2519
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: DUT average = 2561
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: Testbench average = 2561
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: DUT average = 2763
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: Testbench average = 2763
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: DUT average = 2621
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: Testbench average = 2621
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: DUT average = 2334
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: Testbench average = 2334
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: DUT average = 2252
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: Testbench average = 2252
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: DUT average = 2176
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: Testbench average = 2176
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: DUT average = 2053
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: Testbench average = 2053
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: DUT average = 1728
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: Testbench average = 1728
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: DUT average = 1654
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: Testbench average = 1654
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: DUT average = 1824
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: Testbench average = 1824
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: DUT average = 1982
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: Testbench average = 1982
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: DUT average = 1859
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: Testbench average = 1859
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: DUT average = 1618
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: Testbench average = 1618
+[INFO] Test 'test_moving_average' completed successfully.
+   136.00ns INFO     cocotb.regression                  test_moving_average.test_moving_average passed
+   136.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_moving_average.test_moving_average   PASS         136.00           0.01      22482.47  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           136.00           0.01      19197.84  **
+                                                        *************************************************************************************************
+PASSED
+../../src/test_runner.py::test_moving_rndm[1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917891
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_moving_average.test_moving_average (1/1)
+                                                            Test the functionality of the moving average module.
+[INFO] WIDTH = 12, WINDOW_SIZE = 8
+[INFO] Total cycles = 50, Reset will be applied at cycle 25
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: DUT average = 339
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: Testbench average = 339
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: DUT average = 483
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: Testbench average = 483
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: DUT average = 802
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: Testbench average = 802
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: DUT average = 1231
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: Testbench average = 1231
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: DUT average = 1336
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: Testbench average = 1336
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: DUT average = 1696
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: Testbench average = 1696
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: DUT average = 2098
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: Testbench average = 2098
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: DUT average = 2161
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: Testbench average = 2161
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: DUT average = 1955
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: Testbench average = 1955
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: DUT average = 2185
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: Testbench average = 2185
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: DUT average = 1992
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: Testbench average = 1992
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: DUT average = 1886
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: Testbench average = 1886
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: DUT average = 2263
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: Testbench average = 2263
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: DUT average = 2165
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: Testbench average = 2165
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: DUT average = 2195
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: Testbench average = 2195
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: DUT average = 2199
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: Testbench average = 2199
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: DUT average = 2468
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: Testbench average = 2468
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: DUT average = 2130
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: Testbench average = 2130
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: DUT average = 2475
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: Testbench average = 2475
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: DUT average = 2631
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: Testbench average = 2631
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: DUT average = 2203
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: Testbench average = 2203
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: DUT average = 2041
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: Testbench average = 2041
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: DUT average = 1927
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: Testbench average = 1927
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: DUT average = 2261
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: Testbench average = 2261
+[INFO] Applying reset at cycle 25
+[INFO] Starting fresh operation after reset
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: DUT average = 431
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: Testbench average = 431
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: DUT average = 692
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: Testbench average = 692
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: DUT average = 963
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: Testbench average = 963
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: DUT average = 1198
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: Testbench average = 1198
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: DUT average = 1226
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: Testbench average = 1226
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: DUT average = 1657
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: Testbench average = 1657
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: DUT average = 2080
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: Testbench average = 2080
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: DUT average = 2457
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: Testbench average = 2457
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: DUT average = 2422
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: Testbench average = 2422
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: DUT average = 2376
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: Testbench average = 2376
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: DUT average = 2519
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: Testbench average = 2519
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: DUT average = 2561
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: Testbench average = 2561
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: DUT average = 2763
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: Testbench average = 2763
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: DUT average = 2621
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: Testbench average = 2621
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: DUT average = 2334
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: Testbench average = 2334
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: DUT average = 2252
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: Testbench average = 2252
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: DUT average = 2176
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: Testbench average = 2176
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: DUT average = 2053
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: Testbench average = 2053
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: DUT average = 1728
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: Testbench average = 1728
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: DUT average = 1654
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: Testbench average = 1654
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: DUT average = 1824
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: Testbench average = 1824
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: DUT average = 1982
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: Testbench average = 1982
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: DUT average = 1859
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: Testbench average = 1859
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: DUT average = 1618
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: Testbench average = 1618
+[INFO] Test 'test_moving_average' completed successfully.
+   136.00ns INFO     cocotb.regression                  test_moving_average.test_moving_average passed
+   136.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_moving_average.test_moving_average   PASS         136.00           0.01      24795.71  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           136.00           0.01      20824.52  **
+                                                        *************************************************************************************************
+PASSED
+../../src/test_runner.py::test_moving_rndm[2]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917891
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_moving_average.test_moving_average (1/1)
+                                                            Test the functionality of the moving average module.
+[INFO] WIDTH = 12, WINDOW_SIZE = 8
+[INFO] Total cycles = 50, Reset will be applied at cycle 25
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: DUT average = 339
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/50: Testbench average = 339
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: DUT average = 483
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/50: Testbench average = 483
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: DUT average = 802
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/50: Testbench average = 802
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: DUT average = 1231
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/50: Testbench average = 1231
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: DUT average = 1336
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/50: Testbench average = 1336
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: DUT average = 1696
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/50: Testbench average = 1696
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: DUT average = 2098
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/50: Testbench average = 2098
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: DUT average = 2161
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/50: Testbench average = 2161
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: DUT average = 1955
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/50: Testbench average = 1955
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: DUT average = 2185
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/50: Testbench average = 2185
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: DUT average = 1992
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/50: Testbench average = 1992
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: DUT average = 1886
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/50: Testbench average = 1886
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: DUT average = 2263
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/50: Testbench average = 2263
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: DUT average = 2165
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/50: Testbench average = 2165
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: DUT average = 2195
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/50: Testbench average = 2195
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: DUT average = 2199
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/50: Testbench average = 2199
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: DUT average = 2468
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/50: Testbench average = 2468
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: DUT average = 2130
+    60.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 18/50: Testbench average = 2130
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: DUT average = 2475
+    62.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 19/50: Testbench average = 2475
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: DUT average = 2631
+    64.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 20/50: Testbench average = 2631
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: DUT average = 2203
+    66.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 21/50: Testbench average = 2203
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: DUT average = 2041
+    68.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 22/50: Testbench average = 2041
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: DUT average = 1927
+    70.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 23/50: Testbench average = 1927
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: DUT average = 2261
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 24/50: Testbench average = 2261
+[INFO] Applying reset at cycle 25
+[INFO] Starting fresh operation after reset
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: DUT average = 431
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/25: Testbench average = 431
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: DUT average = 692
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/25: Testbench average = 692
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: DUT average = 963
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/25: Testbench average = 963
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: DUT average = 1198
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/25: Testbench average = 1198
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: DUT average = 1226
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/25: Testbench average = 1226
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: DUT average = 1657
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/25: Testbench average = 1657
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: DUT average = 2080
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/25: Testbench average = 2080
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: DUT average = 2457
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/25: Testbench average = 2457
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: DUT average = 2422
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/25: Testbench average = 2422
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: DUT average = 2376
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/25: Testbench average = 2376
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: DUT average = 2519
+   106.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/25: Testbench average = 2519
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: DUT average = 2561
+   108.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/25: Testbench average = 2561
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: DUT average = 2763
+   110.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/25: Testbench average = 2763
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: DUT average = 2621
+   112.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/25: Testbench average = 2621
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: DUT average = 2334
+   114.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/25: Testbench average = 2334
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: DUT average = 2252
+   116.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/25: Testbench average = 2252
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: DUT average = 2176
+   118.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/25: Testbench average = 2176
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: DUT average = 2053
+   120.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 18/25: Testbench average = 2053
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: DUT average = 1728
+   122.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 19/25: Testbench average = 1728
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: DUT average = 1654
+   124.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 20/25: Testbench average = 1654
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: DUT average = 1824
+   126.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 21/25: Testbench average = 1824
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: DUT average = 1982
+   128.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 22/25: Testbench average = 1982
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: DUT average = 1859
+   130.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 23/25: Testbench average = 1859
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: DUT average = 1618
+   132.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 24/25: Testbench average = 1618
+[INFO] Test 'test_moving_average' completed successfully.
+   136.00ns INFO     cocotb.regression                  test_moving_average.test_moving_average passed
+   136.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_moving_average.test_moving_average   PASS         136.00           0.01      17617.68  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           136.00           0.01      15455.75  **
+                                                        *************************************************************************************************
+PASSED
+../../src/test_runner.py::test_moving_rndm[3]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917892
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_moving_average.test_moving_average (1/1)
+                                                            Test the functionality of the moving average module.
+[INFO] WIDTH = 12, WINDOW_SIZE = 8
+[INFO] Total cycles = 36, Reset will be applied at cycle 18
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/36: DUT average = 123
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/36: Testbench average = 123
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/36: DUT average = 145
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/36: Testbench average = 145
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/36: DUT average = 572
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/36: Testbench average = 572
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/36: DUT average = 1027
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/36: Testbench average = 1027
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/36: DUT average = 1117
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/36: Testbench average = 1117
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/36: DUT average = 1305
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/36: Testbench average = 1305
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/36: DUT average = 1370
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/36: Testbench average = 1370
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/36: DUT average = 1699
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/36: Testbench average = 1699
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/36: DUT average = 1689
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/36: Testbench average = 1689
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/36: DUT average = 2127
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/36: Testbench average = 2127
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/36: DUT average = 1856
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/36: Testbench average = 1856
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/36: DUT average = 1651
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/36: Testbench average = 1651
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/36: DUT average = 2049
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/36: Testbench average = 2049
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/36: DUT average = 2161
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/36: Testbench average = 2161
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/36: DUT average = 2166
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/36: Testbench average = 2166
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/36: DUT average = 2066
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/36: Testbench average = 2066
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/36: DUT average = 2336
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/36: Testbench average = 2336
+[INFO] Applying reset at cycle 18
+[INFO] Starting fresh operation after reset
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/18: DUT average = 384
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/18: Testbench average = 384
+    74.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/18: DUT average = 748
+    74.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/18: Testbench average = 748
+    76.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/18: DUT average = 1258
+    76.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/18: Testbench average = 1258
+    78.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/18: DUT average = 1568
+    78.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/18: Testbench average = 1568
+    80.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/18: DUT average = 1902
+    80.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/18: Testbench average = 1902
+    82.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/18: DUT average = 2369
+    82.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/18: Testbench average = 2369
+    84.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/18: DUT average = 2593
+    84.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/18: Testbench average = 2593
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/18: DUT average = 3048
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/18: Testbench average = 3048
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/18: DUT average = 2960
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/18: Testbench average = 2960
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/18: DUT average = 3041
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/18: Testbench average = 3041
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/18: DUT average = 2780
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/18: Testbench average = 2780
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/18: DUT average = 2661
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/18: Testbench average = 2661
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/18: DUT average = 2790
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/18: Testbench average = 2790
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/18: DUT average = 2812
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/18: Testbench average = 2812
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/18: DUT average = 2802
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/18: Testbench average = 2802
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/18: DUT average = 2623
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/18: Testbench average = 2623
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/18: DUT average = 2414
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/18: Testbench average = 2414
+[INFO] Test 'test_moving_average' completed successfully.
+   108.00ns INFO     cocotb.regression                  test_moving_average.test_moving_average passed
+   108.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_moving_average.test_moving_average   PASS         108.00           0.00      24327.86  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           108.00           0.01      19671.90  **
+                                                        *************************************************************************************************
+PASSED
+../../src/test_runner.py::test_moving_rndm[4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917892
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_moving_average.test_moving_average (1/1)
+                                                            Test the functionality of the moving average module.
+[INFO] WIDTH = 12, WINDOW_SIZE = 8
+[INFO] Total cycles = 36, Reset will be applied at cycle 18
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/36: DUT average = 123
+    26.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 1/36: Testbench average = 123
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/36: DUT average = 145
+    28.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 2/36: Testbench average = 145
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/36: DUT average = 572
+    30.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 3/36: Testbench average = 572
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/36: DUT average = 1027
+    32.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 4/36: Testbench average = 1027
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/36: DUT average = 1117
+    34.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 5/36: Testbench average = 1117
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/36: DUT average = 1305
+    36.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 6/36: Testbench average = 1305
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/36: DUT average = 1370
+    38.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 7/36: Testbench average = 1370
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/36: DUT average = 1699
+    40.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 8/36: Testbench average = 1699
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/36: DUT average = 1689
+    42.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 9/36: Testbench average = 1689
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/36: DUT average = 2127
+    44.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 10/36: Testbench average = 2127
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/36: DUT average = 1856
+    46.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 11/36: Testbench average = 1856
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/36: DUT average = 1651
+    48.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 12/36: Testbench average = 1651
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/36: DUT average = 2049
+    50.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 13/36: Testbench average = 2049
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/36: DUT average = 2161
+    52.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 14/36: Testbench average = 2161
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/36: DUT average = 2166
+    54.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 15/36: Testbench average = 2166
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/36: DUT average = 2066
+    56.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 16/36: Testbench average = 2066
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/36: DUT average = 2336
+    58.00ns INFO     cocotb.moving_average              [DEBUG] Cycle 17/36: Testbench average = 2336
+[INFO] Applying reset at cycle 18
+[INFO] Starting fresh operation after reset
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/18: DUT average = 384
+    72.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 1/18: Testbench average = 384
+    74.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/18: DUT average = 748
+    74.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 2/18: Testbench average = 748
+    76.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/18: DUT average = 1258
+    76.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 3/18: Testbench average = 1258
+    78.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/18: DUT average = 1568
+    78.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 4/18: Testbench average = 1568
+    80.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/18: DUT average = 1902
+    80.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 5/18: Testbench average = 1902
+    82.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/18: DUT average = 2369
+    82.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 6/18: Testbench average = 2369
+    84.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/18: DUT average = 2593
+    84.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 7/18: Testbench average = 2593
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/18: DUT average = 3048
+    86.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 8/18: Testbench average = 3048
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/18: DUT average = 2960
+    88.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 9/18: Testbench average = 2960
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/18: DUT average = 3041
+    90.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 10/18: Testbench average = 3041
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/18: DUT average = 2780
+    92.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 11/18: Testbench average = 2780
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/18: DUT average = 2661
+    94.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 12/18: Testbench average = 2661
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/18: DUT average = 2790
+    96.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 13/18: Testbench average = 2790
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/18: DUT average = 2812
+    98.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 14/18: Testbench average = 2812
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/18: DUT average = 2802
+   100.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 15/18: Testbench average = 2802
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/18: DUT average = 2623
+   102.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 16/18: Testbench average = 2623
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/18: DUT average = 2414
+   104.00ns INFO     cocotb.moving_average              [DEBUG] Post-reset Cycle 17/18: Testbench average = 2414
+[INFO] Test 'test_moving_average' completed successfully.
+   108.00ns INFO     cocotb.regression                  test_moving_average.test_moving_average passed
+   108.00ns INFO     cocotb.regression                  *************************************************************************************************
+                                                        ** TEST                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************
+                                                        ** test_moving_average.test_moving_average   PASS         108.00           0.00      24548.03  **
+                                                        *************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           108.00           0.01      19776.68  **
+                                                        *************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-bks2q1vd'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-6l132lhn'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 2 warnings in 1.38s =========================
+Cleaning up Docker resources...

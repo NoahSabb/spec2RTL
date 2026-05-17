@@ -1,0 +1,8 @@
+/code/rtl/cvdp_prbs_gen.sv:4: warning: macro CHECK_MODE undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:5: warning: macro POLY_LENGTH undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:6: warning: macro POLY_TAP undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:6: warning: macro POLY_LENGTH undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:7: warning: macro WIDTH undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:15: warning: macro POLY_TAP undefined (and assumed null) at this point.
+/code/rtl/cvdp_prbs_gen.sv:1: syntax error
+I give up.

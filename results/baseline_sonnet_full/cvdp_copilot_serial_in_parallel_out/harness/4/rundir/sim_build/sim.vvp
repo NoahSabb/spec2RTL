@@ -1,0 +1,39 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaae06da5b0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaae06da740 .scope module, "serial_in_parallel_out_8bit" "serial_in_parallel_out_8bit" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clock";
+    .port_info 1 /INPUT 1 "serial_in";
+    .port_info 2 /OUTPUT 8 "parallel_out";
+o0xffffa77af018 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaae0700500_0 .net "clock", 0 0, o0xffffa77af018;  0 drivers
+v0xaaaae0721dc0_0 .var "parallel_out", 7 0;
+o0xffffa77af078 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaae0721ea0_0 .net "serial_in", 0 0, o0xffffa77af078;  0 drivers
+E_0xaaaae06da9f0 .event posedge, v0xaaaae0700500_0;
+    .scope S_0xaaaae06da740;
+T_0 ;
+    %wait E_0xaaaae06da9f0;
+    %load/vec4 v0xaaaae0721dc0_0;
+    %parti/s 7, 0, 2;
+    %load/vec4 v0xaaaae0721ea0_0;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0xaaaae0721dc0_0, 0;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/serial_in_parallel_out_8bit.sv";

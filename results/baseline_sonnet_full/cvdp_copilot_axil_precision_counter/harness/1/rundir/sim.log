@@ -1,0 +1,3 @@
+/code/rtl/precision_counter_axi.sv:1: warning: macro systemverilog undefined (and assumed null) at this point.
+/code/rtl/precision_counter_axi.sv:1: syntax error
+I give up.

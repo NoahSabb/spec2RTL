@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917887" />
+    <testcase name="hill_cipher_test" classname="test_hill_cipher" file="/src/test_hill_cipher.py" lineno="16" time="0.002986431121826172" sim_time_ns="430.0" ratio_time="143984.56969503433" />
+    <testcase name="hill_cipher_clock_latency_test" classname="test_hill_cipher" file="/src/test_hill_cipher.py" lineno="151" time="0.0005986690521240234" sim_time_ns="60.0" ratio_time="100222.31780167265">
+      <failure error_type="AssertionError" error_msg="Clock latency should be equal to 3.&#10;assert 4 == 3" />
+    </testcase>
+  </testsuite>
+</testsuites>

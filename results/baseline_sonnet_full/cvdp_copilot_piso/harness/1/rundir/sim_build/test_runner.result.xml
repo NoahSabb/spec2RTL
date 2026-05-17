@@ -1,0 +1,10 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917899" />
+    <testcase name="test_piso_1" classname="test_piso" file="/src/test_piso.py" lineno="18" time="0.0010886192321777344" sim_time_ns="335.0" ratio_time="307729.2685063513" />
+    <testcase name="test_piso_2" classname="test_piso" file="/src/test_piso.py" lineno="51" time="0.0005173683166503906" sim_time_ns="175.0" ratio_time="338250.32258064515" />
+    <testcase name="test_piso_3" classname="test_piso" file="/src/test_piso.py" lineno="70" time="0.0008597373962402344" sim_time_ns="335.0" ratio_time="389653.8657792568" />
+    <testcase name="test_piso_4" classname="test_piso" file="/src/test_piso.py" lineno="89" time="0.04768991470336914" sim_time_ns="20575.0" ratio_time="431432.93771809665" />
+    <testcase name="test_reset" classname="test_piso" file="/src/test_piso.py" lineno="132" time="0.0022454261779785156" sim_time_ns="965.0" ratio_time="429762.51433425356" />
+  </testsuite>
+</testsuites>

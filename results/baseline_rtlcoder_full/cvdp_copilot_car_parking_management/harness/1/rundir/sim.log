@@ -1,0 +1,29 @@
+/code/rtl/car_parking_system.sv:140: warning: macro log2 undefined (and assumed null) at this point.
+/code/rtl/car_parking_system.sv:100: syntax error
+/code/rtl/car_parking_system.sv:100: error: Malformed statement
+/code/rtl/car_parking_system.sv:101: syntax error
+/code/rtl/car_parking_system.sv:101: error: Malformed statement
+/code/rtl/car_parking_system.sv:102: syntax error
+/code/rtl/car_parking_system.sv:102: error: Malformed statement
+/code/rtl/car_parking_system.sv:104: syntax error
+/code/rtl/car_parking_system.sv:104: syntax error
+/code/rtl/car_parking_system.sv:104: error: Malformed statement
+/code/rtl/car_parking_system.sv:108: syntax error
+/code/rtl/car_parking_system.sv:108: error: Malformed statement
+/code/rtl/car_parking_system.sv:109: syntax error
+/code/rtl/car_parking_system.sv:109: error: Malformed statement
+/code/rtl/car_parking_system.sv:110: syntax error
+/code/rtl/car_parking_system.sv:110: error: Malformed statement
+/code/rtl/car_parking_system.sv:116: syntax error
+/code/rtl/car_parking_system.sv:116: error: Malformed statement
+/code/rtl/car_parking_system.sv:117: syntax error
+/code/rtl/car_parking_system.sv:117: error: Malformed statement
+/code/rtl/car_parking_system.sv:122: syntax error
+/code/rtl/car_parking_system.sv:122: error: Malformed statement
+/code/rtl/car_parking_system.sv:123: syntax error
+/code/rtl/car_parking_system.sv:123: error: Malformed statement
+/code/rtl/car_parking_system.sv:124: syntax error
+/code/rtl/car_parking_system.sv:124: error: Malformed statement
+/code/rtl/car_parking_system.sv:134: syntax error
+/code/rtl/car_parking_system.sv:134: error: Malformed statement
+/code/rtl/car_parking_system.sv:147: warning: Numeric constant truncated to 2 bits.

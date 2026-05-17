@@ -1,0 +1,20 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968829" />
+    <testcase name="test_piso_1" classname="test_piso" file="/src/test_piso.py" lineno="18" time="0.0012984275817871094" sim_time_ns="335.0" ratio_time="258004.37752478884">
+      <failure error_type="AssertionError" error_msg="Serial data sequence is not correct&#10;assert [1, 1, 1, 1, 1, 1, ...] == [0, 0, 0, 0, 0, 0, ...]" />
+    </testcase>
+    <testcase name="test_piso_2" classname="test_piso" file="/src/test_piso.py" lineno="51" time="0.0007092952728271484" sim_time_ns="175.0" ratio_time="246723.76470588235">
+      <failure error_type="AssertionError" error_msg="Serial data sequence is not correct&#10;assert [1, 1, 1, 1, 1, 1, ...] == [0, 0, 0, 0, 0, 0, ...]" />
+    </testcase>
+    <testcase name="test_piso_3" classname="test_piso" file="/src/test_piso.py" lineno="70" time="0.0009551048278808594" sim_time_ns="335.0" ratio_time="350746.83974038943">
+      <failure error_type="AssertionError" error_msg="Serial data sequence is not correct&#10;assert [1, 1, 1, 1, 1, 1, ...] == [0, 0, 0, 0, 0, 1, ...]" />
+    </testcase>
+    <testcase name="test_piso_4" classname="test_piso" file="/src/test_piso.py" lineno="89" time="0.04138493537902832" sim_time_ns="20575.0" ratio_time="497161.58335301676">
+      <failure error_type="AssertionError" error_msg="Sequences are not same. Rollout is not happening properly&#10;assert [0, 0, 0, 0, 0, 0, ...] == [0, 0, 0, 0, 0, 0, ...]" />
+    </testcase>
+    <testcase name="test_reset" classname="test_piso" file="/src/test_piso.py" lineno="132" time="0.0003597736358642578" sim_time_ns="25.0" ratio_time="69488.1378396289">
+      <failure error_type="AssertionError" error_msg="assert 1 == ((1 &gt;&gt; (7 - 0)) % 2)&#10; +  where 1 = int(Logic('1'))&#10; +    where Logic('1') = LogicObject(piso_8bit.serial_out).value&#10; +      where LogicObject(piso_8bit.serial_out) = HierarchyObject(piso_8bit).serial_out" />
+    </testcase>
+  </testsuite>
+</testsuites>

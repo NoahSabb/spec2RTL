@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1779048885" />
+    <testcase name="test_reset_scenario" classname="test_fibonacci_series" file="/src/test_fibonacci_series.py" lineno="40" time="0.0075609683990478516" sim_time_ns="980.0" ratio_time="129613.02683442121" />
+    <testcase name="test_overflow_and_reset" classname="test_fibonacci_series" file="/src/test_fibonacci_series.py" lineno="59" time="0.0070226192474365234" sim_time_ns="980.0" ratio_time="139549.0721439484" />
+  </testsuite>
+</testsuites>

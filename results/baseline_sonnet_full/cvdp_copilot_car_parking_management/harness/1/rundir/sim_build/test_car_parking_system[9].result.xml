@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917859" />
+    <testcase name="test_car_parking_system" classname="car_parking_control" file="/src/car_parking_control.py" lineno="144" time="0.0019981861114501953" sim_time_ns="600.0" ratio_time="300272.33027085074" />
+  </testsuite>
+</testsuites>

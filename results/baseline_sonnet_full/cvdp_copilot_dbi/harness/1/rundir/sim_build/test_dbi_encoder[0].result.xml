@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917873" />
+    <testcase name="test_dbi_encoder" classname="test_dbi_encoder" file="/src/test_dbi_encoder.py" lineno="8" time="0.0015032291412353516" sim_time_ns="550.0" ratio_time="365879.0166534496" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,109 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaab02e3f540 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaab02e3f6d0 .scope module, "complex_multiplier" "complex_multiplier" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "arst_n";
+    .port_info 2 /INPUT 16 "a_real";
+    .port_info 3 /INPUT 16 "a_imag";
+    .port_info 4 /INPUT 16 "b_real";
+    .port_info 5 /INPUT 16 "b_imag";
+    .port_info 6 /OUTPUT 32 "result_real";
+    .port_info 7 /OUTPUT 32 "result_imag";
+v0xaaab02e68200_0 .var "a", 15 0;
+o0xffff8850f048 .functor BUFZ 16, c4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaab02e8db20_0 .net "a_imag", 15 0, o0xffff8850f048;  0 drivers
+o0xffff8850f078 .functor BUFZ 16, c4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaab02e8dc00_0 .net "a_real", 15 0, o0xffff8850f078;  0 drivers
+v0xaaab02e8dcc0_0 .var "ac", 31 0;
+v0xaaab02e8dda0_0 .var "ad", 31 0;
+o0xffff8850f108 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaab02e8ded0_0 .net "arst_n", 0 0, o0xffff8850f108;  0 drivers
+v0xaaab02e8df90_0 .var "b", 15 0;
+o0xffff8850f168 .functor BUFZ 16, c4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaab02e8e070_0 .net "b_imag", 15 0, o0xffff8850f168;  0 drivers
+o0xffff8850f198 .functor BUFZ 16, c4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaab02e8e150_0 .net "b_real", 15 0, o0xffff8850f198;  0 drivers
+v0xaaab02e8e230_0 .var "bc", 31 0;
+v0xaaab02e8e310_0 .var "bd", 31 0;
+o0xffff8850f228 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaab02e8e3f0_0 .net "clk", 0 0, o0xffff8850f228;  0 drivers
+v0xaaab02e8e4b0_0 .var "imaginary_part", 31 0;
+v0xaaab02e8e590_0 .var "real_part", 31 0;
+v0xaaab02e8e670_0 .var "result_imag", 31 0;
+v0xaaab02e8e750_0 .var "result_real", 31 0;
+E_0xaaab02e7ae30/0 .event negedge, v0xaaab02e8ded0_0;
+E_0xaaab02e7ae30/1 .event posedge, v0xaaab02e8e3f0_0;
+E_0xaaab02e7ae30 .event/or E_0xaaab02e7ae30/0, E_0xaaab02e7ae30/1;
+    .scope S_0xaaab02e3f6d0;
+T_0 ;
+    %wait E_0xaaab02e7ae30;
+    %load/vec4 v0xaaab02e8ded0_0;
+    %inv;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab02e8e750_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab02e8e670_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaab02e8dc00_0;
+    %assign/vec4 v0xaaab02e68200_0, 0;
+    %load/vec4 v0xaaab02e8e150_0;
+    %assign/vec4 v0xaaab02e8df90_0, 0;
+    %load/vec4 v0xaaab02e68200_0;
+    %pad/u 32;
+    %load/vec4 v0xaaab02e8e150_0;
+    %pad/u 32;
+    %mul;
+    %assign/vec4 v0xaaab02e8dcc0_0, 0;
+    %load/vec4 v0xaaab02e8db20_0;
+    %pad/u 32;
+    %load/vec4 v0xaaab02e8df90_0;
+    %pad/u 32;
+    %mul;
+    %assign/vec4 v0xaaab02e8e230_0, 0;
+    %load/vec4 v0xaaab02e8e070_0;
+    %pad/u 32;
+    %load/vec4 v0xaaab02e68200_0;
+    %pad/u 32;
+    %mul;
+    %assign/vec4 v0xaaab02e8dda0_0, 0;
+    %load/vec4 v0xaaab02e8e150_0;
+    %pad/u 32;
+    %load/vec4 v0xaaab02e8db20_0;
+    %pad/u 32;
+    %mul;
+    %assign/vec4 v0xaaab02e8e310_0, 0;
+    %load/vec4 v0xaaab02e8dcc0_0;
+    %load/vec4 v0xaaab02e8e230_0;
+    %sub;
+    %assign/vec4 v0xaaab02e8e590_0, 0;
+    %load/vec4 v0xaaab02e8dda0_0;
+    %load/vec4 v0xaaab02e8e310_0;
+    %add;
+    %assign/vec4 v0xaaab02e8e4b0_0, 0;
+    %load/vec4 v0xaaab02e8e590_0;
+    %assign/vec4 v0xaaab02e8e750_0, 0;
+    %load/vec4 v0xaaab02e8e4b0_0;
+    %assign/vec4 v0xaaab02e8e670_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/complex_multiplier.sv";

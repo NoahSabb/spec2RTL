@@ -1,0 +1,90 @@
+Running harness with project name: cvdp_copilot_load_store_unit_1_1778917886
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_allocator      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917887
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_load_store_unit.test_load_store_unit (1/1)
+Clk period is 10
+     0.00ns WARNING  py.warnings                        /src/test_load_store_unit.py:21: DeprecationWarning: Use ``cocotb.start_soon`` instead.
+                                                          await cocotb.start(DUT_CLK.start())
+     0.00ns INFO     cocotb.clk                         clk STARTED
+   580.00ns WARNING  ..b.Task 3.dmemIFDriver._listening dmem_req_o must be asserted
+                                                        assert 0 == 1
+                                                         +  where 0 = int(Logic('0'))
+                                                         +    where Logic('0') = LogicObject(load_store_unit.ex_if_ready_o).value
+                                                         +      where LogicObject(load_store_unit.ex_if_ready_o) = HierarchyObject(load_store_unit).ex_if_ready_o
+                                                         +        where HierarchyObject(load_store_unit) = <harness_library.dmemIFDriver object at 0xffff9af0bfb0>.dut
+                                                        Traceback (most recent call last):
+                                                          File "/src/harness_library.py", line 256, in _listening
+                                                            await self._process_req(Req_vector)
+                                                          File "/src/harness_library.py", line 292, in _process_req
+                                                            assert int(self.dut.ex_if_ready_o.value) ==1, f'dmem_req_o must be asserted'
+                                                        AssertionError: dmem_req_o must be asserted
+                                                        assert 0 == 1
+                                                         +  where 0 = int(Logic('0'))
+                                                         +    where Logic('0') = LogicObject(load_store_unit.ex_if_ready_o).value
+                                                         +      where LogicObject(load_store_unit.ex_if_ready_o) = HierarchyObject(load_store_unit).ex_if_ready_o
+                                                         +        where HierarchyObject(load_store_unit) = <harness_library.dmemIFDriver object at 0xffff9af0bfb0>.dut
+   580.00ns WARNING  cocotb.regression                  test_load_store_unit.test_load_store_unit failed
+   580.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_load_store_unit.test_load_store_unit   FAIL         580.00           0.01      98886.07  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             580.00           0.01      46487.60  **
+                                                        ***************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+________________________________ test_allocator ________________________________
+
+    def test_allocator():
+>       runner()
+
+/src/test_runner.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s load_store_unit -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/load_store_unit.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-4q8d9pvi'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-t4vvn6l3'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-rmag1dpy'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_allocator - SystemExit: 1
+======================== 1 failed, 3 warnings in 0.33s =========================
+Cleaning up Docker resources...

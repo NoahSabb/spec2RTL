@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968177" />
+    <testcase name="test_complex_multiplier" classname="test_complex_multiplier" file="/src/test_complex_multiplier.py" lineno="19" time="0.0009119510650634766" sim_time_ns="30.0" ratio_time="32896.50196078431">
+      <failure error_type="ValueError" error_msg="Can't convert LogicArray to int: it contains non-0/1 values" />
+    </testcase>
+  </testsuite>
+</testsuites>

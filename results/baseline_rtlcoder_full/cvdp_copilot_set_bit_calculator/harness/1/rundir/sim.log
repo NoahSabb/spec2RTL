@@ -1,0 +1,5 @@
+/code/rtl/SetBitStreamCalculator.v:6: error: Unable to bind parameter `p_max_set_bit_count_width' in `SetBitStreamCalculator'
+/code/rtl/SetBitStreamCalculator.v:9:      : A symbol with that name was declared here. Check for declaration after use.
+/code/rtl/SetBitStreamCalculator.v:6: error: Dimensions must be constant.
+/code/rtl/SetBitStreamCalculator.v:6       : This MSB expression violates the rule: (p_max_set_bit_count_width)-('sd1)
+2 error(s) during elaboration.

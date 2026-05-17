@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917851" />
+    <testcase name="test_glitch_free_mux" classname="test_glitch_free_mux" file="/src/test_glitch_free_mux.py" lineno="7" time="0.001961231231689453" sim_time_ns="27.0" ratio_time="13766.86214442013">
+      <failure error_type="AssertionError" error_msg="Glitch detected, clkout is 1&#10;assert Logic('1') == 0&#10; +  where Logic('1') = LogicObject(glitch_free_mux.clkout).value&#10; +    where LogicObject(glitch_free_mux.clkout) = HierarchyObject(glitch_free_mux).clkout" />
+    </testcase>
+  </testsuite>
+</testsuites>

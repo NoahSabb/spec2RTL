@@ -1,0 +1,110 @@
+Running harness with project name: cvdp_copilot_digital_dice_roller_1_1779048685
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s digital_dice_roller -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/digital_dice_roller.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779048686
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dice_roller.test_dice_roller (1/3)
+                                                            Main test for the digital dice roller, using parameterized DICE_MAX from RTL design.
+     0.00ns WARNING  ..est_dice_roller.test_dice_roller digital_dice_roller contains no child object named DICE_MAX
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dice_roller.py", line 87, in test_dice_roller
+                                                            await dice_roll_test(dut)
+                                                          File "/src/test_dice_roller.py", line 18, in dice_roll_test
+                                                            DICE_MAX = int(dut.DICE_MAX.value)
+                                                                           ^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: digital_dice_roller contains no child object named DICE_MAX
+     0.00ns WARNING  cocotb.regression                  test_dice_roller.test_dice_roller failed
+     0.00ns INFO     cocotb.regression                  running test_dice_roller.test_reset_functionality (2/3)
+                                                            Test the reset functionality of the dice roller.
+     0.00ns INFO     cocotb.digital_dice_roller         Test Case 5: Reset functionality
+     0.00ns WARNING  ..onality.test_reset_functionality digital_dice_roller contains no child object named reset
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dice_roller.py", line 97, in test_reset_functionality
+                                                            await reset_dut(dut)
+                                                          File "/src/test_dice_roller.py", line 9, in reset_dut
+                                                            dut.reset.value = 0  # Assert reset (active-low)
+                                                            ^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: digital_dice_roller contains no child object named reset. Did you mean: 'reset_n'?
+     0.00ns WARNING  cocotb.regression                  test_dice_roller.test_reset_functionality failed
+     0.00ns INFO     cocotb.regression                  running test_dice_roller.test_hold_reset_low (3/3)
+                                                            Test holding reset low to verify dice_value stays reset.
+     0.00ns WARNING  ..ld_reset_low.test_hold_reset_low digital_dice_roller contains no child object named reset
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_dice_roller.py", line 125, in test_hold_reset_low
+                                                            dut.reset.value = 0  # Assert reset (active-low)
+                                                            ^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 484, in __getattr__
+                                                            raise AttributeError(f"{self._path} contains no child object named {name}")
+                                                        AttributeError: digital_dice_roller contains no child object named reset. Did you mean: 'reset_n'?
+     0.00ns WARNING  cocotb.regression                  test_dice_roller.test_hold_reset_low failed
+     0.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_dice_roller.test_dice_roller           FAIL           0.00           0.00          0.00  **
+                                                        ** test_dice_roller.test_reset_functionality   FAIL           0.00           0.00          0.00  **
+                                                        ** test_dice_roller.test_hold_reset_low        FAIL           0.00           0.00          0.00  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=3 PASS=0 FAIL=3 SKIP=0                               0.00           0.02          0.12  **
+                                                        ***************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 3 of 3 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        # List from Files
+        verilog_sources = os.getenv("VERILOG_SOURCES").split()
+    
+        # Language of Top Level File
+        toplevel_lang   = os.getenv("TOPLEVEL_LANG")
+    
+        sim             = os.getenv("SIM", "icarus")
+        toplevel        = os.getenv("TOPLEVEL")
+        module          = os.getenv("MODULE")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+    
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:31: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s digital_dice_roller -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/digital_dice_roller.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 3 of 3 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+============================== 1 failed in 0.31s ===============================
+Cleaning up Docker resources...

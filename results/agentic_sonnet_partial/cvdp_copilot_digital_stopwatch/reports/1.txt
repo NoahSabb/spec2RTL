@@ -1,0 +1,410 @@
+Running harness with project name: cvdp_copilot_digital_stopwatch_1_1778993144
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 3 items
+
+../../src/test_runner.py::test_dig_stop[3-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778993145
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+Current Time - Hours: 0, Minutes: 0, Seconds: 10
+Current Time - Hours: 0, Minutes: 0, Seconds: 11
+Current Time - Hours: 0, Minutes: 0, Seconds: 12
+Current Time - Hours: 0, Minutes: 0, Seconds: 13
+Current Time - Hours: 0, Minutes: 0, Seconds: 14
+Current Time - Hours: 0, Minutes: 0, Seconds: 15
+Current Time - Hours: 0, Minutes: 0, Seconds: 16
+Current Time - Hours: 0, Minutes: 0, Seconds: 17
+Current Time - Hours: 0, Minutes: 0, Seconds: 18
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 20
+Current Time - Hours: 0, Minutes: 0, Seconds: 21
+Current Time - Hours: 0, Minutes: 0, Seconds: 22
+Current Time - Hours: 0, Minutes: 0, Seconds: 23
+Current Time - Hours: 0, Minutes: 0, Seconds: 24
+Current Time - Hours: 0, Minutes: 0, Seconds: 25
+Current Time - Hours: 0, Minutes: 0, Seconds: 26
+Current Time - Hours: 0, Minutes: 0, Seconds: 27
+Current Time - Hours: 0, Minutes: 0, Seconds: 28
+Current Time - Hours: 0, Minutes: 0, Seconds: 29
+Current Time - Hours: 0, Minutes: 0, Seconds: 30
+Current Time - Hours: 0, Minutes: 0, Seconds: 31
+Current Time - Hours: 0, Minutes: 0, Seconds: 32
+Current Time - Hours: 0, Minutes: 0, Seconds: 33
+Current Time - Hours: 0, Minutes: 0, Seconds: 34
+Current Time - Hours: 0, Minutes: 0, Seconds: 35
+Current Time - Hours: 0, Minutes: 0, Seconds: 36
+Current Time - Hours: 0, Minutes: 0, Seconds: 37
+Current Time - Hours: 0, Minutes: 0, Seconds: 38
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 39
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 40
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 41
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 42
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 43
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 44
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 45
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 46
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 47
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 48
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 49
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 50
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 51
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 52
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 53
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 54
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 55
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 56
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 57
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 58
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 59
+34833333194.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                             Traceback (most recent call last):
+                                                               File "/src/test_dig_stopwatch.py", line 160, in test_dig_stopwatch
+                                                                 await check_rollover_conditions(dut, 3600)  # Testing rollovers for 1 hour
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                               File "/src/test_dig_stopwatch.py", line 23, in check_rollover_conditions
+                                                                 assert int(dut.seconds.value) == 0, "Error: Seconds did not reset to 0 after reaching 59."
+                                                             AssertionError: Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+34833333194.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+34833333194.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                             ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                             ***********************************************************************************************
+                                                             ** test_dig_stopwatch.test_dig_stopwatch   FAIL   34833333194.00           0.00   7041379765238.18  **
+                                                             ***********************************************************************************************
+                                                             ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   34833333194.00           0.01   4220759461185.24  **
+                                                             ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 3}
+FAILED
+../../src/test_runner.py::test_dig_stop[50-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778993145
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+Current Time - Hours: 0, Minutes: 0, Seconds: 10
+Current Time - Hours: 0, Minutes: 0, Seconds: 11
+Current Time - Hours: 0, Minutes: 0, Seconds: 12
+Current Time - Hours: 0, Minutes: 0, Seconds: 13
+Current Time - Hours: 0, Minutes: 0, Seconds: 14
+Current Time - Hours: 0, Minutes: 0, Seconds: 15
+Current Time - Hours: 0, Minutes: 0, Seconds: 16
+Current Time - Hours: 0, Minutes: 0, Seconds: 17
+Current Time - Hours: 0, Minutes: 0, Seconds: 18
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 20
+Current Time - Hours: 0, Minutes: 0, Seconds: 21
+Current Time - Hours: 0, Minutes: 0, Seconds: 22
+Current Time - Hours: 0, Minutes: 0, Seconds: 23
+Current Time - Hours: 0, Minutes: 0, Seconds: 24
+Current Time - Hours: 0, Minutes: 0, Seconds: 25
+Current Time - Hours: 0, Minutes: 0, Seconds: 26
+Current Time - Hours: 0, Minutes: 0, Seconds: 27
+Current Time - Hours: 0, Minutes: 0, Seconds: 28
+Current Time - Hours: 0, Minutes: 0, Seconds: 29
+Current Time - Hours: 0, Minutes: 0, Seconds: 30
+Current Time - Hours: 0, Minutes: 0, Seconds: 31
+Current Time - Hours: 0, Minutes: 0, Seconds: 32
+Current Time - Hours: 0, Minutes: 0, Seconds: 33
+Current Time - Hours: 0, Minutes: 0, Seconds: 34
+Current Time - Hours: 0, Minutes: 0, Seconds: 35
+Current Time - Hours: 0, Minutes: 0, Seconds: 36
+Current Time - Hours: 0, Minutes: 0, Seconds: 37
+Current Time - Hours: 0, Minutes: 0, Seconds: 38
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 39
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 40
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 41
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 42
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 43
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 44
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 45
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 46
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 47
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 48
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 49
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 50
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 51
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 52
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 53
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 54
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 55
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 56
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 57
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 58
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 59
+30280000000.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                             Traceback (most recent call last):
+                                                               File "/src/test_dig_stopwatch.py", line 160, in test_dig_stopwatch
+                                                                 await check_rollover_conditions(dut, 3600)  # Testing rollovers for 1 hour
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                               File "/src/test_dig_stopwatch.py", line 23, in check_rollover_conditions
+                                                                 assert int(dut.seconds.value) == 0, "Error: Seconds did not reset to 0 after reaching 59."
+                                                             AssertionError: Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+30280000000.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+30280000000.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                             ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                             ***********************************************************************************************
+                                                             ** test_dig_stopwatch.test_dig_stopwatch   FAIL   30280000000.00           0.05   607727616960.39  **
+                                                             ***********************************************************************************************
+                                                             ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   30280000000.00           0.05   568518067271.28  **
+                                                             ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 50}
+FAILED
+../../src/test_runner.py::test_dig_stop[63-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778993145
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+Current Time - Hours: 0, Minutes: 0, Seconds: 10
+Current Time - Hours: 0, Minutes: 0, Seconds: 11
+Current Time - Hours: 0, Minutes: 0, Seconds: 12
+Current Time - Hours: 0, Minutes: 0, Seconds: 13
+Current Time - Hours: 0, Minutes: 0, Seconds: 14
+Current Time - Hours: 0, Minutes: 0, Seconds: 15
+Current Time - Hours: 0, Minutes: 0, Seconds: 16
+Current Time - Hours: 0, Minutes: 0, Seconds: 17
+Current Time - Hours: 0, Minutes: 0, Seconds: 18
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 19
+Current Time - Hours: 0, Minutes: 0, Seconds: 20
+Current Time - Hours: 0, Minutes: 0, Seconds: 21
+Current Time - Hours: 0, Minutes: 0, Seconds: 22
+Current Time - Hours: 0, Minutes: 0, Seconds: 23
+Current Time - Hours: 0, Minutes: 0, Seconds: 24
+Current Time - Hours: 0, Minutes: 0, Seconds: 25
+Current Time - Hours: 0, Minutes: 0, Seconds: 26
+Current Time - Hours: 0, Minutes: 0, Seconds: 27
+Current Time - Hours: 0, Minutes: 0, Seconds: 28
+Current Time - Hours: 0, Minutes: 0, Seconds: 29
+Current Time - Hours: 0, Minutes: 0, Seconds: 30
+Current Time - Hours: 0, Minutes: 0, Seconds: 31
+Current Time - Hours: 0, Minutes: 0, Seconds: 32
+Current Time - Hours: 0, Minutes: 0, Seconds: 33
+Current Time - Hours: 0, Minutes: 0, Seconds: 34
+Current Time - Hours: 0, Minutes: 0, Seconds: 35
+Current Time - Hours: 0, Minutes: 0, Seconds: 36
+Current Time - Hours: 0, Minutes: 0, Seconds: 37
+Current Time - Hours: 0, Minutes: 0, Seconds: 38
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 39
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 40
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 41
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 42
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 43
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 44
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 45
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 46
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 47
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 48
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 49
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 50
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 51
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 52
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 53
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 54
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 55
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 56
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 57
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 58
+Rollover Current Time - Hour: 0, Minutes: 0, Seconds: 59
+30230155163.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                             Traceback (most recent call last):
+                                                               File "/src/test_dig_stopwatch.py", line 160, in test_dig_stopwatch
+                                                                 await check_rollover_conditions(dut, 3600)  # Testing rollovers for 1 hour
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                               File "/src/test_dig_stopwatch.py", line 23, in check_rollover_conditions
+                                                                 assert int(dut.seconds.value) == 0, "Error: Seconds did not reset to 0 after reaching 59."
+                                                             AssertionError: Error: Seconds did not reset to 0 after reaching 59.
+                                                             assert 59 == 0
+                                                              +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))
+                                                              +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                              +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+30230155163.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+30230155163.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                             ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                             ***********************************************************************************************
+                                                             ** test_dig_stopwatch.test_dig_stopwatch   FAIL   30230155163.00           0.06   482154047802.23  **
+                                                             ***********************************************************************************************
+                                                             ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   30230155163.00           0.07   456936734996.80  **
+                                                             ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 63}
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_dig_stop[3-0] ______________________________
+
+CLK_FREQ = 3, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 3
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=3 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[50-0] ______________________________
+
+CLK_FREQ = 50, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 50
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=50 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[63-0] ______________________________
+
+CLK_FREQ = 63, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 63
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=63 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_dig_stop[3-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[50-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[63-0] - SystemExit: 1
+============================== 3 failed in 0.84s ===============================
+Cleaning up Docker resources...

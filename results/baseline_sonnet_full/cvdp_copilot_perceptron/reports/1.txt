@@ -1,0 +1,139 @@
+Running harness with project name: cvdp_copilot_perceptron_1_1778917896
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_perceptron_gates Running perceptron learning testbench...
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s perceptron_gates -g2012 -s cocotb_iverilog_dump -f /code/rundir/sim_build/cmds.f /code/rtl/perceptron_gates.sv /code/rundir/sim_build/cocotb_iverilog_dump.v in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917897
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_perceptron_gates.test_perceptron_gates (1/1)
+                                                            Testbench for the perceptron_gates module using Cocotb.
+    20.00ns INFO     test                               Start of AND gate Training
+   120.00ns WARNING  py.warnings                        /src/test_perceptron_gates.py:35: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          cocotb.log.info(f"gate_select={gate_select}, x1={x1}, x2={x2}, percep_w1={dut.percep_w1.value.signed_integer}, percep_w2={dut.percep_w2.value.signed_integer}, percep_bias={dut.percep_bias.value.signed_integer}, present_addr={bin(int(dut.present_addr.value))}, stop={bin(int(dut.stop.value))}, input_index={bin(int(dut.input_index.value))}, y_in={dut.y_in.value.signed_integer}, y={dut.y.value.signed_integer}, prev_percep_wt_1={dut.prev_percep_wt_1.value.signed_integer}, prev_percep_wt_2={dut.prev_percep_wt_2.value.signed_integer}, prev_percep_bias={dut.prev_percep_bias.value.signed_integer}")
+   120.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=0, present_addr=0b1, stop=0b0, input_index=0b10, y_in=3, y=1, prev_percep_wt_1=-1, prev_percep_wt_2=-1, prev_percep_bias=-1
+   200.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=-1, percep_w2=1, percep_bias=-1, present_addr=0b100, stop=0b0, input_index=0b11, y_in=-3, y=-1, prev_percep_wt_1=-1, prev_percep_wt_2=1, prev_percep_bias=-1
+   290.00ns INFO     test                               gate_select=0, x1=-1, x2=1, percep_w1=-1, percep_w2=1, percep_bias=-1, present_addr=0b11, stop=0b0, input_index=0b1, y_in=1, y=1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   410.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   435.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   465.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   495.00ns INFO     test                               gate_select=0, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   585.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   615.00ns INFO     test                               End of AND gate Training
+   615.00ns INFO     test                               Start of OR gate Training
+   710.00ns INFO     test                               gate_select=1, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   805.00ns INFO     test                               gate_select=1, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   835.00ns INFO     test                               gate_select=1, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   895.00ns INFO     test                               gate_select=1, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+   895.00ns INFO     test                               End of OR gate Training
+   895.00ns INFO     test                               Start of NAND gate Training
+  1010.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1120.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1215.00ns INFO     test                               gate_select=2, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1295.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1295.00ns INFO     test                               End of NAND gate Training
+  1295.00ns INFO     test                               Start of NOR gate Training
+  1705.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1805.00ns INFO     test                               gate_select=3, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  1905.00ns INFO     test                               gate_select=3, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2005.00ns INFO     test                               gate_select=3, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2105.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2205.00ns INFO     test                               gate_select=3, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2305.00ns INFO     test                               gate_select=3, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2395.00ns INFO     test                               gate_select=3, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2395.00ns INFO     test                               End of NOR gate Training
+  2395.00ns INFO     test                               Start of Random Test Case 1 for gate_select=0b0
+  2495.00ns INFO     test                               gate_select=0, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2595.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2695.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2795.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2795.00ns INFO     test                               End of Random Test Case 1 for gate_select=0b0
+  2795.00ns INFO     test                               Start of Random Test Case 2 for gate_select=0b0
+  2895.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  2995.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3095.00ns INFO     test                               gate_select=0, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3195.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3195.00ns INFO     test                               End of Random Test Case 2 for gate_select=0b0
+  3195.00ns INFO     test                               Start of Random Test Case 3 for gate_select=0b0
+  3295.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3395.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3495.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3595.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3595.00ns INFO     test                               End of Random Test Case 3 for gate_select=0b0
+  3595.00ns INFO     test                               Start of Random Test Case 4 for gate_select=0b10
+  3695.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3795.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3895.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3995.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  3995.00ns INFO     test                               End of Random Test Case 4 for gate_select=0b10
+  3995.00ns INFO     test                               Start of Random Test Case 5 for gate_select=0b10
+  4095.00ns INFO     test                               gate_select=2, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4195.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4295.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4395.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4395.00ns INFO     test                               End of Random Test Case 5 for gate_select=0b10
+  4395.00ns INFO     test                               Start of Random Test Case 6 for gate_select=0b11
+  4495.00ns INFO     test                               gate_select=3, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4595.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4695.00ns INFO     test                               gate_select=3, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4795.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4795.00ns INFO     test                               End of Random Test Case 6 for gate_select=0b11
+  4795.00ns INFO     test                               Start of Random Test Case 7 for gate_select=0b11
+  4895.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  4995.00ns INFO     test                               gate_select=3, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5095.00ns INFO     test                               gate_select=3, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5195.00ns INFO     test                               gate_select=3, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5195.00ns INFO     test                               End of Random Test Case 7 for gate_select=0b11
+  5195.00ns INFO     test                               Start of Random Test Case 8 for gate_select=0b10
+  5295.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5395.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5495.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5595.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5595.00ns INFO     test                               End of Random Test Case 8 for gate_select=0b10
+  5595.00ns INFO     test                               Start of Random Test Case 9 for gate_select=0b10
+  5695.00ns INFO     test                               gate_select=2, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5795.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5895.00ns INFO     test                               gate_select=2, x1=-1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5995.00ns INFO     test                               gate_select=2, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  5995.00ns INFO     test                               End of Random Test Case 9 for gate_select=0b10
+  5995.00ns INFO     test                               Start of Random Test Case 10 for gate_select=0b0
+  6095.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  6195.00ns INFO     test                               gate_select=0, x1=1, x2=1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  6295.00ns INFO     test                               gate_select=0, x1=-1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  6395.00ns INFO     test                               gate_select=0, x1=1, x2=-1, percep_w1=0, percep_w2=0, percep_bias=-2, present_addr=0b101, stop=0b1, input_index=0b11, y_in=-2, y=-1, prev_percep_wt_1=0, prev_percep_wt_2=0, prev_percep_bias=0
+  6395.00ns INFO     test                               End of Random Test Case 10 for gate_select=0b0
+  6395.00ns INFO     test                               Test Completed
+  6395.00ns INFO     cocotb.regression                  test_perceptron_gates.test_perceptron_gates passed
+  6395.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** test_perceptron_gates.test_perceptron_gates   PASS        6395.00           0.02     282212.18  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                              6395.00           0.02     268062.22  **
+                                                        *****************************************************************************************************
+FST info: dumpfile /code/rundir/sim_build/perceptron_gates.fst opened for output.
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_perceptron_gates.result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-q2zw2kuz'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-7edvqu4x'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.34s =========================
+Cleaning up Docker resources...

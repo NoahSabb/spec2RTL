@@ -1,0 +1,3 @@
+/code/rtl/cvdp_copilot_decode_firstbit.sv:3: warning: macro InWidth_g undefined (and assumed null) at this point.
+/code/rtl/cvdp_copilot_decode_firstbit.sv:1: syntax error
+I give up.

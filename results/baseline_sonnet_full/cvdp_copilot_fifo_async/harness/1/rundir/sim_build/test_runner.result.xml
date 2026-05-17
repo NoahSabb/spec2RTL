@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917879" />
+    <testcase name="test_empty" classname="tb" file="/src/tb.py" lineno="109" time="0.002636432647705078" sim_time_ns="618.0" ratio_time="234407.65708084646" />
+    <testcase name="test_basic" classname="tb" file="/src/tb.py" lineno="170" time="0.0009510517120361328" sim_time_ns="115.0" ratio_time="120918.76660817247">
+      <failure error_type="ValueError" error_msg="Int value (3735928495) out of range for assignment of 8-bit signal ('w_data')" />
+    </testcase>
+    <testcase name="test_full" classname="tb" file="/src/tb.py" lineno="194" time="0.0013849735260009766" sim_time_ns="353.0" ratio_time="254878.51816147356" />
+    <testcase name="test_random" classname="tb" file="/src/tb.py" lineno="231" time="0.00964212417602539" sim_time_ns="1300.0000000000002" ratio_time="134825.0630532615" />
+  </testsuite>
+</testsuites>

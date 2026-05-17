@@ -1,0 +1,12 @@
+networks:
+  default:
+    external: true
+    name: cvdp-bridge-cid003_nonagentic-0272bf87
+services:
+  direct:
+    build: .
+    command: pytest -s --log-cli-level=INFO -o cache_dir=/rundir/harness/.cache /src/test_runner.py
+      -v
+    env_file: ./src/.env
+    volumes:
+    - ./src/:/src/:ro

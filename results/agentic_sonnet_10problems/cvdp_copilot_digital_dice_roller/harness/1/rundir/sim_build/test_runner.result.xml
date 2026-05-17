@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1779048686" />
+    <testcase name="test_dice_roller" classname="test_dice_roller" file="/src/test_dice_roller.py" lineno="82" time="0.0026121139526367188" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="digital_dice_roller contains no child object named DICE_MAX" />
+    </testcase>
+    <testcase name="test_reset_functionality" classname="test_dice_roller" file="/src/test_dice_roller.py" lineno="89" time="0.0005793571472167969" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="digital_dice_roller contains no child object named reset" />
+    </testcase>
+    <testcase name="test_hold_reset_low" classname="test_dice_roller" file="/src/test_dice_roller.py" lineno="118" time="0.001016855239868164" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="digital_dice_roller contains no child object named reset" />
+    </testcase>
+  </testsuite>
+</testsuites>

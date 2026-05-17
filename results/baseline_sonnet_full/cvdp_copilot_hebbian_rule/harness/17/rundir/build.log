@@ -1,0 +1,20 @@
+/code/rtl/hebb_gates.sv:16: syntax error
+/code/rtl/hebb_gates.sv:16: error: Malformed statement
+/code/rtl/hebb_gates.sv:19: syntax error
+/code/rtl/hebb_gates.sv:20: syntax error
+/code/rtl/hebb_gates.sv:20: error: Malformed statement
+/code/rtl/hebb_gates.sv:19: error: Malformed conditional expression.
+/code/rtl/hebb_gates.sv:26: syntax error
+/code/rtl/hebb_gates.sv:26: error: Malformed statement
+/code/rtl/hebb_gates.sv:31: syntax error
+/code/rtl/hebb_gates.sv:34: syntax error
+/code/rtl/hebb_gates.sv:34: error: Malformed statement
+/code/rtl/hebb_gates.sv:31: error: Malformed conditional expression.
+/code/rtl/hebb_gates.sv:96: syntax error
+/code/rtl/hebb_gates.sv:96: error: Malformed statement
+/code/rtl/hebb_gates.sv:97: syntax error
+/code/rtl/hebb_gates.sv:97: error: Malformed statement
+/code/rtl/hebb_gates.sv:100: syntax error
+/code/rtl/hebb_gates.sv:100: error: Malformed statement
+/code/rtl/hebb_gates.sv:102: syntax error
+/code/rtl/hebb_gates.sv:102: error: Malformed statement

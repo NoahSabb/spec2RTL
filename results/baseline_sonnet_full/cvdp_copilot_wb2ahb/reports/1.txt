@@ -1,0 +1,74 @@
+Running harness with project name: cvdp_copilot_wb2ahb_1_1778917916
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_areg_param[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917917
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_wishbone_to_ahb_bridge.test_wishbone_to_ahb_bridge (1/1)
+                                                            Testbench for Wishbone-to-AHB Bridge
+    50.00ns WARNING  ..idge.test_wishbone_to_ahb_bridge ERROR: hwrite should be 1, got 0
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(wishbone_to_ahb_bridge.hwrite).value
+                                                         +    where LogicObject(wishbone_to_ahb_bridge.hwrite) = HierarchyObject(wishbone_to_ahb_bridge).hwrite
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_wishbone_to_ahb_bridge.py", line 47, in test_wishbone_to_ahb_bridge
+                                                            assert dut.hwrite.value == 1, f"ERROR: hwrite should be 1, got {dut.hwrite.value}"
+                                                        AssertionError: ERROR: hwrite should be 1, got 0
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(wishbone_to_ahb_bridge.hwrite).value
+                                                         +    where LogicObject(wishbone_to_ahb_bridge.hwrite) = HierarchyObject(wishbone_to_ahb_bridge).hwrite
+    50.00ns WARNING  cocotb.regression                  test_wishbone_to_ahb_bridge.test_wishbone_to_ahb_bridge failed
+    50.00ns INFO     cocotb.regression                  *****************************************************************************************************************
+                                                        ** TEST                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************
+                                                        ** test_wishbone_to_ahb_bridge.test_wishbone_to_ahb_bridge   FAIL          50.00           0.00      17274.73  **
+                                                        *****************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                            50.00           0.01       7604.44  **
+                                                        *****************************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_areg_param[0] ______________________________
+
+test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    def test_areg_param(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s wishbone_to_ahb_bridge -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/wishbone_to_ahb_bridge.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_areg_param[0] - SystemExit: 1
+============================== 1 failed in 0.30s ===============================
+Cleaning up Docker resources...

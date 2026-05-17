@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917915" />
+    <testcase name="test_vga_controller" classname="test_vga_controller" file="/src/test_vga_controller.py" lineno="17" time="10.188311576843262" sim_time_ns="16800060.0" ratio_time="1648954.2819032352" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,50 @@
+Running harness with project name: cvdp_copilot_perfect_squares_1_1778968824
+#1 [internal] load local bake definitions
+#1 reading from stdin 768B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:5e3428857af276e297599ae9bb2cd449b78a45fd145f6fe1f13e760aff8cabf9 done
+#6 exporting config sha256:a449ec0bee767ef3a1e948e97db4fcd828bf920cc1b00f4f8b3ac433eff0694f done
+#6 exporting attestation manifest sha256:62e1a83a89f67a966f4d82958b491ab40a70bd6101f389f9a56b61d3c3f10c68 done
+#6 exporting manifest list sha256:2ff88ad20267ea7243b61107e015c99cc4da6629ccb8857404a64913c1803604 done
+#6 naming to docker.io/library/cvdp_copilot_perfect_squares_1_1778968824-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_perfect_squares_1_1778968824-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner PASSED                             [100%]
+
+=============================== warnings summary ===============================
+../../src/test_runner.py:17
+  /src/test_runner.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.tb - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.tb
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 2.67s =========================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_perfect_squares_1_1778968824-direct:latest
+Deleted: sha256:2ff88ad20267ea7243b61107e015c99cc4da6629ccb8857404a64913c1803604

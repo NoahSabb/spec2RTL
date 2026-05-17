@@ -1,0 +1,312 @@
+Running harness with project name: cvdp_copilot_filo_5_1778917880
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_runner [DEBUG] Running simulation with DATA_WIDTH=8, FILO_DEPTH=8
+[DEBUG] Parameters: {'DATA_WIDTH': 8, 'FILO_DEPTH': 8}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s FILO_RTL -g2012 -PFILO_RTL.DATA_WIDTH=8 -PFILO_RTL.FILO_DEPTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/FILO_RTL.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_filo.test_filo (1/1)
+                                                            Test FILO_RTL behavior with manual full and empty conditions using push count 
+     0.00ns INFO     cocotb.FILO_RTL                    Test started with parameters: DATA_WIDTH=8, FILO_DEPTH=8
+     0.00ns INFO     cocotb.FILO_RTL                    Starting Initial Reset...
+    25.00ns INFO     cocotb.FILO_RTL                    Reset applied. Full: 0, Empty: 1
+    35.00ns INFO     cocotb.FILO_RTL                    Starting Push Test with random data width 8 and FILO depth 8...
+    65.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x52, Push Count: 1, Full: 0, Empty: 0
+    85.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x68, Push Count: 2, Full: 0, Empty: 0
+   105.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x2d, Push Count: 3, Full: 0, Empty: 0
+   125.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x94, Push Count: 4, Full: 0, Empty: 0
+   145.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x98, Push Count: 5, Full: 0, Empty: 0
+   165.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x0, Push Count: 6, Full: 0, Empty: 0
+   185.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xc7, Push Count: 7, Full: 0, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xce, Push Count: 8, Full: 1, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Starting Pop Test...
+   225.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xce, Push Count: 7, Full: 0, Empty: 0
+   245.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xc7, Push Count: 6, Full: 0, Empty: 0
+   265.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x0, Push Count: 5, Full: 0, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x98, Push Count: 4, Full: 0, Empty: 0
+   305.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x94, Push Count: 3, Full: 0, Empty: 0
+   325.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x2d, Push Count: 2, Full: 0, Empty: 0
+   345.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x68, Push Count: 1, Full: 0, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x52, Push Count: 0, Full: 0, Empty: 1
+   365.00ns INFO     cocotb.FILO_RTL                    Starting Feedthrough Test...
+   365.00ns INFO     cocotb.FILO_RTL                    Feedthrough pushed value: 0x64
+   375.00ns INFO     cocotb.FILO_RTL                    Feedthrough popped value: 0x64
+   375.00ns INFO     cocotb.FILO_RTL                    Feedthrough Test Passed.
+   375.00ns INFO     cocotb.FILO_RTL                    All tests passed.
+   375.00ns INFO     cocotb.regression                  test_filo.test_filo passed
+   375.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_filo.test_filo            PASS         375.00           0.00     132507.50  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                375.00           0.00     101038.35  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+../../src/test_runner.py::test_filo[12-10] [DEBUG] Running simulation with DATA_WIDTH=10, FILO_DEPTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 10, 'FILO_DEPTH': 12}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s FILO_RTL -g2012 -PFILO_RTL.DATA_WIDTH=10 -PFILO_RTL.FILO_DEPTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/FILO_RTL.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_filo.test_filo (1/1)
+                                                            Test FILO_RTL behavior with manual full and empty conditions using push count 
+     0.00ns INFO     cocotb.FILO_RTL                    Test started with parameters: DATA_WIDTH=10, FILO_DEPTH=12
+     0.00ns INFO     cocotb.FILO_RTL                    Starting Initial Reset...
+    25.00ns INFO     cocotb.FILO_RTL                    Reset applied. Full: 0, Empty: 1
+    35.00ns INFO     cocotb.FILO_RTL                    Starting Push Test with random data width 10 and FILO depth 12...
+    65.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x14b, Push Count: 1, Full: 0, Empty: 0
+    85.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1a0, Push Count: 2, Full: 0, Empty: 0
+   105.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xb4, Push Count: 3, Full: 0, Empty: 0
+   125.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x251, Push Count: 4, Full: 0, Empty: 0
+   145.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x263, Push Count: 5, Full: 0, Empty: 0
+   165.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1, Push Count: 6, Full: 0, Empty: 0
+   185.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x31d, Push Count: 7, Full: 0, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x33a, Push Count: 8, Full: 0, Empty: 0
+   225.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x193, Push Count: 9, Full: 0, Empty: 0
+   245.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x19b, Push Count: 10, Full: 0, Empty: 0
+   265.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x126, Push Count: 11, Full: 0, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1c6, Push Count: 12, Full: 1, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Starting Pop Test...
+   305.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1c6, Push Count: 11, Full: 0, Empty: 0
+   325.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x126, Push Count: 10, Full: 0, Empty: 0
+   345.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x19b, Push Count: 9, Full: 0, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x193, Push Count: 8, Full: 0, Empty: 0
+   385.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x33a, Push Count: 7, Full: 0, Empty: 0
+   405.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x31d, Push Count: 6, Full: 0, Empty: 0
+   425.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1, Push Count: 5, Full: 0, Empty: 0
+   445.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x263, Push Count: 4, Full: 0, Empty: 0
+   465.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x251, Push Count: 3, Full: 0, Empty: 0
+   485.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xb4, Push Count: 2, Full: 0, Empty: 0
+   505.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1a0, Push Count: 1, Full: 0, Empty: 0
+   525.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x14b, Push Count: 0, Full: 0, Empty: 1
+   525.00ns INFO     cocotb.FILO_RTL                    Starting Feedthrough Test...
+   525.00ns INFO     cocotb.FILO_RTL                    Feedthrough pushed value: 0x199
+   535.00ns INFO     cocotb.FILO_RTL                    Feedthrough popped value: 0x199
+   535.00ns INFO     cocotb.FILO_RTL                    Feedthrough Test Passed.
+   535.00ns INFO     cocotb.FILO_RTL                    All tests passed.
+   535.00ns INFO     cocotb.regression                  test_filo.test_filo passed
+   535.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_filo.test_filo            PASS         535.00           0.00     151967.54  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                535.00           0.00     118458.14  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_filo[12-10].result.xml
+PASSED
+../../src/test_runner.py::test_filo[12-12] [DEBUG] Running simulation with DATA_WIDTH=12, FILO_DEPTH=12
+[DEBUG] Parameters: {'DATA_WIDTH': 12, 'FILO_DEPTH': 12}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s FILO_RTL -g2012 -PFILO_RTL.DATA_WIDTH=12 -PFILO_RTL.FILO_DEPTH=12 -f /code/rundir/sim_build/cmds.f /code/rtl/FILO_RTL.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_filo.test_filo (1/1)
+                                                            Test FILO_RTL behavior with manual full and empty conditions using push count 
+     0.00ns INFO     cocotb.FILO_RTL                    Test started with parameters: DATA_WIDTH=12, FILO_DEPTH=12
+     0.00ns INFO     cocotb.FILO_RTL                    Starting Initial Reset...
+    25.00ns INFO     cocotb.FILO_RTL                    Reset applied. Full: 0, Empty: 1
+    35.00ns INFO     cocotb.FILO_RTL                    Starting Push Test with random data width 12 and FILO depth 12...
+    65.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x52d, Push Count: 1, Full: 0, Empty: 0
+    85.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x682, Push Count: 2, Full: 0, Empty: 0
+   105.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x2d1, Push Count: 3, Full: 0, Empty: 0
+   125.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x947, Push Count: 4, Full: 0, Empty: 0
+   145.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x98c, Push Count: 5, Full: 0, Empty: 0
+   165.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x6, Push Count: 6, Full: 0, Empty: 0
+   185.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xc74, Push Count: 7, Full: 0, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xceb, Push Count: 8, Full: 0, Empty: 0
+   225.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x64d, Push Count: 9, Full: 0, Empty: 0
+   245.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x66c, Push Count: 10, Full: 0, Empty: 0
+   265.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x498, Push Count: 11, Full: 0, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x719, Push Count: 12, Full: 1, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Starting Pop Test...
+   305.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x719, Push Count: 11, Full: 0, Empty: 0
+   325.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x498, Push Count: 10, Full: 0, Empty: 0
+   345.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x66c, Push Count: 9, Full: 0, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x64d, Push Count: 8, Full: 0, Empty: 0
+   385.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xceb, Push Count: 7, Full: 0, Empty: 0
+   405.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xc74, Push Count: 6, Full: 0, Empty: 0
+   425.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x6, Push Count: 5, Full: 0, Empty: 0
+   445.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x98c, Push Count: 4, Full: 0, Empty: 0
+   465.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x947, Push Count: 3, Full: 0, Empty: 0
+   485.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x2d1, Push Count: 2, Full: 0, Empty: 0
+   505.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x682, Push Count: 1, Full: 0, Empty: 0
+   525.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x52d, Push Count: 0, Full: 0, Empty: 1
+   525.00ns INFO     cocotb.FILO_RTL                    Starting Feedthrough Test...
+   525.00ns INFO     cocotb.FILO_RTL                    Feedthrough pushed value: 0x664
+   535.00ns INFO     cocotb.FILO_RTL                    Feedthrough popped value: 0x664
+   535.00ns INFO     cocotb.FILO_RTL                    Feedthrough Test Passed.
+   535.00ns INFO     cocotb.FILO_RTL                    All tests passed.
+   535.00ns INFO     cocotb.regression                  test_filo.test_filo passed
+   535.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_filo.test_filo            PASS         535.00           0.00     146100.18  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                535.00           0.00     118351.93  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_filo[12-12].result.xml
+PASSED
+../../src/test_runner.py::test_filo[16-10] [DEBUG] Running simulation with DATA_WIDTH=10, FILO_DEPTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 10, 'FILO_DEPTH': 16}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s FILO_RTL -g2012 -PFILO_RTL.DATA_WIDTH=10 -PFILO_RTL.FILO_DEPTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/FILO_RTL.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_filo.test_filo (1/1)
+                                                            Test FILO_RTL behavior with manual full and empty conditions using push count 
+     0.00ns INFO     cocotb.FILO_RTL                    Test started with parameters: DATA_WIDTH=10, FILO_DEPTH=16
+     0.00ns INFO     cocotb.FILO_RTL                    Starting Initial Reset...
+    25.00ns INFO     cocotb.FILO_RTL                    Reset applied. Full: 0, Empty: 1
+    35.00ns INFO     cocotb.FILO_RTL                    Starting Push Test with random data width 10 and FILO depth 16...
+    65.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x14b, Push Count: 1, Full: 0, Empty: 0
+    85.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1a0, Push Count: 2, Full: 0, Empty: 0
+   105.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xb4, Push Count: 3, Full: 0, Empty: 0
+   125.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x251, Push Count: 4, Full: 0, Empty: 0
+   145.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x263, Push Count: 5, Full: 0, Empty: 0
+   165.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1, Push Count: 6, Full: 0, Empty: 0
+   185.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x31d, Push Count: 7, Full: 0, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x33a, Push Count: 8, Full: 0, Empty: 0
+   225.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x193, Push Count: 9, Full: 0, Empty: 0
+   245.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x19b, Push Count: 10, Full: 0, Empty: 0
+   265.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x126, Push Count: 11, Full: 0, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x1c6, Push Count: 12, Full: 0, Empty: 0
+   305.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x199, Push Count: 13, Full: 0, Empty: 0
+   325.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xd6, Push Count: 14, Full: 0, Empty: 0
+   345.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x2c5, Push Count: 15, Full: 0, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x3b9, Push Count: 16, Full: 1, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Starting Pop Test...
+   385.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x3b9, Push Count: 15, Full: 0, Empty: 0
+   405.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x2c5, Push Count: 14, Full: 0, Empty: 0
+   425.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xd6, Push Count: 13, Full: 0, Empty: 0
+   445.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x199, Push Count: 12, Full: 0, Empty: 0
+   465.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1c6, Push Count: 11, Full: 0, Empty: 0
+   485.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x126, Push Count: 10, Full: 0, Empty: 0
+   505.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x19b, Push Count: 9, Full: 0, Empty: 0
+   525.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x193, Push Count: 8, Full: 0, Empty: 0
+   545.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x33a, Push Count: 7, Full: 0, Empty: 0
+   565.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x31d, Push Count: 6, Full: 0, Empty: 0
+   585.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1, Push Count: 5, Full: 0, Empty: 0
+   605.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x263, Push Count: 4, Full: 0, Empty: 0
+   625.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x251, Push Count: 3, Full: 0, Empty: 0
+   645.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xb4, Push Count: 2, Full: 0, Empty: 0
+   665.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x1a0, Push Count: 1, Full: 0, Empty: 0
+   685.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x14b, Push Count: 0, Full: 0, Empty: 1
+   685.00ns INFO     cocotb.FILO_RTL                    Starting Feedthrough Test...
+   685.00ns INFO     cocotb.FILO_RTL                    Feedthrough pushed value: 0x100
+   695.00ns INFO     cocotb.FILO_RTL                    Feedthrough popped value: 0x100
+   695.00ns INFO     cocotb.FILO_RTL                    Feedthrough Test Passed.
+   695.00ns INFO     cocotb.FILO_RTL                    All tests passed.
+   695.00ns INFO     cocotb.regression                  test_filo.test_filo passed
+   695.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_filo.test_filo            PASS         695.00           0.01     110741.23  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                695.00           0.01      96633.34  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_filo[16-10].result.xml
+PASSED
+../../src/test_runner.py::test_filo[16-12] [DEBUG] Running simulation with DATA_WIDTH=12, FILO_DEPTH=16
+[DEBUG] Parameters: {'DATA_WIDTH': 12, 'FILO_DEPTH': 16}
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s FILO_RTL -g2012 -PFILO_RTL.DATA_WIDTH=12 -PFILO_RTL.FILO_DEPTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/FILO_RTL.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917882
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_filo.test_filo (1/1)
+                                                            Test FILO_RTL behavior with manual full and empty conditions using push count 
+     0.00ns INFO     cocotb.FILO_RTL                    Test started with parameters: DATA_WIDTH=12, FILO_DEPTH=16
+     0.00ns INFO     cocotb.FILO_RTL                    Starting Initial Reset...
+    25.00ns INFO     cocotb.FILO_RTL                    Reset applied. Full: 0, Empty: 1
+    35.00ns INFO     cocotb.FILO_RTL                    Starting Push Test with random data width 12 and FILO depth 16...
+    65.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x310, Push Count: 1, Full: 0, Empty: 0
+    85.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xc8c, Push Count: 2, Full: 0, Empty: 0
+   105.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xef3, Push Count: 3, Full: 0, Empty: 0
+   125.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x500, Push Count: 4, Full: 0, Empty: 0
+   145.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x434, Push Count: 5, Full: 0, Empty: 0
+   165.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xbda, Push Count: 6, Full: 0, Empty: 0
+   185.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x24d, Push Count: 7, Full: 0, Empty: 0
+   205.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xd9c, Push Count: 8, Full: 0, Empty: 0
+   225.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xe06, Push Count: 9, Full: 0, Empty: 0
+   245.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x42f, Push Count: 10, Full: 0, Empty: 0
+   265.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xd03, Push Count: 11, Full: 0, Empty: 0
+   285.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x34a, Push Count: 12, Full: 0, Empty: 0
+   305.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x31b, Push Count: 13, Full: 0, Empty: 0
+   325.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xc08, Push Count: 14, Full: 0, Empty: 0
+   345.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0xb1d, Push Count: 15, Full: 0, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Pushed value: 0x75b, Push Count: 16, Full: 1, Empty: 0
+   365.00ns INFO     cocotb.FILO_RTL                    Starting Pop Test...
+   385.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x75b, Push Count: 15, Full: 0, Empty: 0
+   405.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xb1d, Push Count: 14, Full: 0, Empty: 0
+   425.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xc08, Push Count: 13, Full: 0, Empty: 0
+   445.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x31b, Push Count: 12, Full: 0, Empty: 0
+   465.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x34a, Push Count: 11, Full: 0, Empty: 0
+   485.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xd03, Push Count: 10, Full: 0, Empty: 0
+   505.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x42f, Push Count: 9, Full: 0, Empty: 0
+   525.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xe06, Push Count: 8, Full: 0, Empty: 0
+   545.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xd9c, Push Count: 7, Full: 0, Empty: 0
+   565.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x24d, Push Count: 6, Full: 0, Empty: 0
+   585.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xbda, Push Count: 5, Full: 0, Empty: 0
+   605.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x434, Push Count: 4, Full: 0, Empty: 0
+   625.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x500, Push Count: 3, Full: 0, Empty: 0
+   645.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xef3, Push Count: 2, Full: 0, Empty: 0
+   665.00ns INFO     cocotb.FILO_RTL                    Popped value: 0xc8c, Push Count: 1, Full: 0, Empty: 0
+   685.00ns INFO     cocotb.FILO_RTL                    Popped value: 0x310, Push Count: 0, Full: 0, Empty: 1
+   685.00ns INFO     cocotb.FILO_RTL                    Starting Feedthrough Test...
+   685.00ns INFO     cocotb.FILO_RTL                    Feedthrough pushed value: 0xdf9
+   695.00ns INFO     cocotb.FILO_RTL                    Feedthrough popped value: 0xdf9
+   695.00ns INFO     cocotb.FILO_RTL                    Feedthrough Test Passed.
+   695.00ns INFO     cocotb.FILO_RTL                    All tests passed.
+   695.00ns INFO     cocotb.regression                  test_filo.test_filo passed
+   695.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_filo.test_filo            PASS         695.00           0.00     145243.71  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                695.00           0.01     122429.29  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_filo[16-12].result.xml
+PASSED
+
+============================== 5 passed in 1.34s ===============================
+Cleaning up Docker resources...

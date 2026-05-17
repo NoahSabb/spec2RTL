@@ -1,0 +1,141 @@
+Running harness with project name: cvdp_copilot_factorial_1_1778917877
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_factorial      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917878
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_factorial.test_factorial (1/1)
+Test 0 Failed: result = 0 do not matches reference 87178291200
+Test 1 Failed: result = 87178291200 do not matches reference 120
+Test 2 Failed: result = 120 do not matches reference 39916800
+Test 3 Failed: result = 39916800 do not matches reference 1
+Test 4 Failed: result = 1 do not matches reference 6
+Test 5 Failed: result = 6 do not matches reference 1
+Test 6 Failed: result = 1 do not matches reference 87178291200
+Test 7 Failed: result = 87178291200 do not matches reference 479001600
+Test 8 Failed: result = 479001600 do not matches reference 6227020800
+Test 9 Passed: result = 6227020800 matches reference 6227020800
+Test 10 Failed: result = 6227020800 do not matches reference 120
+Test 11 Failed: result = 120 do not matches reference 6
+Test 12 Failed: result = 6 do not matches reference 1307674368000
+Test 13 Failed: result = 1307674368000 do not matches reference 2
+Test 14 Failed: result = 2 do not matches reference 87178291200
+Test 15 Failed: result = 87178291200 do not matches reference 1
+Test 16 Failed: result = 1 do not matches reference 362880
+Test 17 Failed: result = 362880 do not matches reference 39916800
+Test 18 Failed: result = 39916800 do not matches reference 1307674368000
+Test 19 Failed: result = 1307674368000 do not matches reference 2
+Test 20 Passed: result = 2 matches reference 2
+Test 21 Failed: result = 2 do not matches reference 6227020800
+Test 22 Failed: result = 6227020800 do not matches reference 362880
+Test 23 Failed: result = 362880 do not matches reference 3628800
+Test 24 Passed: result = 3628800 matches reference 3628800
+Test 25 Failed: result = 3628800 do not matches reference 24
+Test 26 Failed: result = 24 do not matches reference 1
+Test 27 Failed: result = 1 do not matches reference 6227020800
+Test 28 Failed: result = 6227020800 do not matches reference 120
+Test 29 Failed: result = 120 do not matches reference 24
+Test 30 Failed: result = 24 do not matches reference 87178291200
+Test 31 Failed: result = 87178291200 do not matches reference 39916800
+Test 32 Failed: result = 39916800 do not matches reference 5040
+Test 33 Failed: result = 5040 do not matches reference 6
+Test 34 Failed: result = 6 do not matches reference 479001600
+Test 35 Failed: result = 479001600 do not matches reference 1307674368000
+Test 36 Failed: result = 1307674368000 do not matches reference 40320
+Test 37 Failed: result = 40320 do not matches reference 39916800
+Test 38 Failed: result = 39916800 do not matches reference 40320
+Test 39 Failed: result = 40320 do not matches reference 1
+Test 40 Failed: result = 1 do not matches reference 87178291200
+Test 41 Failed: result = 87178291200 do not matches reference 3628800
+Test 42 Failed: result = 3628800 do not matches reference 87178291200
+Test 43 Failed: result = 87178291200 do not matches reference 6
+Test 44 Failed: result = 6 do not matches reference 1
+Test 45 Failed: result = 1 do not matches reference 24
+Test 46 Failed: result = 24 do not matches reference 3628800
+Test 47 Passed: result = 3628800 matches reference 3628800
+Test 48 Failed: result = 3628800 do not matches reference 6227020800
+Test 49 Failed: result = 6227020800 do not matches reference 720
+Test 50 Failed: result = 720 do not matches reference 3628800
+Test 51 Failed: result = 3628800 do not matches reference 362880
+Test 52 Failed: result = 362880 do not matches reference 6227020800
+Test 53 Failed: result = 6227020800 do not matches reference 720
+Test 54 Failed: result = 720 do not matches reference 479001600
+Test 55 Failed: result = 479001600 do not matches reference 6227020800
+Test 56 Failed: result = 6227020800 do not matches reference 3628800
+Test 57 Failed: result = 3628800 do not matches reference 1307674368000
+Test 58 Failed: result = 1307674368000 do not matches reference 362880
+Test 59 Failed: result = 362880 do not matches reference 24
+Test 60 Failed: result = 24 do not matches reference 1
+Test 61 Failed: result = 1 do not matches reference 2
+Test 62 Passed: result = 2 matches reference 2
+Test 63 Failed: result = 2 do not matches reference 1
+Test 64 Failed: result = 1 do not matches reference 6
+Test 65 Failed: result = 6 do not matches reference 1307674368000
+Test 66 Failed: result = 1307674368000 do not matches reference 120
+Test 67 Failed: result = 120 do not matches reference 1
+Test 68 Failed: result = 1 do not matches reference 362880
+Test 69 Failed: result = 362880 do not matches reference 1307674368000
+Test 70 Failed: result = 1307674368000 do not matches reference 1
+Test 71 Failed: result = 1 do not matches reference 2
+Test 72 Failed: result = 2 do not matches reference 1
+Test 73 Failed: result = 1 do not matches reference 720
+Test 74 Failed: result = 720 do not matches reference 1
+Test 75 Failed: result = 1 do not matches reference 120
+Test 76 Failed: result = 120 do not matches reference 1307674368000
+Test 77 Failed: result = 1307674368000 do not matches reference 39916800
+Test 78 Failed: result = 39916800 do not matches reference 1
+Test 79 Failed: result = 1 do not matches reference 39916800
+Test 80 Failed: result = 39916800 do not matches reference 5040
+Test 81 Failed: result = 5040 do not matches reference 6
+Test 82 Failed: result = 6 do not matches reference 5040
+Test 83 Failed: result = 5040 do not matches reference 120
+Test 84 Failed: result = 120 do not matches reference 362880
+Test 85 Failed: result = 362880 do not matches reference 3628800
+Test 86 Failed: result = 3628800 do not matches reference 24
+Test 87 Failed: result = 24 do not matches reference 40320
+Test 88 Failed: result = 40320 do not matches reference 720
+Test 89 Failed: result = 720 do not matches reference 479001600
+Test 90 Failed: result = 479001600 do not matches reference 362880
+Test 91 Failed: result = 362880 do not matches reference 6227020800
+Test 92 Failed: result = 6227020800 do not matches reference 1
+Test 93 Passed: result = 1 matches reference 1
+Test 94 Passed: result = 1 matches reference 1
+Test 95 Failed: result = 1 do not matches reference 3628800
+Test 96 Failed: result = 3628800 do not matches reference 362880
+Test 97 Failed: result = 362880 do not matches reference 24
+Test 98 Failed: result = 24 do not matches reference 2
+Test 99 Failed: result = 2 do not matches reference 5040
+Matched: 7 , Mismatched 93 - TEST FAILED.
+ 10320.00ns INFO     cocotb.regression                  test_factorial.test_factorial passed
+ 10320.00ns INFO     cocotb.regression                  ***************************************************************************************
+                                                        ** TEST                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************
+                                                        ** test_factorial.test_factorial   PASS       10320.00           0.03     295121.79  **
+                                                        ***************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0               10320.00           0.04     284979.28  **
+                                                        ***************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../src/test_runner.py:12
+  /src/test_runner.py:12: PytestUnknownMarkWarning: Unknown pytest.mark.tb - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.tb
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-ku6p8ad_'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-j43hmeq4'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 3 warnings in 0.34s =========================
+Cleaning up Docker resources...

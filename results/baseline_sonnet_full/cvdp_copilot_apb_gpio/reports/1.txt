@@ -1,0 +1,651 @@
+Running harness with project name: cvdp_copilot_apb_gpio_1_1778917852
+#1 [internal] load local bake definitions
+#1 reading from stdin 754B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:e31482889caa1371aa675708b699e6c20b6bb1dc49ff3c088f4d899d7c12950e done
+#6 exporting config sha256:178fdf73dee8daf0d609368c6fdcd3ec14e7bbfab49769ab756043a3546febc7 done
+#6 exporting attestation manifest sha256:22827b57391bd069a1e62d3af29a598046375f5f8070feb73633cc3b89287df3 done
+#6 exporting manifest list sha256:fe38ef29214076283cb56a41b8082b0a0c04f68e1c2f59f9449419980bc3a7f3 done
+#6 naming to docker.io/library/cvdp_copilot_apb_gpio_1_1778917852-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_apb_gpio_1_1778917852-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 3 items
+
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] FAILED           [ 33%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] FAILED          [ 66%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] FAILED          [100%]
+
+=================================== FAILURES ===================================
+________________________ test_cvdp_copilot_apb_gpio[8] _________________________
+
+gpio_width = 8
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 8
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917853
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns INFO     cocotb.regression                  test_gpio_harness.test1_write_read_data_output passed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2 completed successfully
+   300.00ns INFO     cocotb.regression                  test_gpio_harness.test2_write_read_output_enable passed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3 completed successfully
+   520.00ns INFO     cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization passed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x55, Got: 0xAA
+   860.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 4 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x55, Got: 0xAA
+   860.00ns WARNING  ..igure_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x55, Got: 0xAA
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 308, in test4_configure_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x55, Got: 0xAA
+                                                        assert False
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+  1260.00ns ERROR    root                               FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 5 completed with failures:
+                                                        FAIL: Level-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+                                                        FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 385, in test5_clear_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0xFF
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0xFF
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0xFF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0xFF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0xFF
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x0F, Got: 0x00
+  2260.01ns ERROR    root                               FAIL: Combined Interrupt Signal should be high. Got: 0
+  2480.01ns ERROR    root                               FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0F, Got: 0x00
+  2480.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 7 completed with failures:
+                                                        FAIL: Interrupts not masked correctly. Expected: 0x0F, Got: 0x00
+                                                        FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                        FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0F, Got: 0x00
+  2480.01ns WARNING  ..interrupts.test7_mask_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x0F, Got: 0x00
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0F, Got: 0x00
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 574, in test7_mask_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x0F, Got: 0x00
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0F, Got: 0x00
+                                                        assert False
+  2480.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2480.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8 completed successfully
+  2600.01ns INFO     cocotb.regression                  test_gpio_harness.test8_invalid_address_access passed
+  2600.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  3040.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9 completed successfully
+  3040.01ns INFO     cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts passed
+  3040.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  3040.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       PASS: All registers reset correctly
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10 completed successfully
+  3480.01ns INFO     cocotb.regression                  test_gpio_harness.test10_reset_conditions passed
+  3480.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 PASS         140.00           0.00     228305.82  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               PASS         160.00           0.00     314621.96  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             PASS         220.00           0.00     410474.59  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     338089.94  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     372744.19  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     393831.36  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         680.00           0.00     409317.84  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 PASS         120.00           0.00     394758.02  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       PASS         440.00           0.00     425228.98  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      PASS         440.00           0.00     460108.14  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=6 FAIL=4 SKIP=0                                              3480.01           0.02     194362.24  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 4 of 10 tests.
+________________________ test_cvdp_copilot_apb_gpio[11] ________________________
+
+gpio_width = 11
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 11
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917854
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns INFO     cocotb.regression                  test_gpio_harness.test1_write_read_data_output passed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2 completed successfully
+   300.00ns INFO     cocotb.regression                  test_gpio_harness.test2_write_read_output_enable passed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3 completed successfully
+   520.00ns INFO     cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization passed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x055, Got: 0x7AA
+   860.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 4 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x055, Got: 0x7AA
+   860.00ns WARNING  ..igure_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x055, Got: 0x7AA
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 308, in test4_configure_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x055, Got: 0x7AA
+                                                        assert False
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+  1260.00ns ERROR    root                               FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 5 completed with failures:
+                                                        FAIL: Level-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+                                                        FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 385, in test5_clear_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x7FF
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x7FF
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x7FF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x7FF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x7FF
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x00F, Got: 0x000
+  2260.01ns ERROR    root                               FAIL: Combined Interrupt Signal should be high. Got: 0
+  2480.01ns ERROR    root                               FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x00F, Got: 0x000
+  2480.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 7 completed with failures:
+                                                        FAIL: Interrupts not masked correctly. Expected: 0x00F, Got: 0x000
+                                                        FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                        FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x00F, Got: 0x000
+  2480.01ns WARNING  ..interrupts.test7_mask_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x00F, Got: 0x000
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x00F, Got: 0x000
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 574, in test7_mask_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x00F, Got: 0x000
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x00F, Got: 0x000
+                                                        assert False
+  2480.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2480.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8 completed successfully
+  2600.01ns INFO     cocotb.regression                  test_gpio_harness.test8_invalid_address_access passed
+  2600.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  3040.01ns ERROR    root                               FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x7FF
+  3040.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 9 completed with failures:
+                                                        FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x7FF
+  3040.01ns WARNING  ..multiple_simultaneous_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x7FF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 691, in test9_multiple_simultaneous_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x7FF
+                                                        assert False
+  3040.01ns WARNING  cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts failed
+  3040.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  3040.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       PASS: All registers reset correctly
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10 completed successfully
+  3480.01ns INFO     cocotb.regression                  test_gpio_harness.test10_reset_conditions passed
+  3480.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 PASS         140.00           0.00     223186.07  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               PASS         160.00           0.00     338079.92  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             PASS         220.00           0.00     397735.72  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     325436.64  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     304376.20  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     357921.01  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         680.00           0.00     368920.80  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 PASS         120.00           0.00     357469.09  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       FAIL         440.00           0.00     359115.35  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      PASS         440.00           0.00     419812.05  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=5 FAIL=5 SKIP=0                                              3480.01           0.02     159053.88  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 5 of 10 tests.
+________________________ test_cvdp_copilot_apb_gpio[30] ________________________
+
+gpio_width = 30
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 30
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917854
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns INFO     cocotb.regression                  test_gpio_harness.test1_write_read_data_output passed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2 completed successfully
+   300.00ns INFO     cocotb.regression                  test_gpio_harness.test2_write_read_output_enable passed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3 completed successfully
+   520.00ns INFO     cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization passed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x3FFFFFAA
+   860.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 4 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x3FFFFFAA
+   860.00ns WARNING  ..igure_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x3FFFFFAA
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 308, in test4_configure_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x3FFFFFAA
+                                                        assert False
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+  1260.00ns ERROR    root                               FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 5 completed with failures:
+                                                        FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+                                                        FAIL: Combined Interrupt Signal should be low. Got: 1
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 385, in test5_clear_level_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+                                                          FAIL: Combined Interrupt Signal should be low. Got: 1
+                                                        assert False
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x3FFFFFFF
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x3FFFFFFF
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x3FFFFFFF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x3FFFFFFF
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x00000000
+  2260.01ns ERROR    root                               FAIL: Combined Interrupt Signal should be high. Got: 0
+  2480.01ns ERROR    root                               FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0000000F, Got: 0x00000000
+  2480.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 7 completed with failures:
+                                                        FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x00000000
+                                                        FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                        FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0000000F, Got: 0x00000000
+  2480.01ns WARNING  ..interrupts.test7_mask_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x00000000
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0000000F, Got: 0x00000000
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 574, in test7_mask_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x00000000
+                                                          FAIL: Combined Interrupt Signal should be high. Got: 0
+                                                          FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0000000F, Got: 0x00000000
+                                                        assert False
+  2480.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2480.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8 completed successfully
+  2600.01ns INFO     cocotb.regression                  test_gpio_harness.test8_invalid_address_access passed
+  2600.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2600.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  3040.01ns ERROR    root                               FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x3FFFFFFF
+  3040.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 9 completed with failures:
+                                                        FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x3FFFFFFF
+  3040.01ns WARNING  ..multiple_simultaneous_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x3FFFFFFF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 691, in test9_multiple_simultaneous_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x3FFFFFFF
+                                                        assert False
+  3040.01ns WARNING  cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts failed
+  3040.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  3040.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       PASS: All registers reset correctly
+  3480.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10 completed successfully
+  3480.01ns INFO     cocotb.regression                  test_gpio_harness.test10_reset_conditions passed
+  3480.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 PASS         140.00           0.00      95449.05  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               PASS         160.00           0.00     171458.52  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             PASS         220.00           0.00     208389.09  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     182477.72  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     251193.53  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     260037.22  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         680.00           0.00     181965.47  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 PASS         120.00           0.00     265742.60  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       FAIL         440.00           0.00     270322.80  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      PASS         440.00           0.00     271875.92  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=5 FAIL=5 SKIP=0                                              3480.01           0.03     133603.80  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 5 of 10 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] - SystemExit: 1
+============================== 3 failed in 1.10s ===============================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_apb_gpio_1_1778917852-direct:latest
+Deleted: sha256:fe38ef29214076283cb56a41b8082b0a0c04f68e1c2f59f9449419980bc3a7f3

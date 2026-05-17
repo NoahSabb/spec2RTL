@@ -1,0 +1,4 @@
+/code/rtl/load_store_unit.sv:38: syntax error
+/code/rtl/load_store_unit.sv:40: error: Invalid module item.
+/code/rtl/load_store_unit.sv:59: syntax error
+I give up.

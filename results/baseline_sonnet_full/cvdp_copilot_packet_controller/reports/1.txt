@@ -1,0 +1,226 @@
+Running harness with project name: cvdp_copilot_packet_controller_1_1778917894
+#1 [internal] load local bake definitions
+#1 reading from stdin 790B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:372ef6cbc38ea0a6d28c49745719bedfa0eceb2b17d382d801ae75ec10e63737 done
+#6 exporting config sha256:36ced2eafccb14d17370666c2a7d8ebab859ed9ff096217b853d491ef6996be5 done
+#6 exporting attestation manifest sha256:8bd111922ba1b9a6c4a6f6e8f89757c939b86b52c86144f488755fcba2691091 done
+#6 exporting manifest list sha256:ff406d03bdf8ddf2e5e755f47160ae4ceb6f99fbad04ac3b2141f90d0dd95c7b done
+#6 naming to docker.io/library/cvdp_copilot_packet_controller_1_1778917894-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_packet_controller_1_1778917894-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner FAILED                             [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    @pytest.mark.tb
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:30: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917896
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_packet_controller.test_add (1/10)
+                                                            Test #1: ADD => 16 + 32 = 48 => 0x0030
+Test #1: ADD => 16 + 32 = 48
+ERROR: Timed out waiting for tx_start_o on byte 4
+   960.00ns WARNING  cocotb.Test test_add.test_add      Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 162, in test_add
+                                                            await check_5byte_response(dut, 0x0030)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+   960.00ns WARNING  cocotb.regression                  test_packet_controller.test_add failed
+   960.00ns INFO     cocotb.regression                  running test_packet_controller.test_sub (2/10)
+                                                            Test #2: SUB => 100 - 75 = 25 => 0x0019
+Test #2: SUB => 100 - 75 = 25
+ERROR: Timed out waiting for tx_start_o on byte 4
+  1920.00ns WARNING  cocotb.Test test_sub.test_sub      Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 172, in test_sub
+                                                            await check_5byte_response(dut, 0x0019)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  1920.00ns WARNING  cocotb.regression                  test_packet_controller.test_sub failed
+  1920.00ns INFO     cocotb.regression                  running test_packet_controller.test_unknown_opcode (3/10)
+                                                            Test #3: unknown opcode => 0 result.
+Test #3: unknown opcode => result=0
+ERROR: Timed out waiting for tx_start_o on byte 4
+  2880.00ns WARNING  ..known_opcode.test_unknown_opcode Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 182, in test_unknown_opcode
+                                                            await check_5byte_response(dut, 0x0000)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  2880.00ns WARNING  cocotb.regression                  test_packet_controller.test_unknown_opcode failed
+  2880.00ns INFO     cocotb.regression                  running test_packet_controller.test_invalid_checksum (4/10)
+                                                            Test #4: invalid checksum => no response.
+Test #4: invalid checksum => no response expected
+Test #4 passed.
+
+  3380.00ns INFO     cocotb.regression                  test_packet_controller.test_invalid_checksum passed
+  3380.00ns INFO     cocotb.regression                  running test_packet_controller.test_add_zero (5/10)
+                                                            Test #5: ADD => 0 + 0 => 0 result.
+Test #5: ADD => 0 + 0 = 0
+ERROR: Timed out waiting for tx_start_o on byte 4
+  4340.00ns WARNING  ..Test test_add_zero.test_add_zero Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 213, in test_add_zero
+                                                            await check_5byte_response(dut, 0x0000)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  4340.00ns WARNING  cocotb.regression                  test_packet_controller.test_add_zero failed
+  4340.00ns INFO     cocotb.regression                  running test_packet_controller.test_sub_negative (6/10)
+                                                            Test #6: SUB => 50 - 100 => -50 => 0xFFCE (2's complement).
+Test #6: SUB => 50 - 100 => 0xFFCE (assuming wrap).
+ERROR: Timed out waiting for tx_start_o on byte 4
+  5300.01ns WARNING  ..t_sub_negative.test_sub_negative Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 223, in test_sub_negative
+                                                            await check_5byte_response(dut, 0xFFCE)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  5300.01ns WARNING  cocotb.regression                  test_packet_controller.test_sub_negative failed
+  5300.01ns INFO     cocotb.regression                  running test_packet_controller.test_add_large (7/10)
+                                                            Test #7: ADD => 0x8000 + 0x7FFF => 0xFFFF.
+Test #7: ADD => 0x8000 + 0x7FFF => 0xFFFF
+ERROR: Timed out waiting for tx_start_o on byte 4
+  6260.01ns WARNING  ..st test_add_large.test_add_large Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 233, in test_add_large
+                                                            await check_5byte_response(dut, 0xFFFF)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  6260.01ns WARNING  cocotb.regression                  test_packet_controller.test_add_large failed
+  6260.01ns INFO     cocotb.regression                  running test_packet_controller.test_back_to_back (8/10)
+                                                            Test #8: Two back-to-back packets => minimal idle time.
+Test #8: Two back-to-back => ADD(5+7=12), SUB(20-15=5)
+ERROR: Timed out waiting for tx_start_o on byte 4
+  7220.01ns WARNING  ..t_back_to_back.test_back_to_back Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 245, in test_back_to_back
+                                                            await check_5byte_response(dut, 0x000C)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  7220.01ns WARNING  cocotb.regression                  test_packet_controller.test_back_to_back failed
+  7220.01ns INFO     cocotb.regression                  running test_packet_controller.test_random_pkts (9/10)
+                                                            Test #9: Random valid packets => 3 times.
+Test #9: Random Packets => 3 times
+Random Packet #0: opcode=0x0, num1=42414, num2=39948
+ERROR: Timed out waiting for tx_start_o on byte 4
+  8180.01ns WARNING  ..est_random_pkts.test_random_pkts Tx_start_o not asserted for byte 4
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_packet_controller.py", line 258, in test_random_pkts
+                                                            await random_valid_packets(dut, 3)
+                                                          File "/src/test_packet_controller.py", line 148, in random_valid_packets
+                                                            await check_5byte_response(dut, expected)
+                                                          File "/src/test_packet_controller.py", line 88, in check_5byte_response
+                                                            assert False, f"Tx_start_o not asserted for byte {i2}"
+                                                        AssertionError: Tx_start_o not asserted for byte 4
+                                                        assert False
+  8180.01ns WARNING  cocotb.regression                  test_packet_controller.test_random_pkts failed
+  8180.01ns INFO     cocotb.regression                  running test_packet_controller.test_invalid_header (10/10)
+                                                            Test #10: Additional invalid header => no response.
+Test #10: Invalid header => no response
+Test #10 passed.
+
+  8630.01ns INFO     cocotb.regression                  test_packet_controller.test_invalid_header passed
+  8630.01ns INFO     cocotb.regression                  ******************************************************************************************************
+                                                        ** TEST                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************
+                                                        ** test_packet_controller.test_add                FAIL         960.00           0.00     290409.80  **
+                                                        ** test_packet_controller.test_sub                FAIL         960.00           0.00     244076.61  **
+                                                        ** test_packet_controller.test_unknown_opcode     FAIL         960.00           0.00     227990.03  **
+                                                        ** test_packet_controller.test_invalid_checksum   PASS         500.00           0.00     365166.64  **
+                                                        ** test_packet_controller.test_add_zero           FAIL         960.00           0.00     360703.38  **
+                                                        ** test_packet_controller.test_sub_negative       FAIL         960.00           0.00     277883.49  **
+                                                        ** test_packet_controller.test_add_large          FAIL         960.00           0.00     377794.32  **
+                                                        ** test_packet_controller.test_back_to_back       FAIL         960.00           0.00     371759.93  **
+                                                        ** test_packet_controller.test_random_pkts        FAIL         960.00           0.00     331483.65  **
+                                                        ** test_packet_controller.test_invalid_header     PASS         450.00           0.00     370376.14  **
+                                                        ******************************************************************************************************
+                                                        ** TESTS=10 PASS=2 FAIL=8 SKIP=0                              8630.01           0.03     258783.91  **
+                                                        ******************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s packet_controller -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/packet_controller.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 8 of 10 tests.
+=============================== warnings summary ===============================
+../../src/test_runner.py:17
+  /src/test_runner.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.tb - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.tb
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+========================= 1 failed, 1 warning in 0.33s =========================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_packet_controller_1_1778917894-direct:latest
+Deleted: sha256:ff406d03bdf8ddf2e5e755f47160ae4ceb6f99fbad04ac3b2141f90d0dd95c7b

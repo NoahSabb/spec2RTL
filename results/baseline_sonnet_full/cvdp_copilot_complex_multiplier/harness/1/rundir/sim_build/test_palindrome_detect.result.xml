@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917862" />
+    <testcase name="test_complex_multiplier" classname="test_complex_multiplier" file="/src/test_complex_multiplier.py" lineno="19" time="0.08481597900390625" sim_time_ns="20030.0" ratio_time="236158.33048484303" />
+  </testsuite>
+</testsuites>

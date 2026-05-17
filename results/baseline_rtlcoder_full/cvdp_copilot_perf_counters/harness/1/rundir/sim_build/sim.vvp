@@ -1,0 +1,70 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaac0a7d4e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaac0a7d670 .scope module, "cvdp_copilot_perf_counters" "cvdp_copilot_perf_counters" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "sw_req_i";
+    .port_info 3 /INPUT 1 "cpu_trig_i";
+    .port_info 4 /OUTPUT 12 "p_count_o";
+P_0xaaaac0a7d800 .param/l "CNT_W" 0 3 2, +C4<00000000000000000000000000001100>;
+o0xffffb0c8f168 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaac0ac9e80 .functor NOT 1, o0xffffb0c8f168, C4<0>, C4<0>, C4<0>;
+o0xffffb0c8f1f8 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaac0ac9f40 .functor NOT 1, o0xffffb0c8f1f8, C4<0>, C4<0>, C4<0>;
+L_0xaaaac0aca010 .functor AND 1, L_0xaaaac0ac9e80, L_0xaaaac0ac9f40, C4<1>, C4<1>;
+o0xffffb0c8f1c8 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaac0aca100 .functor NOT 1, o0xffffb0c8f1c8, C4<0>, C4<0>, C4<0>;
+L_0xaaaac0aca1a0 .functor AND 1, L_0xaaaac0aca010, L_0xaaaac0aca100, C4<1>, C4<1>;
+v0xaaaac0aa61e0_0 .net *"_ivl_0", 0 0, L_0xaaaac0ac9e80;  1 drivers
+L_0xffffb0c46018 .functor BUFT 1, C4<000000000000>, C4<0>, C4<0>, C4<0>;
+v0xaaaac0ac9480_0 .net/2u *"_ivl_10", 11 0, L_0xffffb0c46018;  1 drivers
+v0xaaaac0ac9560_0 .net *"_ivl_2", 0 0, L_0xaaaac0ac9f40;  1 drivers
+v0xaaaac0ac9650_0 .net *"_ivl_4", 0 0, L_0xaaaac0aca010;  1 drivers
+v0xaaaac0ac9730_0 .net *"_ivl_6", 0 0, L_0xaaaac0aca100;  1 drivers
+o0xffffb0c8f108 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaac0ac9860_0 .net "clk", 0 0, o0xffffb0c8f108;  0 drivers
+v0xaaaac0ac9920_0 .var "count_q", 11 0;
+v0xaaaac0ac9a00_0 .net "cpu_trig_i", 0 0, o0xffffb0c8f168;  0 drivers
+v0xaaaac0ac9ac0_0 .net "p_count_o", 11 0, L_0xaaaac0ada2f0;  1 drivers
+v0xaaaac0ac9ba0_0 .net "reset", 0 0, o0xffffb0c8f1c8;  0 drivers
+v0xaaaac0ac9c60_0 .net "sw_req_i", 0 0, o0xffffb0c8f1f8;  0 drivers
+v0xaaaac0ac9d20_0 .net "trig_int", 0 0, L_0xaaaac0aca1a0;  1 drivers
+E_0xaaaac0a7ddd0 .event posedge, v0xaaaac0ac9ba0_0, v0xaaaac0ac9860_0;
+L_0xaaaac0ada2f0 .functor MUXZ 12, L_0xffffb0c46018, v0xaaaac0ac9920_0, o0xffffb0c8f1f8, C4<>;
+    .scope S_0xaaaac0a7d670;
+T_0 ;
+    %wait E_0xaaaac0a7ddd0;
+    %load/vec4 v0xaaaac0ac9ba0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 12;
+    %assign/vec4 v0xaaaac0ac9920_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaac0ac9d20_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0xaaaac0ac9920_0;
+    %addi 1, 0, 12;
+    %assign/vec4 v0xaaaac0ac9920_0, 0;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/cvdp_copilot_perf_counters.sv";

@@ -1,0 +1,8 @@
+/code/rtl/16qam_demapper.sv:86: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+I_samples[word=(+g[31:0])*(32'sd3)][2:0]').
+/code/rtl/16qam_demapper.sv:87: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+I_samples[word=((+g[31:0])*(32'sd3))+(32'sd2)][2:0]').
+/code/rtl/16qam_demapper.sv:88: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+Q_samples[word=(+g[31:0])*(32'sd3)][2:0]').
+/code/rtl/16qam_demapper.sv:89: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+Q_samples[word=((+g[31:0])*(32'sd3))+(32'sd2)][2:0]').
+/code/rtl/16qam_demapper.sv:92: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+I_samples[word=((+g[31:0])*(32'sd3))+(32'sd1)][2:0]').
+/code/rtl/16qam_demapper.sv:93: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+Q_samples[word=((+g[31:0])*(32'sd3))+(32'sd1)][2:0]').
+/code/rtl/16qam_demapper.sv:96: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+diff_I[word=+g[31:0]][3:0]').
+/code/rtl/16qam_demapper.sv:97: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+diff_Q[word=+g[31:0]][3:0]').

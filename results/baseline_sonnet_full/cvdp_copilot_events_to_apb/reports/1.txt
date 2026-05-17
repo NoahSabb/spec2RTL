@@ -1,0 +1,136 @@
+Running harness with project name: cvdp_copilot_events_to_apb_1_1778917876
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_apb      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917877
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+   500.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_delay passed
+   500.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   681.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_without_delay passed
+   681.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   892.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout passed
+   892.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+  1063.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+  1063.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            PASS         500.00           0.00     232345.67  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         PASS         180.00           0.00     184275.01  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          PASS         210.00           0.00     304776.42  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         170.00           0.00     268460.72  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                              1063.00           0.01     169018.73  **
+                                                        *********************************************************************************************************************
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917877
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+   500.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_delay passed
+   500.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   681.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_without_delay passed
+   681.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   892.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout passed
+   892.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+  1063.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+  1063.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            PASS         500.00           0.00     197900.54  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         PASS         180.00           0.00     176437.19  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          PASS         210.00           0.00     257469.70  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         170.00           0.00     231428.65  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                              1063.00           0.01     148252.48  **
+                                                        *********************************************************************************************************************
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917878
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+   440.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_delay passed
+   440.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   621.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_without_delay passed
+   621.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   832.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout passed
+   832.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+  1003.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+  1003.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            PASS         440.00           0.00     211420.98  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         PASS         180.00           0.00     160632.92  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          PASS         210.00           0.00     220697.53  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         170.00           0.00     228609.07  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                              1003.00           0.01     135422.08  **
+                                                        *********************************************************************************************************************
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917878
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+   440.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_delay passed
+   440.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   621.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_without_delay passed
+   621.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   832.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout passed
+   832.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+  1003.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+  1003.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            PASS         440.00           0.00     166846.92  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         PASS         180.00           0.00     186459.55  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          PASS         210.00           0.00     295869.61  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         170.00           0.00      35771.42  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                              1003.00           0.01      89628.37  **
+                                                        *********************************************************************************************************************
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917878
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_delay (1/4)
+   440.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_delay passed
+   440.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_without_delay (2/4)
+   621.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_without_delay passed
+   621.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_with_timeout (3/4)
+   832.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_with_timeout passed
+   832.00ns INFO     cocotb.regression                  running test_apb_controller.test_apb_controller_priority_all_events (4/4)
+                                                            Test the priority handling of the APB controller for simultaneous events A, B, and C.
+  1003.00ns INFO     cocotb.regression                  test_apb_controller.test_apb_controller_priority_all_events passed
+  1003.00ns INFO     cocotb.regression                  *********************************************************************************************************************
+                                                        ** TEST                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************
+                                                        ** test_apb_controller.test_apb_controller_with_delay            PASS         440.00           0.00     226163.45  **
+                                                        ** test_apb_controller.test_apb_controller_without_delay         PASS         180.00           0.00     187804.66  **
+                                                        ** test_apb_controller.test_apb_controller_with_timeout          PASS         210.00           0.00      77494.62  **
+                                                        ** test_apb_controller.test_apb_controller_priority_all_events   PASS         170.00           0.00     103397.87  **
+                                                        *********************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                              1003.00           0.01     102111.38  **
+                                                        *********************************************************************************************************************
+PASSED
+
+============================== 1 passed in 1.51s ===============================
+Cleaning up Docker resources...

@@ -1,0 +1,55 @@
+Running harness with project name: cvdp_copilot_dbi_1_1778917872
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_dbi_encoder[0] 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dbi_enc -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/dbi_enc.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917873
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dbi_encoder.test_dbi_encoder (1/1)
+data_out after reset  = 0000000000000000000000000000000000000000
+   450.00ns WARNING  py.warnings                        /src/test_dbi_encoder.py:44: DeprecationWarning: `logic_array.integer` getter is deprecated. Use `logic_array.to_unsigned()` instead.
+                                                          xor_result0 = prev_dat0.integer ^ data_in0
+   450.00ns WARNING  py.warnings                        /src/test_dbi_encoder.py:45: DeprecationWarning: `logic_array.integer` getter is deprecated. Use `logic_array.to_unsigned()` instead.
+                                                          xor_result1 = prev_dat1.integer ^ data_in1
+count  = (20, 10)
+control outdata = (0, 1)
+   550.00ns WARNING  py.warnings                        /src/test_dbi_encoder.py:78: DeprecationWarning: `logic_array.binstr` getter is deprecated. Use `str(logic_array)` instead.
+                                                          pres_dat1 = dut.data_out.value[39:20].binstr
+   550.00ns WARNING  py.warnings                        /src/test_dbi_encoder.py:79: DeprecationWarning: `logic_array.binstr` getter is deprecated. Use `str(logic_array)` instead.
+                                                          pres_dat0 = dut.data_out.value[19:0].binstr
+dut  outdata = ('10101010101010101010', '00000000000000000000')
+expected  outdata = ('10101010101010101010', '00000000000000000000')
+[INFO] Test 'test_dbi_encoder' completed successfully.
+   550.00ns INFO     cocotb.regression                  test_dbi_encoder.test_dbi_encoder passed
+   550.00ns INFO     cocotb.regression                  *******************************************************************************************
+                                                        ** TEST                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************
+                                                        ** test_dbi_encoder.test_dbi_encoder   PASS         550.00           0.00     365879.02  **
+                                                        *******************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     550.00           0.00     237503.06  **
+                                                        *******************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_dbi_encoder[0].result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-iryxxwel'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-7tvd0926'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.29s =========================
+Cleaning up Docker resources...

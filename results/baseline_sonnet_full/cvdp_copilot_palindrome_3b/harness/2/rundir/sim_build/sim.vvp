@@ -1,0 +1,73 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaac54e44e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaac54e4670 .scope module, "palindrome_detect" "palindrome_detect" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "bit_stream";
+    .port_info 3 /OUTPUT 1 "palindrome_detected";
+P_0xaaaac54e4800 .param/l "N" 0 3 2, +C4<00000000000000000000000000000011>;
+L_0xaaaac550ae20 .functor BUFZ 1, v0xaaaac552f9e0_0, C4<0>, C4<0>, C4<0>;
+o0xffffb5ccf018 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaac550aef0_0 .net "bit_stream", 0 0, o0xffffb5ccf018;  0 drivers
+o0xffffb5ccf048 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaac552f850_0 .net "clk", 0 0, o0xffffb5ccf048;  0 drivers
+v0xaaaac552f910_0 .net "palindrome_detected", 0 0, L_0xaaaac550ae20;  1 drivers
+v0xaaaac552f9e0_0 .var "palindrome_reg", 0 0;
+o0xffffb5ccf0d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaac552faa0_0 .net "reset", 0 0, o0xffffb5ccf0d8;  0 drivers
+v0xaaaac552fbb0_0 .var "shift_reg", 2 0;
+E_0xaaaac551f250 .event posedge, v0xaaaac552f850_0;
+    .scope S_0xaaaac54e4670;
+T_0 ;
+    %wait E_0xaaaac551f250;
+    %load/vec4 v0xaaaac552faa0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0xaaaac552fbb0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaac552fbb0_0;
+    %parti/s 2, 0, 2;
+    %load/vec4 v0xaaaac550aef0_0;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0xaaaac552fbb0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0xaaaac54e4670;
+T_1 ;
+    %wait E_0xaaaac551f250;
+    %load/vec4 v0xaaaac552faa0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaac552f9e0_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0xaaaac552fbb0_0;
+    %parti/s 1, 1, 2;
+    %load/vec4 v0xaaaac550aef0_0;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %assign/vec4 v0xaaaac552f9e0_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/palindrome_detect.sv";

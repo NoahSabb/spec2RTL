@@ -1,0 +1,12 @@
+networks:
+  default:
+    external: true
+    name: cvdp-bridge-cid003_nonagentic-0272bf87
+services:
+  direct:
+    command: pytest -o cache_dir=/code/rundir/.cache /src/test_runner.py -v -s
+    env_file: ./src/.env
+    image: nvidia/cvdp-sim:v1.0.0
+    volumes:
+    - ./src/:/src/:ro
+    working_dir: /code/rundir

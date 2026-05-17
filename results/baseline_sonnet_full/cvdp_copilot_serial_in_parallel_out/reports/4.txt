@@ -1,0 +1,79 @@
+Running harness with project name: cvdp_copilot_serial_in_parallel_out_4_1778917905
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s serial_in_parallel_out_8bit -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/serial_in_parallel_out_8bit.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917906
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns WARNING  py.warnings                        /src/test_sipo.py:4: DeprecationWarning: Join has been moved to `cocotb.task`.
+                                                          from cocotb.triggers import FallingEdge, RisingEdge, ClockCycles, Timer, Join
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_sipo.test_sipo_1 (1/3)
+reg_data_1  0b1101111
+Bit  0   0
+Bit  1   1
+Bit  2   1
+Bit  3   0
+Bit  4   1
+Bit  5   1
+Bit  6   1
+Bit  7   1
+The parallel out data is  01101111
+    75.00ns INFO     cocotb.regression                  test_sipo.test_sipo_1 passed
+    75.00ns INFO     cocotb.regression                  running test_sipo.test_sipo_2 (2/3)
+reg_data_2  0b1100100
+Bit  0   0
+Bit  1   1
+Bit  2   1
+Bit  3   0
+Bit  4   0
+Bit  5   1
+Bit  6   0
+Bit  7   0
+The parallel out data is  01100100
+   151.00ns INFO     cocotb.regression                  test_sipo.test_sipo_2 passed
+   151.00ns INFO     cocotb.regression                  running test_sipo.test_sipo_3 (3/3)
+reg_data_3  0b11110111
+Bit  0   1
+Bit  1   1
+Bit  2   1
+Bit  3   1
+Bit  4   0
+Bit  5   1
+Bit  6   1
+Bit  7   1
+The parallel out data is  11110111
+   227.00ns INFO     cocotb.regression                  test_sipo.test_sipo_3 passed
+   227.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_sipo.test_sipo_1          PASS          75.00           0.00     151309.67  **
+                                                        ** test_sipo.test_sipo_2          PASS          75.00           0.00      52376.42  **
+                                                        ** test_sipo.test_sipo_3          PASS          75.00           0.00     240683.09  **
+                                                        **************************************************************************************
+                                                        ** TESTS=3 PASS=3 FAIL=0 SKIP=0                227.00           0.00      57651.04  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-ushmef3b'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-nao5y7p6'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.30s =========================
+Cleaning up Docker resources...

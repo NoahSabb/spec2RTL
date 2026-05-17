@@ -1,0 +1,9 @@
+/code/rtl/dbi_enc.sv:37: error: Could not find variable ``previous_dbi_cnsrtrl['sd1]'' in ``dbi_enc''
+/code/rtl/dbi_enc.sv:38: error: Unable to bind wire/reg/memory `previous_group1' in `dbi_enc'
+/code/rtl/dbi_enc.sv:38: error: Unable to elaborate condition expression.
+/code/rtl/dbi_enc.sv:45: error: Could not find variable ``previous_dbi_cnsrtrl['sd0]'' in ``dbi_enc''
+/code/rtl/dbi_enc.sv:46: error: Unable to bind wire/reg/memory `previous_group0' in `dbi_enc'
+/code/rtl/dbi_enc.sv:46: error: Unable to elaborate condition expression.
+/code/rtl/dbi_enc.sv:52: error: Could not find variable ``previous_dbi_cnsrtrl'' in ``dbi_enc''
+/code/rtl/dbi_enc.sv:64: error: Cannot perform procedural assignment to variable 'data_out' because it is also continuously assigned.
+8 error(s) during elaboration.

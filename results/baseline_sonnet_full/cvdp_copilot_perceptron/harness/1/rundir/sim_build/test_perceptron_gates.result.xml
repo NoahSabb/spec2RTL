@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917897" />
+    <testcase name="test_perceptron_gates" classname="test_perceptron_gates" file="/src/test_perceptron_gates.py" lineno="6" time="0.022660255432128906" sim_time_ns="6395.0" ratio_time="282212.1762552081" />
+  </testsuite>
+</testsuites>

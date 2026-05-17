@@ -1,0 +1,779 @@
+Running harness with project name: cvdp_copilot_vending_machine_1_1778917914
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 10 items
+
+../../src/test_runner.py::test_vending_machine1[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917915
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 3, expected price: 15
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 3
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 10, total so far: 13
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 14
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 15
+   190.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   190.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   190.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         190.00           0.00      90682.49  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             190.00           0.01      33975.01  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917916
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 1, expected price: 5
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 3
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 8
+   150.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   150.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   150.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         150.00           0.00      87151.35  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             150.00           0.01      28881.09  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[2]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917916
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 1, expected price: 5
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 3
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 8
+   150.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   150.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   150.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         150.00           0.00      94296.40  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             150.00           0.01      29973.59  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[3]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917916
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 1, expected price: 5
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 3
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 8
+   150.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   150.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   150.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         150.00           0.00      88887.48  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             150.00           0.01      28336.06  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917916
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 1, expected price: 5
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 3
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 8
+   150.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   150.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   150.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         150.00           0.00      94565.70  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             150.00           0.01      29946.48  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[5]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917917
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 4, expected price: 20
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 1
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 2
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 7
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 9
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 11
+   200.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 12
+   220.00ns INFO     cocotb.vending_machine             Inserted coin: 10, total so far: 22
+   230.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   230.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   230.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         230.00           0.00     106466.16  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             230.00           0.01      41066.36  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[6]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917917
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 4, expected price: 20
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 1
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 2
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 7
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 9
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 11
+   200.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 12
+   220.00ns INFO     cocotb.vending_machine             Inserted coin: 10, total so far: 22
+   230.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   230.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   230.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         230.00           0.00     107342.82  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             230.00           0.01      41673.07  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[7]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917917
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 4, expected price: 20
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 1
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 2
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 7
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 9
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 11
+   200.00ns INFO     cocotb.vending_machine             Inserted coin: 1, total so far: 12
+   220.00ns INFO     cocotb.vending_machine             Inserted coin: 10, total so far: 22
+   230.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   230.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   230.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         230.00           0.00     115076.93  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             230.00           0.01      42717.53  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917918
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 3, expected price: 15
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 7
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 12
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 14
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 19
+   190.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   190.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   190.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         190.00           0.00     105930.85  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             190.00           0.01      36683.75  **
+                                                        ***************************************************************************************************
+FAILED
+../../src/test_runner.py::test_vending_machine1[9]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917918
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_vending_machine.test_vending_machine (1/1)
+start of vending machine
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create get_item_price via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_valid_coin via any registered implementation
+    50.00ns INFO     cocotb.vending_machine             Randomly selecting item 3, expected price: 15
+   100.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 2
+   120.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 7
+   140.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 12
+   160.00ns INFO     cocotb.vending_machine             Inserted coin: 2, total so far: 14
+   180.00ns INFO     cocotb.vending_machine             Inserted coin: 5, total so far: 19
+   190.00ns WARNING  ..ing_machine.test_vending_machine Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_vending_machine.py", line 254, in test_vending_machine
+                                                            await random_purchase(dut)
+                                                          File "/src/test_vending_machine.py", line 71, in random_purchase
+                                                            await check_dispense(dut, item_id)
+                                                          File "/src/test_vending_machine.py", line 33, in check_dispense
+                                                            assert dut.dispense_item.value == 1, f"Expected item to be dispensed!"
+                                                        AssertionError: Expected item to be dispensed!
+                                                        assert Logic('0') == 1
+                                                         +  where Logic('0') = LogicObject(vending_machine.dispense_item).value
+                                                         +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item
+   190.00ns WARNING  cocotb.regression                  test_vending_machine.test_vending_machine failed
+   190.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_vending_machine.test_vending_machine   FAIL         190.00           0.00     108335.75  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             190.00           0.01      36562.57  **
+                                                        ***************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+___________________________ test_vending_machine1[0] ___________________________
+
+test = 0
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[1] ___________________________
+
+test = 1
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[2] ___________________________
+
+test = 2
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[3] ___________________________
+
+test = 3
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[4] ___________________________
+
+test = 4
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[5] ___________________________
+
+test = 5
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[6] ___________________________
+
+test = 6
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[7] ___________________________
+
+test = 7
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[8] ___________________________
+
+test = 8
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_vending_machine1[9] ___________________________
+
+test = 9
+
+    @pytest.mark.parametrize("test", range(10))
+    def test_vending_machine1(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s vending_machine -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/vending_machine.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_vending_machine1[0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[3] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[5] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[6] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[7] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_vending_machine1[9] - SystemExit: 1
+============================== 10 failed in 2.81s ==============================
+Cleaning up Docker resources...

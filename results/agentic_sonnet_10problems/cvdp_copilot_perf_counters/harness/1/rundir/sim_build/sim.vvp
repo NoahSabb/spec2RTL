@@ -1,0 +1,90 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaaf0c6c4e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaaf0c6c670 .scope module, "cvdp_copilot_perf_counters" "cvdp_copilot_perf_counters" 3 4;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "sw_req_i";
+    .port_info 3 /INPUT 1 "cpu_trig_i";
+    .port_info 4 /OUTPUT 32 "p_count_o";
+P_0xaaaaf0c6c800 .param/l "CNT_W" 0 3 5, +C4<00000000000000000000000000100000>;
+o0xffff83fdf018 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf0c94230_0 .net "clk", 0 0, o0xffff83fdf018;  0 drivers
+v0xaaaaf0cb95e0_0 .var "count_q", 31 0;
+o0xffff83fdf078 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf0cb96c0_0 .net "cpu_trig_i", 0 0, o0xffff83fdf078;  0 drivers
+v0xaaaaf0cb9790_0 .var "p_count_o", 31 0;
+o0xffff83fdf0d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf0cb9870_0 .net "reset", 0 0, o0xffff83fdf0d8;  0 drivers
+o0xffff83fdf108 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf0cb9980_0 .net "sw_req_i", 0 0, o0xffff83fdf108;  0 drivers
+E_0xaaaaf0ca5af0 .event anyedge, v0xaaaaf0cb9980_0, v0xaaaaf0cb95e0_0;
+E_0xaaaaf0ca5f50 .event posedge, v0xaaaaf0cb9870_0, v0xaaaaf0c94230_0;
+    .scope S_0xaaaaf0c6c670;
+T_0 ;
+    %wait E_0xaaaaf0ca5f50;
+    %load/vec4 v0xaaaaf0cb9870_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaaaf0cb95e0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaaf0cb9980_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0xaaaaf0cb96c0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %pushi/vec4 1, 0, 32;
+    %assign/vec4 v0xaaaaf0cb95e0_0, 0;
+    %jmp T_0.5;
+T_0.4 ;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaaaf0cb95e0_0, 0;
+T_0.5 ;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0xaaaaf0cb96c0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.6, 8;
+    %load/vec4 v0xaaaaf0cb95e0_0;
+    %addi 1, 0, 32;
+    %assign/vec4 v0xaaaaf0cb95e0_0, 0;
+T_0.6 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0xaaaaf0c6c670;
+T_1 ;
+Ewait_0 .event/or E_0xaaaaf0ca5af0, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v0xaaaaf0cb9980_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %load/vec4 v0xaaaaf0cb95e0_0;
+    %store/vec4 v0xaaaaf0cb9790_0, 0, 32;
+    %jmp T_1.1;
+T_1.0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0xaaaaf0cb9790_0, 0, 32;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/cvdp_copilot_perf_counters.sv";

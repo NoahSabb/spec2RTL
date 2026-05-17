@@ -1,0 +1,328 @@
+Running harness with project name: cvdp_copilot_palindrome_3b_2_1778917895
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_palindrome_detect      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917896
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_palindrome_detect.test_palindrome_detect (1/1)
+generated bit: 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([1, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 0
+palindrome 1
+bit stream as input:  deque([0, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 1
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+generated bit: 0
+palindrome 0
+bit stream as input:  deque([1, 0, 0], maxlen=3)
+generated bit: 1
+palindrome 0
+bit stream as input:  deque([0, 1, 1], maxlen=3)
+  2040.00ns INFO     cocotb.regression                  test_palindrome_detect.test_palindrome_detect passed
+  2040.00ns INFO     cocotb.regression                  *******************************************************************************************************
+                                                        ** TEST                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************
+                                                        ** test_palindrome_detect.test_palindrome_detect   PASS        2040.00           0.01     323614.98  **
+                                                        *******************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                2040.00           0.01     283586.77  **
+                                                        *******************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../src/test_runner.py:13
+  /src/test_runner.py:13: PytestUnknownMarkWarning: Unknown pytest.mark.tb - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.tb
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 1 passed, 1 warning in 0.36s =========================
+Cleaning up Docker resources...

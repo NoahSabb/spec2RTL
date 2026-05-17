@@ -1,0 +1,123 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaab01517340 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaab015174d0 .scope module, "fibonacci_series" "fibonacci_series" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /OUTPUT 32 "fib_out";
+    .port_info 3 /OUTPUT 1 "overflow_flag";
+v0xaaab01517680_0 .var "RegA", 31 0;
+v0xaaab0153e8f0_0 .var "RegB", 31 0;
+L_0xffffac666018 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0xaaab0153e9d0_0 .net/2u *"_ivl_0", 31 0, L_0xffffac666018;  1 drivers
+L_0xffffac666060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xaaab0153eac0_0 .net/2u *"_ivl_4", 0 0, L_0xffffac666060;  1 drivers
+o0xffffac6af0d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaab0153eba0_0 .net "clk", 0 0, o0xffffac6af0d8;  0 drivers
+v0xaaab0153ecb0_0 .net "fib_out", 31 0, L_0xaaab0154f310;  1 drivers
+v0xaaab0153ed90_0 .var "internal_fib_out", 31 0;
+v0xaaab0153ee70_0 .var "internal_overflow_flag", 0 0;
+v0xaaab0153ef30_0 .var "next_fib", 32 0;
+v0xaaab0153f010_0 .var "overflow_detected", 0 0;
+v0xaaab0153f0d0_0 .net "overflow_flag", 0 0, L_0xaaab0154f460;  1 drivers
+o0xffffac6af228 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaab0153f190_0 .net "rst", 0 0, o0xffffac6af228;  0 drivers
+E_0xaaab015276c0 .event posedge, v0xaaab0153f190_0, v0xaaab0153eba0_0;
+E_0xaaab01526af0 .event anyedge, v0xaaab01517680_0, v0xaaab0153e8f0_0;
+L_0xaaab0154f310 .functor MUXZ 32, v0xaaab0153ed90_0, L_0xffffac666018, o0xffffac6af228, C4<>;
+L_0xaaab0154f460 .functor MUXZ 1, v0xaaab0153ee70_0, L_0xffffac666060, o0xffffac6af228, C4<>;
+    .scope S_0xaaab015174d0;
+T_0 ;
+Ewait_0 .event/or E_0xaaab01526af0, E_0x0;
+    %wait Ewait_0;
+    %pushi/vec4 0, 0, 1;
+    %load/vec4 v0xaaab01517680_0;
+    %concat/vec4; draw_concat_vec4
+    %pushi/vec4 0, 0, 1;
+    %load/vec4 v0xaaab0153e8f0_0;
+    %concat/vec4; draw_concat_vec4
+    %add;
+    %store/vec4 v0xaaab0153ef30_0, 0, 33;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0xaaab015174d0;
+T_1 ;
+    %wait E_0xaaab015276c0;
+    %load/vec4 v0xaaab0153f190_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab01517680_0, 0;
+    %pushi/vec4 1, 0, 32;
+    %assign/vec4 v0xaaab0153e8f0_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab0153ed90_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153ee70_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153f010_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0xaaab0153f010_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.2, 8;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0xaaab0153ee70_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab0153ed90_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaab01517680_0, 0;
+    %pushi/vec4 1, 0, 32;
+    %assign/vec4 v0xaaab0153e8f0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153f010_0, 0;
+    %jmp T_1.3;
+T_1.2 ;
+    %load/vec4 v0xaaab0153ef30_0;
+    %parti/s 1, 32, 7;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.4, 8;
+    %load/vec4 v0xaaab0153e8f0_0;
+    %assign/vec4 v0xaaab0153ed90_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0xaaab0153f010_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153ee70_0, 0;
+    %load/vec4 v0xaaab01517680_0;
+    %assign/vec4 v0xaaab01517680_0, 0;
+    %load/vec4 v0xaaab0153e8f0_0;
+    %assign/vec4 v0xaaab0153e8f0_0, 0;
+    %jmp T_1.5;
+T_1.4 ;
+    %load/vec4 v0xaaab0153e8f0_0;
+    %assign/vec4 v0xaaab0153ed90_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153ee70_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaab0153f010_0, 0;
+    %load/vec4 v0xaaab0153e8f0_0;
+    %assign/vec4 v0xaaab01517680_0, 0;
+    %load/vec4 v0xaaab0153ef30_0;
+    %parti/s 32, 0, 2;
+    %assign/vec4 v0xaaab0153e8f0_0, 0;
+T_1.5 ;
+T_1.3 ;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/fibonacci_series.sv";

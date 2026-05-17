@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917906" />
+    <testcase name="test_sipo_1" classname="test_sipo" file="/src/test_sipo.py" lineno="12" time="0.0004956722259521484" sim_time_ns="75.0" ratio_time="151309.6681096681" />
+    <testcase name="test_sipo_2" classname="test_sipo" file="/src/test_sipo.py" lineno="34" time="0.0014319419860839844" sim_time_ns="75.0" ratio_time="52376.42357642358" />
+    <testcase name="test_sipo_3" classname="test_sipo" file="/src/test_sipo.py" lineno="55" time="0.0003116130828857422" sim_time_ns="75.0" ratio_time="240683.09104820198" />
+  </testsuite>
+</testsuites>

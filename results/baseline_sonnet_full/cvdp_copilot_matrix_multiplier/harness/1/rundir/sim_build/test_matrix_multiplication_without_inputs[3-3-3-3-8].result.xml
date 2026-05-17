@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917898" />
+    <testcase name="verify_matrix_multiplication" classname="test_matrix_multiplier" file="/src/test_matrix_multiplier.py" lineno="11" time="0.001653432846069336" sim_time_ns="42.0" ratio_time="25401.696899783707" />
+  </testsuite>
+</testsuites>

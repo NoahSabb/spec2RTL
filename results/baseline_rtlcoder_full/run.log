@@ -1,0 +1,1142 @@
+
+=== Starting Preparation Phase ===
+Starting cvdp_copilot_16qam_mapper_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_16qam_mapper_0001
+Requesting valid response to model...
+Starting cvdp_copilot_16qam_mapper_0006 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_16qam_mapper_0006
+Requesting valid response to model...
+Starting cvdp_copilot_64b66b_encoder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_64b66b_encoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_8x3_priority_encoder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_Carry_Lookahead_Adder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_Carry_Lookahead_Adder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_GFCM_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_dsp_unit_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_apb_dsp_unit_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_gpio_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_apb_gpio_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_history_shift_register_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_apb_history_shift_register_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axi_register_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_axi_register_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axi_stream_upscale_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_axi_stream_upscale_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axil_precision_counter_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_axil_precision_counter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axis_joiner_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_axis_joiner_0001
+Requesting valid response to model...
+Starting cvdp_copilot_barrel_shifter_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_barrel_shifter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_bcd_counter_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_bcd_counter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_bcd_to_excess_3_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_bcd_to_excess_3_0001
+Requesting valid response to model...
+Starting cvdp_copilot_binary_to_one_hot_decoder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_caesar_cipher_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_caesar_cipher_0001
+Requesting valid response to model...
+Starting cvdp_copilot_car_parking_management_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_car_parking_management_0001
+Requesting valid response to model...
+Starting cvdp_copilot_cascaded_adder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_cascaded_adder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_clock_divider_0003 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_clock_divider_0003
+Requesting valid response to model...
+Starting cvdp_copilot_comparator_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_comparator_0001
+Requesting valid response to model...
+Starting cvdp_copilot_complex_multiplier_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_complex_multiplier_0001
+Requesting valid response to model...
+Starting cvdp_copilot_concatenate_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_concatenate_0001
+Requesting valid response to model...
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0004 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter_0004
+Requesting valid response to model...
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0014 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter_0014
+Requesting valid response to model...
+Starting cvdp_copilot_convolutional_encoder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_convolutional_encoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_data_bus_controller_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_data_bus_controller_0001
+Requesting valid response to model...
+Starting cvdp_copilot_data_width_converter_0003 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_data_width_converter_0003
+Requesting valid response to model...
+Starting cvdp_copilot_dbi_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_dbi_0001
+Requesting valid response to model...
+Starting cvdp_copilot_decode_firstbit_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_decode_firstbit_0001
+Requesting valid response to model...
+Starting cvdp_copilot_digital_dice_roller_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_digital_dice_roller_0001
+Requesting valid response to model...
+Starting cvdp_copilot_digital_stopwatch_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_digital_stopwatch_0001
+Requesting valid response to model...
+Starting cvdp_copilot_edge_detector_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_edge_detector_0001
+Requesting valid response to model...
+Starting cvdp_copilot_ethernet_packet_parser_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_ethernet_packet_parser_0001
+Requesting valid response to model...
+Starting cvdp_copilot_events_to_apb_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_events_to_apb_0001
+Requesting valid response to model...
+Starting cvdp_copilot_factorial_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_factorial_0001
+Requesting valid response to model...
+Starting cvdp_copilot_fibonacci_series_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Starting cvdp_copilot_fifo_async_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_fifo_async_0001
+Requesting valid response to model...
+Starting cvdp_copilot_filo_0005 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_filo_0005
+Requesting valid response to model...
+Starting cvdp_copilot_fsm_seq_detector_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_fsm_seq_detector_0001
+Requesting valid response to model...
+Starting cvdp_copilot_gcd_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Starting cvdp_copilot_gf_multiplier_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_gf_multiplier_0001
+Requesting valid response to model...
+Starting cvdp_copilot_hamming_code_tx_and_rx_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx_0001
+Requesting valid response to model...
+Starting cvdp_copilot_hamming_code_tx_and_rx_0003 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx_0003
+Requesting valid response to model...
+Starting cvdp_copilot_hebbian_rule_0017 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_hebbian_rule_0017
+Requesting valid response to model...
+Starting cvdp_copilot_hill_cipher_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_hill_cipher_0001
+Requesting valid response to model...
+Starting cvdp_copilot_load_store_unit_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_load_store_unit_0001
+Requesting valid response to model...
+Starting cvdp_copilot_matrix_multiplier_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_matrix_multiplier_0001
+Requesting valid response to model...
+Starting cvdp_copilot_microcode_sequencer_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_microcode_sequencer_0001
+Requesting valid response to model...
+Starting cvdp_copilot_morse_code_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_morse_code_0001
+Requesting valid response to model...
+Starting cvdp_copilot_moving_average_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_moving_average_0001
+Requesting valid response to model...
+Starting cvdp_copilot_nbit_swizzling_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_nbit_swizzling_0001
+Requesting valid response to model...
+Starting cvdp_copilot_packet_controller_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_packet_controller_0001
+Requesting valid response to model...
+Starting cvdp_copilot_palindrome_3b_0002 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_palindrome_3b_0002
+Requesting valid response to model...
+Starting cvdp_copilot_perceptron_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_perceptron_0001
+Requesting valid response to model...
+Starting cvdp_copilot_perf_counters_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_perf_counters_0001
+Requesting valid response to model...
+Starting cvdp_copilot_perfect_squares_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_perfect_squares_0001
+Requesting valid response to model...
+Starting cvdp_copilot_piso_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_piso_0001
+Requesting valid response to model...
+Starting cvdp_copilot_prbs_gen_0003 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_prbs_gen_0003
+Requesting valid response to model...
+Starting cvdp_copilot_restoring_division_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_restoring_division_0001
+Requesting valid response to model...
+Starting cvdp_copilot_reverse_bits_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_reverse_bits_0001
+Requesting valid response to model...
+Starting cvdp_copilot_secure_read_write_bus_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_secure_read_write_bus_0001
+Requesting valid response to model...
+Starting cvdp_copilot_secure_read_write_register_bank_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_secure_read_write_register_bank_0001
+Requesting valid response to model...
+Starting cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_serial_in_parallel_out_0004 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_serial_in_parallel_out_0004
+Requesting valid response to model...
+Starting cvdp_copilot_set_bit_calculator_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_set_bit_calculator_0001
+Requesting valid response to model...
+Starting cvdp_copilot_sorter_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_sorter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_static_branch_predict_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_static_branch_predict_0001
+Requesting valid response to model...
+Starting cvdp_copilot_sync_lifo_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_sync_lifo_0001
+Requesting valid response to model...
+Starting cvdp_copilot_sync_serial_communication_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_sync_serial_communication_0001
+Requesting valid response to model...
+Starting cvdp_copilot_thermostat_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_thermostat_0001
+Requesting valid response to model...
+Starting cvdp_copilot_ttc_lite_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_ttc_lite_0001
+Requesting valid response to model...
+Starting cvdp_copilot_unpacker_one_hot_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_unpacker_one_hot_0001
+Requesting valid response to model...
+Starting cvdp_copilot_vending_machine_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_vending_machine_0001
+Requesting valid response to model...
+Starting cvdp_copilot_vga_controller_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_vga_controller_0001
+Requesting valid response to model...
+Starting cvdp_copilot_wb2ahb_0001 repository execution...
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_wb2ahb_0001
+Requesting valid response to model...
+All preparation tasks completed successfully
+=== Preparation Phase Complete ===
+
+Writing preparation results...
+
+=== Starting Execution Phase ===
+Starting cvdp_copilot_16qam_mapper_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_16qam_mapper/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_16qam_mapper/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_16qam_mapper_0006 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_16qam_mapper/harness/6/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_16qam_mapper/harness/6/docker-compose.yml, not modifying
+Starting cvdp_copilot_64b66b_encoder_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_64b66b_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_64b66b_encoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_8x3_priority_encoder_0001 harness execution...
+Running service: pytest:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_Carry_Lookahead_Adder_0001 harness execution...
+Running service: 07-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_Carry_Lookahead_Adder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_Carry_Lookahead_Adder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_GFCM_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_GFCM/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_GFCM/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_dsp_unit_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_dsp_unit/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_dsp_unit/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_gpio_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_gpio/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_gpio/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_history_shift_register_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_history_shift_register/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_apb_history_shift_register/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axi_register_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axi_register/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axi_register/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axi_stream_upscale_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axil_precision_counter_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axil_precision_counter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axil_precision_counter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axis_joiner_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axis_joiner/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_axis_joiner/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_barrel_shifter_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_bcd_counter_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_bcd_to_excess_3_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_to_excess_3/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_to_excess_3/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_binary_to_one_hot_decoder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_caesar_cipher_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_car_parking_management_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_car_parking_management/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_car_parking_management/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_cascaded_adder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_cascaded_adder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_cascaded_adder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_clock_divider_0003 harness execution...
+Running service: 3-:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_clock_divider/harness/3/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_clock_divider/harness/3/docker-compose.yml, not modifying
+Starting cvdp_copilot_comparator_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_comparator/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_comparator/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_complex_multiplier_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_complex_multiplier/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_complex_multiplier/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_concatenate_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_concatenate/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_concatenate/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0004 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/4/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/4/docker-compose.yml, not modifying
+Starting cvdp_copilot_configurable_digital_low_pass_filter_0014 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/14/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_configurable_digital_low_pass_filter/harness/14/docker-compose.yml, not modifying
+Starting cvdp_copilot_convolutional_encoder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_convolutional_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_convolutional_encoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_data_bus_controller_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_data_bus_controller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_data_bus_controller/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_data_width_converter_0003 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_data_width_converter/harness/3/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_data_width_converter/harness/3/docker-compose.yml, not modifying
+Starting cvdp_copilot_dbi_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_dbi/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_dbi/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_decode_firstbit_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_decode_firstbit/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_decode_firstbit/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_digital_dice_roller_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_digital_stopwatch_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_edge_detector_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_edge_detector/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_edge_detector/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_ethernet_packet_parser_0001 harness execution...
+Running service: test:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_ethernet_packet_parser/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_ethernet_packet_parser/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_events_to_apb_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_events_to_apb/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_events_to_apb/harness/1/docker-compose.yml, not modifying
+Timeout for /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_events_to_apb/harness/1/run_docker_harness_direct.sh (600s) expired
+[ERROR] Failed to execute None harness...
+Starting cvdp_copilot_factorial_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_factorial/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_factorial/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_fibonacci_series_0001 harness execution...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_fifo_async_0001 harness execution...
+Running service: test:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fifo_async/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fifo_async/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_filo_0005 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_filo/harness/5/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_filo/harness/5/docker-compose.yml, not modifying
+Starting cvdp_copilot_fsm_seq_detector_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fsm_seq_detector/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_fsm_seq_detector/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_gcd_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_gf_multiplier_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_gf_multiplier/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_gf_multiplier/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_hamming_code_tx_and_rx_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_hamming_code_tx_and_rx_0003 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx/harness/3/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hamming_code_tx_and_rx/harness/3/docker-compose.yml, not modifying
+Starting cvdp_copilot_hebbian_rule_0017 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hebbian_rule/harness/17/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hebbian_rule/harness/17/docker-compose.yml, not modifying
+Starting cvdp_copilot_hill_cipher_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hill_cipher/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_hill_cipher/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_load_store_unit_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_load_store_unit/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_load_store_unit/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_matrix_multiplier_0001 harness execution...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_matrix_multiplier/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_matrix_multiplier/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_microcode_sequencer_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_microcode_sequencer/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_microcode_sequencer/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_morse_code_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_morse_code/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_morse_code/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_moving_average_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_moving_average/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_moving_average/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_nbit_swizzling_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_nbit_swizzling/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_nbit_swizzling/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_packet_controller_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_packet_controller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_packet_controller/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_palindrome_3b_0002 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_palindrome_3b/harness/2/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_palindrome_3b/harness/2/docker-compose.yml, not modifying
+Starting cvdp_copilot_perceptron_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perceptron/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perceptron/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_perf_counters_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perf_counters/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perf_counters/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_perfect_squares_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perfect_squares/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_perfect_squares/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_piso_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_piso/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_piso/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_prbs_gen_0003 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_prbs_gen/harness/3/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_prbs_gen/harness/3/docker-compose.yml, not modifying
+Starting cvdp_copilot_restoring_division_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_restoring_division/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_restoring_division/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_reverse_bits_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_reverse_bits/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_reverse_bits/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_secure_read_write_bus_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_secure_read_write_bus/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_secure_read_write_bus/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_secure_read_write_register_bank_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_secure_read_write_register_bank/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_secure_read_write_register_bank/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_serial_in_parallel_out_0004 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_serial_in_parallel_out/harness/4/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_serial_in_parallel_out/harness/4/docker-compose.yml, not modifying
+Starting cvdp_copilot_set_bit_calculator_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_set_bit_calculator/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_set_bit_calculator/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_sorter_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sorter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sorter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_static_branch_predict_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_static_branch_predict/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_static_branch_predict/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_sync_lifo_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sync_lifo/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sync_lifo/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_sync_serial_communication_0001 harness execution...
+Running service: 1-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sync_serial_communication/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_sync_serial_communication/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_thermostat_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_thermostat/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_thermostat/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_ttc_lite_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_ttc_lite/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_ttc_lite/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_unpacker_one_hot_0001 harness execution...
+Running service: test:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_unpacker_one_hot/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_unpacker_one_hot/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_vending_machine_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_vending_machine/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_vending_machine/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_vga_controller_0001 harness execution...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_vga_controller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_vga_controller/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_wb2ahb_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_wb2ahb/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_wb2ahb/harness/1/docker-compose.yml, not modifying
+All execution tasks completed successfully
+=== Execution Phase Complete ===
+
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 15:00:52
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M
+=======================
+
+Generating text report: work_rtlcoder_1sample/report.txt
+Text report generated: work_rtlcoder_1sample/report.txt
+Benchmark execution time: Min: 0 - Max: 4.55549693107605 - Avg: 1.1961476283195691
+cvdp_copilot_8x3_priority_encoder_0001,cvdp_copilot_barrel_shifter_0001,cvdp_copilot_bcd_counter_0001,cvdp_copilot_binary_to_one_hot_decoder_0001,cvdp_copilot_caesar_cipher_0001,cvdp_copilot_comparator_0001,cvdp_copilot_clock_divider_0003,cvdp_copilot_digital_dice_roller_0001,cvdp_copilot_digital_stopwatch_0001,cvdp_copilot_edge_detector_0001 not available in the provided dataset.
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m424[0m, in [35mextract_datapoint[0m
+    harness     = [31mself.context[0m[1;31m[id][0m['harness']
+                  [31m~~~~~~~~~~~~[0m[1;31m^^^^[0m
+[1;35mKeyError[0m: [35m'cvdp_copilot_8x3_priority_encoder_0001,cvdp_copilot_barrel_shifter_0001,cvdp_copilot_bcd_counter_0001,cvdp_copilot_binary_to_one_hot_decoder_0001,cvdp_copilot_caesar_cipher_0001,cvdp_copilot_comparator_0001,cvdp_copilot_clock_divider_0003,cvdp_copilot_digital_dice_roller_0001,cvdp_copilot_digital_stopwatch_0001,cvdp_copilot_edge_detector_0001'[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m464[0m, in [35mcreate_repo[0m
+    (harness, name, issue, patches) = [31mself.extract_datapoint[0m[1;31m(id)[0m
+                                      [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m432[0m, in [35mextract_datapoint[0m
+    raise ValueError(f"{id} not available in the provided dataset.")
+[1;35mValueError[0m: [35mcvdp_copilot_8x3_priority_encoder_0001,cvdp_copilot_barrel_shifter_0001,cvdp_copilot_bcd_counter_0001,cvdp_copilot_binary_to_one_hot_decoder_0001,cvdp_copilot_caesar_cipher_0001,cvdp_copilot_comparator_0001,cvdp_copilot_clock_divider_0003,cvdp_copilot_digital_dice_roller_0001,cvdp_copilot_digital_stopwatch_0001,cvdp_copilot_edge_detector_0001 not available in the provided dataset.[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m611[0m, in [35m<module>[0m
+    raise Exception(f"Unable to process the JSON file: {filename}. Error: {str(e)}")
+[1;35mException[0m: [35mUnable to process the JSON file: ../data/cid003_nonagentic.jsonl. Error: cvdp_copilot_8x3_priority_encoder_0001,cvdp_copilot_barrel_shifter_0001,cvdp_copilot_bcd_counter_0001,cvdp_copilot_binary_to_one_hot_decoder_0001,cvdp_copilot_caesar_cipher_0001,cvdp_copilot_comparator_0001,cvdp_copilot_clock_divider_0003,cvdp_copilot_digital_dice_roller_0001,cvdp_copilot_digital_stopwatch_0001,cvdp_copilot_edge_detector_0001 not available in the provided dataset.[0m
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Running service: pytest:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 01:37:41
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M
+=======================
+
+Generating text report: work_rtlcoder_1sample/report.txt
+Text report generated: work_rtlcoder_1sample/report.txt
+Benchmark execution time: Min: 0 - Max: 4.55549693107605 - Avg: 1.1983213944312854
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.3053159713745117,
+      "pid": 27475
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_barrel_shifter_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 01:41:16
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M
+=======================
+
+Generating text report: work_rtlcoder_1sample/report.txt
+Text report generated: work_rtlcoder_1sample/report.txt
+Benchmark execution time: Min: 0 - Max: 4.55549693107605 - Avg: 1.1980213201962984
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_barrel_shifter/reports/1.txt",
+      "error_msg": null,
+      "execution": 0.8937101364135742,
+      "pid": 27566
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_bcd_counter_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 01:55:34
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M
+=======================
+
+Generating text report: work_rtlcoder_1sample/report.txt
+Text report generated: work_rtlcoder_1sample/report.txt
+Benchmark execution time: Min: 0 - Max: 4.55549693107605 - Avg: 1.1867842796521308
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_bcd_counter/reports/1.txt",
+      "error_msg": null,
+      "execution": 2.5389089584350586,
+      "pid": 27775
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 02:00:02
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M
+=======================
+
+Generating text report: work_rtlcoder_1sample/report.txt
+Text report generated: work_rtlcoder_1sample/report.txt
+Benchmark execution time: Min: 0 - Max: 4.55549693107605 - Avg: 1.188302911244906
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_rtlcoder_1sample/cvdp_copilot_binary_to_one_hot_decoder/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.0417683124542236,
+      "pid": 27945
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "hf.co/mradermacher/RTLCoder-v1.1-GGUF:Q4_K_M",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_caesar_cipher_0001
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m214[0m, in [35mrun_parallel[0m
+    for future in [31mconcurrent.futures.as_completed[0m[1;31m(futures)[0m:
+                  [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m243[0m, in [35mas_completed[0m
+    [31mwaiter.event.wait[0m[1;31m(wait_timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m660[0m, in [35mwait[0m
+    signaled = self._cond.wait(timeout)
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m359[0m, in [35mwait[0m
+    [31mwaiter.acquire[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[1;35mKeyboardInterrupt[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m208[0m, in [35mrun_parallel[0m
+    with [31mconcurrent.futures.ThreadPoolExecutor[0m[1;31m(max_workers=num_processes)[0m as executor:
+         [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m647[0m, in [35m__exit__[0m
+    [31mself.shutdown[0m[1;31m(wait=True)[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m239[0m, in [35mshutdown[0m
+    [31mt.join[0m[1;31m()[0m
+    [31m~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m1095[0m, in [35mjoin[0m
+    [31mself._handle.join[0m[1;31m(timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt: 
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m224[0m, in [35mrun_parallel[0m
+    for future in [31mconcurrent.futures.as_completed[0m[1;31m(futures)[0m:
+                  [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m243[0m, in [35mas_completed[0m
+    [31mwaiter.event.wait[0m[1;31m(wait_timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m660[0m, in [35mwait[0m
+    signaled = self._cond.wait(timeout)
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m359[0m, in [35mwait[0m
+    [31mwaiter.acquire[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[1;35mKeyboardInterrupt[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m218[0m, in [35mrun_parallel[0m
+    with [31mconcurrent.futures.ThreadPoolExecutor[0m[1;31m(max_workers=num_processes)[0m as executor:
+         [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m647[0m, in [35m__exit__[0m
+    [31mself.shutdown[0m[1;31m(wait=True)[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m239[0m, in [35mshutdown[0m
+    [31mt.join[0m[1;31m()[0m
+    [31m~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m1095[0m, in [35mjoin[0m
+    [31mself._handle.join[0m[1;31m(timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt: 
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m224[0m, in [35mrun_parallel[0m
+    for future in [31mconcurrent.futures.as_completed[0m[1;31m(futures)[0m:
+                  [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m243[0m, in [35mas_completed[0m
+    [31mwaiter.event.wait[0m[1;31m(wait_timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m660[0m, in [35mwait[0m
+    signaled = self._cond.wait(timeout)
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m359[0m, in [35mwait[0m
+    [31mwaiter.acquire[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[1;35mKeyboardInterrupt[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m218[0m, in [35mrun_parallel[0m
+    with [31mconcurrent.futures.ThreadPoolExecutor[0m[1;31m(max_workers=num_processes)[0m as executor:
+         [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m647[0m, in [35m__exit__[0m
+    [31mself.shutdown[0m[1;31m(wait=True)[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m239[0m, in [35mshutdown[0m
+    [31mt.join[0m[1;31m()[0m
+    [31m~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m1095[0m, in [35mjoin[0m
+    [31mself._handle.join[0m[1;31m(timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt: 
+Creating harness environment for datapoint: work_rtlcoder_1sample/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m224[0m, in [35mrun_parallel[0m
+    for future in [31mconcurrent.futures.as_completed[0m[1;31m(futures)[0m:
+                  [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m243[0m, in [35mas_completed[0m
+    [31mwaiter.event.wait[0m[1;31m(wait_timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m660[0m, in [35mwait[0m
+    signaled = self._cond.wait(timeout)
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m359[0m, in [35mwait[0m
+    [31mwaiter.acquire[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[1;35mKeyboardInterrupt[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m218[0m, in [35mrun_parallel[0m
+    with [31mconcurrent.futures.ThreadPoolExecutor[0m[1;31m(max_workers=num_processes)[0m as executor:
+         [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m647[0m, in [35m__exit__[0m
+    [31mself.shutdown[0m[1;31m(wait=True)[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m239[0m, in [35mshutdown[0m
+    [31mt.join[0m[1;31m()[0m
+    [31m~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/threading.py"[0m, line [35m1095[0m, in [35mjoin[0m
+    [31mself._handle.join[0m[1;31m(timeout)[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/opt/miniconda3/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt: 

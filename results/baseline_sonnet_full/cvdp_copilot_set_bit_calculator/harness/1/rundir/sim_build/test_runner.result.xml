@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917906" />
+    <testcase name="test_unique_number_identifier" classname="test_SetBitStreamCalculator" file="/src/test_SetBitStreamCalculator.py" lineno="16" time="0.0075299739837646484" sim_time_ns="3095.0" ratio_time="411023.9964537884" />
+  </testsuite>
+</testsuites>

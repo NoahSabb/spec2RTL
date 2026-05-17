@@ -1,0 +1,233 @@
+Running harness with project name: cvdp_copilot_fifo_async_1_1778917878
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917879
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running tb.test_empty (1/4)
+    10.00ns INFO     cocotb.fifo_async                  Clocks initialized.
+   110.00ns INFO     cocotb.fifo_async                  Resets initialized, ready for sequential value tests.
+   110.00ns INFO     cocotb.fifo_async                  Test Empty Started, executing 14 read and writes.
+   338.00ns INFO     cocotb.fifo_async                  Finished to write data in FIFO.
+   588.00ns INFO     cocotb.fifo_async                  Finished to read data from FIFO.
+   618.00ns WARNING  py.warnings                        /src/tb.py:167: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          w_clk.kill()
+   618.00ns WARNING  py.warnings                        /src/tb.py:168: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          r_clk.kill()
+   618.00ns INFO     cocotb.regression                  tb.test_empty passed
+   618.00ns INFO     cocotb.regression                  running tb.test_basic (2/4)
+   628.00ns INFO     cocotb.fifo_async                  Clocks initialized.
+   728.00ns INFO     cocotb.fifo_async                  Resets initialized, ready for sequential value tests.
+   733.00ns INFO     cocotb.fifo_async                  Wrote 0xdeadbeaf in w_data bus.
+   733.00ns WARNING  cocotb.Test test_basic.test_basic  Int value (3735928495) out of range for assignment of 8-bit signal ('w_data')
+                                                        Traceback (most recent call last):
+                                                          File "/src/tb.py", line 182, in test_basic
+                                                            await write_data(dut, 0xDEADBEAF)
+                                                          File "/src/tb.py", line 42, in write_data
+                                                            dut.w_data.value = w_data
+                                                            ^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 876, in value
+                                                            self.set(value)
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 1363, in set
+                                                            super().set(value)
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 925, in set
+                                                            self._set_value(value, _GPISetAction.DEPOSIT)
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/handle.py", line 1291, in _set_value
+                                                            raise ValueError(
+                                                        ValueError: Int value (3735928495) out of range for assignment of 8-bit signal ('w_data')
+   733.00ns WARNING  cocotb.regression                  tb.test_basic failed
+   733.00ns INFO     cocotb.regression                  running tb.test_full (3/4)
+   743.00ns INFO     cocotb.fifo_async                  Clocks initialized.
+   843.00ns INFO     cocotb.fifo_async                  Resets initialized, ready for sequential value tests.
+  1072.00ns INFO     cocotb.fifo_async                  Finished to write data into FIFO
+  1086.00ns WARNING  py.warnings                        /src/tb.py:228: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          w_clk.kill()
+  1086.00ns WARNING  py.warnings                        /src/tb.py:229: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          r_clk.kill()
+  1086.00ns INFO     cocotb.regression                  tb.test_full passed
+  1086.00ns INFO     cocotb.regression                  running tb.test_random (4/4)
+  1096.00ns INFO     cocotb.fifo_async                  Clocks initialized.
+  1196.00ns INFO     cocotb.fifo_async                  Resets initialized, ready for sequential value tests.
+  1196.00ns INFO     cocotb.fifo_async                  Starting w_test thread...
+  1196.00ns INFO     cocotb.fifo_async                  Starting r_test thread...
+  1196.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1210.00ns INFO     cocotb.fifo_async                  Wrote 0xaa in w_data bus.
+  1213.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1231.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1234.00ns INFO     cocotb.fifo_async                  Wrote 0xdd in w_data bus.
+  1249.00ns INFO     cocotb.fifo_async                  Successfully read 0xaa and prepared the next read.
+  1258.00ns INFO     cocotb.fifo_async                  Wrote 0x3c in w_data bus.
+  1267.00ns INFO     cocotb.fifo_async                  Successfully read 0xdd and prepared the next read.
+  1282.00ns INFO     cocotb.fifo_async                  Wrote 0x6b in w_data bus.
+  1285.00ns INFO     cocotb.fifo_async                  Successfully read 0x3c and prepared the next read.
+  1303.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1306.00ns INFO     cocotb.fifo_async                  Wrote 0x42 in w_data bus.
+  1321.00ns INFO     cocotb.fifo_async                  Successfully read 0x6b and prepared the next read.
+  1330.00ns INFO     cocotb.fifo_async                  Wrote 0x82 in w_data bus.
+  1339.00ns INFO     cocotb.fifo_async                  Successfully read 0x42 and prepared the next read.
+  1354.00ns INFO     cocotb.fifo_async                  Wrote 0x2c in w_data bus.
+  1357.00ns INFO     cocotb.fifo_async                  Successfully read 0x82 and prepared the next read.
+  1375.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1378.00ns INFO     cocotb.fifo_async                  Wrote 0xde in w_data bus.
+  1393.00ns INFO     cocotb.fifo_async                  Successfully read 0x2c and prepared the next read.
+  1402.00ns INFO     cocotb.fifo_async                  Wrote 0x66 in w_data bus.
+  1411.00ns INFO     cocotb.fifo_async                  Successfully read 0xde and prepared the next read.
+  1426.00ns INFO     cocotb.fifo_async                  Wrote 0x1f in w_data bus.
+  1429.00ns INFO     cocotb.fifo_async                  Successfully read 0x66 and prepared the next read.
+  1447.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1450.00ns INFO     cocotb.fifo_async                  Wrote 0xd5 in w_data bus.
+  1465.00ns INFO     cocotb.fifo_async                  Successfully read 0x1f and prepared the next read.
+  1474.00ns INFO     cocotb.fifo_async                  Wrote 0x7f in w_data bus.
+  1483.00ns INFO     cocotb.fifo_async                  Successfully read 0xd5 and prepared the next read.
+  1498.00ns INFO     cocotb.fifo_async                  Wrote 0x6d in w_data bus.
+  1501.00ns INFO     cocotb.fifo_async                  Successfully read 0x7f and prepared the next read.
+  1519.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1522.00ns INFO     cocotb.fifo_async                  Wrote 0x2b in w_data bus.
+  1537.00ns INFO     cocotb.fifo_async                  Successfully read 0x6d and prepared the next read.
+  1546.00ns INFO     cocotb.fifo_async                  Wrote 0xaa in w_data bus.
+  1555.00ns INFO     cocotb.fifo_async                  Successfully read 0x2b and prepared the next read.
+  1570.00ns INFO     cocotb.fifo_async                  Wrote 0x41 in w_data bus.
+  1573.00ns INFO     cocotb.fifo_async                  Successfully read 0xaa and prepared the next read.
+  1591.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1594.00ns INFO     cocotb.fifo_async                  Wrote 0x23 in w_data bus.
+  1609.00ns INFO     cocotb.fifo_async                  Successfully read 0x41 and prepared the next read.
+  1618.00ns INFO     cocotb.fifo_async                  Wrote 0xdb in w_data bus.
+  1627.00ns INFO     cocotb.fifo_async                  Successfully read 0x23 and prepared the next read.
+  1642.00ns INFO     cocotb.fifo_async                  Wrote 0x0 in w_data bus.
+  1645.00ns INFO     cocotb.fifo_async                  Successfully read 0xdb and prepared the next read.
+  1663.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1666.00ns INFO     cocotb.fifo_async                  Wrote 0xf0 in w_data bus.
+  1681.00ns INFO     cocotb.fifo_async                  Successfully read 0x0 and prepared the next read.
+  1690.00ns INFO     cocotb.fifo_async                  Wrote 0xd5 in w_data bus.
+  1699.00ns INFO     cocotb.fifo_async                  Successfully read 0xf0 and prepared the next read.
+  1714.00ns INFO     cocotb.fifo_async                  Wrote 0xbd in w_data bus.
+  1717.00ns INFO     cocotb.fifo_async                  Successfully read 0xd5 and prepared the next read.
+  1735.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1738.00ns INFO     cocotb.fifo_async                  Wrote 0xaa in w_data bus.
+  1753.00ns INFO     cocotb.fifo_async                  Successfully read 0xbd and prepared the next read.
+  1762.00ns INFO     cocotb.fifo_async                  Wrote 0x33 in w_data bus.
+  1771.00ns INFO     cocotb.fifo_async                  Successfully read 0xaa and prepared the next read.
+  1786.00ns INFO     cocotb.fifo_async                  Wrote 0xa in w_data bus.
+  1789.00ns INFO     cocotb.fifo_async                  Successfully read 0x33 and prepared the next read.
+  1807.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1810.00ns INFO     cocotb.fifo_async                  Wrote 0xf5 in w_data bus.
+  1825.00ns INFO     cocotb.fifo_async                  Successfully read 0xa and prepared the next read.
+  1834.00ns INFO     cocotb.fifo_async                  Wrote 0xe5 in w_data bus.
+  1843.00ns INFO     cocotb.fifo_async                  Successfully read 0xf5 and prepared the next read.
+  1858.00ns INFO     cocotb.fifo_async                  Wrote 0x2a in w_data bus.
+  1861.00ns INFO     cocotb.fifo_async                  Successfully read 0xe5 and prepared the next read.
+  1879.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1882.00ns INFO     cocotb.fifo_async                  Wrote 0x1 in w_data bus.
+  1897.00ns INFO     cocotb.fifo_async                  Successfully read 0x2a and prepared the next read.
+  1906.00ns INFO     cocotb.fifo_async                  Wrote 0xd8 in w_data bus.
+  1915.00ns INFO     cocotb.fifo_async                  Successfully read 0x1 and prepared the next read.
+  1930.00ns INFO     cocotb.fifo_async                  Wrote 0xf5 in w_data bus.
+  1933.00ns INFO     cocotb.fifo_async                  Successfully read 0xd8 and prepared the next read.
+  1951.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  1954.00ns INFO     cocotb.fifo_async                  Wrote 0x4 in w_data bus.
+  1969.00ns INFO     cocotb.fifo_async                  Successfully read 0xf5 and prepared the next read.
+  1978.00ns INFO     cocotb.fifo_async                  Wrote 0x4c in w_data bus.
+  1987.00ns INFO     cocotb.fifo_async                  Successfully read 0x4 and prepared the next read.
+  2002.00ns INFO     cocotb.fifo_async                  Wrote 0x4a in w_data bus.
+  2005.00ns INFO     cocotb.fifo_async                  Successfully read 0x4c and prepared the next read.
+  2023.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2026.00ns INFO     cocotb.fifo_async                  Wrote 0x62 in w_data bus.
+  2041.00ns INFO     cocotb.fifo_async                  Successfully read 0x4a and prepared the next read.
+  2050.00ns INFO     cocotb.fifo_async                  Wrote 0x9d in w_data bus.
+  2059.00ns INFO     cocotb.fifo_async                  Successfully read 0x62 and prepared the next read.
+  2074.00ns INFO     cocotb.fifo_async                  Wrote 0x3 in w_data bus.
+  2077.00ns INFO     cocotb.fifo_async                  Successfully read 0x9d and prepared the next read.
+  2095.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2098.00ns INFO     cocotb.fifo_async                  Wrote 0x2a in w_data bus.
+  2113.00ns INFO     cocotb.fifo_async                  Successfully read 0x3 and prepared the next read.
+  2122.00ns INFO     cocotb.fifo_async                  Wrote 0x2b in w_data bus.
+  2131.00ns INFO     cocotb.fifo_async                  Successfully read 0x2a and prepared the next read.
+  2146.00ns INFO     cocotb.fifo_async                  Wrote 0xbc in w_data bus.
+  2149.00ns INFO     cocotb.fifo_async                  Successfully read 0x2b and prepared the next read.
+  2167.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2170.00ns INFO     cocotb.fifo_async                  Wrote 0x4d in w_data bus.
+  2185.00ns INFO     cocotb.fifo_async                  Successfully read 0xbc and prepared the next read.
+  2194.00ns INFO     cocotb.fifo_async                  Wrote 0x1c in w_data bus.
+  2203.00ns INFO     cocotb.fifo_async                  Successfully read 0x4d and prepared the next read.
+  2218.00ns INFO     cocotb.fifo_async                  Wrote 0x11 in w_data bus.
+  2221.00ns INFO     cocotb.fifo_async                  Successfully read 0x1c and prepared the next read.
+  2239.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2242.00ns INFO     cocotb.fifo_async                  Wrote 0x22 in w_data bus.
+  2257.00ns INFO     cocotb.fifo_async                  Successfully read 0x11 and prepared the next read.
+  2266.00ns INFO     cocotb.fifo_async                  Wrote 0xc7 in w_data bus.
+  2275.00ns INFO     cocotb.fifo_async                  Successfully read 0x22 and prepared the next read.
+  2290.00ns INFO     cocotb.fifo_async                  Wrote 0x4b in w_data bus.
+  2293.00ns INFO     cocotb.fifo_async                  Successfully read 0xc7 and prepared the next read.
+  2311.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2314.00ns INFO     cocotb.fifo_async                  Wrote 0xd7 in w_data bus.
+  2329.00ns INFO     cocotb.fifo_async                  Successfully read 0x4b and prepared the next read.
+  2338.00ns INFO     cocotb.fifo_async                  Wrote 0xf4 in w_data bus.
+  2347.00ns INFO     cocotb.fifo_async                  Successfully read 0xd7 and prepared the next read.
+  2362.00ns INFO     cocotb.fifo_async                  Wrote 0x9 in w_data bus.
+  2365.00ns INFO     cocotb.fifo_async                  Successfully read 0xf4 and prepared the next read.
+  2383.00ns INFO     cocotb.fifo_async                  Detected empty FIFO, skipping new data read.
+  2386.00ns WARNING  py.warnings                        /src/tb.py:249: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          r_task.kill()
+  2386.00ns WARNING  py.warnings                        /src/tb.py:250: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          w_task.kill()
+  2386.00ns WARNING  py.warnings                        /src/tb.py:252: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          w_clk.kill()
+  2386.00ns WARNING  py.warnings                        /src/tb.py:253: DeprecationWarning: `task.kill()` is deprecated in favor of `task.cancel()`
+                                                          r_clk.kill()
+  2386.00ns INFO     cocotb.regression                  tb.test_random passed
+  2386.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** tb.test_empty                  PASS         618.00           0.00     234407.66  **
+                                                        ** tb.test_basic                  FAIL         115.00           0.00     120918.77  **
+                                                        ** tb.test_full                   PASS         353.00           0.00     254878.52  **
+                                                        ** tb.test_random                 PASS        1300.00           0.01     134825.06  **
+                                                        **************************************************************************************
+                                                        ** TESTS=4 PASS=3 FAIL=1 SKIP=0               2386.00           0.02     118205.38  **
+                                                        **************************************************************************************
+  2386.00ns INFO     cocotb.fifo_async                  Wrote 0xdb in w_data bus.
+  2386.00ns INFO     cocotb.fifo_async                  Finished to execute w_test thread.
+  2386.00ns INFO     cocotb.fifo_async                  Finished to execute r_test thread.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    @pytest.mark.tb
+    def test_runner():
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"))
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:30: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s fifo_async -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/fifo_async.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 4 tests.
+=============================== warnings summary ===============================
+../../src/test_runner.py:17
+  /src/test_runner.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.tb - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.tb
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+========================= 1 failed, 1 warning in 0.33s =========================
+Cleaning up Docker resources...

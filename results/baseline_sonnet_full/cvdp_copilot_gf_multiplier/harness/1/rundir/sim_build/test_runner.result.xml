@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917883" />
+    <testcase name="gf_multiplier_basic_test" classname="test_gf_mult" file="/src/test_gf_mult.py" lineno="30" time="0.000476837158203125" sim_time_ns="3.0" ratio_time="6291.456" />
+    <testcase name="gf_multiplier_random_test" classname="test_gf_mult" file="/src/test_gf_mult.py" lineno="70" time="0.0010378360748291016" sim_time_ns="20.0" ratio_time="19270.86606937744" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,89 @@
+Running harness with project name: cvdp_copilot_data_width_converter_3_1778968189
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s data_width_converter -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/data_width_converter.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778968190
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running DW_convertor.test_data_width_converter (1/1)
+                                                            Test data_width_converter with multiple test cases 
+    20.00ns INFO     cocotb.data_width_converter        Sending data 0x11111111
+    40.00ns INFO     cocotb.data_width_converter        Sending data 0x22222222
+    50.00ns INFO     cocotb.data_width_converter        Sending data 0x33333333
+    60.00ns INFO     cocotb.data_width_converter        Sending data 0x44444444
+    70.00ns INFO     cocotb.data_width_converter        Expected output: 0x11111111222222223333333344444444
+    70.00ns WARNING  ..verter.test_data_width_converter Output mismatch: Expected 0x11111111222222223333333344444444, got 0x3333333333333333
+                                                        assert LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) == 22685491133344441733072379273554445380
+                                                         +  where LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) = LogicArrayObject(data_width_converter.o_data_out).value
+                                                         +    where LogicArrayObject(data_width_converter.o_data_out) = HierarchyObject(data_width_converter).o_data_out
+                                                        Traceback (most recent call last):
+                                                          File "/src/DW_convertor.py", line 144, in test_data_width_converter
+                                                            await test_case_3(dut)
+                                                          File "/src/DW_convertor.py", line 99, in test_case_3
+                                                            assert dut.o_data_out.value == expected_output, f"Output mismatch: Expected {hex(expected_output)}, got {hex(dut.o_data_out.value)}"
+                                                        AssertionError: Output mismatch: Expected 0x11111111222222223333333344444444, got 0x3333333333333333
+                                                        assert LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) == 22685491133344441733072379273554445380
+                                                         +  where LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) = LogicArrayObject(data_width_converter.o_data_out).value
+                                                         +    where LogicArrayObject(data_width_converter.o_data_out) = HierarchyObject(data_width_converter).o_data_out
+    70.00ns WARNING  cocotb.regression                  DW_convertor.test_data_width_converter failed
+    70.00ns INFO     cocotb.regression                  ************************************************************************************************
+                                                        ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ************************************************************************************************
+                                                        ** DW_convertor.test_data_width_converter   FAIL          70.00           0.00      55913.40  **
+                                                        ************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                           70.00           0.00      16182.62  **
+                                                        ************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner():
+    
+        # List from Files
+        verilog_sources = os.getenv("VERILOG_SOURCES").split()
+    
+        # Language of Top Level File
+        toplevel_lang   = os.getenv("TOPLEVEL_LANG")
+    
+        sim             = os.getenv("SIM", "icarus")
+        toplevel        = os.getenv("TOPLEVEL")
+        module          = os.getenv("MODULE")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+    
+        )
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:31: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s data_width_converter -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/data_width_converter.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+============================== 1 failed in 0.25s ===============================
+Cleaning up Docker resources...

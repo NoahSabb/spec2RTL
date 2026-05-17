@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778993145" />
+    <testcase name="test_dig_stopwatch" classname="test_dig_stopwatch" file="/src/test_dig_stopwatch.py" lineno="122" time="0.0626981258392334" sim_time_ns="30230155163.0" ratio_time="482154047802.23047">
+      <failure error_type="AssertionError" error_msg="Error: Seconds did not reset to 0 after reaching 59.&#10;assert 59 == 0&#10; +  where 59 = int(LogicArray('111011', Range(5, 'downto', 0)))&#10; +    where LogicArray('111011', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value&#10; +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds" />
+    </testcase>
+  </testsuite>
+</testsuites>

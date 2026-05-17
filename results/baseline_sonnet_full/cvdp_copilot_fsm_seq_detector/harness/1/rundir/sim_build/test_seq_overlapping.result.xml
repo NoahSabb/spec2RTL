@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917882" />
+    <testcase name="test_basic" classname="test_fsm_seq_det" file="/src/test_fsm_seq_det.py" lineno="17" time="0.0018620491027832031" sim_time_ns="205.0" ratio_time="110093.76696542893" />
+  </testsuite>
+</testsuites>

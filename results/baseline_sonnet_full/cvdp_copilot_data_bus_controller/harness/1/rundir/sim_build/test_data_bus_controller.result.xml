@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917871" />
+    <testcase name="test_data_bus_controller" classname="test_data_bus_controller" file="/src/test_data_bus_controller.py" lineno="81" time="0.00152587890625" sim_time_ns="20.0" ratio_time="13107.2">
+      <failure error_type="AttributeError" error_msg="data_bus_controller contains no child object named s_ready" />
+    </testcase>
+  </testsuite>
+</testsuites>

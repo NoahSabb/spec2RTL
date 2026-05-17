@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968824" />
+    <testcase name="test_perf_counters" classname="test_perf_counters" file="/src/test_perf_counters.py" lineno="8" time="0.0029532909393310547" sim_time_ns="570.0" ratio_time="193005.0278517801">
+      <failure error_type="AssertionError" error_msg="Error: Counter value 000000011110, expected 1 when sw_req_i is asserted&#10;assert LogicArray('000000011110', Range(11, 'downto', 0)) == 1&#10; +  where LogicArray('000000011110', Range(11, 'downto', 0)) = LogicArrayObject(cvdp_copilot_perf_counters.p_count_o).value&#10; +    where LogicArrayObject(cvdp_copilot_perf_counters.p_count_o) = HierarchyObject(cvdp_copilot_perf_counters).p_count_o" />
+    </testcase>
+    <testcase name="test_perf_counters_overflow" classname="test_perf_counters" file="/src/test_perf_counters.py" lineno="70" time="0.12545490264892578" sim_time_ns="41020.0" ratio_time="326970.08354301436">
+      <failure error_type="AssertionError" error_msg="Error: Counter value 3, expected 1 after overflow&#10;assert 3 == 1&#10; +  where 3 = int(LogicArray('000000000011', Range(11, 'downto', 0)))&#10; +    where LogicArray('000000000011', Range(11, 'downto', 0)) = LogicArrayObject(cvdp_copilot_perf_counters.p_count_o).value&#10; +      where LogicArrayObject(cvdp_copilot_perf_counters.p_count_o) = HierarchyObject(cvdp_copilot_perf_counters).p_count_o" />
+    </testcase>
+  </testsuite>
+</testsuites>

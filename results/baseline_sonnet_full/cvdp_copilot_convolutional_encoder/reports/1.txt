@@ -1,0 +1,93 @@
+Running harness with project name: cvdp_copilot_convolutional_encoder_1_1778917869
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917870
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_convolutional_encoder.test_reset (1/3)
+                                                            Test reset functionality.
+    10.00ns INFO     cocotb.regression                  test_convolutional_encoder.test_reset passed
+    10.00ns INFO     cocotb.regression                  running test_convolutional_encoder.test_convolutional_encoding (2/3)
+                                                            Test the convolutional encoding logic for a sequence of data.
+Cycle 1: Input bit: 1, Shift register: [0, 0]
+Expected encoded bits: bit1=1, bit2=1
+Actual encoded bits: bit1=1, bit2=1
+Cycle 2: Input bit: 0, Shift register: [1, 0]
+Expected encoded bits: bit1=1, bit2=0
+Actual encoded bits: bit1=1, bit2=0
+Cycle 3: Input bit: 1, Shift register: [0, 1]
+Expected encoded bits: bit1=0, bit2=0
+Actual encoded bits: bit1=0, bit2=0
+Cycle 4: Input bit: 1, Shift register: [1, 0]
+Expected encoded bits: bit1=0, bit2=1
+Actual encoded bits: bit1=0, bit2=1
+Cycle 5: Input bit: 0, Shift register: [1, 1]
+Expected encoded bits: bit1=0, bit2=1
+Actual encoded bits: bit1=0, bit2=1
+Cycle 6: Input bit: 0, Shift register: [0, 1]
+Expected encoded bits: bit1=1, bit2=1
+Actual encoded bits: bit1=1, bit2=1
+    83.00ns INFO     cocotb.regression                  test_convolutional_encoder.test_convolutional_encoding passed
+    83.00ns INFO     cocotb.regression                  running test_convolutional_encoder.test_random_data (3/3)
+                                                            Test convolutional encoding with random input data.
+Cycle 1: Input bit: 0, Shift register: [0, 0]
+Expected encoded bits: bit1=0, bit2=0
+Actual encoded bits: bit1=0, bit2=0
+Cycle 2: Input bit: 0, Shift register: [0, 0]
+Expected encoded bits: bit1=0, bit2=0
+Actual encoded bits: bit1=0, bit2=0
+Cycle 3: Input bit: 1, Shift register: [0, 0]
+Expected encoded bits: bit1=1, bit2=1
+Actual encoded bits: bit1=1, bit2=1
+Cycle 4: Input bit: 0, Shift register: [1, 0]
+Expected encoded bits: bit1=1, bit2=0
+Actual encoded bits: bit1=1, bit2=0
+Cycle 5: Input bit: 1, Shift register: [0, 1]
+Expected encoded bits: bit1=0, bit2=0
+Actual encoded bits: bit1=0, bit2=0
+Cycle 6: Input bit: 0, Shift register: [1, 0]
+Expected encoded bits: bit1=1, bit2=0
+Actual encoded bits: bit1=1, bit2=0
+Cycle 7: Input bit: 0, Shift register: [0, 1]
+Expected encoded bits: bit1=1, bit2=1
+Actual encoded bits: bit1=1, bit2=1
+Cycle 8: Input bit: 1, Shift register: [0, 0]
+Expected encoded bits: bit1=1, bit2=1
+Actual encoded bits: bit1=1, bit2=1
+Cycle 9: Input bit: 1, Shift register: [1, 0]
+Expected encoded bits: bit1=0, bit2=1
+Actual encoded bits: bit1=0, bit2=1
+Cycle 10: Input bit: 0, Shift register: [1, 1]
+Expected encoded bits: bit1=0, bit2=1
+Actual encoded bits: bit1=0, bit2=1
+   196.00ns INFO     cocotb.regression                  test_convolutional_encoder.test_random_data passed
+   196.00ns INFO     cocotb.regression                  ****************************************************************************************************************
+                                                        ** TEST                                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ****************************************************************************************************************
+                                                        ** test_convolutional_encoder.test_reset                    PASS          10.00           0.00      35971.73  **
+                                                        ** test_convolutional_encoder.test_convolutional_encoding   PASS          72.00           0.00     194957.97  **
+                                                        ** test_convolutional_encoder.test_random_data              PASS         112.00           0.00     228817.36  **
+                                                        ****************************************************************************************************************
+                                                        ** TESTS=3 PASS=3 FAIL=0 SKIP=0                                          196.00           0.01      34043.55  **
+                                                        ****************************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-ni1rtcg5'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-5gx6ynbg'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.30s =========================
+Cleaning up Docker resources...

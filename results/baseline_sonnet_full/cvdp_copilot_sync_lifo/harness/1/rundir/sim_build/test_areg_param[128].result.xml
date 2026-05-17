@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917910" />
+    <testcase name="lifo_test" classname="test_sync_lifo" file="/src/test_sync_lifo.py" lineno="8" time="0.019507646560668945" sim_time_ns="2710.0" ratio_time="138919.88413732414" />
+  </testsuite>
+</testsuites>

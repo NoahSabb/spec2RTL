@@ -1,0 +1,2 @@
+/code/rtl/packet_controller.sv:16: warning: Numeric constant truncated to 2 bits.
+/code/rtl/packet_controller.sv:17: warning: Numeric constant truncated to 2 bits.

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917918" />
+    <testcase name="test_vending_machine" classname="test_vending_machine" file="/src/test_vending_machine.py" lineno="238" time="0.0017538070678710938" sim_time_ns="190.0" ratio_time="108335.74768896139">
+      <failure error_type="AssertionError" error_msg="Expected item to be dispensed!&#10;assert Logic('0') == 1&#10; +  where Logic('0') = LogicObject(vending_machine.dispense_item).value&#10; +    where LogicObject(vending_machine.dispense_item) = HierarchyObject(vending_machine).dispense_item" />
+    </testcase>
+  </testsuite>
+</testsuites>

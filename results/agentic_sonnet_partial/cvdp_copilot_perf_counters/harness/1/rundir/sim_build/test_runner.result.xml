@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778993628" />
+    <testcase name="test_perf_counters" classname="test_perf_counters" file="/src/test_perf_counters.py" lineno="8" time="0.0027213096618652344" sim_time_ns="570.0" ratio_time="209457.97091291397">
+      <failure error_type="AssertionError" error_msg="Error: Counter value 00100000, expected 1 when sw_req_i is asserted&#10;assert LogicArray('00100000', Range(7, 'downto', 0)) == 1&#10; +  where LogicArray('00100000', Range(7, 'downto', 0)) = LogicArrayObject(cvdp_copilot_perf_counters.p_count_o).value&#10; +    where LogicArrayObject(cvdp_copilot_perf_counters.p_count_o) = HierarchyObject(cvdp_copilot_perf_counters).p_count_o" />
+    </testcase>
+    <testcase name="test_perf_counters_overflow" classname="test_perf_counters" file="/src/test_perf_counters.py" lineno="70" time="0.008099794387817383" sim_time_ns="2620.0" ratio_time="323465.0010302299" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1779049094" />
+    <testcase name="gcd_test" classname="test_gcd_top" file="/src/test_gcd_top.py" lineno="28" time="0.0008192062377929688" sim_time_ns="50.0" ratio_time="61034.691501746216">
+      <failure error_type="AssertionError" error_msg="Test failed with A=1, B=1. Expected 1, got 0&#10;assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 1&#10; +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value&#10; +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT" />
+    </testcase>
+    <testcase name="gcd_stress_test" classname="test_gcd_top" file="/src/test_gcd_top.py" lineno="88" time="2.5430755615234375" sim_time_ns="1120790.0" ratio_time="440722.25652964367">
+      <failure error_type="AssertionError" error_msg="Test failed with A=32431, B=1968. Expected 41, got 0&#10;assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 41&#10; +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value&#10; +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT" />
+    </testcase>
+  </testsuite>
+</testsuites>

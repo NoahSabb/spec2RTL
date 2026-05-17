@@ -1,0 +1,25 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917854" />
+    <testcase name="test1_write_read_data_output" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="69" time="0.0014667510986328125" sim_time_ns="140.0" ratio_time="95449.05071521456" />
+    <testcase name="test2_write_read_output_enable" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="110" time="0.0009331703186035156" sim_time_ns="159.99999999999997" ratio_time="171458.5181400102" />
+    <testcase name="test3_gpio_input_synchronization" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="185" time="0.0010557174682617188" sim_time_ns="219.99999999999994" ratio_time="208389.08762420953" />
+    <testcase name="test4_configure_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="242" time="0.001863241195678711" sim_time_ns="340.0" ratio_time="182477.71721049264">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x3FFFFFAA&#10;assert False" />
+    </testcase>
+    <testcase name="test5_clear_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="312" time="0.001592397689819336" sim_time_ns="399.9999999999999" ratio_time="251193.53196586308">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF&#10;  FAIL: Combined Interrupt Signal should be low. Got: 1&#10;assert False" />
+    </testcase>
+    <testcase name="test6_configure_edge_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="389" time="0.0020766258239746094" sim_time_ns="540.0" ratio_time="260037.21699196327">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x3FFFFFFF&#10;  FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x3FFFFFFF&#10;assert False" />
+    </testcase>
+    <testcase name="test7_mask_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="476" time="0.0037369728088378906" sim_time_ns="679.9999999999998" ratio_time="181965.4663774403">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x00000000&#10;  FAIL: Combined Interrupt Signal should be high. Got: 0&#10;  FAIL: Interrupts not masked correctly after re-triggering. Expected: 0x0000000F, Got: 0x00000000&#10;assert False" />
+    </testcase>
+    <testcase name="test8_invalid_address_access" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="578" time="0.0004515647888183594" sim_time_ns="120.0" ratio_time="265742.5976768743" />
+    <testcase name="test9_multiple_simultaneous_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="625" time="0.0016276836395263672" sim_time_ns="440.0" ratio_time="270322.8006444998">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x3FFFFFFF&#10;assert False" />
+    </testcase>
+    <testcase name="test10_reset_conditions" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="695" time="0.0016183853149414062" sim_time_ns="440.0" ratio_time="271875.9222156747" />
+  </testsuite>
+</testsuites>

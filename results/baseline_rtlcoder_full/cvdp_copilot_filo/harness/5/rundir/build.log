@@ -1,0 +1,10 @@
+/code/rtl/FILO_RTL.sv:6: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:6: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:7: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:7: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:16: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:16: warning: macro DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/FILO_RTL.sv:6: syntax error
+/code/rtl/FILO_RTL.sv:1: Errors in port declarations.
+/code/rtl/FILO_RTL.sv:16: syntax error
+/code/rtl/FILO_RTL.sv:16: error: Invalid module item.

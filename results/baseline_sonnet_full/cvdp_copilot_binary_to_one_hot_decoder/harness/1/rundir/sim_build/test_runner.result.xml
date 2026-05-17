@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917857" />
+    <testcase name="test_binary_to_one_hot_decoder" classname="test_binary_to_one_hot_decoder" file="/src/test_binary_to_one_hot_decoder.py" lineno="6" time="0.00034236907958984375" sim_time_ns="1.6" ratio_time="4673.3192200557105" />
+  </testsuite>
+</testsuites>

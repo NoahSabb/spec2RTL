@@ -1,0 +1,41 @@
+Running harness with project name: cvdp_copilot_bcd_counter_1_1778917855
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_areg_param[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917856
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_bcd_counter.test_bcd_counter (1/1)
+                                                            Test the BCD counter simulating a 24-hour clock with a 1 Hz frequency.
+Midnight transition: Hours = 00000000, Minutes = 00000000, Seconds = 00000000
+86401000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:42: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                  assert int(dut.ms_hr) == 0 and int(dut.ls_hr) == 0, "24-hour reset failed"
+86401000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:43: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                  assert int(dut.ms_min) == 0 and int(dut.ls_min) == 0, "24-hour reset failed"
+86401000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:44: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                  assert int(dut.ms_sec) == 0 and int(dut.ls_sec) == 0, "24-hour reset failed"
+Post-midnight check: Hours = 00010000, Minutes = 00010000, Seconds = 00010000
+123011000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:54: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                   assert int(dut.ms_hr) == 1 and int(dut.ls_hr) == 0, "Counter incorrect for hours after reset"
+123011000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:55: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                   assert int(dut.ms_min) == 1 and int(dut.ls_min) == 0, "Counter incorrect for minutes after reset"
+123011000000000.00ns WARNING  py.warnings                        /src/test_bcd_counter.py:56: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                                   assert int(dut.ms_sec) == 1 and int(dut.ls_sec) == 0, "Counter incorrect for seconds after reset"
+123011000000000.00ns INFO     cocotb.regression                  test_bcd_counter.test_bcd_counter passed
+123011000000000.00ns INFO     cocotb.regression                  *******************************************************************************************
+                                                                 ** TEST                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                                 *******************************************************************************************
+                                                                 ** test_bcd_counter.test_bcd_counter   PASS   123011000000000.00           2.64   46573442188041.89  **
+                                                                 *******************************************************************************************
+                                                                 ** TESTS=1 PASS=1 FAIL=0 SKIP=0               123011000000000.00           2.64   46557749375915.91  **
+                                                                 *******************************************************************************************
+PASSED
+
+============================== 1 passed in 2.96s ===============================
+Cleaning up Docker resources...

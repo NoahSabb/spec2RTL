@@ -1,0 +1,115 @@
+Running harness with project name: cvdp_copilot_cascaded_adder_1_1778917858
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_tree_adder[20-48]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.02     149954.77  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.02     140525.01  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 20, IN_DATA_WIDTH = 48
+PASSED
+../../src/test_runner.py::test_tree_adder[79-310]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917860
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.90       3622.55  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.90       3616.83  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 79, IN_DATA_WIDTH = 310
+PASSED
+../../src/test_runner.py::test_tree_adder[81-233]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917861
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.73       4425.58  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.74       4413.19  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 81, IN_DATA_WIDTH = 233
+PASSED
+../../src/test_runner.py::test_tree_adder[290-305]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917862
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00          11.24        289.13  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00          11.24        289.09  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 290, IN_DATA_WIDTH = 305
+PASSED
+../../src/test_runner.py::test_tree_adder[443-239]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917873
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00          21.00        154.73  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00          21.01        154.72  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 443, IN_DATA_WIDTH = 239
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-1q20x9ex'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-4hau8pet'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 2 warnings in 35.40s ========================
+Cleaning up Docker resources...

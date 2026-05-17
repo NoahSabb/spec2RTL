@@ -1,0 +1,102 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaace7e08e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaace7e0a70 .scope module, "clock_divider" "clock_divider" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /INPUT 2 "sel";
+    .port_info 3 /OUTPUT 1 "clk_out";
+o0xffff8c5af018 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaace7df800_0 .net "clk", 0 0, o0xffff8c5af018;  0 drivers
+v0xaaaace7df900_0 .net "clk_div2", 0 0, L_0xaaaace805b80;  1 drivers
+v0xaaaace805610_0 .net "clk_div4", 0 0, L_0xaaaace805c20;  1 drivers
+v0xaaaace8056b0_0 .net "clk_div8", 0 0, L_0xaaaace805d10;  1 drivers
+v0xaaaace805770_0 .var "clk_out", 0 0;
+v0xaaaace805880_0 .var "counter", 2 0;
+o0xffff8c5af138 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaace805960_0 .net "rst_n", 0 0, o0xffff8c5af138;  0 drivers
+o0xffff8c5af168 .functor BUFZ 2, c4<zz>; HiZ drive
+v0xaaaace805a20_0 .net "sel", 1 0, o0xffff8c5af168;  0 drivers
+E_0xaaaace7f1e20/0 .event negedge, v0xaaaace805960_0;
+E_0xaaaace7f1e20/1 .event posedge, v0xaaaace7df800_0;
+E_0xaaaace7f1e20 .event/or E_0xaaaace7f1e20/0, E_0xaaaace7f1e20/1;
+L_0xaaaace805b80 .part v0xaaaace805880_0, 0, 1;
+L_0xaaaace805c20 .part v0xaaaace805880_0, 1, 1;
+L_0xaaaace805d10 .part v0xaaaace805880_0, 2, 1;
+    .scope S_0xaaaace7e0a70;
+T_0 ;
+    %wait E_0xaaaace7f1e20;
+    %load/vec4 v0xaaaace805960_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0xaaaace805880_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaace805880_0;
+    %addi 1, 0, 3;
+    %assign/vec4 v0xaaaace805880_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0xaaaace7e0a70;
+T_1 ;
+    %wait E_0xaaaace7f1e20;
+    %load/vec4 v0xaaaace805960_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaace805770_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0xaaaace805a20_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.2, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.3, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.4, 6;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaace805770_0, 0;
+    %jmp T_1.6;
+T_1.2 ;
+    %load/vec4 v0xaaaace7df900_0;
+    %assign/vec4 v0xaaaace805770_0, 0;
+    %jmp T_1.6;
+T_1.3 ;
+    %load/vec4 v0xaaaace805610_0;
+    %assign/vec4 v0xaaaace805770_0, 0;
+    %jmp T_1.6;
+T_1.4 ;
+    %load/vec4 v0xaaaace8056b0_0;
+    %assign/vec4 v0xaaaace805770_0, 0;
+    %jmp T_1.6;
+T_1.6 ;
+    %pop/vec4 1;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/clock_divider.sv";

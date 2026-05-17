@@ -1,0 +1,3 @@
+/code/rtl/static_branch_predict.sv:160: error: Variable 'instr_j' cannot have multiple drivers.
+/code/rtl/static_branch_predict.sv:165: error: Variable 'instr_b' cannot have multiple drivers.
+2 error(s) during elaboration.

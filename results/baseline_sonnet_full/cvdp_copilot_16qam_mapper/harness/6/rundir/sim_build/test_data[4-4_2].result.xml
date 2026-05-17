@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917867" />
+    <testcase name="test_qam16_demapper_interpolated" classname="test_qam16_demapper_interpolated" file="/src/test_qam16_demapper_interpolated.py" lineno="5" time="0.0004553794860839844" sim_time_ns="1.0" ratio_time="2195.9706806282725" />
+  </testsuite>
+</testsuites>

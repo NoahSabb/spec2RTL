@@ -1,0 +1,785 @@
+Running harness with project name: cvdp_copilot_restoring_division_1_1778917900
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 10 items
+
+../../src/test_runner.py::test_areg_param[3-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917901
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 3
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 34, Reset will be applied at cycle 17
+Performing write operation: dividend = 5, divisor = 1
+Read operation: quotient = 2, remainder = 0
+   110.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 5, Got: 2
+                                                        assert 2 == 5
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 5, Got: 2
+                                                        assert 2 == 5
+   110.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         110.00           0.00      28729.90  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   110.00           0.01      14514.53  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[3-1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917901
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 3
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 34, Reset will be applied at cycle 17
+Performing write operation: dividend = 5, divisor = 1
+Read operation: quotient = 2, remainder = 0
+   110.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 5, Got: 2
+                                                        assert 2 == 5
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 5, Got: 2
+                                                        assert 2 == 5
+   110.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         110.00           0.00      31843.01  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   110.00           0.01      13439.76  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[4-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917901
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 4
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 34, Reset will be applied at cycle 17
+Performing write operation: dividend = 8, divisor = 2
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 11, divisor = 4
+Read operation: quotient = 2, remainder = 3
+Check Passed: quotient = 2, remainder = 3
+Performing write operation: dividend = 15, divisor = 1
+Read operation: quotient = 15, remainder = 0
+Check Passed: quotient = 15, remainder = 0
+Performing write operation: dividend = 10, divisor = 3
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 13, divisor = 2
+Read operation: quotient = 6, remainder = 1
+Check Passed: quotient = 6, remainder = 1
+Performing write operation: dividend = 12, divisor = 4
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 11, divisor = 4
+Read operation: quotient = 2, remainder = 3
+Check Passed: quotient = 2, remainder = 3
+Performing write operation: dividend = 4, divisor = 2
+Read operation: quotient = 2, remainder = 0
+Check Passed: quotient = 2, remainder = 0
+Performing write operation: dividend = 8, divisor = 4
+Read operation: quotient = 2, remainder = 0
+Check Passed: quotient = 2, remainder = 0
+Performing write operation: dividend = 12, divisor = 1
+Read operation: quotient = 12, remainder = 0
+Check Passed: quotient = 12, remainder = 0
+Performing write operation: dividend = 6, divisor = 1
+Read operation: quotient = 6, remainder = 0
+Check Passed: quotient = 6, remainder = 0
+Performing write operation: dividend = 12, divisor = 3
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 15, divisor = 3
+Read operation: quotient = 5, remainder = 0
+Check Passed: quotient = 5, remainder = 0
+Performing write operation: dividend = 12, divisor = 1
+Read operation: quotient = 12, remainder = 0
+Check Passed: quotient = 12, remainder = 0
+Performing write operation: dividend = 6, divisor = 2
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 4, divisor = 4
+Read operation: quotient = 1, remainder = 0
+Check Passed: quotient = 1, remainder = 0
+Performing write operation: dividend = 11, divisor = 2
+Read operation: quotient = 5, remainder = 1
+Check Passed: quotient = 5, remainder = 1
+[INFO] Reset applied to the DUT
+Performing write operation: dividend = 10, divisor = 1
+Read operation: quotient = 10, remainder = 0
+Check Passed: quotient = 10, remainder = 0
+Performing write operation: dividend = 5, divisor = 2
+Read operation: quotient = 2, remainder = 1
+Check Passed: quotient = 2, remainder = 1
+Performing write operation: dividend = 14, divisor = 4
+Read operation: quotient = 3, remainder = 2
+Check Passed: quotient = 3, remainder = 2
+Performing write operation: dividend = 10, divisor = 1
+Read operation: quotient = 10, remainder = 0
+Check Passed: quotient = 10, remainder = 0
+Performing write operation: dividend = 13, divisor = 2
+Read operation: quotient = 6, remainder = 1
+Check Passed: quotient = 6, remainder = 1
+Performing write operation: dividend = 12, divisor = 4
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 14, divisor = 2
+Read operation: quotient = 7, remainder = 0
+Check Passed: quotient = 7, remainder = 0
+Performing write operation: dividend = 4, divisor = 4
+Read operation: quotient = 1, remainder = 0
+Check Passed: quotient = 1, remainder = 0
+Performing write operation: dividend = 7, divisor = 2
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 7, divisor = 4
+Read operation: quotient = 1, remainder = 3
+Check Passed: quotient = 1, remainder = 3
+Performing write operation: dividend = 14, divisor = 1
+Read operation: quotient = 14, remainder = 0
+Check Passed: quotient = 14, remainder = 0
+Performing write operation: dividend = 13, divisor = 4
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 5, divisor = 2
+Read operation: quotient = 2, remainder = 1
+Check Passed: quotient = 2, remainder = 1
+Performing write operation: dividend = 4, divisor = 1
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 4, divisor = 3
+Read operation: quotient = 1, remainder = 1
+Check Passed: quotient = 1, remainder = 1
+Performing write operation: dividend = 14, divisor = 1
+Read operation: quotient = 14, remainder = 0
+Check Passed: quotient = 14, remainder = 0
+Performing write operation: dividend = 7, divisor = 1
+Read operation: quotient = 7, remainder = 0
+Check Passed: quotient = 7, remainder = 0
+  2800.00ns INFO     cocotb.regression                  test_restoring_division.test_restoring_division passed
+  2800.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   PASS        2800.00           0.01     368302.17  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                  2800.00           0.01     315183.47  **
+                                                        *********************************************************************************************************
+PASSED
+../../src/test_runner.py::test_areg_param[4-1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917901
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 4
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 34, Reset will be applied at cycle 17
+Performing write operation: dividend = 8, divisor = 2
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 11, divisor = 4
+Read operation: quotient = 2, remainder = 3
+Check Passed: quotient = 2, remainder = 3
+Performing write operation: dividend = 15, divisor = 1
+Read operation: quotient = 15, remainder = 0
+Check Passed: quotient = 15, remainder = 0
+Performing write operation: dividend = 10, divisor = 3
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 13, divisor = 2
+Read operation: quotient = 6, remainder = 1
+Check Passed: quotient = 6, remainder = 1
+Performing write operation: dividend = 12, divisor = 4
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 11, divisor = 4
+Read operation: quotient = 2, remainder = 3
+Check Passed: quotient = 2, remainder = 3
+Performing write operation: dividend = 4, divisor = 2
+Read operation: quotient = 2, remainder = 0
+Check Passed: quotient = 2, remainder = 0
+Performing write operation: dividend = 8, divisor = 4
+Read operation: quotient = 2, remainder = 0
+Check Passed: quotient = 2, remainder = 0
+Performing write operation: dividend = 12, divisor = 1
+Read operation: quotient = 12, remainder = 0
+Check Passed: quotient = 12, remainder = 0
+Performing write operation: dividend = 6, divisor = 1
+Read operation: quotient = 6, remainder = 0
+Check Passed: quotient = 6, remainder = 0
+Performing write operation: dividend = 12, divisor = 3
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 15, divisor = 3
+Read operation: quotient = 5, remainder = 0
+Check Passed: quotient = 5, remainder = 0
+Performing write operation: dividend = 12, divisor = 1
+Read operation: quotient = 12, remainder = 0
+Check Passed: quotient = 12, remainder = 0
+Performing write operation: dividend = 6, divisor = 2
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 4, divisor = 4
+Read operation: quotient = 1, remainder = 0
+Check Passed: quotient = 1, remainder = 0
+Performing write operation: dividend = 11, divisor = 2
+Read operation: quotient = 5, remainder = 1
+Check Passed: quotient = 5, remainder = 1
+[INFO] Reset applied to the DUT
+Performing write operation: dividend = 10, divisor = 1
+Read operation: quotient = 10, remainder = 0
+Check Passed: quotient = 10, remainder = 0
+Performing write operation: dividend = 5, divisor = 2
+Read operation: quotient = 2, remainder = 1
+Check Passed: quotient = 2, remainder = 1
+Performing write operation: dividend = 14, divisor = 4
+Read operation: quotient = 3, remainder = 2
+Check Passed: quotient = 3, remainder = 2
+Performing write operation: dividend = 10, divisor = 1
+Read operation: quotient = 10, remainder = 0
+Check Passed: quotient = 10, remainder = 0
+Performing write operation: dividend = 13, divisor = 2
+Read operation: quotient = 6, remainder = 1
+Check Passed: quotient = 6, remainder = 1
+Performing write operation: dividend = 12, divisor = 4
+Read operation: quotient = 3, remainder = 0
+Check Passed: quotient = 3, remainder = 0
+Performing write operation: dividend = 14, divisor = 2
+Read operation: quotient = 7, remainder = 0
+Check Passed: quotient = 7, remainder = 0
+Performing write operation: dividend = 4, divisor = 4
+Read operation: quotient = 1, remainder = 0
+Check Passed: quotient = 1, remainder = 0
+Performing write operation: dividend = 7, divisor = 2
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 7, divisor = 4
+Read operation: quotient = 1, remainder = 3
+Check Passed: quotient = 1, remainder = 3
+Performing write operation: dividend = 14, divisor = 1
+Read operation: quotient = 14, remainder = 0
+Check Passed: quotient = 14, remainder = 0
+Performing write operation: dividend = 13, divisor = 4
+Read operation: quotient = 3, remainder = 1
+Check Passed: quotient = 3, remainder = 1
+Performing write operation: dividend = 5, divisor = 2
+Read operation: quotient = 2, remainder = 1
+Check Passed: quotient = 2, remainder = 1
+Performing write operation: dividend = 4, divisor = 1
+Read operation: quotient = 4, remainder = 0
+Check Passed: quotient = 4, remainder = 0
+Performing write operation: dividend = 4, divisor = 3
+Read operation: quotient = 1, remainder = 1
+Check Passed: quotient = 1, remainder = 1
+Performing write operation: dividend = 14, divisor = 1
+Read operation: quotient = 14, remainder = 0
+Check Passed: quotient = 14, remainder = 0
+Performing write operation: dividend = 7, divisor = 1
+Read operation: quotient = 7, remainder = 0
+Check Passed: quotient = 7, remainder = 0
+  2800.00ns INFO     cocotb.regression                  test_restoring_division.test_restoring_division passed
+  2800.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   PASS        2800.00           0.01     230709.79  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                  2800.00           0.01     213640.85  **
+                                                        *********************************************************************************************************
+PASSED
+../../src/test_runner.py::test_areg_param[6-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917902
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 6
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 20, Reset will be applied at cycle 10
+Performing write operation: dividend = 17, divisor = 5
+Read operation: quotient = 6, remainder = 4
+   140.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 3, Got: 6
+                                                        assert 6 == 3
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 3, Got: 6
+                                                        assert 6 == 3
+   140.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   140.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         140.00           0.00     100445.19  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   140.00           0.01      21771.63  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[6-1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917902
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 6
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 20, Reset will be applied at cycle 10
+Performing write operation: dividend = 17, divisor = 5
+Read operation: quotient = 6, remainder = 4
+   140.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 3, Got: 6
+                                                        assert 6 == 3
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 3, Got: 6
+                                                        assert 6 == 3
+   140.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   140.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         140.00           0.00     106822.37  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   140.00           0.00      28344.00  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[9-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917902
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 9
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 20, Reset will be applied at cycle 10
+Performing write operation: dividend = 103, divisor = 9
+Read operation: quotient = 22, remainder = 8
+   170.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 11, Got: 22
+                                                        assert 22 == 11
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 11, Got: 22
+                                                        assert 22 == 11
+   170.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   170.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         170.00           0.00     121740.09  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   170.00           0.01      32500.65  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[9-1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917903
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 9
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 31, Reset will be applied at cycle 15
+Performing write operation: dividend = 61, divisor = 2
+Read operation: quotient = 61, remainder = 0
+   170.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 30, Got: 61
+                                                        assert 61 == 30
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 30, Got: 61
+                                                        assert 61 == 30
+   170.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   170.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         170.00           0.00     118325.87  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   170.00           0.01      32153.30  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[15-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917903
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 15
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 31, Reset will be applied at cycle 15
+Performing write operation: dividend = 3348, divisor = 2
+Read operation: quotient = 3348, remainder = 0
+   230.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 1674, Got: 3348
+                                                        assert 3348 == 1674
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 1674, Got: 3348
+                                                        assert 3348 == 1674
+   230.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   230.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         230.00           0.00     129889.58  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   230.00           0.01      41709.11  **
+                                                        *********************************************************************************************************
+FAILED
+../../src/test_runner.py::test_areg_param[15-1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917903
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_restoring_division.test_restoring_division (1/1)
+data_wd = 15
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiFunction(20) to object.
+     0.00ns WARNING  gpi                                Unable to create is_power_of_2 via any registered implementation
+[INFO] Total cycles = 31, Reset will be applied at cycle 15
+Performing write operation: dividend = 3348, divisor = 2
+Read operation: quotient = 3348, remainder = 0
+   230.00ns WARNING  ..division.test_restoring_division ERROR: Quotient mismatch! Expected: 1674, Got: 3348
+                                                        assert 3348 == 1674
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_restoring_division.py", line 83, in test_restoring_division
+                                                            assert out_q == expected_q, f"ERROR: Quotient mismatch! Expected: {expected_q}, Got: {out_q}"
+                                                        AssertionError: ERROR: Quotient mismatch! Expected: 1674, Got: 3348
+                                                        assert 3348 == 1674
+   230.00ns WARNING  cocotb.regression                  test_restoring_division.test_restoring_division failed
+   230.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_restoring_division.test_restoring_division   FAIL         230.00           0.00     145022.54  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                   230.00           0.01      41664.07  **
+                                                        *********************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+_____________________________ test_areg_param[3-0] _____________________________
+
+test = 0, WIDTH = 3
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 3
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=3 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[3-1] _____________________________
+
+test = 1, WIDTH = 3
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 3
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=3 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[6-0] _____________________________
+
+test = 0, WIDTH = 6
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 6
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=6 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[6-1] _____________________________
+
+test = 1, WIDTH = 6
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 6
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=6 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[9-0] _____________________________
+
+test = 0, WIDTH = 9
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 9
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=9 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_areg_param[9-1] _____________________________
+
+test = 1, WIDTH = 9
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 9
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=9 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_areg_param[15-0] _____________________________
+
+test = 0, WIDTH = 15
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 15
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=15 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_areg_param[15-1] _____________________________
+
+test = 1, WIDTH = 15
+
+    @pytest.mark.parametrize("test", range(2))
+    @pytest.mark.parametrize("WIDTH", [3,4,6,9,15])
+    def test_areg_param(test,WIDTH):
+>           runner(WIDTH = WIDTH)
+
+/src/test_runner.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 15
+
+    def runner(WIDTH: int=0):
+        parameter = {"WIDTH":WIDTH}
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s restoring_division -g2012 -Prestoring_division.WIDTH=15 -f /code/rundir/sim_build/cmds.f /code/rtl/restore_division.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_areg_param[3-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[3-1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[6-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[6-1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[9-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[9-1] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[15-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_areg_param[15-1] - SystemExit: 1
+========================= 8 failed, 2 passed in 2.82s ==========================
+Cleaning up Docker resources...

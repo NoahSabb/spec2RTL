@@ -1,0 +1,42 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaada675610 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaada6757a0 .scope module, "binary_to_one_hot_decoder" "binary_to_one_hot_decoder" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 5 "binary_in";
+    .port_info 1 /OUTPUT 32 "one_hot_out";
+P_0xaaaada6754e0 .param/l "BINARY_WIDTH" 0 3 2, +C4<00000000000000000000000000000101>;
+P_0xaaaada675520 .param/l "OUTPUT_WIDTH" 0 3 3, +C4<00000000000000000000000000100000>;
+v0xaaaada69d3a0_0 .net *"_ivl_0", 31 0, L_0xaaaada6bf7b0;  1 drivers
+v0xaaaada6bf010_0 .net *"_ivl_10", 31 0, L_0xaaaada6cfa60;  1 drivers
+L_0xffffa8cb60f0 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0xaaaada6bf0f0_0 .net/2u *"_ivl_12", 31 0, L_0xffffa8cb60f0;  1 drivers
+L_0xffffa8cb6018 .functor BUFT 1, C4<000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0xaaaada6bf1e0_0 .net *"_ivl_3", 26 0, L_0xffffa8cb6018;  1 drivers
+L_0xffffa8cb6060 .functor BUFT 1, C4<00000000000000000000000000100000>, C4<0>, C4<0>, C4<0>;
+v0xaaaada6bf2c0_0 .net/2u *"_ivl_4", 31 0, L_0xffffa8cb6060;  1 drivers
+v0xaaaada6bf3f0_0 .net *"_ivl_6", 0 0, L_0xaaaada6cf8f0;  1 drivers
+L_0xffffa8cb60a8 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v0xaaaada6bf4b0_0 .net/2u *"_ivl_8", 31 0, L_0xffffa8cb60a8;  1 drivers
+o0xffffa8cff168 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0xaaaada6bf590_0 .net "binary_in", 4 0, o0xffffa8cff168;  0 drivers
+v0xaaaada6bf670_0 .net "one_hot_out", 31 0, L_0xaaaada6cfbd0;  1 drivers
+L_0xaaaada6bf7b0 .concat [ 5 27 0 0], o0xffffa8cff168, L_0xffffa8cb6018;
+L_0xaaaada6cf8f0 .cmp/gt 32, L_0xffffa8cb6060, L_0xaaaada6bf7b0;
+L_0xaaaada6cfa60 .shift/l 32, L_0xffffa8cb60a8, o0xffffa8cff168;
+L_0xaaaada6cfbd0 .functor MUXZ 32, L_0xffffa8cb60f0, L_0xaaaada6cfa60, L_0xaaaada6cf8f0, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/binary_to_one_hot_decoder.v";

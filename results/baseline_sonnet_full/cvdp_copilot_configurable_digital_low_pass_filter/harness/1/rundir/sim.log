@@ -1,0 +1,1 @@
+/code/rtl/low_pass_filter.sv:62: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in '+mult_results[word=+i[31:0]][30:0]').

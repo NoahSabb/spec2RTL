@@ -1,0 +1,318 @@
+Running harness with project name: cvdp_copilot_hill_cipher_1_1778917886
+#1 [internal] load local bake definitions
+#1 reading from stdin 766B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 65B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:196cef4a66c1ff723261959ff8e6a1cdd2af50c078b79b6b8a3072d76d31e29b done
+#6 exporting config sha256:f0405155eadff84420e60079e85a4100cf5a1e93398184e653a90956d0e4885e done
+#6 exporting attestation manifest sha256:2cc0d38a6bb88ebc55d4425ac4f05513cb1cebb05b3a345c1daf49278cc0cfd2 done
+#6 exporting manifest list sha256:9141bb39c085376ca16d30bd8af2b84410817eda022f1a85fef2d343d3cecb5b done
+#6 naming to docker.io/library/cvdp_copilot_hill_cipher_1_1778917886-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_hill_cipher_1_1778917886-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 2 items
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s hill_cipher -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/hill_cipher.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917887
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_hill_cipher.hill_cipher_test (1/2)
+                                                            Test the hill_cipher module with various inputs to cover all corner cases.
+    10.00ns INFO     cocotb.hill_cipher                 Running Test Case 1: Normal Case
+    60.00ns INFO     cocotb.hill_cipher                 Test Case 1 Inputs:
+    60.00ns INFO     cocotb.hill_cipher                   Category: Normal Case
+    60.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10000100001
+    60.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 1057
+    60.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b10000100001000010000100001000010000100001
+    60.00ns INFO     cocotb.hill_cipher                   Key (decimal): 1134979744801
+    60.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b110001100011
+    60.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 3171
+    60.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b110001100011
+    60.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 3171
+    80.00ns INFO     cocotb.hill_cipher                 Running Test Case 2: Maximum Values
+   130.00ns INFO     cocotb.hill_cipher                 Test Case 2 Inputs:
+   130.00ns INFO     cocotb.hill_cipher                   Category: Maximum Values
+   130.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b110101101011010
+   130.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 27482
+   130.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b111111111111111111111111111111111111111111111
+   130.00ns INFO     cocotb.hill_cipher                   Key (decimal): 35184372088831
+   130.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b0
+   130.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 0
+   130.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b0
+   130.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 0
+   150.00ns INFO     cocotb.hill_cipher                 Running Test Case 3: Minimum Values
+   200.00ns INFO     cocotb.hill_cipher                 Test Case 3 Inputs:
+   200.00ns INFO     cocotb.hill_cipher                   Category: Minimum Values
+   200.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Key (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 0
+   220.00ns INFO     cocotb.hill_cipher                 Running Test Case 4: Edge Case: Modulo Operation
+   270.00ns INFO     cocotb.hill_cipher                 Test Case 4 Inputs:
+   270.00ns INFO     cocotb.hill_cipher                   Category: Edge Case: Modulo Operation
+   270.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b1100011000110
+   270.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 6342
+   270.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b1100011000110001100011000110001100011000110
+   270.00ns INFO     cocotb.hill_cipher                   Key (decimal): 6809878468806
+   270.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b1000010000100
+   270.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 4228
+   270.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b1000010000100
+   270.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 4228
+   290.00ns INFO     cocotb.hill_cipher                 Running Test Case 5: Random Case
+   340.00ns INFO     cocotb.hill_cipher                 Test Case 5 Inputs:
+   340.00ns INFO     cocotb.hill_cipher                   Category: Random Case
+   340.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10011101
+   340.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 157
+   340.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b11111111001100101001111001101001101111010
+   340.00ns INFO     cocotb.hill_cipher                   Key (decimal): 2192131806074
+   340.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b100011010100100
+   340.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 18084
+   340.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b100011010100100
+   340.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 18084
+   360.00ns INFO     cocotb.hill_cipher                 Running Test Case 6: Random Case
+   410.00ns INFO     cocotb.hill_cipher                 Test Case 6 Inputs:
+   410.00ns INFO     cocotb.hill_cipher                   Category: Random Case
+   410.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10000100
+   410.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 132
+   410.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b1100010001011001100001100010010010110110
+   410.00ns INFO     cocotb.hill_cipher                   Key (decimal): 843315553462
+   410.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b10000111000100
+   410.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 8644
+   410.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b10000111000100
+   410.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 8644
+   430.00ns INFO     cocotb.hill_cipher                 All test cases passed!
+   430.00ns INFO     cocotb.regression                  test_hill_cipher.hill_cipher_test passed
+   430.00ns INFO     cocotb.regression                  running test_hill_cipher.hill_cipher_clock_latency_test (2/2)
+                                                            Test the clock latency from start signal to done signal.
+   491.00ns INFO     cocotb.hill_cipher                 Clock Latency: 4 clock cycles
+   491.00ns WARNING  ..t.hill_cipher_clock_latency_test Clock latency should be equal to 3.
+                                                        assert 4 == 3
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_hill_cipher.py", line 180, in hill_cipher_clock_latency_test
+                                                            assert latency == 3, "Clock latency should be equal to 3."
+                                                        AssertionError: Clock latency should be equal to 3.
+                                                        assert 4 == 3
+   491.00ns WARNING  cocotb.regression                  test_hill_cipher.hill_cipher_clock_latency_test failed
+   491.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_hill_cipher.hill_cipher_test                 PASS         430.00           0.00     134573.25  **
+                                                        ** test_hill_cipher.hill_cipher_clock_latency_test   FAIL          60.00           0.00     109702.81  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=2 PASS=1 FAIL=1 SKIP=0                                   491.00           0.01      60026.91  **
+                                                        *********************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 2 tests.
+FAILED
+../../src/test_runner.py::test_hill_cipher 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s hill_cipher -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/hill_cipher.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917887
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_hill_cipher.hill_cipher_test (1/2)
+                                                            Test the hill_cipher module with various inputs to cover all corner cases.
+    10.00ns INFO     cocotb.hill_cipher                 Running Test Case 1: Normal Case
+    60.00ns INFO     cocotb.hill_cipher                 Test Case 1 Inputs:
+    60.00ns INFO     cocotb.hill_cipher                   Category: Normal Case
+    60.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10000100001
+    60.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 1057
+    60.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b10000100001000010000100001000010000100001
+    60.00ns INFO     cocotb.hill_cipher                   Key (decimal): 1134979744801
+    60.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b110001100011
+    60.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 3171
+    60.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b110001100011
+    60.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 3171
+    80.00ns INFO     cocotb.hill_cipher                 Running Test Case 2: Maximum Values
+   130.00ns INFO     cocotb.hill_cipher                 Test Case 2 Inputs:
+   130.00ns INFO     cocotb.hill_cipher                   Category: Maximum Values
+   130.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b110101101011010
+   130.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 27482
+   130.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b111111111111111111111111111111111111111111111
+   130.00ns INFO     cocotb.hill_cipher                   Key (decimal): 35184372088831
+   130.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b0
+   130.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 0
+   130.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b0
+   130.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 0
+   150.00ns INFO     cocotb.hill_cipher                 Running Test Case 3: Minimum Values
+   200.00ns INFO     cocotb.hill_cipher                 Test Case 3 Inputs:
+   200.00ns INFO     cocotb.hill_cipher                   Category: Minimum Values
+   200.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Key (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 0
+   200.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b0
+   200.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 0
+   220.00ns INFO     cocotb.hill_cipher                 Running Test Case 4: Edge Case: Modulo Operation
+   270.00ns INFO     cocotb.hill_cipher                 Test Case 4 Inputs:
+   270.00ns INFO     cocotb.hill_cipher                   Category: Edge Case: Modulo Operation
+   270.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b1100011000110
+   270.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 6342
+   270.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b1100011000110001100011000110001100011000110
+   270.00ns INFO     cocotb.hill_cipher                   Key (decimal): 6809878468806
+   270.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b1000010000100
+   270.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 4228
+   270.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b1000010000100
+   270.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 4228
+   290.00ns INFO     cocotb.hill_cipher                 Running Test Case 5: Random Case
+   340.00ns INFO     cocotb.hill_cipher                 Test Case 5 Inputs:
+   340.00ns INFO     cocotb.hill_cipher                   Category: Random Case
+   340.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10011101
+   340.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 157
+   340.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b11111111001100101001111001101001101111010
+   340.00ns INFO     cocotb.hill_cipher                   Key (decimal): 2192131806074
+   340.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b100011010100100
+   340.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 18084
+   340.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b100011010100100
+   340.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 18084
+   360.00ns INFO     cocotb.hill_cipher                 Running Test Case 6: Random Case
+   410.00ns INFO     cocotb.hill_cipher                 Test Case 6 Inputs:
+   410.00ns INFO     cocotb.hill_cipher                   Category: Random Case
+   410.00ns INFO     cocotb.hill_cipher                   Plaintext (binary): 0b10000100
+   410.00ns INFO     cocotb.hill_cipher                   Plaintext (decimal): 132
+   410.00ns INFO     cocotb.hill_cipher                   Key (binary): 0b1100010001011001100001100010010010110110
+   410.00ns INFO     cocotb.hill_cipher                   Key (decimal): 843315553462
+   410.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (binary): 0b10000111000100
+   410.00ns INFO     cocotb.hill_cipher                   Expected Ciphertext (decimal): 8644
+   410.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (binary): 0b10000111000100
+   410.00ns INFO     cocotb.hill_cipher                   Actual Ciphertext (decimal): 8644
+   430.00ns INFO     cocotb.hill_cipher                 All test cases passed!
+   430.00ns INFO     cocotb.regression                  test_hill_cipher.hill_cipher_test passed
+   430.00ns INFO     cocotb.regression                  running test_hill_cipher.hill_cipher_clock_latency_test (2/2)
+                                                            Test the clock latency from start signal to done signal.
+   491.00ns INFO     cocotb.hill_cipher                 Clock Latency: 4 clock cycles
+   491.00ns WARNING  ..t.hill_cipher_clock_latency_test Clock latency should be equal to 3.
+                                                        assert 4 == 3
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_hill_cipher.py", line 180, in hill_cipher_clock_latency_test
+                                                            assert latency == 3, "Clock latency should be equal to 3."
+                                                        AssertionError: Clock latency should be equal to 3.
+                                                        assert 4 == 3
+   491.00ns WARNING  cocotb.regression                  test_hill_cipher.hill_cipher_clock_latency_test failed
+   491.00ns INFO     cocotb.regression                  *********************************************************************************************************
+                                                        ** TEST                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************
+                                                        ** test_hill_cipher.hill_cipher_test                 PASS         430.00           0.00     143984.57  **
+                                                        ** test_hill_cipher.hill_cipher_clock_latency_test   FAIL          60.00           0.00     100222.32  **
+                                                        *********************************************************************************************************
+                                                        ** TESTS=2 PASS=1 FAIL=1 SKIP=0                                   491.00           0.01      60256.99  **
+                                                        *********************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 2 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+    def test_runner( ):
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s hill_cipher -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/hill_cipher.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 2 tests.
+_______________________________ test_hill_cipher _______________________________
+
+    def test_hill_cipher():
+        # Run the simulation
+>       test_runner()
+
+/src/test_runner.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def test_runner( ):
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="build.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s hill_cipher -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/hill_cipher.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 2 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-qbg7nyl5'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-5t2cdylk'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-0nhako3i'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+FAILED ../../src/test_runner.py::test_hill_cipher - SystemExit: 1
+======================== 2 failed, 3 warnings in 0.58s =========================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_hill_cipher_1_1778917886-direct:latest
+Deleted: sha256:9141bb39c085376ca16d30bd8af2b84410817eda022f1a85fef2d343d3cecb5b

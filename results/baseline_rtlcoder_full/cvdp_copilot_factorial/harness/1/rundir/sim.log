@@ -1,0 +1,6 @@
+/code/rtl/factorial.sv:20: error: 'Idle' has already been declared in this scope.
+/code/rtl/factorial.sv:12:      : It was declared here as an enum type or value.
+/code/rtl/factorial.sv:21: error: 'Bussy' has already been declared in this scope.
+/code/rtl/factorial.sv:12:      : It was declared here as an enum type or value.
+/code/rtl/factorial.sv:22: error: 'Done' has already been declared in this scope.
+/code/rtl/factorial.sv:12:      : It was declared here as an enum type or value.

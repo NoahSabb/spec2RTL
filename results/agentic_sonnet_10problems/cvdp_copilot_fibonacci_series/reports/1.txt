@@ -1,0 +1,244 @@
+Running harness with project name: cvdp_copilot_fibonacci_series_1_1779048884
+Requirement already satisfied: aes in /venv/lib/python3.12/site-packages (1.2.0)
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779048885
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fibonacci_series.test_reset_scenario (1/2)
+                                                            Test case to cover the scenario where the sequence is interrupted by reset. 
+    10.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+    10.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+    20.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+    30.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+    40.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2, Expected = 2
+    50.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3, Expected = 3
+    60.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5, Expected = 5
+    70.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 8, Expected = 8
+    80.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 13, Expected = 13
+    90.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 21, Expected = 21
+   100.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 34, Expected = 34
+   110.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 55, Expected = 55
+   120.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 89, Expected = 89
+   130.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 144, Expected = 144
+   140.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 233, Expected = 233
+   150.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 377, Expected = 377
+   160.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 610, Expected = 610
+   170.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 987, Expected = 987
+   180.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1597, Expected = 1597
+   190.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2584, Expected = 2584
+   200.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 4181, Expected = 4181
+   210.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 6765, Expected = 6765
+   220.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 10946, Expected = 10946
+   230.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 17711, Expected = 17711
+   240.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 28657, Expected = 28657
+   250.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 46368, Expected = 46368
+   260.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 75025, Expected = 75025
+   270.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 121393, Expected = 121393
+   280.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 196418, Expected = 196418
+   290.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 317811, Expected = 317811
+   300.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 514229, Expected = 514229
+   310.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 832040, Expected = 832040
+   320.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1346269, Expected = 1346269
+   330.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2178309, Expected = 2178309
+   340.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3524578, Expected = 3524578
+   350.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5702887, Expected = 5702887
+   360.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 9227465, Expected = 9227465
+   370.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 14930352, Expected = 14930352
+   380.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 24157817, Expected = 24157817
+   390.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 39088169, Expected = 39088169
+   400.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 63245986, Expected = 63245986
+   410.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 102334155, Expected = 102334155
+   420.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 165580141, Expected = 165580141
+   430.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 267914296, Expected = 267914296
+   440.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 433494437, Expected = 433494437
+   450.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 701408733, Expected = 701408733
+   460.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1134903170, Expected = 1134903170
+   470.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1836311903, Expected = 1836311903
+   480.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2971215073, Expected = 2971215073
+   490.00ns INFO     cocotb.fibonacci_series            Overflow detected. Fibonacci sequence will reset.
+   490.00ns INFO     cocotb.fibonacci_series            Sequence running; applying reset to interrupt it.
+   500.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+   500.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+   510.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+   520.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+   530.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2, Expected = 2
+   540.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3, Expected = 3
+   550.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5, Expected = 5
+   560.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 8, Expected = 8
+   570.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 13, Expected = 13
+   580.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 21, Expected = 21
+   590.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 34, Expected = 34
+   600.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 55, Expected = 55
+   610.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 89, Expected = 89
+   620.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 144, Expected = 144
+   630.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 233, Expected = 233
+   640.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 377, Expected = 377
+   650.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 610, Expected = 610
+   660.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 987, Expected = 987
+   670.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1597, Expected = 1597
+   680.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2584, Expected = 2584
+   690.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 4181, Expected = 4181
+   700.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 6765, Expected = 6765
+   710.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 10946, Expected = 10946
+   720.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 17711, Expected = 17711
+   730.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 28657, Expected = 28657
+   740.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 46368, Expected = 46368
+   750.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 75025, Expected = 75025
+   760.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 121393, Expected = 121393
+   770.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 196418, Expected = 196418
+   780.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 317811, Expected = 317811
+   790.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 514229, Expected = 514229
+   800.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 832040, Expected = 832040
+   810.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1346269, Expected = 1346269
+   820.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2178309, Expected = 2178309
+   830.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3524578, Expected = 3524578
+   840.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5702887, Expected = 5702887
+   850.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 9227465, Expected = 9227465
+   860.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 14930352, Expected = 14930352
+   870.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 24157817, Expected = 24157817
+   880.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 39088169, Expected = 39088169
+   890.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 63245986, Expected = 63245986
+   900.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 102334155, Expected = 102334155
+   910.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 165580141, Expected = 165580141
+   920.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 267914296, Expected = 267914296
+   930.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 433494437, Expected = 433494437
+   940.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 701408733, Expected = 701408733
+   950.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1134903170, Expected = 1134903170
+   960.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1836311903, Expected = 1836311903
+   970.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2971215073, Expected = 2971215073
+   980.00ns INFO     cocotb.fibonacci_series            Overflow detected. Fibonacci sequence will reset.
+   980.00ns INFO     cocotb.regression                  test_fibonacci_series.test_reset_scenario passed
+   980.00ns INFO     cocotb.regression                  running test_fibonacci_series.test_overflow_and_reset (2/2)
+                                                            Test case to cover overflow scenario and reset after overflow. 
+   991.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+   991.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+  1001.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+  1011.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+  1021.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2, Expected = 2
+  1031.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3, Expected = 3
+  1041.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5, Expected = 5
+  1051.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 8, Expected = 8
+  1061.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 13, Expected = 13
+  1071.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 21, Expected = 21
+  1081.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 34, Expected = 34
+  1091.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 55, Expected = 55
+  1101.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 89, Expected = 89
+  1111.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 144, Expected = 144
+  1121.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 233, Expected = 233
+  1131.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 377, Expected = 377
+  1141.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 610, Expected = 610
+  1151.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 987, Expected = 987
+  1161.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1597, Expected = 1597
+  1171.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2584, Expected = 2584
+  1181.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 4181, Expected = 4181
+  1191.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 6765, Expected = 6765
+  1201.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 10946, Expected = 10946
+  1211.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 17711, Expected = 17711
+  1221.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 28657, Expected = 28657
+  1231.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 46368, Expected = 46368
+  1241.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 75025, Expected = 75025
+  1251.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 121393, Expected = 121393
+  1261.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 196418, Expected = 196418
+  1271.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 317811, Expected = 317811
+  1281.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 514229, Expected = 514229
+  1291.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 832040, Expected = 832040
+  1301.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1346269, Expected = 1346269
+  1311.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2178309, Expected = 2178309
+  1321.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3524578, Expected = 3524578
+  1331.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5702887, Expected = 5702887
+  1341.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 9227465, Expected = 9227465
+  1351.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 14930352, Expected = 14930352
+  1361.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 24157817, Expected = 24157817
+  1371.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 39088169, Expected = 39088169
+  1381.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 63245986, Expected = 63245986
+  1391.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 102334155, Expected = 102334155
+  1401.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 165580141, Expected = 165580141
+  1411.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 267914296, Expected = 267914296
+  1421.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 433494437, Expected = 433494437
+  1431.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 701408733, Expected = 701408733
+  1441.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1134903170, Expected = 1134903170
+  1451.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1836311903, Expected = 1836311903
+  1461.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2971215073, Expected = 2971215073
+  1471.00ns INFO     cocotb.fibonacci_series            Overflow detected. Fibonacci sequence will reset.
+  1471.00ns INFO     cocotb.fibonacci_series            Applying reset after overflow.
+  1481.00ns INFO     cocotb.fibonacci_series            Reset applied to DUT.
+  1481.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 0, Expected = 0
+  1491.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+  1501.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1, Expected = 1
+  1511.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2, Expected = 2
+  1521.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3, Expected = 3
+  1531.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5, Expected = 5
+  1541.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 8, Expected = 8
+  1551.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 13, Expected = 13
+  1561.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 21, Expected = 21
+  1571.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 34, Expected = 34
+  1581.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 55, Expected = 55
+  1591.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 89, Expected = 89
+  1601.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 144, Expected = 144
+  1611.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 233, Expected = 233
+  1621.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 377, Expected = 377
+  1631.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 610, Expected = 610
+  1641.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 987, Expected = 987
+  1651.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1597, Expected = 1597
+  1661.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2584, Expected = 2584
+  1671.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 4181, Expected = 4181
+  1681.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 6765, Expected = 6765
+  1691.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 10946, Expected = 10946
+  1701.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 17711, Expected = 17711
+  1711.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 28657, Expected = 28657
+  1721.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 46368, Expected = 46368
+  1731.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 75025, Expected = 75025
+  1741.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 121393, Expected = 121393
+  1751.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 196418, Expected = 196418
+  1761.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 317811, Expected = 317811
+  1771.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 514229, Expected = 514229
+  1781.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 832040, Expected = 832040
+  1791.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1346269, Expected = 1346269
+  1801.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2178309, Expected = 2178309
+  1811.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 3524578, Expected = 3524578
+  1821.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 5702887, Expected = 5702887
+  1831.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 9227465, Expected = 9227465
+  1841.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 14930352, Expected = 14930352
+  1851.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 24157817, Expected = 24157817
+  1861.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 39088169, Expected = 39088169
+  1871.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 63245986, Expected = 63245986
+  1881.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 102334155, Expected = 102334155
+  1891.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 165580141, Expected = 165580141
+  1901.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 267914296, Expected = 267914296
+  1911.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 433494437, Expected = 433494437
+  1921.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 701408733, Expected = 701408733
+  1931.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1134903170, Expected = 1134903170
+  1941.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 1836311903, Expected = 1836311903
+  1951.00ns INFO     cocotb.fibonacci_series            DUT Fibonacci Output = 2971215073, Expected = 2971215073
+  1961.00ns INFO     cocotb.fibonacci_series            Overflow detected. Fibonacci sequence will reset.
+  1961.00ns INFO     cocotb.regression                  test_fibonacci_series.test_overflow_and_reset passed
+  1961.00ns INFO     cocotb.regression                  *******************************************************************************************************
+                                                        ** TEST                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************
+                                                        ** test_fibonacci_series.test_reset_scenario       PASS         980.00           0.01     129613.03  **
+                                                        ** test_fibonacci_series.test_overflow_and_reset   PASS         980.00           0.01     139549.07  **
+                                                        *******************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                1961.00           0.02     127444.76  **
+                                                        *******************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-9a0wgrgf'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-u6twypj6'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.26s =========================
+Cleaning up Docker resources...

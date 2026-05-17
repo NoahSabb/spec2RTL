@@ -1,0 +1,16 @@
+/code/rtl/perceptron_gates.sv:59: syntax error
+/code/rtl/perceptron_gates.sv:59: error: Invalid module item.
+/code/rtl/perceptron_gates.sv:82: error: 'inst' has already been declared in this scope.
+/code/rtl/perceptron_gates.sv:76:      : It was declared here as an instance name.
+/code/rtl/perceptron_gates.sv:116: syntax error
+/code/rtl/perceptron_gates.sv:116: error: Incomprehensible case expression.
+/code/rtl/perceptron_gates.sv:118: syntax error
+/code/rtl/perceptron_gates.sv:118: error: Incomprehensible case expression.
+/code/rtl/perceptron_gates.sv:120: syntax error
+/code/rtl/perceptron_gates.sv:120: error: Incomprehensible case expression.
+/code/rtl/perceptron_gates.sv:122: syntax error
+/code/rtl/perceptron_gates.sv:122: error: Incomprehensible case expression.
+/code/rtl/perceptron_gates.sv:129: syntax error
+/code/rtl/perceptron_gates.sv:129: error: Syntax error in continuous assignment
+/code/rundir/sim_build/cocotb_iverilog_dump.v:11: syntax error
+I give up.

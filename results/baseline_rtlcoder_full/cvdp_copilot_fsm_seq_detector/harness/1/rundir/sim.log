@@ -1,0 +1,3 @@
+/code/rtl/fsm_seq_detector.sv:11: syntax error
+/code/rtl/fsm_seq_detector.sv:11: error: Invalid module item.
+/code/rtl/fsm_seq_detector.sv:28: warning: Static variable initialization requires explicit lifetime in this context.

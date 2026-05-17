@@ -1,0 +1,92 @@
+Running harness with project name: cvdp_copilot_gfcm_1_1778993738
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_gfcm      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778993739
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_glitch_free_mux.test_glitch_free_mux (1/1)
+     0.00ns WARNING  py.warnings                        /src/test_glitch_free_mux.py:11: DeprecationWarning: Use ``cocotb.start_soon`` instead.
+                                                          await cocotb.start(util.phase_shifted_clock(dut.clk1, clk1_period, 0, "ns"))
+     0.00ns INFO     cocotb.glitch_free_mux             clk1 STARTED, period: 19, phase: 0
+     0.00ns WARNING  py.warnings                        /src/test_glitch_free_mux.py:16: DeprecationWarning: Use ``cocotb.start_soon`` instead.
+                                                          await cocotb.start(util.phase_shifted_clock(dut.clk2,clk2_period,clk2_phase, "ns"))
+     0.00ns INFO     cocotb.glitch_free_mux             clk2 STARTED, period: 152, phase: 12
+    11.00ns INFO     cocotb.glitch_free_mux             DUT IS OUT OF RESET
+   164.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+   164.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+   171.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+   171.00ns WARNING  ..ch_free_mux.test_glitch_free_mux Glitch detected, clkout is 1
+                                                        assert Logic('1') == 0
+                                                         +  where Logic('1') = LogicObject(glitch_free_mux.clkout).value
+                                                         +    where LogicObject(glitch_free_mux.clkout) = HierarchyObject(glitch_free_mux).clkout
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_glitch_free_mux.py", line 41, in test_glitch_free_mux
+                                                            await util.check_glitch_free_transition(dut)
+                                                          File "/src/harness_library.py", line 36, in check_glitch_free_transition
+                                                            assert dut.clkout.value == 0, f"Glitch detected, clkout is {dut.clkout.value}"
+                                                        AssertionError: Glitch detected, clkout is 1
+                                                        assert Logic('1') == 0
+                                                         +  where Logic('1') = LogicObject(glitch_free_mux.clkout).value
+                                                         +    where LogicObject(glitch_free_mux.clkout) = HierarchyObject(glitch_free_mux).clkout
+   171.00ns WARNING  cocotb.regression                  test_glitch_free_mux.test_glitch_free_mux failed
+   171.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_glitch_free_mux.test_glitch_free_mux   FAIL         171.00           0.00     107497.90  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                             171.00           0.00      35187.46  **
+                                                        ***************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_gfcm ___________________________________
+
+    def test_gfcm():
+>       runner()
+
+/src/test_runner.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:22: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s glitch_free_mux -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/glitch_free_mux.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-_sg3599i'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-ba9xzlt_'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-wgf_2i__'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_gfcm - SystemExit: 1
+======================== 1 failed, 3 warnings in 0.25s =========================
+Cleaning up Docker resources...

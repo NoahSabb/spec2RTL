@@ -1,0 +1,32 @@
+/code/rtl/low_pass_filter.sv:17: syntax error
+/code/rtl/low_pass_filter.sv:1: error: Syntax error in variable list.
+/code/rtl/low_pass_filter.sv:23: syntax error
+/code/rtl/low_pass_filter.sv:23: error: Malformed statement
+/code/rtl/low_pass_filter.sv:24: syntax error
+/code/rtl/low_pass_filter.sv:27: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:27: syntax error
+/code/rtl/low_pass_filter.sv:27: error: Malformed statement
+/code/rtl/low_pass_filter.sv:27: syntax error
+/code/rtl/low_pass_filter.sv:28: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:34: syntax error
+/code/rtl/low_pass_filter.sv:35: error: Malformed statement
+/code/rtl/low_pass_filter.sv:36: syntax error
+/code/rtl/low_pass_filter.sv:36: error: Malformed statement
+/code/rtl/low_pass_filter.sv:45: syntax error
+/code/rtl/low_pass_filter.sv:45: error: Malformed statement
+/code/rtl/low_pass_filter.sv:46: syntax error
+/code/rtl/low_pass_filter.sv:49: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:50: syntax error
+/code/rtl/low_pass_filter.sv:51: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:51: syntax error
+/code/rtl/low_pass_filter.sv:51: error: Malformed statement
+/code/rtl/low_pass_filter.sv:51: syntax error
+/code/rtl/low_pass_filter.sv:52: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:55: syntax error
+/code/rtl/low_pass_filter.sv:63: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:64: syntax error
+/code/rtl/low_pass_filter.sv:65: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:68: syntax error
+/code/rtl/low_pass_filter.sv:69: Syntax in assignment statement l-value.
+/code/rtl/low_pass_filter.sv:72: syntax error
+I give up.

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917914" />
+    <testcase name="test_ttc_counter_lite" classname="test_ttc_counter_lite" file="/src/test_ttc_counter_lite.py" lineno="6" time="0.0032024383544921875" sim_time_ns="290.0" ratio_time="90555.99761762955">
+      <failure error_type="AssertionError" error_msg="[ERROR] Counter value mismatch: read 20, expected 10&#10;assert 20 == 10&#10; +  where 10 = int(LogicArray('0000000000001010', Range(15, 'downto', 0)))&#10; +    where LogicArray('0000000000001010', Range(15, 'downto', 0)) = LogicArrayObject(ttc_counter_lite.count).value&#10; +      where LogicArrayObject(ttc_counter_lite.count) = HierarchyObject(ttc_counter_lite).count" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917853" />
+    <testcase name="test_apb_dsp_unit" classname="test_apb_dsp_unit" file="/src/test_apb_dsp_unit.py" lineno="56" time="0.003140687942504883" sim_time_ns="300.0" ratio_time="95520.47369619677">
+      <failure error_type="AssertionError" error_msg="Memory at address 100 should hold 0x55: Expected 85, but got 0&#10;assert 0 == 85" />
+    </testcase>
+  </testsuite>
+</testsuites>

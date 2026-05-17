@@ -1,0 +1,38 @@
+Running harness with project name: cvdp_copilot_data_width_converter_3_1778917871
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s data_width_converter -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/data_width_converter.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917872
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running DW_convertor.test_data_width_converter (1/1)
+                                                            Test data_width_converter with multiple test cases 
+    20.00ns INFO     cocotb.data_width_converter        Sending data 0x11111111
+    40.00ns INFO     cocotb.data_width_converter        Sending data 0x22222222
+    50.00ns INFO     cocotb.data_width_converter        Sending data 0x33333333
+    60.00ns INFO     cocotb.data_width_converter        Sending data 0x44444444
+    70.00ns INFO     cocotb.data_width_converter        Expected output: 0x11111111222222223333333344444444
+    70.00ns INFO     cocotb.data_width_converter        Test case 2 completed successfully
+    70.00ns INFO     cocotb.regression                  DW_convertor.test_data_width_converter passed
+    70.00ns INFO     cocotb.regression                  ************************************************************************************************
+                                                        ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ************************************************************************************************
+                                                        ** DW_convertor.test_data_width_converter   PASS          70.00           0.00     113141.15  **
+                                                        ************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           70.00           0.00      23767.61  **
+                                                        ************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+
+============================== 1 passed in 0.29s ===============================
+Cleaning up Docker resources...

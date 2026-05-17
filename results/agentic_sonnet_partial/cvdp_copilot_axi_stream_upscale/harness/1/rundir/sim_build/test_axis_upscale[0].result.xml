@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778993844" />
+    <testcase name="test_axis_upscale" classname="test_axis_upscale" file="/src/test_axis_upscale.py" lineno="8" time="0.0008323192596435547" sim_time_ns="300.0" ratio_time="360438.6135777714">
+      <failure error_type="AssertionError" error_msg="[ERROR] s_axis_ready : 1&#10;assert Logic('1') == 0&#10; +  where Logic('1') = LogicObject(axis_upscale.s_axis_ready).value&#10; +    where LogicObject(axis_upscale.s_axis_ready) = HierarchyObject(axis_upscale).s_axis_ready" />
+    </testcase>
+  </testsuite>
+</testsuites>

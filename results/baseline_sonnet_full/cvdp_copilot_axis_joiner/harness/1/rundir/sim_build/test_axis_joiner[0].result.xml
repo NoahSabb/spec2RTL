@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917855" />
+    <testcase name="test_axis_joiner" classname="test_axis_joiner" file="/src/test_axis_joiner.py" lineno="8" time="0.0011813640594482422" sim_time_ns="90.0" ratio_time="76183.12008072654" />
+  </testsuite>
+</testsuites>

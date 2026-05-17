@@ -1,0 +1,156 @@
+{
+  "cvdp_copilot_gcd_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+        "error_msg": null,
+        "execution": 2.2813029289245605,
+        "pid": 27186
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_caesar_cipher_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 0,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_caesar_cipher/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.2173480987548828,
+        "pid": 23734
+      }
+    ],
+    "errors": 0
+  },
+  "cvdp_copilot_fibonacci_series_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.097120761871338,
+        "pid": 24949
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_digital_dice_roller_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.495283842086792,
+        "pid": 24778
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_digital_stopwatch_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.859018087387085,
+        "pid": 24842
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_edge_detector_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 0,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.2014260292053223,
+        "pid": 29132
+      }
+    ],
+    "errors": 0
+  },
+  "cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.092240810394287,
+        "pid": 25056
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_perf_counters_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.791114091873169,
+        "pid": 25108
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_GFCM_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.250262975692749,
+        "pid": 25201
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_axi_stream_upscale_0001": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/reports/1.txt",
+        "error_msg": null,
+        "execution": 1.257755994796753,
+        "pid": 25304
+      }
+    ],
+    "errors": 1
+  },
+  "cvdp_copilot_configurable_digital_low_pass_filter_0014": {
+    "category": "cid003",
+    "difficulty": "easy",
+    "tests": [
+      {
+        "result": 1,
+        "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter/reports/14.txt",
+        "error_msg": null,
+        "execution": 9.807706117630005,
+        "pid": 25396
+      }
+    ],
+    "errors": 1
+  }
+}

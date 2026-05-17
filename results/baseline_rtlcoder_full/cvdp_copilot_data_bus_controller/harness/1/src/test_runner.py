@@ -1,0 +1,26 @@
+import os
+from cocotb_tools.runner import get_runner
+import pytest
+import pickle
+import random
+
+verilog_sources = os.getenv("VERILOG_SOURCES").split()
+toplevel_lang   = os.getenv("TOPLEVEL_LANG")
+sim             = os.getenv("SIM", "icarus")
+toplevel        = os.getenv("TOPLEVEL")
+module          = os.getenv("MODULE")
+@pytest.mark.tb
+def test_data_bus_controller():
+    parameter = {"AFINITY": random.randint(0, 1)}
+    runner = get_runner(sim)
+    runner.build(
+        sources=verilog_sources,
+        hdl_toplevel=toplevel,
+        # Arguments
+        always=True,
+        clean=True,
+        parameters=parameter,
+        verbose=True,
+        timescale=("1ns", "1ns"),
+        log_file="sim.log")
+    runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)

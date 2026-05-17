@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917872" />
+    <testcase name="test_advanced_decimator_with_adaptive_peak_detection_0" classname="test_advanced_decimator_with_adaptive_peak_detection" file="/src/test_advanced_decimator_with_adaptive_peak_detection.py" lineno="11" time="0.0025072097778320312" sim_time_ns="50.0" ratio_time="19942.487637885126">
+      <failure error_type="AssertionError" error_msg="[ERROR] DUT output data does not match model output data on Test Case 2&#10;assert [-6191313] == [52584601]" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,4 @@
+/code/rtl/cvdp_copilot_decode_firstbit.sv:104: error: Variable 'pl_firstbit' cannot be driven by a continuous assignment/module or continuous assignment with non-default strength.
+/code/rtl/cvdp_copilot_decode_firstbit.sv:105: error: Variable 'pl_found' cannot be driven by a continuous assignment/module or continuous assignment with non-default strength.
+/code/rtl/cvdp_copilot_decode_firstbit.sv:106: error: Variable 'pl_valid' cannot be driven by a continuous assignment/module or continuous assignment with non-default strength.
+3 error(s) during elaboration.

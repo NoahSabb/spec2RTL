@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1779048715" />
+    <testcase name="test_sync_pos_neg_edge_detector" classname="test_sync_pos_neg_edge_detector" file="/src/test_sync_pos_neg_edge_detector.py" lineno="21" time="0.0004076957702636719" sim_time_ns="65.0" ratio_time="159432.6081871345" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917860" />
+    <testcase name="test_clock_divider" classname="test_clk_div" file="/src/test_clk_div.py" lineno="6" time="0.004969596862792969" sim_time_ns="830.0" ratio_time="167015.5593935905" />
+  </testsuite>
+</testsuites>

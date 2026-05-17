@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917894" />
+    <testcase name="test_nbit_sizling" classname="test_nbit_swizzling" file="/src/test_nbit_swizzling.py" lineno="9" time="0.0012853145599365234" sim_time_ns="200.0" ratio_time="155603.93248005936" />
+  </testsuite>
+</testsuites>

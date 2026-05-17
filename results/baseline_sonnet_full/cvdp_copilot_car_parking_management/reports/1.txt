@@ -1,0 +1,136 @@
+Running harness with project name: cvdp_copilot_car_parking_management_1_1778917858
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 4 items
+
+../../src/test_runner.py::test_runner Running simulation with TOTAL_SPACES=9
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   195.00ns INFO     cocotb.car_parking_system          Simulating single vehicle exit
+   225.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   235.00ns INFO     cocotb.car_parking_system          Simulating parking full scenario
+   535.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   545.00ns INFO     cocotb.car_parking_system          Simulating reset during operation
+   600.00ns INFO     cocotb.regression                  car_parking_control.test_car_parking_system passed
+   600.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   PASS         600.00           0.00     219692.92  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               600.00           0.00     166034.33  **
+                                                        *****************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+../../src/test_runner.py::test_car_parking_system[14] Test Runner: TOTAL_SPACES=14
+Running simulation with TOTAL_SPACES=14
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=14 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=14 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   195.00ns INFO     cocotb.car_parking_system          Simulating single vehicle exit
+   225.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   235.00ns INFO     cocotb.car_parking_system          Simulating parking full scenario
+   685.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   695.00ns INFO     cocotb.car_parking_system          Simulating reset during operation
+   750.00ns INFO     cocotb.regression                  car_parking_control.test_car_parking_system passed
+   750.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   PASS         750.00           0.00     280943.82  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               750.00           0.00     222864.19  **
+                                                        *****************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_car_parking_system[14].result.xml
+PASSED
+../../src/test_runner.py::test_car_parking_system[12] Test Runner: TOTAL_SPACES=12
+Running simulation with TOTAL_SPACES=12
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=12 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=12 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   195.00ns INFO     cocotb.car_parking_system          Simulating single vehicle exit
+   225.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   235.00ns INFO     cocotb.car_parking_system          Simulating parking full scenario
+   625.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   635.00ns INFO     cocotb.car_parking_system          Simulating reset during operation
+   690.00ns INFO     cocotb.regression                  car_parking_control.test_car_parking_system passed
+   690.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   PASS         690.00           0.00     257731.74  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               690.00           0.00     206896.61  **
+                                                        *****************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_car_parking_system[12].result.xml
+PASSED
+../../src/test_runner.py::test_car_parking_system[9] Test Runner: TOTAL_SPACES=9
+Running simulation with TOTAL_SPACES=9
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   195.00ns INFO     cocotb.car_parking_system          Simulating single vehicle exit
+   225.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   235.00ns INFO     cocotb.car_parking_system          Simulating parking full scenario
+   535.00ns INFO     cocotb.car_parking_system          Seven-segment display validated successfully
+   545.00ns INFO     cocotb.car_parking_system          Simulating reset during operation
+   600.00ns INFO     cocotb.regression                  car_parking_control.test_car_parking_system passed
+   600.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   PASS         600.00           0.00     300272.33  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                               600.00           0.00     226168.99  **
+                                                        *****************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_car_parking_system[9].result.xml
+PASSED
+
+============================== 4 passed in 1.17s ===============================
+Cleaning up Docker resources...

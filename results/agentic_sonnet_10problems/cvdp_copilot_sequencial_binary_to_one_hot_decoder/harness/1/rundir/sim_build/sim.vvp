@@ -1,0 +1,54 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaae1337510 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaae13376a0 .scope module, "binary_to_one_hot_decoder_sequential" "binary_to_one_hot_decoder_sequential" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "i_clk";
+    .port_info 1 /INPUT 1 "i_rstb";
+    .port_info 2 /INPUT 5 "i_binary_in";
+    .port_info 3 /OUTPUT 32 "o_one_hot_out";
+P_0xaaaae135c9c0 .param/l "BINARY_WIDTH" 0 3 2, +C4<00000000000000000000000000000101>;
+P_0xaaaae135ca00 .param/l "OUTPUT_WIDTH" 0 3 3, +C4<00000000000000000000000000100000>;
+o0xffff9ad6f018 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0xaaaae135e2d0_0 .net "i_binary_in", 4 0, o0xffff9ad6f018;  0 drivers
+o0xffff9ad6f048 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaae1380e10_0 .net "i_clk", 0 0, o0xffff9ad6f048;  0 drivers
+o0xffff9ad6f078 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaae1380ed0_0 .net "i_rstb", 0 0, o0xffff9ad6f078;  0 drivers
+v0xaaaae1380fa0_0 .var "o_one_hot_out", 31 0;
+E_0xaaaae1337cd0/0 .event negedge, v0xaaaae1380ed0_0;
+E_0xaaaae1337cd0/1 .event posedge, v0xaaaae1380e10_0;
+E_0xaaaae1337cd0 .event/or E_0xaaaae1337cd0/0, E_0xaaaae1337cd0/1;
+    .scope S_0xaaaae13376a0;
+T_0 ;
+    %wait E_0xaaaae1337cd0;
+    %load/vec4 v0xaaaae1380ed0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaaae1380fa0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 1, 0, 32;
+    %ix/getv 4, v0xaaaae135e2d0_0;
+    %shiftl 4;
+    %assign/vec4 v0xaaaae1380fa0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/binary_to_one_hot_decoder_sequential.v";

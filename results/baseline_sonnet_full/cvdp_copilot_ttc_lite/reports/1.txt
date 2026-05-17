@@ -1,0 +1,81 @@
+Running harness with project name: cvdp_copilot_ttc_lite_1_1778917913
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_areg_param[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917914
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_ttc_counter_lite.test_ttc_counter_lite (1/1)
+                                                            Cocotb-based testbench for the ttc_counter_lite module.
+    40.00ns INFO     cocotb.ttc_counter_lite            [CHECK] Match value correctly set: 20
+    60.00ns INFO     cocotb.ttc_counter_lite            [CHECK] Reload value correctly set: 10
+    80.00ns INFO     cocotb.ttc_counter_lite            [CHECK] Control register configured correctly: Enable=1, Interval Mode=1, Interrupt Enable=1
+   280.00ns INFO     cocotb.ttc_counter_lite            [CHECK] Counter is running within range: 20, Reload Value: 10, Match Value: 20
+[READ] Address: 0, Data: 20
+   290.00ns WARNING  ..unter_lite.test_ttc_counter_lite [ERROR] Counter value mismatch: read 20, expected 10
+                                                        assert 20 == 10
+                                                         +  where 10 = int(LogicArray('0000000000001010', Range(15, 'downto', 0)))
+                                                         +    where LogicArray('0000000000001010', Range(15, 'downto', 0)) = LogicArrayObject(ttc_counter_lite.count).value
+                                                         +      where LogicArrayObject(ttc_counter_lite.count) = HierarchyObject(ttc_counter_lite).count
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_ttc_counter_lite.py", line 70, in test_ttc_counter_lite
+                                                            assert count_val == int(dut.count.value), f"[ERROR] Counter value mismatch: read {count_val}, expected {int(dut.count.value)}"
+                                                        AssertionError: [ERROR] Counter value mismatch: read 20, expected 10
+                                                        assert 20 == 10
+                                                         +  where 10 = int(LogicArray('0000000000001010', Range(15, 'downto', 0)))
+                                                         +    where LogicArray('0000000000001010', Range(15, 'downto', 0)) = LogicArrayObject(ttc_counter_lite.count).value
+                                                         +      where LogicArrayObject(ttc_counter_lite.count) = HierarchyObject(ttc_counter_lite).count
+   290.00ns WARNING  cocotb.regression                  test_ttc_counter_lite.test_ttc_counter_lite failed
+   290.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** test_ttc_counter_lite.test_ttc_counter_lite   FAIL         290.00           0.00      90556.00  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               290.00           0.01      40741.86  **
+                                                        *****************************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_areg_param[0] ______________________________
+
+test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    def test_areg_param(test):
+>           runner()
+
+/src/test_runner.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+plusargs = [], parameter = {}
+
+    def runner(plusargs=[], parameter={}):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:23: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s ttc_counter_lite -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/ttc_counter_lite.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_areg_param[0] - SystemExit: 1
+============================== 1 failed in 0.30s ===============================
+Cleaning up Docker resources...

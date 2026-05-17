@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917872" />
+    <testcase name="test_data_width_converter" classname="DW_convertor" file="/src/DW_convertor.py" lineno="132" time="0.0006186962127685547" sim_time_ns="70.0" ratio_time="113141.14836223506" />
+  </testsuite>
+</testsuites>

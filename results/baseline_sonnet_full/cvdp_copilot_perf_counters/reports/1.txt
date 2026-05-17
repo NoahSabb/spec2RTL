@@ -1,0 +1,39 @@
+Running harness with project name: cvdp_copilot_perf_counters_1_1778917896
+#1 [internal] load local bake definitions
+#1 reading from stdin 774B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:33245e234cc4929b1888636e9fdd635458b6b0dbda329f4108851cc83e21259a done
+#6 exporting config sha256:bf79c7478511ef3a34d089182082af1cbf959002de25b6796f5ad5dbb35db0b7 done
+#6 exporting attestation manifest sha256:0b25631ef828868d527702298287a617e88a428acdd24ba2ae050846cb2ee85f done
+#6 exporting manifest list sha256:60c7174200d3da9114f06da33243dc175693f96843d92a1eb7e3cb3c7729a0ce done
+#6 naming to docker.io/library/cvdp_copilot_perf_counters_1_1778917896-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_perf_counters_1_1778917896-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 

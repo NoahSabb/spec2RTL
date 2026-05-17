@@ -1,0 +1,50 @@
+Running harness with project name: cvdp_copilot_hamming_code_tx_and_rx_1_1778917884
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917885
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running tx_test.tx_test (1/1)
+     5.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Corner Case - data_in=0000 expected_data_out=[0, 0, 0, 0, 0, 0, 0, 0] actual_data_out=00000000
+    10.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Corner Case - data_in=1111 expected_data_out=[1, 1, 1, 1, 1, 1, 1, 0] actual_data_out=11111110
+    15.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Corner Case - data_in=1010 expected_data_out=[1, 0, 1, 0, 0, 1, 0, 0] actual_data_out=10100100
+    20.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Corner Case - data_in=0101 expected_data_out=[0, 1, 0, 1, 1, 0, 1, 0] actual_data_out=01011010
+    25.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=0110 expected_data_out=[0, 1, 1, 0, 0, 1, 1, 0] actual_data_out=01100110
+    30.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=0000 expected_data_out=[0, 0, 0, 0, 0, 0, 0, 0] actual_data_out=00000000
+    35.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=0100 expected_data_out=[0, 1, 0, 1, 0, 1, 0, 0] actual_data_out=01010100
+    40.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=1100 expected_data_out=[1, 1, 0, 0, 0, 0, 1, 0] actual_data_out=11000010
+    45.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=1011 expected_data_out=[1, 0, 1, 0, 1, 0, 1, 0] actual_data_out=10101010
+    50.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=0111 expected_data_out=[0, 1, 1, 0, 1, 0, 0, 0] actual_data_out=01101000
+    55.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=1110 expected_data_out=[1, 1, 1, 1, 0, 0, 0, 0] actual_data_out=11110000
+    60.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=0001 expected_data_out=[0, 0, 0, 0, 1, 1, 1, 0] actual_data_out=00001110
+    65.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=1001 expected_data_out=[1, 0, 0, 1, 1, 0, 0, 0] actual_data_out=10011000
+    70.00ns INFO     cocotb.hamming_code_tx_for_4bit    PASS: Random Test - data_in=1001 expected_data_out=[1, 0, 0, 1, 1, 0, 0, 0] actual_data_out=10011000
+    70.00ns INFO     cocotb.regression                  tx_test.tx_test passed
+    70.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** tx_test.tx_test                PASS          70.00           0.00      79201.86  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 70.00           0.00      42774.08  **
+                                                        **************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-6mqy_8sq'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-c1_a7wv0'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.28s =========================
+Cleaning up Docker resources...

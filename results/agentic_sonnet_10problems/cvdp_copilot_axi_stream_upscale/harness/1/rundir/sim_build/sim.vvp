@@ -1,0 +1,131 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaaee884150 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaaee8842e0 .scope module, "axis_upscale" "axis_upscale" 3 3;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "resetn";
+    .port_info 2 /INPUT 1 "dfmt_enable";
+    .port_info 3 /INPUT 1 "dfmt_type";
+    .port_info 4 /INPUT 1 "dfmt_se";
+    .port_info 5 /INPUT 1 "s_axis_valid";
+    .port_info 6 /INPUT 24 "s_axis_data";
+    .port_info 7 /INPUT 1 "m_axis_ready";
+    .port_info 8 /OUTPUT 1 "s_axis_ready";
+    .port_info 9 /OUTPUT 1 "m_axis_valid";
+    .port_info 10 /OUTPUT 32 "m_axis_data";
+o0xffffa5e9f2e8 .functor BUFZ 1, c4<z>; HiZ drive
+o0xffffa5e9f318 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaaee8acea0 .functor AND 1, o0xffffa5e9f2e8, o0xffffa5e9f318, C4<1>, C4<1>;
+L_0xaaaaee8acfd0 .functor NOT 1, L_0xaaaaee8acf30, C4<0>, C4<0>, C4<0>;
+L_0xaaaaee8ad2d0 .functor AND 1, L_0xaaaaee8acea0, L_0xaaaaee8ad160, C4<1>, C4<1>;
+L_0xaaaaee8ad5a0 .functor NOT 1, L_0xaaaaee8ad500, C4<0>, C4<0>, C4<0>;
+L_0xaaaaee8ae010 .functor BUFZ 1, v0xaaaaee8aca80_0, C4<0>, C4<0>, C4<0>;
+L_0xaaaaee8ae080 .functor BUFZ 1, v0xaaaaee8ac6a0_0, C4<0>, C4<0>, C4<0>;
+L_0xaaaaee8ae130 .functor BUFZ 32, v0xaaaaee8ac440_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0xaaaaee8845e0_0 .net *"_ivl_0", 0 0, L_0xaaaaee8acea0;  1 drivers
+v0xaaaaee8ab220_0 .net *"_ivl_15", 0 0, L_0xaaaaee8ad500;  1 drivers
+v0xaaaaee8ab300_0 .net *"_ivl_16", 0 0, L_0xaaaaee8ad5a0;  1 drivers
+v0xaaaaee8ab3c0_0 .net *"_ivl_19", 0 0, L_0xaaaaee8ad690;  1 drivers
+v0xaaaaee8ab4a0_0 .net *"_ivl_20", 0 0, L_0xaaaaee8ad770;  1 drivers
+v0xaaaaee8ab5d0_0 .net *"_ivl_23", 0 0, L_0xaaaaee8ad8b0;  1 drivers
+v0xaaaaee8ab6b0_0 .net *"_ivl_27", 22 0, L_0xaaaaee8adb30;  1 drivers
+v0xaaaaee8ab790_0 .net *"_ivl_28", 31 0, L_0xaaaaee8adc30;  1 drivers
+v0xaaaaee8ab870_0 .net *"_ivl_3", 0 0, L_0xaaaaee8acf30;  1 drivers
+L_0xffffa5e56018 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0xaaaaee8ab950_0 .net/2u *"_ivl_30", 7 0, L_0xffffa5e56018;  1 drivers
+v0xaaaaee8aba30_0 .net *"_ivl_32", 31 0, L_0xaaaaee8add70;  1 drivers
+v0xaaaaee8abb10_0 .net *"_ivl_4", 0 0, L_0xaaaaee8acfd0;  1 drivers
+v0xaaaaee8abbf0_0 .net *"_ivl_7", 0 0, L_0xaaaaee8ad070;  1 drivers
+v0xaaaaee8abcd0_0 .net *"_ivl_8", 0 0, L_0xaaaaee8ad160;  1 drivers
+o0xffffa5e9f2b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaee8abdb0_0 .net "clk", 0 0, o0xffffa5e9f2b8;  0 drivers
+v0xaaaaee8abe70_0 .net "dfmt_enable", 0 0, o0xffffa5e9f2e8;  0 drivers
+v0xaaaaee8abf30_0 .net "dfmt_se", 0 0, o0xffffa5e9f318;  0 drivers
+o0xffffa5e9f348 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaee8ac100_0 .net "dfmt_type", 0 0, o0xffffa5e9f348;  0 drivers
+v0xaaaaee8ac1c0_0 .net "fill_bit", 0 0, L_0xaaaaee8ad2d0;  1 drivers
+v0xaaaaee8ac280_0 .net "fill_byte", 7 0, L_0xaaaaee8ad3e0;  1 drivers
+v0xaaaaee8ac360_0 .net "m_axis_data", 31 0, L_0xaaaaee8ae130;  1 drivers
+v0xaaaaee8ac440_0 .var "m_axis_data_reg", 31 0;
+o0xffffa5e9f438 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaee8ac520_0 .net "m_axis_ready", 0 0, o0xffffa5e9f438;  0 drivers
+v0xaaaaee8ac5e0_0 .net "m_axis_valid", 0 0, L_0xaaaaee8ae080;  1 drivers
+v0xaaaaee8ac6a0_0 .var "m_axis_valid_reg", 0 0;
+v0xaaaaee8ac760_0 .net "msb_bit", 0 0, L_0xaaaaee8ad9a0;  1 drivers
+o0xffffa5e9f4f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaee8ac820_0 .net "resetn", 0 0, o0xffffa5e9f4f8;  0 drivers
+o0xffffa5e9f528 .functor BUFZ 24, c4<zzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaaaee8ac8e0_0 .net "s_axis_data", 23 0, o0xffffa5e9f528;  0 drivers
+v0xaaaaee8ac9c0_0 .net "s_axis_ready", 0 0, L_0xaaaaee8ae010;  1 drivers
+v0xaaaaee8aca80_0 .var "s_axis_ready_reg", 0 0;
+o0xffffa5e9f5b8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaee8acb40_0 .net "s_axis_valid", 0 0, o0xffffa5e9f5b8;  0 drivers
+v0xaaaaee8acc00_0 .net "upscaled_data", 31 0, L_0xaaaaee8aded0;  1 drivers
+E_0xaaaaee8913b0 .event posedge, v0xaaaaee8abdb0_0;
+L_0xaaaaee8acf30 .part o0xffffa5e9f528, 23, 1;
+L_0xaaaaee8ad070 .part o0xffffa5e9f528, 23, 1;
+L_0xaaaaee8ad160 .functor MUXZ 1, L_0xaaaaee8ad070, L_0xaaaaee8acfd0, o0xffffa5e9f348, C4<>;
+L_0xaaaaee8ad3e0 .repeat 8, 8, L_0xaaaaee8ad2d0;
+L_0xaaaaee8ad500 .part o0xffffa5e9f528, 23, 1;
+L_0xaaaaee8ad690 .part o0xffffa5e9f528, 23, 1;
+L_0xaaaaee8ad770 .functor MUXZ 1, L_0xaaaaee8ad690, L_0xaaaaee8ad5a0, o0xffffa5e9f348, C4<>;
+L_0xaaaaee8ad8b0 .part o0xffffa5e9f528, 23, 1;
+L_0xaaaaee8ad9a0 .functor MUXZ 1, L_0xaaaaee8ad8b0, L_0xaaaaee8ad770, o0xffffa5e9f2e8, C4<>;
+L_0xaaaaee8adb30 .part o0xffffa5e9f528, 0, 23;
+L_0xaaaaee8adc30 .concat [ 23 1 8 0], L_0xaaaaee8adb30, L_0xaaaaee8ad9a0, L_0xaaaaee8ad3e0;
+L_0xaaaaee8add70 .concat [ 24 8 0 0], o0xffffa5e9f528, L_0xffffa5e56018;
+L_0xaaaaee8aded0 .functor MUXZ 32, L_0xaaaaee8add70, L_0xaaaaee8adc30, o0xffffa5e9f2e8, C4<>;
+    .scope S_0xaaaaee8842e0;
+T_0 ;
+    %wait E_0xaaaaee8913b0;
+    %load/vec4 v0xaaaaee8ac820_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaaee8ac6a0_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaaaee8ac440_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaaee8aca80_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaaee8ac520_0;
+    %assign/vec4 v0xaaaaee8aca80_0, 0;
+    %load/vec4 v0xaaaaee8aca80_0;
+    %load/vec4 v0xaaaaee8acb40_0;
+    %and;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0xaaaaee8ac6a0_0, 0;
+    %load/vec4 v0xaaaaee8acc00_0;
+    %assign/vec4 v0xaaaaee8ac440_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0xaaaaee8ac520_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaaee8ac6a0_0, 0;
+T_0.4 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/axis_upscale.sv";

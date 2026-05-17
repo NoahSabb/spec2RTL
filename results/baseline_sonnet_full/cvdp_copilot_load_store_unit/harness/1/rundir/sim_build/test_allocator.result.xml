@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917887" />
+    <testcase name="test_load_store_unit" classname="test_load_store_unit" file="/src/test_load_store_unit.py" lineno="15" time="0.005865335464477539" sim_time_ns="580.0" ratio_time="98886.07454981505">
+      <failure error_type="AssertionError" error_msg="dmem_req_o must be asserted&#10;assert 0 == 1&#10; +  where 0 = int(Logic('0'))&#10; +    where Logic('0') = LogicObject(load_store_unit.ex_if_ready_o).value&#10; +      where LogicObject(load_store_unit.ex_if_ready_o) = HierarchyObject(load_store_unit).ex_if_ready_o&#10; +        where HierarchyObject(load_store_unit) = &lt;harness_library.dmemIFDriver object at 0xffff9af0bfb0&gt;.dut" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,395 @@
+Running harness with project name: cvdp_copilot_nbit_swizzling_1_1778917892
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_nbit_sizling[16]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917893
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_nbit_swizzling.test_nbit_sizling (1/1)
+                                                            Test the nbit_sizling module 
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 40033,data_in = 1001110001100001,, expected_data_out = 37736, data_out = 37736
+Checking operation in binary for sel=2:: data_in_bin = 1001110001100001, expected_data_out = 0b1001001101101000, data_out = 1001001101101000
+DATA_WIDTH =16
+Checking operation for sel=0:: data_in = 25214,data_in = 0110001001111110,, expected_data_out = 32326, data_out = 32326
+Checking operation in binary for sel=0:: data_in_bin = 0110001001111110, expected_data_out = 0b111111001000110, data_out = 0111111001000110
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 63756,data_in = 1111100100001100,, expected_data_out = 63747, data_out = 63747
+Checking operation in binary for sel=2:: data_in_bin = 1111100100001100, expected_data_out = 0b1111100100000011, data_out = 1111100100000011
+DATA_WIDTH =16
+Checking operation for sel=0:: data_in = 46481,data_in = 1011010110010001,, expected_data_out = 35245, data_out = 35245
+Checking operation in binary for sel=0:: data_in_bin = 1011010110010001, expected_data_out = 0b1000100110101101, data_out = 1000100110101101
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 15872,data_in = 0011111000000000,, expected_data_out = 50944, data_out = 50944
+Checking operation in binary for sel=2:: data_in_bin = 0011111000000000, expected_data_out = 0b1100011100000000, data_out = 1100011100000000
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 32022,data_in = 0111110100010110,, expected_data_out = 60294, data_out = 60294
+Checking operation in binary for sel=2:: data_in_bin = 0111110100010110, expected_data_out = 0b1110101110000110, data_out = 1110101110000110
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 39514,data_in = 1001101001011010,, expected_data_out = 26021, data_out = 26021
+Checking operation in binary for sel=3:: data_in_bin = 1001101001011010, expected_data_out = 0b110010110100101, data_out = 0110010110100101
+DATA_WIDTH =16
+Checking operation for sel=0:: data_in = 63608,data_in = 1111100001111000,, expected_data_out = 7711, data_out = 7711
+Checking operation in binary for sel=0:: data_in_bin = 1111100001111000, expected_data_out = 0b1111000011111, data_out = 0001111000011111
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 11869,data_in = 0010111001011101,, expected_data_out = 7598, data_out = 7598
+Checking operation in binary for sel=3:: data_in_bin = 0010111001011101, expected_data_out = 0b1110110101110, data_out = 0001110110101110
+DATA_WIDTH =16
+Checking operation for sel=1:: data_in = 4783,data_in = 0001001010101111,, expected_data_out = 18677, data_out = 18677
+Checking operation in binary for sel=1:: data_in_bin = 0001001010101111, expected_data_out = 0b100100011110101, data_out = 0100100011110101
+DATA_WIDTH =16
+Checking operation for sel=0:: data_in = 41719,data_in = 1010001011110111,, expected_data_out = 61253, data_out = 61253
+Checking operation in binary for sel=0:: data_in_bin = 1010001011110111, expected_data_out = 0b1110111101000101, data_out = 1110111101000101
+DATA_WIDTH =16
+Checking operation for sel=1:: data_in = 60256,data_in = 1110101101100000,, expected_data_out = 55046, data_out = 55046
+Checking operation in binary for sel=1:: data_in_bin = 1110101101100000, expected_data_out = 0b1101011100000110, data_out = 1101011100000110
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 59818,data_in = 1110100110101010,, expected_data_out = 31061, data_out = 31061
+Checking operation in binary for sel=2:: data_in_bin = 1110100110101010, expected_data_out = 0b111100101010101, data_out = 0111100101010101
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 62975,data_in = 1111010111111111,, expected_data_out = 64255, data_out = 64255
+Checking operation in binary for sel=3:: data_in_bin = 1111010111111111, expected_data_out = 0b1111101011111111, data_out = 1111101011111111
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 56187,data_in = 1101101101111011,, expected_data_out = 59319, data_out = 59319
+Checking operation in binary for sel=3:: data_in_bin = 1101101101111011, expected_data_out = 0b1110011110110111, data_out = 1110011110110111
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 19406,data_in = 0100101111001110,, expected_data_out = 34765, data_out = 34765
+Checking operation in binary for sel=3:: data_in_bin = 0100101111001110, expected_data_out = 0b1000011111001101, data_out = 1000011111001101
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 15678,data_in = 0011110100111110,, expected_data_out = 15933, data_out = 15933
+Checking operation in binary for sel=3:: data_in_bin = 0011110100111110, expected_data_out = 0b11111000111101, data_out = 0011111000111101
+DATA_WIDTH =16
+Checking operation for sel=3:: data_in = 58109,data_in = 1110001011111101,, expected_data_out = 53758, data_out = 53758
+Checking operation in binary for sel=3:: data_in_bin = 1110001011111101, expected_data_out = 0b1101000111111110, data_out = 1101000111111110
+DATA_WIDTH =16
+Checking operation for sel=2:: data_in = 10339,data_in = 0010100001100011,, expected_data_out = 16748, data_out = 16748
+Checking operation in binary for sel=2:: data_in_bin = 0010100001100011, expected_data_out = 0b100000101101100, data_out = 0100000101101100
+DATA_WIDTH =16
+Checking operation for sel=0:: data_in = 19625,data_in = 0100110010101001,, expected_data_out = 38194, data_out = 38194
+Checking operation in binary for sel=0:: data_in_bin = 0100110010101001, expected_data_out = 0b1001010100110010, data_out = 1001010100110010
+   200.00ns INFO     cocotb.regression                  test_nbit_swizzling.test_nbit_sizling passed
+   200.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                        ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************
+                                                        ** test_nbit_swizzling.test_nbit_sizling   PASS         200.00           0.00     230963.88  **
+                                                        ***********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                         200.00           0.00      45876.99  **
+                                                        ***********************************************************************************************
+PASSED
+../../src/test_runner.py::test_nbit_sizling[32]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917893
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_nbit_swizzling.test_nbit_sizling (1/1)
+                                                            Test the nbit_sizling module 
+DATA_WIDTH =32
+Checking operation for sel=1:: data_in = 1311829673,data_in = 01001110001100001110111010101001,, expected_data_out = 208835959, data_out = 208835959
+Checking operation in binary for sel=1:: data_in_bin = 01001110001100001110111010101001, expected_data_out = 0b1100011100101001010101110111, data_out = 00001100011100101001010101110111
+DATA_WIDTH =32
+Checking operation for sel=2:: data_in = 2089157026,data_in = 01111100100001100000000110100010,, expected_data_out = 1046577221, data_out = 1046577221
+Checking operation in binary for sel=2:: data_in_bin = 01111100100001100000000110100010, expected_data_out = 0b111110011000011000000001000101, data_out = 00111110011000011000000001000101
+DATA_WIDTH =32
+Checking operation for sel=2:: data_in = 2855749857,data_in = 10101010001101110100100011100001,, expected_data_out = 1441534599, data_out = 1441534599
+Checking operation in binary for sel=2:: data_in_bin = 10101010001101110100100011100001, expected_data_out = 0b1010101111011000001001010000111, data_out = 01010101111011000001001010000111
+DATA_WIDTH =32
+Checking operation for sel=2:: data_in = 1049317300,data_in = 00111110100010110100111110110100,, expected_data_out = 2094133805, data_out = 2094133805
+Checking operation in binary for sel=2:: data_in_bin = 00111110100010110100111110110100, expected_data_out = 0b1111100110100011111001000101101, data_out = 01111100110100011111001000101101
+DATA_WIDTH =32
+Checking operation for sel=0:: data_in = 1794246364,data_in = 01101010111100100000011011011100,, expected_data_out = 996167510, data_out = 996167510
+Checking operation in binary for sel=0:: data_in_bin = 01101010111100100000011011011100, expected_data_out = 0b111011011000000100111101010110, data_out = 00111011011000000100111101010110
+DATA_WIDTH =32
+Checking operation for sel=0:: data_in = 907513370,data_in = 00110110000101111000111000011010,, expected_data_out = 1483860076, data_out = 1483860076
+Checking operation in binary for sel=0:: data_in_bin = 00110110000101111000111000011010, expected_data_out = 0b1011000011100011110100001101100, data_out = 01011000011100011110100001101100
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 3773416627,data_in = 11100000111010011100010010110011,, expected_data_out = 1886991068, data_out = 1886991068
+Checking operation in binary for sel=3:: data_in_bin = 11100000111010011100010010110011, expected_data_out = 0b1110000011110010011001011011100, data_out = 01110000011110010011001011011100
+DATA_WIDTH =32
+Checking operation for sel=1:: data_in = 3343140295,data_in = 11000111010001000100010111000111,, expected_data_out = 585360290, data_out = 585360290
+Checking operation in binary for sel=1:: data_in_bin = 11000111010001000100010111000111, expected_data_out = 0b100010111000111110001110100010, data_out = 00100010111000111110001110100010
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 2004361206,data_in = 01110111011110000001111111110110,, expected_data_out = 4007759862, data_out = 4007759862
+Checking operation in binary for sel=3:: data_in_bin = 01110111011110000001111111110110, expected_data_out = 0b11101110111000011000111111110110, data_out = 11101110111000011000111111110110
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 2470501472,data_in = 10010011010000001101110001100000,, expected_data_out = 2619388768, data_out = 2619388768
+Checking operation in binary for sel=3:: data_in_bin = 10010011010000001101110001100000, expected_data_out = 0b10011100001000001011001101100000, data_out = 10011100001000001011001101100000
+DATA_WIDTH =32
+Checking operation for sel=1:: data_in = 338811507,data_in = 00010100001100011101101001110011,, expected_data_out = 2351484507, data_out = 2351484507
+Checking operation in binary for sel=1:: data_in_bin = 00010100001100011101101001110011, expected_data_out = 0b10001100001010001100111001011011, data_out = 10001100001010001100111001011011
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 2640144308,data_in = 10011101010111010110011110110100,, expected_data_out = 2611703506, data_out = 2611703506
+Checking operation in binary for sel=3:: data_in_bin = 10011101010111010110011110110100, expected_data_out = 0b10011011101010110110111011010010, data_out = 10011011101010110110111011010010
+DATA_WIDTH =32
+Checking operation for sel=0:: data_in = 1878702170,data_in = 01101111111110101011100001011010,, expected_data_out = 1511874550, data_out = 1511874550
+Checking operation in binary for sel=0:: data_in_bin = 01101111111110101011100001011010, expected_data_out = 0b1011010000111010101111111110110, data_out = 01011010000111010101111111110110
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 2488413628,data_in = 10010100010100100010110110111100,, expected_data_out = 2460240851, data_out = 2460240851
+Checking operation in binary for sel=3:: data_in_bin = 10010100010100100010110110111100, expected_data_out = 0b10010010101001000100101111010011, data_out = 10010010101001000100101111010011
+DATA_WIDTH =32
+Checking operation for sel=1:: data_in = 2988193355,data_in = 10110010000111000011011001001011,, expected_data_out = 944624236, data_out = 944624236
+Checking operation in binary for sel=1:: data_in_bin = 10110010000111000011011001001011, expected_data_out = 0b111000010011011101001001101100, data_out = 00111000010011011101001001101100
+DATA_WIDTH =32
+Checking operation for sel=1:: data_in = 2880738922,data_in = 10101011101101001001011001101010,, expected_data_out = 768956009, data_out = 768956009
+Checking operation in binary for sel=1:: data_in_bin = 10101011101101001001011001101010, expected_data_out = 0b101101110101010101011001101001, data_out = 00101101110101010101011001101001
+DATA_WIDTH =32
+Checking operation for sel=0:: data_in = 1712028388,data_in = 01100110000010110111101011100100,, expected_data_out = 660525158, data_out = 660525158
+Checking operation in binary for sel=0:: data_in_bin = 01100110000010110111101011100100, expected_data_out = 0b100111010111101101000001100110, data_out = 00100111010111101101000001100110
+DATA_WIDTH =32
+Checking operation for sel=0:: data_in = 2804768287,data_in = 10100111001011010101111000011111,, expected_data_out = 4168791269, data_out = 4168791269
+Checking operation in binary for sel=0:: data_in_bin = 10100111001011010101111000011111, expected_data_out = 0b11111000011110101011010011100101, data_out = 11111000011110101011010011100101
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 394579431,data_in = 00010111100001001100110111100111,, expected_data_out = 2383559550, data_out = 2383559550
+Checking operation in binary for sel=3:: data_in_bin = 00010111100001001100110111100111, expected_data_out = 0b10001110000100100011101101111110, data_out = 10001110000100100011101101111110
+DATA_WIDTH =32
+Checking operation for sel=3:: data_in = 961300267,data_in = 00111001010011000100011100101011,, expected_data_out = 3374526029, data_out = 3374526029
+Checking operation in binary for sel=3:: data_in_bin = 00111001010011000100011100101011, expected_data_out = 0b11001001001000110010111001001101, data_out = 11001001001000110010111001001101
+   200.00ns INFO     cocotb.regression                  test_nbit_swizzling.test_nbit_sizling passed
+   200.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                        ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************
+                                                        ** test_nbit_swizzling.test_nbit_sizling   PASS         200.00           0.00     194812.08  **
+                                                        ***********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                         200.00           0.00     118066.26  **
+                                                        ***********************************************************************************************
+PASSED
+../../src/test_runner.py::test_nbit_sizling[40]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917894
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_nbit_swizzling.test_nbit_sizling (1/1)
+                                                            Test the nbit_sizling module 
+DATA_WIDTH =40
+Checking operation for sel=3:: data_in = 290622369756,data_in = 0100001110101010011100010110111111011100,, expected_data_out = 84486155751, data_out = 84486155751
+Checking operation in binary for sel=3:: data_in_bin = 0100001110101010011100010110111111011100, expected_data_out = 0b1001110101011110001000110110111100111, data_out = 0001001110101011110001000110110111100111
+DATA_WIDTH =40
+Checking operation for sel=2:: data_in = 279022673231,data_in = 0100000011110111000011000001110101001111,, expected_data_out = 826843992010, data_out = 826843992010
+Checking operation in binary for sel=2:: data_in_bin = 0100000011110111000011000001110101001111, expected_data_out = 0b1100000010000011101111100000111111001010, data_out = 1100000010000011101111100000111111001010
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 1034181137525,data_in = 1111000011001001111111111101010001110101,, expected_data_out = 748062479119, data_out = 748062479119
+Checking operation in binary for sel=0:: data_in_bin = 1111000011001001111111111101010001110101, expected_data_out = 0b1010111000101011111111111001001100001111, data_out = 1010111000101011111111111001001100001111
+DATA_WIDTH =40
+Checking operation for sel=3:: data_in = 1028427598150,data_in = 1110111101110011000011111100100101000110,, expected_data_out = 815609652556, data_out = 815609652556
+Checking operation in binary for sel=3:: data_in_bin = 1110111101110011000011111100100101000110, expected_data_out = 0b1011110111100110000111111010010101001100, data_out = 1011110111100110000111111010010101001100
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 322113158361,data_in = 0100101011111111011100001011110011011001,, expected_data_out = 666744323922, data_out = 666744323922
+Checking operation in binary for sel=0:: data_in_bin = 0100101011111111011100001011110011011001, expected_data_out = 0b1001101100111101000011101111111101010010, data_out = 1001101100111101000011101111111101010010
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 1084509218127,data_in = 1111110010000001110010010110010101001111,, expected_data_out = 1042176770367, data_out = 1042176770367
+Checking operation in binary for sel=0:: data_in_bin = 1111110010000001110010010110010101001111, expected_data_out = 0b1111001010100110100100111000000100111111, data_out = 1111001010100110100100111000000100111111
+DATA_WIDTH =40
+Checking operation for sel=2:: data_in = 948138877488,data_in = 1101110011000001011110110010001000110000,, expected_data_out = 888957645873, data_out = 888957645873
+Checking operation in binary for sel=2:: data_in_bin = 1101110011000001011110110010001000110000, expected_data_out = 0b1100111011111010000000010011010000110001, data_out = 1100111011111010000000010011010000110001
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 1030289916674,data_in = 1110111111100010000100001000001100000010,, expected_data_out = 569073994768, data_out = 569073994768
+Checking operation in binary for sel=1:: data_in_bin = 1110111111100010000100001000001100000010, expected_data_out = 0b1000010001111111011101000000110000010000, data_out = 1000010001111111011101000000110000010000
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 796293746703,data_in = 1011100101100110110011100101000000001111,, expected_data_out = 233704456359, data_out = 233704456359
+Checking operation in binary for sel=1:: data_in_bin = 1011100101100110110011100101000000001111, expected_data_out = 0b11011001101001110111110000000010100111, data_out = 0011011001101001110111110000000010100111
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 485300975881,data_in = 0111000011111110001100010011100100001001,, expected_data_out = 858740296136, data_out = 858740296136
+Checking operation in binary for sel=1:: data_in_bin = 0111000011111110001100010011100100001001, expected_data_out = 0b1100011111110000111010010000100111001000, data_out = 1100011111110000111010010000100111001000
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 803873080675,data_in = 1011101100101010100100011100010101100011,, expected_data_out = 853147210973, data_out = 853147210973
+Checking operation in binary for sel=0:: data_in_bin = 1011101100101010100100011100010101100011, expected_data_out = 0b1100011010100011100010010101010011011101, data_out = 1100011010100011100010010101010011011101
+DATA_WIDTH =40
+Checking operation for sel=2:: data_in = 985117589084,data_in = 1110010101011101100101010111111001011100,, expected_data_out = 729723939049, data_out = 729723939049
+Checking operation in binary for sel=2:: data_in_bin = 1110010101011101100101010111111001011100, expected_data_out = 0b1010100111100110111011111010100011101001, data_out = 1010100111100110111011111010100011101001
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 1040280249665,data_in = 1111001000110101100010001110010101000001,, expected_data_out = 114973747825, data_out = 114973747825
+Checking operation in binary for sel=1:: data_in_bin = 1111001000110101100010001110010101000001, expected_data_out = 0b1101011000100111110000010101001110001, data_out = 0001101011000100111110000010101001110001
+DATA_WIDTH =40
+Checking operation for sel=2:: data_in = 795057048804,data_in = 1011100100011101000101111100110011100100,, expected_data_out = 169163421852, data_out = 169163421852
+Checking operation in binary for sel=2:: data_in_bin = 1011100100011101000101111100110011100100, expected_data_out = 0b10011101100010111011001111100010011100, data_out = 0010011101100010111011001111100010011100
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 601969391585,data_in = 1000110000101000001010111111011111100001,, expected_data_out = 583844238385, data_out = 583844238385
+Checking operation in binary for sel=0:: data_in_bin = 1000110000101000001010111111011111100001, expected_data_out = 0b1000011111101111110101000001010000110001, data_out = 1000011111101111110101000001010000110001
+DATA_WIDTH =40
+Checking operation for sel=3:: data_in = 79085906520,data_in = 0001001001101001111000110010101001011000,, expected_data_out = 294389164323, data_out = 294389164323
+Checking operation in binary for sel=3:: data_in_bin = 0001001001101001111000110010101001011000, expected_data_out = 0b100010010001010111101100010100100100011, data_out = 0100010010001010111101100010100100100011
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 797253907890,data_in = 1011100110100000000010010011010110110010,, expected_data_out = 1507121865, data_out = 1507121865
+Checking operation in binary for sel=1:: data_in_bin = 1011100110100000000010010011010110110010, expected_data_out = 0b1011001110101001101101011001001, data_out = 0000000001011001110101001101101011001001
+DATA_WIDTH =40
+Checking operation for sel=2:: data_in = 12269860087,data_in = 0000001011011011010101110011010011110111,, expected_data_out = 894081645500, data_out = 894081645500
+Checking operation in binary for sel=2:: data_in_bin = 0000001011011011010101110011010011110111, expected_data_out = 0b1101000000101011011010110011101110111100, data_out = 1101000000101011011010110011101110111100
+DATA_WIDTH =40
+Checking operation for sel=1:: data_in = 897587463128,data_in = 1101000011111100011000011100001111011000,, expected_data_out = 429239942200, data_out = 429239942200
+Checking operation in binary for sel=1:: data_in_bin = 1101000011111100011000011100001111011000, expected_data_out = 0b110001111110000101100011011110000111000, data_out = 0110001111110000101100011011110000111000
+DATA_WIDTH =40
+Checking operation for sel=0:: data_in = 406204035462,data_in = 0101111010010011101001011011000110000110,, expected_data_out = 418988280186, data_out = 418988280186
+Checking operation in binary for sel=0:: data_in_bin = 0101111010010011101001011011000110000110, expected_data_out = 0b110000110001101101001011100100101111010, data_out = 0110000110001101101001011100100101111010
+   200.00ns INFO     cocotb.regression                  test_nbit_swizzling.test_nbit_sizling passed
+   200.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                        ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************
+                                                        ** test_nbit_swizzling.test_nbit_sizling   PASS         200.00           0.00     163648.22  **
+                                                        ***********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                         200.00           0.00      97022.99  **
+                                                        ***********************************************************************************************
+PASSED
+../../src/test_runner.py::test_nbit_sizling[48]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917894
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_nbit_swizzling.test_nbit_sizling (1/1)
+                                                            Test the nbit_sizling module 
+DATA_WIDTH =48
+Checking operation for sel=3:: data_in = 74640801230812,data_in = 010000111110001010101010011100010110111111011100,, expected_data_out = 10948227739598, data_out = 10948227739598
+Checking operation in binary for sel=3:: data_in_bin = 010000111110001010101010011100010110111111011100, expected_data_out = 0b10011111010100010101001110011010111111001110, data_out = 000010011111010100010101001110011010111111001110
+DATA_WIDTH =48
+Checking operation for sel=2:: data_in = 71270537108815,data_in = 010000001101000111110111000011000001110101001111,, expected_data_out = 193715784322859, data_out = 193715784322859
+Checking operation in binary for sel=2:: data_in_bin = 010000001101000111110111000011000001110101001111, expected_data_out = 0b101100000010111011111000100000110000111100101011, data_out = 101100000010111011111000100000110000111100101011
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 264461705270389,data_in = 111100001000011011001001111111111101010001110101,, expected_data_out = 191503994675471, data_out = 191503994675471
+Checking operation in binary for sel=0:: data_in_bin = 111100001000011011001001111111111101010001110101, expected_data_out = 0b101011100010101111111111100100110110000100001111, data_out = 101011100010101111111111100100110110000100001111
+DATA_WIDTH =48
+Checking operation for sel=3:: data_in = 263390799841606,data_in = 111011111000110101110011000011111100100101000110,, expected_data_out = 242420633631320, data_out = 242420633631320
+Checking operation in binary for sel=3:: data_in_bin = 111011111000110101110011000011111100100101000110, expected_data_out = 0b110111000111101011110011110000001111101001011000, data_out = 110111000111101011110011110000001111101001011000
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 81758988057817,data_in = 010010100101101111111111011100001011110011011001,, expected_data_out = 170686546958930, data_out = 170686546958930
+Checking operation in binary for sel=0:: data_in_bin = 010010100101101111111111011100001011110011011001, expected_data_out = 0b100110110011110100001110111111111101101001010010, data_out = 100110110011110100001110111111111101101001010010
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 277594503734607,data_in = 111111000111100010000001110010010110010101001111,, expected_data_out = 266797253205567, data_out = 266797253205567
+Checking operation in binary for sel=0:: data_in_bin = 111111000111100010000001110010010110010101001111, expected_data_out = 0b111100101010011010010011100000010001111000111111, data_out = 111100101010011010010011100000010001111000111111
+DATA_WIDTH =48
+Checking operation for sel=2:: data_in = 242192156926512,data_in = 110111000100010111000001011110110010001000110000,, expected_data_out = 39274159136964, data_out = 39274159136964
+Checking operation in binary for sel=2:: data_in_bin = 110111000100010111000001011110110010001000110000, expected_data_out = 0b1000111011100000111010010011011110000011000100, data_out = 001000111011100000111010010011011110000011000100
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 263298172879618,data_in = 111011110111011111100010000100001000001100000010,, expected_data_out = 79091676004616, data_out = 79091676004616
+Checking operation in binary for sel=1:: data_in_bin = 111011110111011111100010000100001000001100000010, expected_data_out = 0b10001111110111011110111010000001100000100001000, data_out = 010001111110111011110111010000001100000100001000
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 204145815343119,data_in = 101110011010101101100110110011100101000000001111,, expected_data_out = 113067663821427, data_out = 113067663821427
+Checking operation in binary for sel=1:: data_in_bin = 101110011010101101100110110011100101000000001111, expected_data_out = 0b11001101101010110011101111100000000101001110011, data_out = 011001101101010110011101111100000000101001110011
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 123793812044041,data_in = 011100001001011011111110001100010011100100001001,, expected_data_out = 140089192651916, data_out = 140089192651916
+Checking operation in binary for sel=1:: data_in_bin = 011100001001011011111110001100010011100100001001, expected_data_out = 0b11111110110100100001110100100001001110010001100, data_out = 011111110110100100001110100100001001110010001100
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 205660928197987,data_in = 101110110000110000101010100100011100010101100011,, expected_data_out = 218405685965021, data_out = 218405685965021
+Checking operation in binary for sel=0:: data_in_bin = 101110110000110000101010100100011100010101100011, expected_data_out = 0b110001101010001110001001010101000011000011011101, data_out = 110001101010001110001001010101000011000011011101
+DATA_WIDTH =48
+Checking operation for sel=2:: data_in = 252253589306972,data_in = 111001010110110001011101100101010111111001011100,, expected_data_out = 117079263581095, data_out = 117079263581095
+Checking operation in binary for sel=2:: data_in_bin = 111001010110110001011101100101010111111001011100, expected_data_out = 0b11010100111101110100011111010101001001110100111, data_out = 011010100111101110100011111010101001001110100111
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 266662532670785,data_in = 111100101000011100110101100010001110010101000001,, expected_data_out = 190083701581585, data_out = 190083701581585
+Checking operation in binary for sel=1:: data_in_bin = 111100101000011100110101100010001110010101000001, expected_data_out = 0b101011001110000101001111100000101010011100010001, data_out = 101011001110000101001111100000101010011100010001
+DATA_WIDTH =48
+Checking operation for sel=2:: data_in = 204153168579812,data_in = 101110011010110100011101000101111100110011100100,, expected_data_out = 98799468839539, data_out = 98799468839539
+Checking operation in binary for sel=2:: data_in_bin = 101110011010110100011101000101111100110011100100, expected_data_out = 0b10110011101101110001011001111101000001001110011, data_out = 010110011101101110001011001111101000001001110011
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 154383273424865,data_in = 100011000110100100101000001010111111011111100001,, expected_data_out = 149464125052465, data_out = 149464125052465
+Checking operation in binary for sel=0:: data_in_bin = 100011000110100100101000001010111111011111100001, expected_data_out = 0b100001111110111111010100000101001001011000110001, data_out = 100001111110111111010100000101001001011000110001
+DATA_WIDTH =48
+Checking operation for sel=3:: data_in = 20712108796504,data_in = 000100101101011001101001111000110010101001011000,, expected_data_out = 38318173403462, data_out = 38318173403462
+Checking operation in binary for sel=3:: data_in_bin = 000100101101011001101001111000110010101001011000, expected_data_out = 0b1000101101100110100101000111010011100101000110, data_out = 001000101101100110100101000111010011100101000110
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 203798883153330,data_in = 101110010101101010100000000010010011010110110010,, expected_data_out = 5886744308880, data_out = 5886744308880
+Checking operation in binary for sel=1:: data_in_bin = 101110010101101010100000000010010011010110110010, expected_data_out = 0b1010101101010011101010011011010110010010000, data_out = 000001010101101010011101010011011010110010010000
+DATA_WIDTH =48
+Checking operation for sel=2:: data_in = 2593545204983,data_in = 000000100101101111011011010101110011010011110111,, expected_data_out = 180378925969138, data_out = 180378925969138
+Checking operation in binary for sel=2:: data_in_bin = 000000100101101111011011010101110011010011110111, expected_data_out = 0b101001000000110110111101110011101010111011110010, data_out = 101001000000110110111101110011101010111011110010
+DATA_WIDTH =48
+Checking operation for sel=1:: data_in = 228913106240472,data_in = 110100000011000111111100011000011100001111011000,, expected_data_out = 69870714340230, data_out = 69870714340230
+Checking operation in binary for sel=1:: data_in_bin = 110100000011000111111100011000011100001111011000, expected_data_out = 0b1111111000110000001011000110111100001110000110, data_out = 001111111000110000001011000110111100001110000110
+DATA_WIDTH =48
+Checking operation for sel=0:: data_in = 104099599462790,data_in = 010111101010110110010011101001011011000110000110,, expected_data_out = 107260999742842, data_out = 107260999742842
+Checking operation in binary for sel=0:: data_in_bin = 010111101010110110010011101001011011000110000110, expected_data_out = 0b11000011000110110100101110010011011010101111010, data_out = 011000011000110110100101110010011011010101111010
+   200.00ns INFO     cocotb.regression                  test_nbit_swizzling.test_nbit_sizling passed
+   200.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                        ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************
+                                                        ** test_nbit_swizzling.test_nbit_sizling   PASS         200.00           0.00     160087.94  **
+                                                        ***********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                         200.00           0.00      98677.90  **
+                                                        ***********************************************************************************************
+PASSED
+../../src/test_runner.py::test_nbit_sizling[64]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917894
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_nbit_swizzling.test_nbit_sizling (1/1)
+                                                            Test the nbit_sizling module 
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 12281720653614455703,data_in = 1010101001110001011011111101110011110101010001001001101110010111,, expected_data_out = 6165135676118587881, data_out = 6165135676118587881
+Checking operation in binary for sel=3:: data_in_bin = 1010101001110001011011111101110011110101010001001001101110010111, expected_data_out = 0b101010110001110111101100011101110101111001000101101100111101001, data_out = 0101010110001110111101100011101110101111001000101101100111101001
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 2335276909569252687,data_in = 0010000001101000100100011111100111110111000011000001110101001111,, expected_data_out = 294574145645099250, data_out = 294574145645099250
+Checking operation in binary for sel=3:: data_in_bin = 0010000001101000100100011111100111110111000011000001110101001111, expected_data_out = 0b10000010110100010011001111111101111001100001011100011110010, data_out = 0000010000010110100010011001111111101111001100001011100011110010
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 852128559245303884,data_in = 0000101111010011010111100110100011101100110010000010000001001100,, expected_data_out = 15045253215993136178, data_out = 15045253215993136178
+Checking operation in binary for sel=3:: data_in_bin = 0000101111010011010111100110100011101100110010000010000001001100, expected_data_out = 0b1101000011001011011110100001011000110111000100110000010000110010, data_out = 1101000011001011011110100001011000110111000100110000010000110010
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 303652229945872547,data_in = 0000010000110110110010100001100000100101001011011101000010100011,, expected_data_out = 2336333672006028229, data_out = 2336333672006028229
+Checking operation in binary for sel=3:: data_in_bin = 0000010000110110110010100001100000100101001011011101000010100011, expected_data_out = 0b10000001101100010100110001100010100100101101000000101111000101, data_out = 0010000001101100010100110001100010100100101101000000101111000101
+DATA_WIDTH =64
+Checking operation for sel=2:: data_in = 13941774661190295572,data_in = 1100000101111011001000100011000000001010110010100010000000010100,, expected_data_out = 16033672585964169220, data_out = 16033672585964169220
+Checking operation in binary for sel=2:: data_in_bin = 1100000101111011001000100011000000001010110010100010000000010100, expected_data_out = 0b1101111010000011000011000100010001010011010100000010100000000100, data_out = 1101111010000011000011000100010001010011010100000010100000000100
+DATA_WIDTH =64
+Checking operation for sel=1:: data_in = 7407946463036490540,data_in = 0110011011001110010100000000111100100100011001101100001100101100,, expected_data_out = 17296764201678890532, data_out = 17296764201678890532
+Checking operation in binary for sel=1:: data_in_bin = 0110011011001110010100000000111100100100011001101100001100101100, expected_data_out = 0b1111000000001010011100110110011000110100110000110110011000100100, data_out = 1111000000001010011100110110011000110100110000110110011000100100
+DATA_WIDTH =64
+Checking operation for sel=1:: data_in = 18417547660069926670,data_in = 1111111110011000010001100000010000111000010010110111011100001110,, expected_data_out = 2333456141833392668, data_out = 2333456141833392668
+Checking operation in binary for sel=1:: data_in_bin = 1111111110011000010001100000010000111000010010110111011100001110, expected_data_out = 0b10000001100010000110011111111101110000111011101101001000011100, data_out = 0010000001100010000110011111111101110000111011101101001000011100
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 264305266693384817,data_in = 0000001110101011000000000011110101011101100001100010101001110001,, expected_data_out = 13895013035902325902, data_out = 13895013035902325902
+Checking operation in binary for sel=3:: data_in_bin = 0000001110101011000000000011110101011101100001100010101001110001, expected_data_out = 0b1100000011010101000000001011110010111010011000010101010010001110, data_out = 1100000011010101000000001011110010111010011000010101010010001110
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 6147762426166239879,data_in = 0101010101010001001111010101101010110111001000011110001010000111,, expected_data_out = 12288841631951767521, data_out = 12288841631951767521
+Checking operation in binary for sel=3:: data_in_bin = 0101010101010001001111010101101010110111001000011110001010000111, expected_data_out = 0b1010101010001010101111000101101011101101100001000100011111100001, data_out = 1010101010001010101111000101101011101101100001000100011111100001
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 10919217182642503411,data_in = 1001011110001000110110100010110011010100101111110111111011110011,, expected_data_out = 16794304765075750607, data_out = 16794304765075750607
+Checking operation in binary for sel=3:: data_in_bin = 1001011110001000110110100010110011010100101111110111111011110011, expected_data_out = 0b1110100100010001010110110011010000101011111111010111111011001111, data_out = 1110100100010001010110110011010000101011111111010111111011001111
+DATA_WIDTH =64
+Checking operation for sel=2:: data_in = 2096369433354657298,data_in = 0001110100010111110011001110010010000001000101110101111000010010,, expected_data_out = 16769196316411644026, data_out = 16769196316411644026
+Checking operation in binary for sel=2:: data_in_bin = 0001110100010111110011001110010010000001000101110101111000010010, expected_data_out = 0b1110100010111000001001110011001111101000100000010100100001111010, data_out = 1110100010111000001001110011001111101000100000010100100001111010
+DATA_WIDTH =64
+Checking operation for sel=2:: data_in = 14773926680247850704,data_in = 1100110100000111100010000000101001000001110101101101011011010000,, expected_data_out = 16191373121075415915, data_out = 16191373121075415915
+Checking operation in binary for sel=2:: data_in_bin = 1100110100000111100010000000101001000001110101101101011011010000, expected_data_out = 0b1110000010110011010100000001000101101011100000100000101101101011, data_out = 1110000010110011010100000001000101101011100000100000101101101011
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 7629988754041720755,data_in = 0110100111100011001010100101100010101100111000011100111110110011,, expected_data_out = 10864745097598596045, data_out = 10864745097598596045
+Checking operation in binary for sel=3:: data_in_bin = 0110100111100011001010100101100010101100111000011100111110110011, expected_data_out = 0b1001011011000111010101000001101000110101100001111111001111001101, data_out = 1001011011000111010101000001101000110101100001111111001111001101
+DATA_WIDTH =64
+Checking operation for sel=0:: data_in = 12947798839224699928,data_in = 1011001110101111110100100111000110100011001101000000110000011000,, expected_data_out = 1742942282799904205, data_out = 1742942282799904205
+Checking operation in binary for sel=0:: data_in_bin = 1011001110101111110100100111000110100011001101000000110000011000, expected_data_out = 0b1100000110000001011001100010110001110010010111111010111001101, data_out = 0001100000110000001011001100010110001110010010111111010111001101
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 5651999643088862417,data_in = 0100111001101111111011111011101011010100111100100011110011010001,, expected_data_out = 8284080544125238411, data_out = 8284080544125238411
+Checking operation in binary for sel=3:: data_in_bin = 0100111001101111111011111011101011010100111100100011110011010001, expected_data_out = 0b111001011110110111101110101110100101011010011110011110010001011, data_out = 0111001011110110111101110101110100101011010011110011110010001011
+DATA_WIDTH =64
+Checking operation for sel=0:: data_in = 10639104884366673298,data_in = 1001001110100101101100011000011000100000110011001000010110010010,, expected_data_out = 5305577929928713673, data_out = 5305577929928713673
+Checking operation in binary for sel=0:: data_in_bin = 1001001110100101101100011000011000100000110011001000010110010010, expected_data_out = 0b100100110100001001100110000010001100001100011011010010111001001, data_out = 0100100110100001001100110000010001100001100011011010010111001001
+DATA_WIDTH =64
+Checking operation for sel=1:: data_in = 10784479692701155383,data_in = 1001010110101010001010110010010001010010110111011100000000110111,, expected_data_out = 2653840268725566282, data_out = 2653840268725566282
+Checking operation in binary for sel=1:: data_in_bin = 1001010110101010001010110010010001010010110111011100000000110111, expected_data_out = 0b10010011010100010101011010100111101100000000111011101101001010, data_out = 0010010011010100010101011010100111101100000000111011101101001010
+DATA_WIDTH =64
+Checking operation for sel=3:: data_in = 3449387171255756319,data_in = 0010111111011110101011110101101101001011011111010010011000011111,, expected_data_out = 17616944687577195768, data_out = 17616944687577195768
+Checking operation in binary for sel=3:: data_in_bin = 0010111111011110101011110101101101001011011111010010011000011111, expected_data_out = 0b1111010001111011111101011101101011010010101111100110010011111000, data_out = 1111010001111011111101011101101011010010101111100110010011111000
+DATA_WIDTH =64
+Checking operation for sel=2:: data_in = 4307043604966444691,data_in = 0011101111000101101100010101011011001010001001001000111010010011,, expected_data_out = 11807429477491001713, data_out = 11807429477491001713
+Checking operation in binary for sel=2:: data_in_bin = 0011101111000101101100010101011011001010001001001000111010010011, expected_data_out = 0b1010001111011100011010101000110100100100010100111100100101110001, data_out = 1010001111011100011010101000110100100100010100111100100101110001
+DATA_WIDTH =64
+Checking operation for sel=2:: data_in = 11631141587603659530,data_in = 1010000101101010000111011010011001000101011000111001101100001010,, expected_data_out = 6234501103445233881, data_out = 6234501103445233881
+Checking operation in binary for sel=2:: data_in_bin = 1010000101101010000111011010011001000101011000111001101100001010, expected_data_out = 0b101011010000101011001011011100011000110101000100101000011011001, data_out = 0101011010000101011001011011100011000110101000100101000011011001
+   200.00ns INFO     cocotb.regression                  test_nbit_swizzling.test_nbit_sizling passed
+   200.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                        ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************
+                                                        ** test_nbit_swizzling.test_nbit_sizling   PASS         200.00           0.00     155603.93  **
+                                                        ***********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                         200.00           0.00     100450.34  **
+                                                        ***********************************************************************************************
+PASSED
+
+============================== 5 passed in 1.34s ===============================
+Cleaning up Docker resources...

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917892" />
+    <testcase name="test_moving_average" classname="test_moving_average" file="/src/test_moving_average.py" lineno="8" time="0.004399538040161133" sim_time_ns="108.0" ratio_time="24548.03186473744" />
+  </testsuite>
+</testsuites>

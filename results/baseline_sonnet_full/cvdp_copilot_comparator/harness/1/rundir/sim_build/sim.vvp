@@ -1,0 +1,134 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaaf125c4e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaaf125c670 .scope module, "signed_unsigned_comparator" "signed_unsigned_comparator" 3 23;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 5 "i_A";
+    .port_info 1 /INPUT 5 "i_B";
+    .port_info 2 /INPUT 1 "i_enable";
+    .port_info 3 /INPUT 1 "i_mode";
+    .port_info 4 /OUTPUT 1 "o_greater";
+    .port_info 5 /OUTPUT 1 "o_less";
+    .port_info 6 /OUTPUT 1 "o_equal";
+P_0xaaaaf12839c0 .param/l "WIDTH" 0 3 24, +C4<00000000000000000000000000000101>;
+v0xaaaaf1286bc0_0 .net "A_magnitude", 3 0, L_0xaaaaf12af7a0;  1 drivers
+o0xffff8cf7f048 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0xaaaaf12aef40_0 .net/s "A_signed", 4 0, o0xffff8cf7f048;  0 drivers
+v0xaaaaf12af020_0 .net "B_magnitude", 3 0, L_0xaaaaf12af840;  1 drivers
+o0xffff8cf7f0a8 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0xaaaaf12af0e0_0 .net/s "B_signed", 4 0, o0xffff8cf7f0a8;  0 drivers
+v0xaaaaf12af1c0_0 .net "i_A", 4 0, o0xffff8cf7f048;  alias, 0 drivers
+v0xaaaaf12af280_0 .net "i_B", 4 0, o0xffff8cf7f0a8;  alias, 0 drivers
+o0xffff8cf7f0d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf12af320_0 .net "i_enable", 0 0, o0xffff8cf7f0d8;  0 drivers
+o0xffff8cf7f108 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf12af3c0_0 .net "i_mode", 0 0, o0xffff8cf7f108;  0 drivers
+v0xaaaaf12af480_0 .var "o_equal", 0 0;
+v0xaaaaf12af540_0 .var "o_greater", 0 0;
+v0xaaaaf12af600_0 .var "o_less", 0 0;
+E_0xaaaaf1296230/0 .event anyedge, v0xaaaaf12af320_0, v0xaaaaf12af3c0_0, v0xaaaaf12aef40_0, v0xaaaaf12af0e0_0;
+E_0xaaaaf1296230/1 .event anyedge, v0xaaaaf1286bc0_0, v0xaaaaf12af020_0;
+E_0xaaaaf1296230 .event/or E_0xaaaaf1296230/0, E_0xaaaaf1296230/1;
+L_0xaaaaf12af7a0 .part o0xffff8cf7f048, 0, 4;
+L_0xaaaaf12af840 .part o0xffff8cf7f0a8, 0, 4;
+    .scope S_0xaaaaf125c670;
+T_0 ;
+Ewait_0 .event/or E_0xaaaaf1296230, E_0x0;
+    %wait Ewait_0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+    %load/vec4 v0xaaaaf12af320_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v0xaaaaf12af3c0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0xaaaaf12af0e0_0;
+    %load/vec4 v0xaaaaf12aef40_0;
+    %cmp/s;
+    %jmp/0xz  T_0.4, 5;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+    %jmp T_0.5;
+T_0.4 ;
+    %load/vec4 v0xaaaaf12aef40_0;
+    %load/vec4 v0xaaaaf12af0e0_0;
+    %cmp/s;
+    %jmp/0xz  T_0.6, 5;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+    %jmp T_0.7;
+T_0.6 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+T_0.7 ;
+T_0.5 ;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0xaaaaf12af020_0;
+    %load/vec4 v0xaaaaf1286bc0_0;
+    %cmp/u;
+    %jmp/0xz  T_0.8, 5;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+    %jmp T_0.9;
+T_0.8 ;
+    %load/vec4 v0xaaaaf1286bc0_0;
+    %load/vec4 v0xaaaaf12af020_0;
+    %cmp/u;
+    %jmp/0xz  T_0.10, 5;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+    %jmp T_0.11;
+T_0.10 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaaaaf12af600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaaaaf12af480_0, 0, 1;
+T_0.11 ;
+T_0.9 ;
+T_0.3 ;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/signed_comparator.sv";

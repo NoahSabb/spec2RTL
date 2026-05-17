@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917904" />
+    <testcase name="test_secure_read_write_register_bank" classname="test_secure_read_write_register_bank" file="/src/test_secure_read_write_register_bank.py" lineno="18" time="0.0037641525268554688" sim_time_ns="155.0" ratio_time="41177.92753990372">
+      <failure error_type="AssertionError" error_msg="output should not be 00000010&#10;assert LogicArray('00000010', Range(7, 'downto', 0)) == 0&#10; +  where LogicArray('00000010', Range(7, 'downto', 0)) = LogicArrayObject(secure_read_write_register_bank.o_data_out).value&#10; +    where LogicArrayObject(secure_read_write_register_bank.o_data_out) = HierarchyObject(secure_read_write_register_bank).o_data_out" />
+    </testcase>
+  </testsuite>
+</testsuites>

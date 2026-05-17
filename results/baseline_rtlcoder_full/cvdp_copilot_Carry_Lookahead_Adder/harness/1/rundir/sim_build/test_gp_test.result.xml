@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968153" />
+    <testcase name="test_gp_test" classname="test_gp_test" file="/src/test_gp_test.py" lineno="11" time="0.0006706714630126953" sim_time_ns="6.0" ratio_time="8946.25808745112">
+      <failure error_type="AssertionError" error_msg="Mismatch for A=0, B=1, Cin=0: o_Cout=1, expected=0&#10;assert 1 == 0" />
+    </testcase>
+  </testsuite>
+</testsuites>

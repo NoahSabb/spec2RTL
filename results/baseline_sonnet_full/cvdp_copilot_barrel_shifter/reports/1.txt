@@ -1,0 +1,67 @@
+Running harness with project name: cvdp_copilot_barrel_shifter_1_1778917855
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s barrel_shifter_8bit -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/barrel_shifter_8bit.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917856
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns WARNING  py.warnings                        /src/test_barrel_shifter.py:4: DeprecationWarning: Join has been moved to `cocotb.task`.
+                                                          from cocotb.triggers import FallingEdge, RisingEdge, ClockCycles, Timer, Join
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_barrel_shifter.test_barrel_1 (1/3)
+data_in  10000011
+shift_bits  011
+left_right 1
+data_out  00011000
+24
+Left shift process is successful
+    10.00ns INFO     cocotb.regression                  test_barrel_shifter.test_barrel_1 passed
+    10.00ns INFO     cocotb.regression                  running test_barrel_shifter.test_barrel_2 (2/3)
+data_in  11110110
+shift_bits  111
+left_right 0
+data_out  00000001
+1
+Right shift process is successful
+    21.00ns INFO     cocotb.regression                  test_barrel_shifter.test_barrel_2 passed
+    21.00ns INFO     cocotb.regression                  running test_barrel_shifter.test_barrel_3 (3/3)
+data_in  00011001
+shift_bits  000
+left_right 1
+data_out  00011001
+25
+Left shift process is successful
+    32.00ns INFO     cocotb.regression                  test_barrel_shifter.test_barrel_3 passed
+    32.00ns INFO     cocotb.regression                  *******************************************************************************************
+                                                        ** TEST                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************
+                                                        ** test_barrel_shifter.test_barrel_1   PASS          10.00           0.00      41201.41  **
+                                                        ** test_barrel_shifter.test_barrel_2   PASS          10.00           0.00     123725.78  **
+                                                        ** test_barrel_shifter.test_barrel_3   PASS          10.00           0.00     158275.62  **
+                                                        *******************************************************************************************
+                                                        ** TESTS=3 PASS=3 FAIL=0 SKIP=0                      32.00           0.00      23894.91  **
+                                                        *******************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-31ufnyzn'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-i553ylqd'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.30s =========================
+Cleaning up Docker resources...

@@ -1,0 +1,80 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaaf5a9ad10 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0xaaaaf5a9aea0 .scope module, "sync_pos_neg_edge_detector" "sync_pos_neg_edge_detector" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "i_clk";
+    .port_info 1 /INPUT 1 "i_rstb";
+    .port_info 2 /INPUT 1 "i_detection_signal";
+    .port_info 3 /OUTPUT 1 "o_positive_edge_detected";
+    .port_info 4 /OUTPUT 1 "o_negative_edge_detected";
+L_0xaaaaf5abf6e0 .functor NOT 1, v0xaaaaf5abf3b0_0, C4<0>, C4<0>, C4<0>;
+o0xffff8f19f1f8 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaaf5abf770 .functor AND 1, o0xffff8f19f1f8, L_0xaaaaf5abf6e0, C4<1>, C4<1>;
+L_0xaaaaf5abf840 .functor NOT 1, o0xffff8f19f1f8, C4<0>, C4<0>, C4<0>;
+L_0xaaaaf5abf900 .functor AND 1, L_0xaaaaf5abf840, v0xaaaaf5abf3b0_0, C4<1>, C4<1>;
+L_0xaaaaf5abfa40 .functor OR 1, L_0xaaaaf5abf770, L_0xaaaaf5abf900, C4<0>, C4<0>;
+L_0xaaaaf5abfb50 .functor NOT 1, v0xaaaaf5abf170_0, C4<0>, C4<0>, C4<0>;
+L_0xaaaaf5abfc00 .functor AND 1, o0xffff8f19f1f8, L_0xaaaaf5abfb50, C4<1>, C4<1>;
+L_0xaaaaf5abfcc0 .functor NOT 1, o0xffff8f19f1f8, C4<0>, C4<0>, C4<0>;
+L_0xaaaaf5abfd80 .functor AND 1, L_0xaaaaf5abfcc0, v0xaaaaf5abf170_0, C4<1>, C4<1>;
+L_0xaaaaf5abfe40 .functor OR 1, L_0xaaaaf5abfc00, L_0xaaaaf5abfd80, C4<0>, C4<0>;
+L_0xaaaaf5abffb0 .functor BUFZ 1, L_0xaaaaf5abfa40, C4<0>, C4<0>, C4<0>;
+L_0xaaaaf5ac0020 .functor BUFZ 1, L_0xaaaaf5abfe40, C4<0>, C4<0>, C4<0>;
+v0xaaaaf5a9b100_0 .net *"_ivl_0", 0 0, L_0xaaaaf5abf6e0;  1 drivers
+v0xaaaaf5abe790_0 .net *"_ivl_10", 0 0, L_0xaaaaf5abfb50;  1 drivers
+v0xaaaaf5abe870_0 .net *"_ivl_12", 0 0, L_0xaaaaf5abfc00;  1 drivers
+v0xaaaaf5abe930_0 .net *"_ivl_14", 0 0, L_0xaaaaf5abfcc0;  1 drivers
+v0xaaaaf5abea10_0 .net *"_ivl_16", 0 0, L_0xaaaaf5abfd80;  1 drivers
+v0xaaaaf5abeb40_0 .net *"_ivl_2", 0 0, L_0xaaaaf5abf770;  1 drivers
+v0xaaaaf5abec20_0 .net *"_ivl_4", 0 0, L_0xaaaaf5abf840;  1 drivers
+v0xaaaaf5abed00_0 .net *"_ivl_6", 0 0, L_0xaaaaf5abf900;  1 drivers
+v0xaaaaf5abede0_0 .net "falling_edge", 0 0, L_0xaaaaf5abfe40;  1 drivers
+o0xffff8f19f1c8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf5abef30_0 .net "i_clk", 0 0, o0xffff8f19f1c8;  0 drivers
+v0xaaaaf5abeff0_0 .net "i_detection_signal", 0 0, o0xffff8f19f1f8;  0 drivers
+o0xffff8f19f228 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaaf5abf0b0_0 .net "i_rstb", 0 0, o0xffff8f19f228;  0 drivers
+v0xaaaaf5abf170_0 .var "negative_edge_last", 0 0;
+v0xaaaaf5abf230_0 .net "o_negative_edge_detected", 0 0, L_0xaaaaf5ac0020;  1 drivers
+v0xaaaaf5abf2f0_0 .net "o_positive_edge_detected", 0 0, L_0xaaaaf5abffb0;  1 drivers
+v0xaaaaf5abf3b0_0 .var "positive_edge_last", 0 0;
+v0xaaaaf5abf470_0 .net "rising_edge", 0 0, L_0xaaaaf5abfa40;  1 drivers
+E_0xaaaaf5aaa970/0 .event negedge, v0xaaaaf5abf0b0_0;
+E_0xaaaaf5aaa970/1 .event posedge, v0xaaaaf5abef30_0;
+E_0xaaaaf5aaa970 .event/or E_0xaaaaf5aaa970/0, E_0xaaaaf5aaa970/1;
+    .scope S_0xaaaaf5a9aea0;
+T_0 ;
+    %wait E_0xaaaaf5aaa970;
+    %load/vec4 v0xaaaaf5abf0b0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaaf5abf3b0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaaf5abf170_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaaf5abf470_0;
+    %assign/vec4 v0xaaaaf5abf3b0_0, 0;
+    %load/vec4 v0xaaaaf5abede0_0;
+    %assign/vec4 v0xaaaaf5abf170_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/sync_pos_neg_edge_detector.sv";

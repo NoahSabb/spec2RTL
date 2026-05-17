@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917870" />
+    <testcase name="test_reset" classname="test_convolutional_encoder" file="/src/test_convolutional_encoder.py" lineno="12" time="0.0002779960632324219" sim_time_ns="10.0" ratio_time="35971.73241852487" />
+    <testcase name="test_convolutional_encoding" classname="test_convolutional_encoder" file="/src/test_convolutional_encoder.py" lineno="29" time="0.0003693103790283203" sim_time_ns="72.0" ratio_time="194957.96513879922" />
+    <testcase name="test_random_data" classname="test_convolutional_encoder" file="/src/test_convolutional_encoder.py" lineno="67" time="0.0004894733428955078" sim_time_ns="112.0" ratio_time="228817.36385776912" />
+  </testsuite>
+</testsuites>

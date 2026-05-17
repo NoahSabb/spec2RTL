@@ -1,0 +1,1521 @@
+Running harness with project name: cvdp_copilot_16qam_mapper_6_1778917848
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collected 60 items
+
+../../src/test_runner.py      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917850
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2656.30  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        652.61  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917850
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1850.97  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        674.98  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917850
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1006.55  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        526.99  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917851
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1217.86  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        601.85  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=14
+[DEBUG] Parameters: {'N': 14}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917851
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1167.03  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        545.35  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917851
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1874.13  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        678.80  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917851
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        855.28  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        320.10  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917852
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1774.24  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        651.29  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917852
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        644.88  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        209.69  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917852
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1933.75  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        709.22  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917853
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        878.02  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        381.16  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917853
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2252.58  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        738.56  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917853
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       3026.19  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        685.46  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917853
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1674.37  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        620.00  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917854
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        973.83  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.01        177.09  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917854
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1315.24  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        546.13  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=14
+[DEBUG] Parameters: {'N': 14}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917854
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1731.75  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        672.92  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917855
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1262.96  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        540.22  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917855
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1744.72  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        663.87  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917855
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1725.34  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        646.17  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917856
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        878.39  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        420.10  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917856
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1572.67  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        605.15  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917856
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1399.97  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        614.64  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2403.61  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        609.28  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2587.48  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        465.78  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2220.38  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        697.42  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1289.36  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        395.35  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917858
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        889.75  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        495.08  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=14
+[DEBUG] Parameters: {'N': 14}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917858
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1637.12  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        664.29  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917858
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2117.27  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        704.33  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1932.86  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        215.28  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1912.59  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        268.56  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1257.29  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        595.19  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917859
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1977.51  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        705.04  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917860
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1281.09  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        597.82  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917860
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2305.83  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        738.04  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917860
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2532.79  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        783.54  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917860
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1598.44  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        520.26  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917861
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1218.57  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        593.67  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917861
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1100.29  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        554.58  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=14
+[DEBUG] Parameters: {'N': 14}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917861
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1669.71  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        680.67  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917862
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2291.97  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        344.13  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917862
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1766.77  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        672.38  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917862
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1875.81  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        687.14  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917862
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -3.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 3.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00        975.19  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        523.57  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917863
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1648.06  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        301.27  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917863
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1345.62  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        605.59  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917863
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2155.35  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        284.71  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917864
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2334.06  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        736.88  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917864
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2198.27  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        278.34  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917864
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 3.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1189.20  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        560.89  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917864
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1285.02  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.01        177.87  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=14
+[DEBUG] Parameters: {'N': 14}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917865
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1730.32  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        215.82  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=8
+[DEBUG] Parameters: {'N': 8}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917865
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2089.84  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        749.65  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917865
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1769.75  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        684.11  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917865
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 2.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1889.33  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        688.27  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917866
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= -1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= 0.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1034.86  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        526.20  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=16
+[DEBUG] Parameters: {'N': 16}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917866
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1736.05  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        658.45  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917866
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -1.0
+     0.00ns INFO     test                               avg I= -3.0
+     0.00ns INFO     test                               avg Q= 1.0
+     0.00ns INFO     test                               avg I= 2.0
+     0.00ns INFO     test                               avg Q= 0.0
+     0.00ns INFO     test                               avg I= -2.0
+     0.00ns INFO     test                               avg Q= 1.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       1182.16  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        561.86  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+.     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917867
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_demapper_interpolated.test_qam16_demapper_interpolated (1/1)
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= -2.0
+     0.00ns INFO     test                               avg I= 1.0
+     0.00ns INFO     test                               avg Q= 0.0
+     1.00ns INFO     cocotb.regression                  test_qam16_demapper_interpolated.test_qam16_demapper_interpolated passed
+     1.00ns INFO     cocotb.regression                  ***************************************************************************************************************************
+                                                        ** TEST                                                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************
+                                                        ** test_qam16_demapper_interpolated.test_qam16_demapper_interpolated   PASS           1.00           0.00       2195.97  **
+                                                        ***************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                       1.00           0.00        276.56  **
+                                                        ***************************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+.
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-6bvjccc4'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-h2f1jndk'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 60 passed, 2 warnings in 17.19s ========================
+Cleaning up Docker resources...

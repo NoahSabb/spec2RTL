@@ -1,0 +1,465 @@
+Running harness with project name: cvdp_copilot_gcd_1_1779005797
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_runner      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779005798
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_test (1/2)
+                                                            Test GCD calculation for different combinations of A and B 
+    50.00ns WARNING  cocotb.Test gcd_test.gcd_test      Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('00000', Range(4, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000', Range(4, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 74, in gcd_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('00000', Range(4, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000', Range(4, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+    50.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_test failed
+    50.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_stress_test (2/2)
+                                                            Stress test GCD calculation with random non-zero, positive values 
+   280.00ns WARNING  .. gcd_stress_test.gcd_stress_test Test failed with A=17, B=23. Expected 1, got 0
+                                                        assert LogicArray('00000', Range(4, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000', Range(4, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 123, in gcd_stress_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=17, B=23. Expected 1, got 0
+                                                        assert LogicArray('00000', Range(4, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000', Range(4, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+   280.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_stress_test failed
+   280.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gcd_top.gcd_test          FAIL          50.00           0.00      57143.11  **
+                                                        ** test_gcd_top.gcd_stress_test   FAIL         230.00           0.00     267597.76  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                280.00           0.01      48901.12  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with WIDTH=5
+[DEBUG] Parameters: {'WIDTH': 5}
+FAILED
+../../src/test_runner.py::test_gcd[4]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779005798
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_test (1/2)
+                                                            Test GCD calculation for different combinations of A and B 
+    50.00ns WARNING  cocotb.Test gcd_test.gcd_test      Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('0000', Range(3, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 74, in gcd_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('0000', Range(3, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+    50.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_test failed
+    50.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_stress_test (2/2)
+                                                            Stress test GCD calculation with random non-zero, positive values 
+   200.00ns WARNING  .. gcd_stress_test.gcd_stress_test Test failed with A=9, B=12. Expected 3, got 0
+                                                        assert LogicArray('0000', Range(3, 'downto', 0)) == 3
+                                                         +  where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 123, in gcd_stress_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=9, B=12. Expected 3, got 0
+                                                        assert LogicArray('0000', Range(3, 'downto', 0)) == 3
+                                                         +  where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+   200.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_stress_test failed
+   200.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gcd_top.gcd_test          FAIL          50.00           0.00      63434.72  **
+                                                        ** test_gcd_top.gcd_stress_test   FAIL         150.00           0.00     238855.58  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                200.00           0.01      38564.96  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with WIDTH=4
+[DEBUG] Parameters: {'WIDTH': 4}
+FAILED
+../../src/test_runner.py::test_gcd[6]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779005798
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_test (1/2)
+                                                            Test GCD calculation for different combinations of A and B 
+    50.00ns WARNING  cocotb.Test gcd_test.gcd_test      Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('000000', Range(5, 'downto', 0)) == 1
+                                                         +  where LogicArray('000000', Range(5, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 74, in gcd_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('000000', Range(5, 'downto', 0)) == 1
+                                                         +  where LogicArray('000000', Range(5, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+    50.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_test failed
+    50.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_stress_test (2/2)
+                                                            Stress test GCD calculation with random non-zero, positive values 
+   390.00ns WARNING  .. gcd_stress_test.gcd_stress_test Test failed with A=33, B=46. Expected 1, got 0
+                                                        assert LogicArray('000000', Range(5, 'downto', 0)) == 1
+                                                         +  where LogicArray('000000', Range(5, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 123, in gcd_stress_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=33, B=46. Expected 1, got 0
+                                                        assert LogicArray('000000', Range(5, 'downto', 0)) == 1
+                                                         +  where LogicArray('000000', Range(5, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+   390.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_stress_test failed
+   390.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gcd_top.gcd_test          FAIL          50.00           0.00      61972.58  **
+                                                        ** test_gcd_top.gcd_stress_test   FAIL         340.00           0.00     302004.10  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0                390.00           0.01      66094.90  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with WIDTH=6
+[DEBUG] Parameters: {'WIDTH': 6}
+FAILED
+../../src/test_runner.py::test_gcd[8]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779005798
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_test (1/2)
+                                                            Test GCD calculation for different combinations of A and B 
+    50.00ns WARNING  cocotb.Test gcd_test.gcd_test      Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('00000000', Range(7, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000000', Range(7, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 74, in gcd_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('00000000', Range(7, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000000', Range(7, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+    50.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_test failed
+    50.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_stress_test (2/2)
+                                                            Stress test GCD calculation with random non-zero, positive values 
+  4310.00ns WARNING  .. gcd_stress_test.gcd_stress_test Test failed with A=132, B=181. Expected 1, got 0
+                                                        assert LogicArray('00000000', Range(7, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000000', Range(7, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 123, in gcd_stress_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=132, B=181. Expected 1, got 0
+                                                        assert LogicArray('00000000', Range(7, 'downto', 0)) == 1
+                                                         +  where LogicArray('00000000', Range(7, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+  4310.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_stress_test failed
+  4310.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gcd_top.gcd_test          FAIL          50.00           0.00      58809.65  **
+                                                        ** test_gcd_top.gcd_stress_test   FAIL        4260.00           0.01     442522.60  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0               4310.00           0.01     298904.65  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with WIDTH=8
+[DEBUG] Parameters: {'WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_gcd[16]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1779005799
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_test (1/2)
+                                                            Test GCD calculation for different combinations of A and B 
+    50.00ns WARNING  cocotb.Test gcd_test.gcd_test      Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 74, in gcd_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=1, B=1. Expected 1, got 0
+                                                        assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+    50.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_test failed
+    50.00ns INFO     cocotb.regression                  running test_gcd_top.gcd_stress_test (2/2)
+                                                            Stress test GCD calculation with random non-zero, positive values 
+105750.00ns WARNING  .. gcd_stress_test.gcd_stress_test Test failed with A=13456, B=9229. Expected 1, got 0
+                                                        assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gcd_top.py", line 123, in gcd_stress_test
+                                                            assert dut.OUT.value == expected_gcd, f"Test failed with A={A}, B={B}. Expected {expected_gcd}, got {int(dut.OUT.value)}"
+                                                        AssertionError: Test failed with A=13456, B=9229. Expected 1, got 0
+                                                        assert LogicArray('0000000000000000', Range(15, 'downto', 0)) == 1
+                                                         +  where LogicArray('0000000000000000', Range(15, 'downto', 0)) = LogicArrayObject(gcd_top.OUT).value
+                                                         +    where LogicArrayObject(gcd_top.OUT) = HierarchyObject(gcd_top).OUT
+105750.00ns WARNING  cocotb.regression                  test_gcd_top.gcd_stress_test failed
+105750.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gcd_top.gcd_test          FAIL          50.00           0.00      62845.43  **
+                                                        ** test_gcd_top.gcd_stress_test   FAIL      105700.00           0.24     442577.58  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=0 FAIL=2 SKIP=0             105750.00           0.24     434270.76  **
+                                                        **************************************************************************************
+[DEBUG] Running simulation with WIDTH=16
+[DEBUG] Parameters: {'WIDTH': 16}
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+WIDTH = 5
+
+    def test_runner(WIDTH: int=5):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s gcd_top -g2012 -Pgcd_top.WIDTH=5 -f /code/rundir/sim_build/cmds.f /code/rtl/gcd_top.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+_________________________________ test_gcd[4] __________________________________
+
+WIDTH = 4
+
+    @pytest.mark.parametrize("WIDTH", [4,6,8,16])
+    
+    def test_gcd(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 4
+
+    def test_runner(WIDTH: int=5):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s gcd_top -g2012 -Pgcd_top.WIDTH=4 -f /code/rundir/sim_build/cmds.f /code/rtl/gcd_top.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+_________________________________ test_gcd[6] __________________________________
+
+WIDTH = 6
+
+    @pytest.mark.parametrize("WIDTH", [4,6,8,16])
+    
+    def test_gcd(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 6
+
+    def test_runner(WIDTH: int=5):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s gcd_top -g2012 -Pgcd_top.WIDTH=6 -f /code/rundir/sim_build/cmds.f /code/rtl/gcd_top.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+_________________________________ test_gcd[8] __________________________________
+
+WIDTH = 8
+
+    @pytest.mark.parametrize("WIDTH", [4,6,8,16])
+    
+    def test_gcd(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 8
+
+    def test_runner(WIDTH: int=5):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s gcd_top -g2012 -Pgcd_top.WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/gcd_top.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+_________________________________ test_gcd[16] _________________________________
+
+WIDTH = 16
+
+    @pytest.mark.parametrize("WIDTH", [4,6,8,16])
+    
+    def test_gcd(WIDTH):
+        # Run the simulation with specified parameters
+>       test_runner(WIDTH=WIDTH)
+
+/src/test_runner.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+WIDTH = 16
+
+    def test_runner(WIDTH: int=5):
+    
+        parameter = {"WIDTH":WIDTH}
+        # Debug information
+        print(f"[DEBUG] Running simulation with WIDTH={WIDTH}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+    
+            # Arguments
+            always=True,
+            clean=True,
+            verbose=True,
+            parameters=parameter,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log")
+    
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s gcd_top -g2012 -Pgcd_top.WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/gcd_top.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 2 of 2 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-f5vpf4rh'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-gwnbfpjq'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-_pra5dxx'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+FAILED ../../src/test_runner.py::test_gcd[4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_gcd[6] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_gcd[8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_gcd[16] - SystemExit: 1
+======================== 5 failed, 3 warnings in 1.44s =========================
+Cleaning up Docker resources...

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917861" />
+    <testcase name="test_signed_comparator" classname="test_signed_comparator" file="/src/test_signed_comparator.py" lineno="6" time="0.0004603862762451172" sim_time_ns="1801.8" ratio_time="3913670.0917659244" />
+  </testsuite>
+</testsuites>

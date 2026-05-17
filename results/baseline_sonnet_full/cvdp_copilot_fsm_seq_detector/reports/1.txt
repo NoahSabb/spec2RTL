@@ -1,0 +1,163 @@
+Running harness with project name: cvdp_copilot_fsm_seq_detector_1_1778917880
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_detection_at_start      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm_seq_det.test_basic (1/1)
+    40.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    50.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    60.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    70.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    80.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    90.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   100.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   110.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   120.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   130.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 1, test_sequence: 0
+   140.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   145.00ns INFO     cocotb.regression                  test_fsm_seq_det.test_basic passed
+   145.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm_seq_det.test_basic    PASS         145.00           0.00     102576.16  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                145.00           0.00      69228.69  **
+                                                        **************************************************************************************
+PASSED
+../../src/test_runner.py::test_detection_at_end      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm_seq_det.test_basic (1/1)
+    40.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+    50.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+    60.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    70.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    80.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    90.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   100.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   110.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   120.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   130.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   140.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   150.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   160.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   165.00ns INFO     cocotb.regression                  test_fsm_seq_det.test_basic passed
+   165.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm_seq_det.test_basic    PASS         165.00           0.00     155205.24  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                165.00           0.00      94221.94  **
+                                                        **************************************************************************************
+PASSED
+../../src/test_runner.py::test_multiple_occurrences      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917881
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm_seq_det.test_basic (1/1)
+    40.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    50.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    60.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    70.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    80.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    90.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   100.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   110.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   120.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   130.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 1, test_sequence: 0
+   140.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   150.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   160.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   170.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   180.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   190.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   195.00ns INFO     cocotb.regression                  test_fsm_seq_det.test_basic passed
+   195.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm_seq_det.test_basic    PASS         195.00           0.00     162118.79  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                195.00           0.00      92741.73  **
+                                                        **************************************************************************************
+PASSED
+../../src/test_runner.py::test_noise_before_after      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917882
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm_seq_det.test_basic (1/1)
+    40.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+    50.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+    60.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    70.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    80.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    90.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   100.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   110.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   120.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   130.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   140.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   150.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   160.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   170.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   180.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   190.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 1, test_sequence: 0
+   195.00ns INFO     cocotb.regression                  test_fsm_seq_det.test_basic passed
+   195.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm_seq_det.test_basic    PASS         195.00           0.00      97448.98  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                195.00           0.00      71294.39  **
+                                                        **************************************************************************************
+PASSED
+../../src/test_runner.py::test_seq_overlapping      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917882
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_fsm_seq_det.test_basic (1/1)
+    40.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    50.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    60.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+    70.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+    80.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+    90.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   100.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   110.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   120.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   130.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 1, test_sequence: 1
+   140.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 1
+   150.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   160.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   170.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 0
+   180.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 0, test_sequence: 1
+   190.00ns INFO     cocotb.fsm_seq_detector            Input: 1, Decoded Output: 0, test_sequence: 0
+   200.00ns INFO     cocotb.fsm_seq_detector            Input: 0, Decoded Output: 1, test_sequence: 0
+   205.00ns INFO     cocotb.regression                  test_fsm_seq_det.test_basic passed
+   205.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_fsm_seq_det.test_basic    PASS         205.00           0.00     110093.77  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                205.00           0.00      78408.93  **
+                                                        **************************************************************************************
+PASSED
+
+============================== 5 passed in 1.76s ===============================
+Cleaning up Docker resources...

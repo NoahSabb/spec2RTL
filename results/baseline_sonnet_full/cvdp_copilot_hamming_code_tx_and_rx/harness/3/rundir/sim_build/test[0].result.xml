@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917885" />
+    <testcase name="test_hamming_code_receiver" classname="test_hamming_code_receiver" file="/src/test_hamming_code_receiver.py" lineno="20" time="0.004808664321899414" sim_time_ns="360.0" ratio_time="74864.86390004463" />
+  </testsuite>
+</testsuites>

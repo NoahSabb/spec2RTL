@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917899" />
+    <testcase name="test_perfect_squares_generator" classname="test_perfect_squares_generator" file="/src/test_perfect_squares_generator.py" lineno="6" time="2.881052255630493" sim_time_ns="1000040.0" ratio_time="347109.2889917576" />
+  </testsuite>
+</testsuites>

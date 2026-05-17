@@ -1,0 +1,4 @@
+/code/rtl/axis_upscale.sv:6: syntax error
+/code/rtl/axis_upscale.sv:6: error: Invalid module instantiation
+/code/rtl/axis_upscale.sv:8: warning: Extra digits given for sized hex constant.
+/code/rtl/axis_upscale.sv:8: warning: Numeric constant truncated to 8 bits.

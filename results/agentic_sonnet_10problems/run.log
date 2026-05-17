@@ -1,0 +1,1470 @@
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 20:58:11
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 13.918272972106934 - Max: 13.918272972106934 - Avg: 13.918272972106934
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+      "error_msg": null,
+      "execution": 13.918272972106934,
+      "pid": 23286
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m50[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<3 lines>...
+        max_iterations=self.max_iterations
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m192[0m, in [35mrun_parallel[0m
+    result = future.result()
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m449[0m, in [35mresult[0m
+    return [31mself.__get_result[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m401[0m, in [35m__get_result[0m
+    raise self._exception
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m59[0m, in [35mrun[0m
+    result = self.fn(*self.args, **self.kwargs)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m166[0m, in [35mrun_single_process[0m
+    testbench = generate_testbench(client, spec, verilog)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m227[0m, in [35mgenerate_testbench[0m
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=2000,
+        messages=[{"role": "user", "content": prompt}]
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/venv/lib/python3.13/site-packages/anthropic/_utils/_utils.py"[0m, line [35m294[0m, in [35mwrapper[0m
+    return func(*args, **kwargs)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/venv/lib/python3.13/site-packages/anthropic/resources/messages/messages.py"[0m, line [35m1003[0m, in [35mcreate[0m
+    return [31mself._post[0m[1;31m([0m
+           [31m~~~~~~~~~~[0m[1;31m^[0m
+        [1;31m"/v1/messages",[0m
+        [1;31m^^^^^^^^^^^^^^^[0m
+    ...<30 lines>...
+        [1;31mstream_cls=Stream[RawMessageStreamEvent],[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/venv/lib/python3.13/site-packages/anthropic/_base_client.py"[0m, line [35m1374[0m, in [35mpost[0m
+    return cast(ResponseT, [31mself.request[0m[1;31m(cast_to, opts, stream=stream, stream_cls=stream_cls)[0m)
+                           [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/venv/lib/python3.13/site-packages/anthropic/_base_client.py"[0m, line [35m1147[0m, in [35mrequest[0m
+    raise self._make_status_error_from_response(err.response) from None
+[1;35manthropic.BadRequestError[0m: [35mError code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011Cb7V5hUU6KK7uBd8YQb53'}[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m611[0m, in [35m<module>[0m
+    raise Exception(f"Unable to process the JSON file: {filename}. Error: {str(e)}")
+[1;35mException[0m: [35mUnable to process the JSON file: ../data/cid003_nonagentic.jsonl. Error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011Cb7V5hUU6KK7uBd8YQb53'}[0m
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:18:13
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 3.0928237438201904 - Max: 3.0928237438201904 - Avg: 3.0928237438201904
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+      "error_msg": null,
+      "execution": 3.0928237438201904,
+      "pid": 23630
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_caesar_cipher_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:21:52
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 2.1550859212875366
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 0,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_caesar_cipher/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.2173480987548828,
+      "pid": 23734
+    }
+  ],
+  "errors": 0,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:30:13
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 1.9474283854166667
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.5321133136749268,
+      "pid": 23982
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m50[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<3 lines>...
+        max_iterations=self.max_iterations
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m217[0m, in [35mrun_parallel[0m
+    result = future.result()
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m449[0m, in [35mresult[0m
+    return [31mself.__get_result[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m401[0m, in [35m__get_result[0m
+    raise self._exception
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m59[0m, in [35mrun[0m
+    result = self.fn(*self.args, **self.kwargs)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m198[0m, in [35mrun_single_process[0m
+    reflection = reflect(client, spec, verilog, sim_result)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m79[0m, in [35mreflect[0m
+    Output: {[31msim_result[0m[1;31m['output'][0m}
+             [31m~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[1;35mKeyError[0m: [35m'output'[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m611[0m, in [35m<module>[0m
+    raise Exception(f"Unable to process the JSON file: {filename}. Error: {str(e)}")
+[1;35mException[0m: [35mUnable to process the JSON file: ../data/cid003_nonagentic.jsonl. Error: 'output'[0m
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:41:32
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 1.9115710258483887
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.4245412349700928,
+      "pid": 24705
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_digital_dice_roller_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:44:10
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 1.8074992299079895
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.495283842086792,
+      "pid": 24778
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_digital_stopwatch_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:45:46
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 1.8178030014038087
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.859018087387085,
+      "pid": 24842
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_edge_detector_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:47:03
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.2173480987548828 - Max: 3.0928237438201904 - Avg: 1.7250725030899048
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.2614200115203857,
+      "pid": 24905
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:48:29
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.097120761871338 - Max: 3.0928237438201904 - Avg: 1.6705024242401123
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.097120761871338,
+      "pid": 24949
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:50:47
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.097120761871338 - Max: 2.5681190490722656 - Avg: 1.5830516417821248
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+      "error_msg": null,
+      "execution": 2.5681190490722656,
+      "pid": 25002
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:51:59
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 2.5681190490722656 - Avg: 1.5129358087267195
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.092240810394287,
+      "pid": 25056
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_perf_counters_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:53:49
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 2.5681190490722656 - Avg: 1.5477080941200256
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.791114091873169,
+      "pid": 25108
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:55:39
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 2.5681190490722656 - Avg: 1.514658636516995
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.250262975692749,
+      "pid": 25201
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:57:24
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 2.5681190490722656 - Avg: 1.4889683723449707
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.257755994796753,
+      "pid": 25304
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter_0014
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter/harness/14/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter/harness/14/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-16 21:59:32
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 9.807706117630005 - Avg: 2.2452172582799736
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter/reports/14.txt",
+      "error_msg": null,
+      "execution": 9.807706117630005,
+      "pid": 25396
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m503[0m, in [35m<module>[0m
+    [31mobj.create_model[0m[1;31m(version=model_to_use, **model_kwargs)[0m
+    [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/wrapper.py"[0m, line [35m41[0m, in [35mcreate_model[0m
+    self.model = [31mself.factory.create_model[0m[1;31m(model_name=version, context=self.repo.folders, **kwargs)[0m
+                 [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/llm_lib/model_factory.py"[0m, line [35m70[0m, in [35mcreate_model[0m
+    raise ValueError(f"Unsupported model type: {model_name}")
+[1;35mValueError[0m: [35mUnsupported model type: claude-sonnet-4-6[0m
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m503[0m, in [35m<module>[0m
+    [31mobj.create_model[0m[1;31m(version=model_to_use, **model_kwargs)[0m
+    [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/wrapper.py"[0m, line [35m41[0m, in [35mcreate_model[0m
+    self.model = [31mself.factory.create_model[0m[1;31m(model_name=version, context=self.repo.folders, **kwargs)[0m
+                 [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/llm_lib/model_factory.py"[0m, line [35m70[0m, in [35mcreate_model[0m
+    raise ValueError(f"Unsupported model type: {model_name}")
+[1;35mValueError[0m: [35mUnsupported model type: claude-sonnet-4-6[0m
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 01:16:39
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 9.807706117630005 - Avg: 2.2191430655392734
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+      "error_msg": null,
+      "execution": 2.2813029289245605,
+      "pid": 27186
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_edge_detector_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 12:53:42
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 1.092240810394287 - Max: 9.807706117630005 - Avg: 2.2136890671469946
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 0,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.2014260292053223,
+      "pid": 29132
+    }
+  ],
+  "errors": 0,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:03:17
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.170368888161399
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_GFCM/reports/1.txt",
+      "error_msg": null,
+      "execution": 0.7737410068511963,
+      "pid": 29549
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:05:50
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.149833982641047
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_axi_stream_upscale/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.031872034072876,
+      "pid": 29677
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_configurable_digital_low_pass_filter_0014
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m225[0m, in [35mrun_parallel[0m
+    result = future.result()
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m449[0m, in [35mresult[0m
+    return [31mself.__get_result[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m401[0m, in [35m__get_result[0m
+    raise self._exception
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m59[0m, in [35mrun[0m
+    result = self.fn(*self.args, **self.kwargs)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m194[0m, in [35mrun_single_process[0m
+    sim_result = [1;31mrun_simulation[0m(verilog, testbench)
+                 [1;31m^^^^^^^^^^^^^^[0m
+[1;35mNameError[0m: [35mname 'run_simulation' is not defined[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m611[0m, in [35m<module>[0m
+    raise Exception(f"Unable to process the JSON file: {filename}. Error: {str(e)}")
+[1;35mException[0m: [35mUnable to process the JSON file: ../data/cid003_nonagentic.jsonl. Error: name 'run_simulation' is not defined[0m
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_digital_dice_roller_0001
+Requesting valid response to model...
+Running service: direct:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:11:27
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.1239424618807705
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_dice_roller/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.2104771137237549,
+      "pid": 29873
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_edge_detector_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:11:56
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.1046527299014004
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 0,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_edge_detector/reports/1.txt",
+      "error_msg": null,
+      "execution": 0.989238977432251,
+      "pid": 29925
+    }
+  ],
+  "errors": 0,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_digital_stopwatch_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:14:13
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.094751986590299
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_digital_stopwatch/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.7501099109649658,
+      "pid": 30021
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_fibonacci_series_0001
+Requesting valid response to model...
+Running service: auto:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:14:45
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.0988273837349634
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 0,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_fibonacci_series/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.1419501304626465,
+      "pid": 30084
+    }
+  ],
+  "errors": 0,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:18:17
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.3079501282085073
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 1,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_gcd/reports/1.txt",
+      "error_msg": null,
+      "execution": 4.581653118133545,
+      "pid": 30165
+    }
+  ],
+  "errors": 1,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Running service: 01-new-tb:
+
+Ensuring /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+
+=== Benchmark Report ===
+Dataset: ../data/cid003_nonagentic.jsonl
+Generated: 2026-05-17 13:18:36
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_claude_agentic_v1/report.txt
+Text report generated: work_claude_agentic_v1/report.txt
+Benchmark execution time: Min: 0.7737410068511963 - Max: 9.807706117630005 - Avg: 2.3022023114291104
+{
+  "category": "cid003",
+  "difficulty": "easy",
+  "tests": [
+    {
+      "result": 0,
+      "log": "/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_sequencial_binary_to_one_hot_decoder/reports/1.txt",
+      "error_msg": null,
+      "execution": 1.0290148258209229,
+      "pid": 30231
+    }
+  ],
+  "errors": 0,
+  "metadata": {
+    "golden_mode": false,
+    "disable_patch": false,
+    "model_agent": "claude-sonnet-4-6",
+    "force_agentic": false,
+    "force_agentic_include_golden": false,
+    "force_agentic_include_harness": false,
+    "force_copilot": false,
+    "copilot_refine": null
+  }
+}
+Creating harness environment for datapoint: work_claude_agentic_v1/cvdp_copilot_perf_counters_0001
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m516[0m, in [35m<module>[0m
+    exec_result = obj.execute_single(args.id, runs_file=args.answers)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m153[0m, in [35mexecute_single[0m
+    (_, obj, repo) = [31mself.repo.prepare[0m[1;31m(issue, self.model)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m530[0m, in [35mprepare[0m
+    (obj, repo) = [31mself.create_repo[0m[1;31m(id, model)[0m
+                  [31m~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m468[0m, in [35mcreate_repo[0m
+    self.files [id] = [31mself.get_context_for_repo[0m[1;31m(id, model)[0m
+                      [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1066[0m, in [35mget_context_for_repo[0m
+    return [31mself.create_context[0m[1;31m(id, model)[0m
+           [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/src/dataset_processor.py"[0m, line [35m1171[0m, in [35mcreate_context[0m
+    output, success = [31mmodel.prompt[0m[1;31m(prompt, schema=schema_to_use, prompt_log=logfile, files=files, timeout=MODEL_TIMEOUT, category=cat)[0m
+                      [31m~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/../agents/agentic_claude_factory.py"[0m, line [35m70[0m, in [35mprompt[0m
+    result = run_parallel(
+        generator=generator,
+    ...<5 lines>...
+        rtl_filename=rtl_filename
+    )
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m225[0m, in [35mrun_parallel[0m
+    result = future.result()
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m449[0m, in [35mresult[0m
+    return [31mself.__get_result[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/_base.py"[0m, line [35m401[0m, in [35m__get_result[0m
+    raise self._exception
+  File [35m"/opt/miniconda3/lib/python3.13/concurrent/futures/thread.py"[0m, line [35m59[0m, in [35mrun[0m
+    result = self.fn(*self.args, **self.kwargs)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m189[0m, in [35mrun_single_process[0m
+    sim_result = run_harness(verilog, harness_dir, rtl_filename)
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/agents/agentic_loop_v1.py"[0m, line [35m37[0m, in [35mrun_harness[0m
+    result = subprocess.run(
+        ["bash", script],
+    ...<2 lines>...
+        timeout=120
+    )
+  File [35m"/opt/miniconda3/lib/python3.13/subprocess.py"[0m, line [35m556[0m, in [35mrun[0m
+    stdout, stderr = [31mprocess.communicate[0m[1;31m(input, timeout=timeout)[0m
+                     [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/subprocess.py"[0m, line [35m1222[0m, in [35mcommunicate[0m
+    stdout, stderr = [31mself._communicate[0m[1;31m(input, endtime, timeout)[0m
+                     [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/subprocess.py"[0m, line [35m2155[0m, in [35m_communicate[0m
+    [31mself._check_timeout[0m[1;31m(endtime, orig_timeout, stdout, stderr)[0m
+    [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/opt/miniconda3/lib/python3.13/subprocess.py"[0m, line [35m1269[0m, in [35m_check_timeout[0m
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+[1;35msubprocess.TimeoutExpired[0m: [35mCommand '['bash', '/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/harness/1/run_docker_harness_direct.sh']' timed out after 120 seconds[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/run_benchmark.py"[0m, line [35m611[0m, in [35m<module>[0m
+    raise Exception(f"Unable to process the JSON file: {filename}. Error: {str(e)}")
+[1;35mException[0m: [35mUnable to process the JSON file: ../data/cid003_nonagentic.jsonl. Error: Command '['bash', '/Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_claude_agentic_v1/cvdp_copilot_perf_counters/harness/1/run_docker_harness_direct.sh']' timed out after 120 seconds[0m

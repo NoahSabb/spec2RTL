@@ -1,0 +1,79 @@
+Running harness with project name: cvdp_copilot_carry_lookahead_adder_1_1778968152
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_gp_test      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778968153
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gp_test.test_gp_test (1/1)
+                                                            Test GP module for all possible input combinations.
+     2.00ns INFO     cocotb.GP                          Test passed for A=0, B=0, Cin=0.
+     4.00ns INFO     cocotb.GP                          Test passed for A=0, B=0, Cin=1.
+     6.00ns WARNING  ..b.Test test_gp_test.test_gp_test Mismatch for A=0, B=1, Cin=0: o_Cout=1, expected=0
+                                                        assert 1 == 0
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gp_test.py", line 38, in test_gp_test
+                                                            assert o_Cout == expected_Cout, f"Mismatch for A={i_A}, B={i_B}, Cin={i_Cin}: o_Cout={o_Cout}, expected={expected_Cout}"
+                                                        AssertionError: Mismatch for A=0, B=1, Cin=0: o_Cout=1, expected=0
+                                                        assert 1 == 0
+     6.00ns WARNING  cocotb.regression                  test_gp_test.test_gp_test failed
+     6.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_gp_test.test_gp_test      FAIL           6.00           0.00       8946.26  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                  6.00           0.00       1545.43  **
+                                                        **************************************************************************************
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_gp_test _________________________________
+
+    def test_gp_test():
+>       runner()
+
+/src/test_runner.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def runner():
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:22: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s GP -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/GP.v in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-um43byob'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-abzmz7s7'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-z__bbzwb'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_gp_test - SystemExit: 1
+======================== 1 failed, 3 warnings in 0.31s =========================
+Cleaning up Docker resources...

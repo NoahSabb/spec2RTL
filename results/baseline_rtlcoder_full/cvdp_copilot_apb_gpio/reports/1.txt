@@ -1,0 +1,428 @@
+Running harness with project name: cvdp_copilot_apb_gpio_1_1778968155
+#1 [internal] load local bake definitions
+#1 reading from stdin 740B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:5f2649618920335cd3bd164e2e1f8e2da7c882634d7cd9877b8a08c48f19abb6 done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:c7fff4ac4734b5351afe73b70c651c9c905a3b3677491ab8f79d8f7467896180 done
+#6 exporting config sha256:59c021fa11c88555b4938a6c88eb33ddaa49d34b3c3e16d03cbbe1f8154e0387 done
+#6 exporting attestation manifest sha256:a5939279f29c36ccc3a1a81d8c14406ff8a1d3061870880fe622602aedabedb7 done
+#6 exporting manifest list sha256:5d0057496ed351b726722609d1a8816303f4528d9ddd831342ea9b0c9af7c3b6 done
+#6 naming to docker.io/library/cvdp_copilot_apb_gpio_1_1778968155-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_apb_gpio_1_1778968155-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 3 items
+
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] FAILED           [ 33%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] FAILED          [ 66%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] FAILED          [100%]
+
+=================================== FAILURES ===================================
+________________________ test_cvdp_copilot_apb_gpio[8] _________________________
+
+gpio_width = 8
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:32: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '1-apb-compatible-gpio-module-design-with-interrupt-and-b...', 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim_8.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+
+During handling of the above exception, another exception occurred:
+
+gpio_width = 8
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+            runner(gpio_width)
+        except Exception as e:
+            logger.error(f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}")
+            # Using assert False to report failure without halting other tests
+>           assert False, f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}"
+E           AssertionError: Simulation failed for GPIO_WIDTH = 8: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+E           assert False
+
+/src/test_runner.py:67: AssertionError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+ERROR    test_runner:test_runner.py:65 Simulation failed for GPIO_WIDTH = 8: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+________________________ test_cvdp_copilot_apb_gpio[11] ________________________
+
+gpio_width = 11
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:32: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '1-apb-compatible-gpio-module-design-with-interrupt-and-b..., 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim_11.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+
+During handling of the above exception, another exception occurred:
+
+gpio_width = 11
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+            runner(gpio_width)
+        except Exception as e:
+            logger.error(f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}")
+            # Using assert False to report failure without halting other tests
+>           assert False, f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}"
+E           AssertionError: Simulation failed for GPIO_WIDTH = 11: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+E           assert False
+
+/src/test_runner.py:67: AssertionError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+ERROR    test_runner:test_runner.py:65 Simulation failed for GPIO_WIDTH = 11: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+________________________ test_cvdp_copilot_apb_gpio[30] ________________________
+
+gpio_width = 30
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/src/test_runner.py:32: in runner
+    runner.build(
+/venv/lib/python3.12/site-packages/cocotb_tools/runner.py:389: in build
+    self._execute(cmds, cwd=self.build_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', ...],)
+kwargs = {'cwd': PosixPath('/code/rundir/sim_build'), 'env': {'HASH': '1-apb-compatible-gpio-module-design-with-interrupt-and-b..., 'LC_CTYPE': 'C.UTF-8', ...}, 'stderr': -2, 'stdout': <_io.TextIOWrapper name='sim_30.log' mode='w' encoding='utf-8'>}
+process = <Popen: returncode: 2 args: ['iverilog', '-o', '/code/rundir/sim_build/sim.v...>
+stdout = None, stderr = None, retcode = 2
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError
+
+During handling of the above exception, another exception occurred:
+
+gpio_width = 30
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+            runner(gpio_width)
+        except Exception as e:
+            logger.error(f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}")
+            # Using assert False to report failure without halting other tests
+>           assert False, f"Simulation failed for GPIO_WIDTH = {gpio_width}: {e}"
+E           AssertionError: Simulation failed for GPIO_WIDTH = 30: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+E           assert False
+
+/src/test_runner.py:67: AssertionError
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+ERROR    test_runner:test_runner.py:65 Simulation failed for GPIO_WIDTH = 30: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'cvdp_copilot_apb_gpio', '-g2012', '-Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/cvdp_copilot_apb_gpio.sv']' returned non-zero exit status 2.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] - AssertionErr...
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] - AssertionEr...
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] - AssertionEr...
+============================== 3 failed in 0.10s ===============================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_apb_gpio_1_1778968155-direct:latest
+Deleted: sha256:5d0057496ed351b726722609d1a8816303f4528d9ddd831342ea9b0c9af7c3b6

@@ -1,0 +1,109 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaafdc584e0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaafdc58670 .scope module, "hamming_code_receiver" "hamming_code_receiver" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 8 "data_in";
+    .port_info 1 /OUTPUT 4 "data_out";
+L_0xaaaafdcac620 .functor XOR 1, L_0xaaaafdcac4e0, L_0xaaaafdcac580, C4<0>, C4<0>;
+L_0xaaaafdcac7d0 .functor XOR 1, L_0xaaaafdcac620, L_0xaaaafdcac730, C4<0>, C4<0>;
+L_0xaaaafdcac9b0 .functor XOR 1, L_0xaaaafdcac7d0, L_0xaaaafdcac8e0, C4<0>, C4<0>;
+L_0xaaaafdcacbf0 .functor XOR 1, L_0xaaaafdcaca70, L_0xaaaafdcacb10, C4<0>, C4<0>;
+L_0xaaaafdcacdd0 .functor XOR 1, L_0xaaaafdcacbf0, L_0xaaaafdcacd30, C4<0>, C4<0>;
+L_0xaaaafdcad0e0 .functor XOR 1, L_0xaaaafdcacdd0, L_0xaaaafdcacee0, C4<0>, C4<0>;
+L_0xaaaafdcad3d0 .functor XOR 1, L_0xaaaafdcad230, L_0xaaaafdcad2d0, C4<0>, C4<0>;
+L_0xaaaafdcad530 .functor XOR 1, L_0xaaaafdcad3d0, L_0xaaaafdcad490, C4<0>, C4<0>;
+L_0xaaaafdcad7a0 .functor XOR 1, L_0xaaaafdcad530, L_0xaaaafdcad690, C4<0>, C4<0>;
+v0xaaaafdc58850_0 .net *"_ivl_1", 0 0, L_0xaaaafdcac4e0;  1 drivers
+v0xaaaafdcaab70_0 .net *"_ivl_11", 0 0, L_0xaaaafdcac8e0;  1 drivers
+v0xaaaafdcaac50_0 .net *"_ivl_15", 0 0, L_0xaaaafdcaca70;  1 drivers
+v0xaaaafdcaad10_0 .net *"_ivl_17", 0 0, L_0xaaaafdcacb10;  1 drivers
+v0xaaaafdcaadf0_0 .net *"_ivl_18", 0 0, L_0xaaaafdcacbf0;  1 drivers
+v0xaaaafdcaaf20_0 .net *"_ivl_21", 0 0, L_0xaaaafdcacd30;  1 drivers
+v0xaaaafdcab000_0 .net *"_ivl_22", 0 0, L_0xaaaafdcacdd0;  1 drivers
+v0xaaaafdcab0e0_0 .net *"_ivl_25", 0 0, L_0xaaaafdcacee0;  1 drivers
+v0xaaaafdcab1c0_0 .net *"_ivl_29", 0 0, L_0xaaaafdcad230;  1 drivers
+v0xaaaafdcab330_0 .net *"_ivl_3", 0 0, L_0xaaaafdcac580;  1 drivers
+v0xaaaafdcab410_0 .net *"_ivl_31", 0 0, L_0xaaaafdcad2d0;  1 drivers
+v0xaaaafdcab4f0_0 .net *"_ivl_32", 0 0, L_0xaaaafdcad3d0;  1 drivers
+v0xaaaafdcab5d0_0 .net *"_ivl_35", 0 0, L_0xaaaafdcad490;  1 drivers
+v0xaaaafdcab6b0_0 .net *"_ivl_36", 0 0, L_0xaaaafdcad530;  1 drivers
+v0xaaaafdcab790_0 .net *"_ivl_39", 0 0, L_0xaaaafdcad690;  1 drivers
+v0xaaaafdcab870_0 .net *"_ivl_4", 0 0, L_0xaaaafdcac620;  1 drivers
+v0xaaaafdcab950_0 .net *"_ivl_43", 0 0, L_0xaaaafdcad8b0;  1 drivers
+v0xaaaafdcabb40_0 .net *"_ivl_45", 0 0, L_0xaaaafdcad950;  1 drivers
+v0xaaaafdcabc20_0 .net *"_ivl_47", 0 0, L_0xaaaafdcadac0;  1 drivers
+v0xaaaafdcabd00_0 .net *"_ivl_49", 0 0, L_0xaaaafdcadb60;  1 drivers
+v0xaaaafdcabde0_0 .net *"_ivl_7", 0 0, L_0xaaaafdcac730;  1 drivers
+v0xaaaafdcabec0_0 .net *"_ivl_8", 0 0, L_0xaaaafdcac7d0;  1 drivers
+v0xaaaafdcabfa0_0 .net "c1", 0 0, L_0xaaaafdcad7a0;  1 drivers
+v0xaaaafdcac060_0 .net "c2", 0 0, L_0xaaaafdcad0e0;  1 drivers
+v0xaaaafdcac120_0 .net "c3", 0 0, L_0xaaaafdcac9b0;  1 drivers
+v0xaaaafdcac1e0_0 .var "corrected", 7 0;
+o0xffffb33bf4f8 .functor BUFZ 8, c4<zzzzzzzz>; HiZ drive
+v0xaaaafdcac2c0_0 .net "data_in", 7 0, o0xffffb33bf4f8;  0 drivers
+v0xaaaafdcac3a0_0 .net "data_out", 3 0, L_0xaaaafdcadc90;  1 drivers
+E_0xaaaafdc91d90 .event anyedge, v0xaaaafdcac2c0_0, v0xaaaafdcabfa0_0, v0xaaaafdcac060_0, v0xaaaafdcac120_0;
+L_0xaaaafdcac4e0 .part o0xffffb33bf4f8, 1, 1;
+L_0xaaaafdcac580 .part o0xffffb33bf4f8, 3, 1;
+L_0xaaaafdcac730 .part o0xffffb33bf4f8, 5, 1;
+L_0xaaaafdcac8e0 .part o0xffffb33bf4f8, 7, 1;
+L_0xaaaafdcaca70 .part o0xffffb33bf4f8, 2, 1;
+L_0xaaaafdcacb10 .part o0xffffb33bf4f8, 3, 1;
+L_0xaaaafdcacd30 .part o0xffffb33bf4f8, 6, 1;
+L_0xaaaafdcacee0 .part o0xffffb33bf4f8, 7, 1;
+L_0xaaaafdcad230 .part o0xffffb33bf4f8, 4, 1;
+L_0xaaaafdcad2d0 .part o0xffffb33bf4f8, 5, 1;
+L_0xaaaafdcad490 .part o0xffffb33bf4f8, 6, 1;
+L_0xaaaafdcad690 .part o0xffffb33bf4f8, 7, 1;
+L_0xaaaafdcad8b0 .part v0xaaaafdcac1e0_0, 7, 1;
+L_0xaaaafdcad950 .part v0xaaaafdcac1e0_0, 6, 1;
+L_0xaaaafdcadac0 .part v0xaaaafdcac1e0_0, 5, 1;
+L_0xaaaafdcadb60 .part v0xaaaafdcac1e0_0, 3, 1;
+L_0xaaaafdcadc90 .concat [ 1 1 1 1], L_0xaaaafdcadb60, L_0xaaaafdcadac0, L_0xaaaafdcad950, L_0xaaaafdcad8b0;
+    .scope S_0xaaaafdc58670;
+T_0 ;
+Ewait_0 .event/or E_0xaaaafdc91d90, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v0xaaaafdcac2c0_0;
+    %store/vec4 v0xaaaafdcac1e0_0, 0, 8;
+    %load/vec4 v0xaaaafdcabfa0_0;
+    %load/vec4 v0xaaaafdcac060_0;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0xaaaafdcac120_0;
+    %concat/vec4; draw_concat_vec4
+    %cmpi/ne 0, 0, 3;
+    %jmp/0xz  T_0.0, 4;
+    %load/vec4 v0xaaaafdcac2c0_0;
+    %load/vec4 v0xaaaafdcabfa0_0;
+    %load/vec4 v0xaaaafdcac060_0;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0xaaaafdcac120_0;
+    %concat/vec4; draw_concat_vec4
+    %part/u 1;
+    %inv;
+    %load/vec4 v0xaaaafdcabfa0_0;
+    %load/vec4 v0xaaaafdcac060_0;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0xaaaafdcac120_0;
+    %concat/vec4; draw_concat_vec4
+    %ix/vec4 4;
+    %store/vec4 v0xaaaafdcac1e0_0, 4, 1;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/hamming_code_receiver.sv";

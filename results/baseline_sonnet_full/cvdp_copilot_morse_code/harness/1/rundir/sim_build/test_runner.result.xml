@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917890" />
+    <testcase name="test_random_ascii_inputs" classname="test_morse_encoder" file="/src/test_morse_encoder.py" lineno="45" time="0.004719972610473633" sim_time_ns="256.0" ratio_time="54237.60286912158" />
+    <testcase name="test_specific_chars" classname="test_morse_encoder" file="/src/test_morse_encoder.py" lineno="65" time="0.0005950927734375" sim_time_ns="36.0" ratio_time="60494.769230769234" />
+    <testcase name="test_random_numeric_inputs" classname="test_morse_encoder" file="/src/test_morse_encoder.py" lineno="74" time="0.005547523498535156" sim_time_ns="256.0" ratio_time="46146.71755200275" />
+  </testsuite>
+</testsuites>

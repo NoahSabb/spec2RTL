@@ -1,0 +1,84 @@
+Running harness with project name: cvdp_copilot_caesar_cipher_1_1778991710
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s caesar_cipher -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/caesar_cipher.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778991711
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_caesar_cipher.test_predefined_cases (1/4)
+                                                            Test caesar_cipher with predefined cases
+     0.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'hello', key = 3
+     5.00ns INFO     cocotb.caesar_cipher               Passed for input 'hello' with key 3: output 'khoor'
+     5.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'WORLD', key = 4
+    10.00ns INFO     cocotb.caesar_cipher               Passed for input 'WORLD' with key 4: output 'ASVPH'
+    10.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'Caesar', key = 5
+    16.00ns INFO     cocotb.caesar_cipher               Passed for input 'Caesar' with key 5: output 'Hfjxfw'
+    16.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'Python3!', key = 2
+    24.00ns INFO     cocotb.caesar_cipher               Passed for input 'Python3!' with key 2: output 'Ravjqp3!'
+    24.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'EdgeCaseZ', key = 1
+    33.00ns INFO     cocotb.caesar_cipher               Passed for input 'EdgeCaseZ' with key 1: output 'FehfDbtfA'
+    33.00ns INFO     cocotb.regression                  test_caesar_cipher.test_predefined_cases passed
+    33.00ns INFO     cocotb.regression                  running test_caesar_cipher.test_boundary_conditions (2/4)
+                                                            Test caesar_cipher with boundary conditions
+    34.00ns INFO     cocotb.caesar_cipher               Testing boundary condition with input 'Z', key = 1
+    35.00ns INFO     cocotb.caesar_cipher               Passed boundary condition test for input 'Z' with key 1: output 'A'
+    35.00ns INFO     cocotb.caesar_cipher               Testing boundary condition with input 'z', key = 1
+    36.00ns INFO     cocotb.caesar_cipher               Passed boundary condition test for input 'z' with key 1: output 'a'
+    36.00ns INFO     cocotb.caesar_cipher               Testing boundary condition with input 'A', key = 15
+    37.00ns INFO     cocotb.caesar_cipher               Passed boundary condition test for input 'A' with key 15: output 'P'
+    37.00ns INFO     cocotb.caesar_cipher               Testing boundary condition with input 'a', key = 15
+    38.00ns INFO     cocotb.caesar_cipher               Passed boundary condition test for input 'a' with key 15: output 'p'
+    38.00ns INFO     cocotb.regression                  test_caesar_cipher.test_boundary_conditions passed
+    38.00ns INFO     cocotb.regression                  running test_caesar_cipher.test_random_cases (3/4)
+                                                            Test caesar_cipher with random inputs and keys
+    39.00ns INFO     cocotb.caesar_cipher               Testing random input 'DjFtjYVn', key = 1
+    47.00ns INFO     cocotb.caesar_cipher               Random test passed for input 'DjFtjYVn' with key 1: output 'EkGukZWo'
+    47.00ns INFO     cocotb.caesar_cipher               Testing random input 'LZmYOZil', key = 9
+    55.00ns INFO     cocotb.caesar_cipher               Random test passed for input 'LZmYOZil' with key 9: output 'UIvHXIru'
+    55.00ns INFO     cocotb.caesar_cipher               Testing random input 'mutvRJzW', key = 8
+    63.00ns INFO     cocotb.caesar_cipher               Random test passed for input 'mutvRJzW' with key 8: output 'ucbdZRhE'
+    63.00ns INFO     cocotb.caesar_cipher               Testing random input 'tVqMMacL', key = 1
+    71.00ns INFO     cocotb.caesar_cipher               Random test passed for input 'tVqMMacL' with key 1: output 'uWrNNbdM'
+    71.00ns INFO     cocotb.caesar_cipher               Testing random input 'jvudKUQU', key = 2
+    79.00ns INFO     cocotb.caesar_cipher               Random test passed for input 'jvudKUQU' with key 2: output 'lxwfMWSW'
+    79.00ns INFO     cocotb.regression                  test_caesar_cipher.test_random_cases passed
+    79.00ns INFO     cocotb.regression                  running test_caesar_cipher.test_with_numbers_and_symbols (4/4)
+                                                            Test caesar_cipher with numbers and symbols to ensure they remain unchanged
+    80.00ns INFO     cocotb.caesar_cipher               Testing Caesar cipher with input 'Hello123!@#World', key = 3 (includes numbers and symbols)
+    96.00ns INFO     cocotb.caesar_cipher               Passed for input 'Hello123!@#World' with key 3: output 'Khoor123!@#Zruog'
+    96.00ns INFO     cocotb.regression                  test_caesar_cipher.test_with_numbers_and_symbols passed
+    96.00ns INFO     cocotb.regression                  **********************************************************************************************************
+                                                        ** TEST                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************
+                                                        ** test_caesar_cipher.test_predefined_cases           PASS          33.00           0.00      33726.13  **
+                                                        ** test_caesar_cipher.test_boundary_conditions        PASS           4.00           0.00      11397.57  **
+                                                        ** test_caesar_cipher.test_random_cases               PASS          40.00           0.00      43062.67  **
+                                                        ** test_caesar_cipher.test_with_numbers_and_symbols   PASS          16.00           0.00      56064.21  **
+                                                        **********************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                     96.00           0.00      22926.22  **
+                                                        **********************************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-fdgsho4v'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-96qpwx8s'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.24s =========================
+Cleaning up Docker resources...

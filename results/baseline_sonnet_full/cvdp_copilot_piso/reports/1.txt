@@ -1,0 +1,129 @@
+Running harness with project name: cvdp_copilot_piso_1_1778917898
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_runner 
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s piso_8bit -g2012 -f /code/rundir/sim_build/cmds.f /code/rtl/piso_8bit.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917899
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns WARNING  py.warnings                        /src/test_piso.py:4: DeprecationWarning: Join has been moved to `cocotb.task`.
+                                                          from cocotb.triggers import FallingEdge, RisingEdge, ClockCycles, Timer, Join
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_piso.test_piso_1 (1/5)
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  1
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  1
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  1
+Serial out  0
+Serial out  0
+[0, 0, 0, 0, 0, 0, 0, 1]
+[0, 0, 0, 0, 0, 0, 1, 0]
+[0, 0, 0, 0, 0, 1, 0, 0]
+   335.00ns INFO     cocotb.regression                  test_piso.test_piso_1 passed
+   335.00ns INFO     cocotb.regression                  running test_piso.test_piso_2 (2/5)
+Serial out  8 0
+Serial out  9 0
+Serial out  10 0
+Serial out  11 0
+Serial out  12 0
+Serial out  13 0
+Serial out  14 1
+Serial out  15 0
+[0, 0, 0, 0, 0, 0, 1, 0]
+   511.00ns INFO     cocotb.regression                  test_piso.test_piso_2 passed
+   511.00ns INFO     cocotb.regression                  running test_piso.test_piso_3 (3/5)
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  0
+Serial out  1
+Serial out  0
+Serial out  0
+[0, 0, 0, 0, 0, 1, 0, 0]
+   847.00ns INFO     cocotb.regression                  test_piso.test_piso_3 passed
+   847.00ns INFO     cocotb.regression                  running test_piso.test_piso_4 (4/5)
+Serial out  0 0
+Serial out  1 0
+Serial out  2 0
+Serial out  3 0
+Serial out  4 0
+Serial out  5 0
+Serial out  6 0
+Serial out  7 1
+Serial out  2040 0
+Serial out  2041 0
+Serial out  2042 0
+Serial out  2043 0
+Serial out  2044 0
+Serial out  2045 0
+Serial out  2046 0
+Serial out  2047 0
+Serial out  2048 0
+Serial out  2049 0
+Serial out  2050 0
+Serial out  2051 0
+Serial out  2052 0
+Serial out  2053 0
+Serial out  2054 0
+Serial out  2055 1
+Initial 8-bit sequence [0, 0, 0, 0, 0, 0, 0, 1]
+First   8-bit sequence 0000_0000 after rollout [0, 0, 0, 0, 0, 0, 0, 0]
+Second  8-bit sequence 0000_0001 after rollout [0, 0, 0, 0, 0, 0, 0, 1]
+ 21423.00ns INFO     cocotb.regression                  test_piso.test_piso_4 passed
+ 21423.00ns INFO     cocotb.regression                  running test_piso.test_reset (5/5)
+Done first loop test...
+Done mid test reset application...
+ 22389.00ns INFO     cocotb.regression                  test_piso.test_reset passed
+ 22389.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_piso.test_piso_1          PASS         335.00           0.00     307729.27  **
+                                                        ** test_piso.test_piso_2          PASS         175.00           0.00     338250.32  **
+                                                        ** test_piso.test_piso_3          PASS         335.00           0.00     389653.87  **
+                                                        ** test_piso.test_piso_4          PASS       20575.00           0.05     431432.94  **
+                                                        ** test_piso.test_reset           PASS         965.00           0.00     429762.51  **
+                                                        **************************************************************************************
+                                                        ** TESTS=5 PASS=5 FAIL=0 SKIP=0              22389.00           0.05     414344.78  **
+                                                        **************************************************************************************
+INFO     Icarus:runner.py:602 Results file: /code/rundir/sim_build/test_runner.result.xml
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-qy3pzc_v'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-0_sv3h5c'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.33s =========================
+Cleaning up Docker resources...

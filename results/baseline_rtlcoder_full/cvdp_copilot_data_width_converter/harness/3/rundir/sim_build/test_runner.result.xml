@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968190" />
+    <testcase name="test_data_width_converter" classname="DW_convertor" file="/src/DW_convertor.py" lineno="132" time="0.0012519359588623047" sim_time_ns="70.0" ratio_time="55913.40316130261">
+      <failure error_type="AssertionError" error_msg="Output mismatch: Expected 0x11111111222222223333333344444444, got 0x3333333333333333&#10;assert LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) == 22685491133344441733072379273554445380&#10; +  where LogicArray('00000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110011001100110011', Range(127, 'downto', 0)) = LogicArrayObject(data_width_converter.o_data_out).value&#10; +    where LogicArrayObject(data_width_converter.o_data_out) = HierarchyObject(data_width_converter).o_data_out" />
+    </testcase>
+  </testsuite>
+</testsuites>

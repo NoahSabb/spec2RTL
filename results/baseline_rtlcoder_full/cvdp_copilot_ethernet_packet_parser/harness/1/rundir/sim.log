@@ -1,0 +1,2 @@
+/code/rtl/ethernet_parser.v:14: error: 'beat_cnt' has already been declared in this scope.
+/code/rtl/ethernet_parser.v:10:      : It was declared here as a variable.

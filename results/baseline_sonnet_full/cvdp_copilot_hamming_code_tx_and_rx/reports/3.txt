@@ -1,0 +1,91 @@
+Running harness with project name: cvdp_copilot_hamming_code_tx_and_rx_3_1778917884
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917885
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_hamming_code_receiver.test_hamming_code_receiver (1/1)
+                                                            Cocotb testbench for the Hamming code receiver, including corner cases and randomized data input.
+    20.00ns INFO     cocotb.hamming_code_receiver       Test 1 - Modified Data: 00010000, Bit to Flip: 3
+    20.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 1 - Original data: 0000, Transmitted: 00000000, Modified: 00010000, Corrected data: 0000
+    20.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+    40.00ns INFO     cocotb.hamming_code_receiver       Test 2 - Modified Data: 10111110, Bit to Flip: 1
+    40.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 2 - Original data: 1111, Transmitted: 11111110, Modified: 10111110, Corrected data: 1111
+    40.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+    60.00ns INFO     cocotb.hamming_code_receiver       Test 3 - Modified Data: 00001111, Bit to Flip: 7
+    60.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 3 - Original data: 0001, Transmitted: 00001110, Modified: 00001111, Corrected data: 0001
+    60.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+    80.00ns INFO     cocotb.hamming_code_receiver       Test 4 - Modified Data: 10110010, Bit to Flip: 0
+    80.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 4 - Original data: 0010, Transmitted: 00110010, Modified: 10110010, Corrected data: 0010
+    80.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   100.00ns INFO     cocotb.hamming_code_receiver       Test 5 - Modified Data: 01010101, Bit to Flip: 7
+   100.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 5 - Original data: 0100, Transmitted: 01010100, Modified: 01010101, Corrected data: 0100
+   100.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   120.00ns INFO     cocotb.hamming_code_receiver       Test 6 - Modified Data: 10010010, Bit to Flip: 5
+   120.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 6 - Original data: 1000, Transmitted: 10010110, Modified: 10010010, Corrected data: 1000
+   120.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   140.00ns INFO     cocotb.hamming_code_receiver       Test 7 - Modified Data: 10000010, Bit to Flip: 1
+   140.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 7 - Original data: 1100, Transmitted: 11000010, Modified: 10000010, Corrected data: 1100
+   140.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   160.00ns INFO     cocotb.hamming_code_receiver       Test 8 - Modified Data: 10101100, Bit to Flip: 4
+   160.00ns INFO     cocotb.hamming_code_receiver       Corner Case Test 8 - Original data: 1010, Transmitted: 10100100, Modified: 10101100, Corrected data: 1010
+   160.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   180.00ns INFO     cocotb.hamming_code_receiver       Random Test 1 - Modified Data: 10000000, Bit to Flip: 0
+   180.00ns INFO     cocotb.hamming_code_receiver       Random Test 1 - Original data: 0000, Transmitted: 00000000, Modified: 10000000, Corrected data: 0000
+   180.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   200.00ns INFO     cocotb.hamming_code_receiver       Random Test 2 - Modified Data: 10101000, Bit to Flip: 6
+   200.00ns INFO     cocotb.hamming_code_receiver       Random Test 2 - Original data: 1011, Transmitted: 10101010, Modified: 10101000, Corrected data: 1011
+   200.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   220.00ns INFO     cocotb.hamming_code_receiver       Random Test 3 - Modified Data: 01011110, Bit to Flip: 5
+   220.00ns INFO     cocotb.hamming_code_receiver       Random Test 3 - Original data: 0101, Transmitted: 01011010, Modified: 01011110, Corrected data: 0101
+   220.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   240.00ns INFO     cocotb.hamming_code_receiver       Random Test 4 - Modified Data: 00110100, Bit to Flip: 4
+   240.00ns INFO     cocotb.hamming_code_receiver       Random Test 4 - Original data: 0011, Transmitted: 00111100, Modified: 00110100, Corrected data: 0011
+   240.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   260.00ns INFO     cocotb.hamming_code_receiver       Random Test 5 - Modified Data: 10110010, Bit to Flip: 0
+   260.00ns INFO     cocotb.hamming_code_receiver       Random Test 5 - Original data: 0010, Transmitted: 00110010, Modified: 10110010, Corrected data: 0010
+   260.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   280.00ns INFO     cocotb.hamming_code_receiver       Random Test 6 - Modified Data: 10101100, Bit to Flip: 4
+   280.00ns INFO     cocotb.hamming_code_receiver       Random Test 6 - Original data: 1010, Transmitted: 10100100, Modified: 10101100, Corrected data: 1010
+   280.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   300.00ns INFO     cocotb.hamming_code_receiver       Random Test 7 - Modified Data: 10010111, Bit to Flip: 7
+   300.00ns INFO     cocotb.hamming_code_receiver       Random Test 7 - Original data: 1000, Transmitted: 10010110, Modified: 10010111, Corrected data: 1000
+   300.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   320.00ns INFO     cocotb.hamming_code_receiver       Random Test 8 - Modified Data: 00001111, Bit to Flip: 7
+   320.00ns INFO     cocotb.hamming_code_receiver       Random Test 8 - Original data: 0001, Transmitted: 00001110, Modified: 00001111, Corrected data: 0001
+   320.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   340.00ns INFO     cocotb.hamming_code_receiver       Random Test 9 - Modified Data: 00100010, Bit to Flip: 3
+   340.00ns INFO     cocotb.hamming_code_receiver       Random Test 9 - Original data: 0010, Transmitted: 00110010, Modified: 00100010, Corrected data: 0010
+   340.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   360.00ns INFO     cocotb.hamming_code_receiver       Random Test 10 - Modified Data: 00111000, Bit to Flip: 5
+   360.00ns INFO     cocotb.hamming_code_receiver       Random Test 10 - Original data: 0011, Transmitted: 00111100, Modified: 00111000, Corrected data: 0011
+   360.00ns INFO     cocotb.hamming_code_receiver       ----------------------------------------
+   360.00ns INFO     cocotb.regression                  test_hamming_code_receiver.test_hamming_code_receiver passed
+   360.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_hamming_code_receiver.test_hamming_code_receiver   PASS         360.00           0.00      74864.86  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         360.00           0.01      56880.49  **
+                                                        ***************************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-wpex40cm'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-513hm19i'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.31s =========================
+Cleaning up Docker resources...

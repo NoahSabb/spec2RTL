@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968196" />
+    <testcase name="test_sync_pos_neg_edge_detector" classname="test_sync_pos_neg_edge_detector" file="/src/test_sync_pos_neg_edge_detector.py" lineno="21" time="0.0005457401275634766" sim_time_ns="35.0" ratio_time="64133.08868501529">
+      <failure error_type="AssertionError" error_msg="output should be 1 not 0&#10;assert Logic('0') == 1&#10; +  where Logic('0') = LogicObject(sync_pos_neg_edge_detector.o_positive_edge_detected).value&#10; +    where LogicObject(sync_pos_neg_edge_detector.o_positive_edge_detected) = HierarchyObject(sync_pos_neg_edge_detector).o_positive_edge_detected" />
+    </testcase>
+  </testsuite>
+</testsuites>

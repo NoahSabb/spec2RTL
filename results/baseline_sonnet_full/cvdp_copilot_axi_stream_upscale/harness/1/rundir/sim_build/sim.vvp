@@ -1,0 +1,106 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0xaaaabb78f720 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -9;
+S_0xaaaabb78f8b0 .scope module, "axis_upscale" "axis_upscale" 3 5;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "resetn";
+    .port_info 2 /INPUT 1 "dfmt_enable";
+    .port_info 3 /INPUT 1 "dfmt_type";
+    .port_info 4 /INPUT 1 "dfmt_se";
+    .port_info 5 /INPUT 1 "s_axis_valid";
+    .port_info 6 /INPUT 24 "s_axis_data";
+    .port_info 7 /OUTPUT 1 "s_axis_ready";
+    .port_info 8 /OUTPUT 1 "m_axis_valid";
+    .port_info 9 /OUTPUT 32 "m_axis_data";
+    .port_info 10 /INPUT 1 "m_axis_ready";
+L_0xaaaabb7b65d0 .functor NOT 1, v0xaaaabb7b5f70_0, C4<0>, C4<0>, C4<0>;
+o0xffffa3eaf348 .functor BUFZ 1, c4<z>; HiZ drive
+L_0xaaaabb7b6660 .functor OR 1, o0xffffa3eaf348, L_0xaaaabb7b65d0, C4<0>, C4<0>;
+L_0xaaaabb7b6800 .functor NOT 1, L_0xaaaabb7b6730, C4<0>, C4<0>, C4<0>;
+v0xaaaabb78fbd0_0 .net *"_ivl_0", 0 0, L_0xaaaabb7b65d0;  1 drivers
+L_0xffffa3e66018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xaaaabb7b5010_0 .net/2u *"_ivl_12", 0 0, L_0xffffa3e66018;  1 drivers
+v0xaaaabb7b50f0_0 .net *"_ivl_17", 7 0, L_0xaaaabb7b6cf0;  1 drivers
+v0xaaaabb7b51b0_0 .net *"_ivl_19", 22 0, L_0xaaaabb7b6de0;  1 drivers
+v0xaaaabb7b5290_0 .net *"_ivl_20", 31 0, L_0xaaaabb7b6ec0;  1 drivers
+L_0xffffa3e66060 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0xaaaabb7b53c0_0 .net/2u *"_ivl_22", 7 0, L_0xffffa3e66060;  1 drivers
+v0xaaaabb7b54a0_0 .net *"_ivl_24", 31 0, L_0xaaaabb7b7000;  1 drivers
+v0xaaaabb7b5580_0 .net *"_ivl_5", 0 0, L_0xaaaabb7b6730;  1 drivers
+v0xaaaabb7b5660_0 .net *"_ivl_6", 0 0, L_0xaaaabb7b6800;  1 drivers
+v0xaaaabb7b5740_0 .net *"_ivl_9", 0 0, L_0xaaaabb7b68f0;  1 drivers
+o0xffffa3eaf1f8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b5820_0 .net "clk", 0 0, o0xffffa3eaf1f8;  0 drivers
+o0xffffa3eaf228 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b58e0_0 .net "dfmt_enable", 0 0, o0xffffa3eaf228;  0 drivers
+o0xffffa3eaf258 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b59a0_0 .net "dfmt_se", 0 0, o0xffffa3eaf258;  0 drivers
+o0xffffa3eaf288 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b5a60_0 .net "dfmt_type", 0 0, o0xffffa3eaf288;  0 drivers
+v0xaaaabb7b5b20_0 .net "extended_bit", 0 0, L_0xaaaabb7b6b50;  1 drivers
+v0xaaaabb7b5be0_0 .net "formatted_data", 31 0, L_0xaaaabb7b70f0;  1 drivers
+v0xaaaabb7b5cc0_0 .var "m_axis_data", 31 0;
+v0xaaaabb7b5eb0_0 .net "m_axis_ready", 0 0, o0xffffa3eaf348;  0 drivers
+v0xaaaabb7b5f70_0 .var "m_axis_valid", 0 0;
+v0xaaaabb7b6030_0 .net "msb_bit", 0 0, L_0xaaaabb7b69e0;  1 drivers
+o0xffffa3eaf3d8 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b60f0_0 .net "resetn", 0 0, o0xffffa3eaf3d8;  0 drivers
+o0xffffa3eaf408 .functor BUFZ 24, c4<zzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0xaaaabb7b61b0_0 .net "s_axis_data", 23 0, o0xffffa3eaf408;  0 drivers
+v0xaaaabb7b6290_0 .net "s_axis_ready", 0 0, L_0xaaaabb7b6660;  1 drivers
+o0xffffa3eaf468 .functor BUFZ 1, c4<z>; HiZ drive
+v0xaaaabb7b6350_0 .net "s_axis_valid", 0 0, o0xffffa3eaf468;  0 drivers
+E_0xaaaabb79e1a0 .event posedge, v0xaaaabb7b5820_0;
+L_0xaaaabb7b6730 .part o0xffffa3eaf408, 23, 1;
+L_0xaaaabb7b68f0 .part o0xffffa3eaf408, 23, 1;
+L_0xaaaabb7b69e0 .functor MUXZ 1, L_0xaaaabb7b68f0, L_0xaaaabb7b6800, o0xffffa3eaf288, C4<>;
+L_0xaaaabb7b6b50 .functor MUXZ 1, L_0xffffa3e66018, L_0xaaaabb7b69e0, o0xffffa3eaf258, C4<>;
+L_0xaaaabb7b6cf0 .repeat 8, 8, L_0xaaaabb7b6b50;
+L_0xaaaabb7b6de0 .part o0xffffa3eaf408, 0, 23;
+L_0xaaaabb7b6ec0 .concat [ 23 1 8 0], L_0xaaaabb7b6de0, L_0xaaaabb7b69e0, L_0xaaaabb7b6cf0;
+L_0xaaaabb7b7000 .concat [ 24 8 0 0], o0xffffa3eaf408, L_0xffffa3e66060;
+L_0xaaaabb7b70f0 .functor MUXZ 32, L_0xaaaabb7b7000, L_0xaaaabb7b6ec0, o0xffffa3eaf228, C4<>;
+    .scope S_0xaaaabb78f8b0;
+T_0 ;
+    %wait E_0xaaaabb79e1a0;
+    %load/vec4 v0xaaaabb7b60f0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0xaaaabb7b5f70_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0xaaaabb7b5cc0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0xaaaabb7b6290_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0xaaaabb7b6350_0;
+    %assign/vec4 v0xaaaabb7b5f70_0, 0;
+    %load/vec4 v0xaaaabb7b6350_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0xaaaabb7b5be0_0;
+    %assign/vec4 v0xaaaabb7b5cc0_0, 0;
+T_0.4 ;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/axis_upscale.sv";

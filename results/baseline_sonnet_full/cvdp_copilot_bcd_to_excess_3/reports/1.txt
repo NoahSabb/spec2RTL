@@ -1,0 +1,68 @@
+Running harness with project name: cvdp_copilot_bcd_to_excess_3_1_1778917856
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 2 items
+
+../../src/test_runner.py::test_areg_param[0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_bcd_to_excess_3.bcd_to_excess_3 (1/1)
+                                                            Test BCD to Excess-3 conversion including error flag assertions. 
+Performing bcd to excess_3 operation: bcd = 0, excess3 = 0011
+Performing bcd to excess_3 operation: bcd = 1, excess3 = 0100
+Performing bcd to excess_3 operation: bcd = 2, excess3 = 0101
+Performing bcd to excess_3 operation: bcd = 3, excess3 = 0110
+Performing bcd to excess_3 operation: bcd = 4, excess3 = 0111
+Performing bcd to excess_3 operation: bcd = 5, excess3 = 1000
+Performing bcd to excess_3 operation: bcd = 6, excess3 = 1001
+Performing bcd to excess_3 operation: bcd = 7, excess3 = 1010
+Performing bcd to excess_3 operation: bcd = 8, excess3 = 1011
+Performing bcd to excess_3 operation: bcd = 9, excess3 = 1100
+Testing invalid input: bcd = 10, error = 1
+Testing invalid input: bcd = 11, error = 1
+   130.00ns INFO     cocotb.regression                  test_bcd_to_excess_3.bcd_to_excess_3 passed
+   130.00ns INFO     cocotb.regression                  **********************************************************************************************
+                                                        ** TEST                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************
+                                                        ** test_bcd_to_excess_3.bcd_to_excess_3   PASS         130.00           0.00     279763.74  **
+                                                        **********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                        130.00           0.00     103582.74  **
+                                                        **********************************************************************************************
+PASSED
+../../src/test_runner.py::test_areg_param[1]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917857
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_bcd_to_excess_3.bcd_to_excess_3 (1/1)
+                                                            Test BCD to Excess-3 conversion including error flag assertions. 
+Performing bcd to excess_3 operation: bcd = 0, excess3 = 0011
+Performing bcd to excess_3 operation: bcd = 1, excess3 = 0100
+Performing bcd to excess_3 operation: bcd = 2, excess3 = 0101
+Performing bcd to excess_3 operation: bcd = 3, excess3 = 0110
+Performing bcd to excess_3 operation: bcd = 4, excess3 = 0111
+Performing bcd to excess_3 operation: bcd = 5, excess3 = 1000
+Performing bcd to excess_3 operation: bcd = 6, excess3 = 1001
+Performing bcd to excess_3 operation: bcd = 7, excess3 = 1010
+Performing bcd to excess_3 operation: bcd = 8, excess3 = 1011
+Performing bcd to excess_3 operation: bcd = 9, excess3 = 1100
+Testing invalid input: bcd = 10, error = 1
+Testing invalid input: bcd = 11, error = 1
+   130.00ns INFO     cocotb.regression                  test_bcd_to_excess_3.bcd_to_excess_3 passed
+   130.00ns INFO     cocotb.regression                  **********************************************************************************************
+                                                        ** TEST                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************
+                                                        ** test_bcd_to_excess_3.bcd_to_excess_3   PASS         130.00           0.00     263792.70  **
+                                                        **********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                        130.00           0.00     104556.00  **
+                                                        **********************************************************************************************
+PASSED
+
+============================== 2 passed in 0.58s ===============================
+Cleaning up Docker resources...

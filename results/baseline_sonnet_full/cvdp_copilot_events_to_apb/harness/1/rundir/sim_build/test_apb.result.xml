@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917878" />
+    <testcase name="test_apb_controller_with_delay" classname="test_apb_controller" file="/src/test_apb_controller.py" lineno="7" time="0.00194549560546875" sim_time_ns="440.0" ratio_time="226163.45098039217" />
+    <testcase name="test_apb_controller_without_delay" classname="test_apb_controller" file="/src/test_apb_controller.py" lineno="48" time="0.0009584426879882812" sim_time_ns="180.0" ratio_time="187804.6567164179" />
+    <testcase name="test_apb_controller_with_timeout" classname="test_apb_controller" file="/src/test_apb_controller.py" lineno="88" time="0.0027098655700683594" sim_time_ns="210.0" ratio_time="77494.61903923984" />
+    <testcase name="test_apb_controller_priority_all_events" classname="test_apb_controller" file="/src/test_apb_controller.py" lineno="130" time="0.001644134521484375" sim_time_ns="170.0" ratio_time="103397.86542923434" />
+  </testsuite>
+</testsuites>

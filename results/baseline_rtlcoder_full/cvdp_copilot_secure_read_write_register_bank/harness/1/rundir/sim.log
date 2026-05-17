@@ -1,0 +1,9 @@
+/code/rtl/secure_read_write_register_bank.v:25: syntax error
+/code/rtl/secure_read_write_register_bank.v:25: error: Malformed statement
+/code/rtl/secure_read_write_register_bank.v:37: syntax error
+/code/rtl/secure_read_write_register_bank.v:37: error: Malformed statement
+/code/rtl/secure_read_write_register_bank.v:42: syntax error
+/code/rtl/secure_read_write_register_bank.v:43: error: Malformed statement
+/code/rtl/secure_read_write_register_bank.v:42: error: Malformed conditional expression.
+/code/rtl/secure_read_write_register_bank.v:97: syntax error
+/code/rtl/secure_read_write_register_bank.v:97: error: Malformed statement

@@ -1,0 +1,31 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778968820" />
+    <testcase name="test_add" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="155" time="0.002396106719970703" sim_time_ns="800.0" ratio_time="333874.94527363183">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_sub" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="165" time="0.0020589828491210938" sim_time_ns="800.0" ratio_time="388541.361741547">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_unknown_opcode" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="175" time="0.002001047134399414" sim_time_ns="800.0" ratio_time="399790.6827117836">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_invalid_checksum" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="185" time="0.0011894702911376953" sim_time_ns="500.0" ratio_time="420355.181399078" />
+    <testcase name="test_add_zero" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="206" time="0.0020308494567871094" sim_time_ns="800.0" ratio_time="393923.8318854191">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_sub_negative" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="216" time="0.0019240379333496094" sim_time_ns="800.0" ratio_time="415792.21809169766">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_add_large" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="226" time="0.0019342899322509766" sim_time_ns="800.0" ratio_time="413588.46296068036">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_back_to_back" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="236" time="0.001941680908203125" sim_time_ns="800.0" ratio_time="412014.1453831041">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_random_pkts" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="252" time="0.001965045928955078" sim_time_ns="800.0" ratio_time="407115.16622179083">
+      <failure error_type="AssertionError" error_msg="Tx_start_o not asserted for byte 0&#10;assert False" />
+    </testcase>
+    <testcase name="test_invalid_header" classname="test_packet_controller" file="/src/test_packet_controller.py" lineno="261" time="0.0010826587677001953" sim_time_ns="450.0" ratio_time="415643.42655802687" />
+  </testsuite>
+</testsuites>

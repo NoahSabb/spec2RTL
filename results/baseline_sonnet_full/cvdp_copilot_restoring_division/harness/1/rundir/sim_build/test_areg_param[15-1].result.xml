@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778917903" />
+    <testcase name="test_restoring_division" classname="test_restoring_division" file="/src/test_restoring_division.py" lineno="8" time="0.0015859603881835938" sim_time_ns="230.0" ratio_time="145022.5375826819">
+      <failure error_type="AssertionError" error_msg="ERROR: Quotient mismatch! Expected: 1674, Got: 3348&#10;assert 3348 == 1674" />
+    </testcase>
+  </testsuite>
+</testsuites>

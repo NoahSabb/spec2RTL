@@ -1,0 +1,12 @@
+/code/rtl/cascaded_adder.sv:5: warning: macro IN_DATA_NS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:5: warning: macro IN_DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:7: warning: macro IN_DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:7: warning: macro IN_DATA_NS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:13: warning: macro IN_DATA_WIDTH undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:13: warning: macro IN_DATA_NS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:22: warning: macro IN_DATA_WS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:29: warning: macro IN_DATA_NS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:29: warning: macro clog2 undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:29: warning: macro IN_DATA_NS undefined (and assumed null) at this point.
+/code/rtl/cascaded_adder.sv:1: syntax error
+I give up.

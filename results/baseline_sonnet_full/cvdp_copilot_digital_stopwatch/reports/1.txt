@@ -1,0 +1,248 @@
+Running harness with project name: cvdp_copilot_digital_stopwatch_1_1778917874
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 3 items
+
+../../src/test_runner.py::test_dig_stop[3-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917875
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+6166666642.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                            Traceback (most recent call last):
+                                                              File "/src/test_dig_stopwatch.py", line 152, in test_dig_stopwatch
+                                                                assert int(dut.seconds.value) == stopped_seconds, "Stopwatch did not stop as expected."
+                                                            AssertionError: Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+6166666642.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+6166666642.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                            ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                            ***********************************************************************************************
+                                                            ** test_dig_stopwatch.test_dig_stopwatch   FAIL   6166666642.00           0.00   1972310093274.91  **
+                                                            ***********************************************************************************************
+                                                            ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   6166666642.00           0.01   913017563740.59  **
+                                                            ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 3}
+FAILED
+../../src/test_runner.py::test_dig_stop[50-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917875
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+5060000000.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                            Traceback (most recent call last):
+                                                              File "/src/test_dig_stopwatch.py", line 152, in test_dig_stopwatch
+                                                                assert int(dut.seconds.value) == stopped_seconds, "Stopwatch did not stop as expected."
+                                                            AssertionError: Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+5060000000.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+5060000000.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                            ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                            ***********************************************************************************************
+                                                            ** test_dig_stopwatch.test_dig_stopwatch   FAIL   5060000000.00           0.01   414232033570.80  **
+                                                            ***********************************************************************************************
+                                                            ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   5060000000.00           0.02   319741747619.62  **
+                                                            ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 50}
+FAILED
+../../src/test_runner.py::test_dig_stop[63-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.3 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778917876
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_dig_stopwatch.test_dig_stopwatch (1/1)
+Current Time - Hours: 0, Minutes: 0, Seconds: 0
+Current Time - Hours: 0, Minutes: 0, Seconds: 1
+Current Time - Hours: 0, Minutes: 0, Seconds: 2
+Current Time - Hours: 0, Minutes: 0, Seconds: 3
+Current Time - Hours: 0, Minutes: 0, Seconds: 4
+Current Time - Hours: 0, Minutes: 0, Seconds: 5
+Current Time - Hours: 0, Minutes: 0, Seconds: 6
+Current Time - Hours: 0, Minutes: 0, Seconds: 7
+Current Time - Hours: 0, Minutes: 0, Seconds: 8
+Current Time - Hours: 0, Minutes: 0, Seconds: 9
+5055554959.00ns WARNING  ..dig_stopwatch.test_dig_stopwatch Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+                                                            Traceback (most recent call last):
+                                                              File "/src/test_dig_stopwatch.py", line 152, in test_dig_stopwatch
+                                                                assert int(dut.seconds.value) == stopped_seconds, "Stopwatch did not stop as expected."
+                                                            AssertionError: Stopwatch did not stop as expected.
+                                                            assert 10 == 9
+                                                             +  where 10 = int(LogicArray('001010', Range(5, 'downto', 0)))
+                                                             +    where LogicArray('001010', Range(5, 'downto', 0)) = LogicArrayObject(dig_stopwatch.seconds).value
+                                                             +      where LogicArrayObject(dig_stopwatch.seconds) = HierarchyObject(dig_stopwatch).seconds
+5055554959.00ns WARNING  cocotb.regression                  test_dig_stopwatch.test_dig_stopwatch failed
+5055554959.00ns INFO     cocotb.regression                  ***********************************************************************************************
+                                                            ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                            ***********************************************************************************************
+                                                            ** test_dig_stopwatch.test_dig_stopwatch   FAIL   5055554959.00           0.02   309085977300.94  **
+                                                            ***********************************************************************************************
+                                                            ** TESTS=1 PASS=0 FAIL=1 SKIP=0                   5055554959.00           0.02   252579264183.74  **
+                                                            ***********************************************************************************************
+[DEBUG] Parameters: {'CLK_FREQ': 63}
+FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_dig_stop[3-0] ______________________________
+
+CLK_FREQ = 3, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 3
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=3 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[50-0] ______________________________
+
+CLK_FREQ = 50, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 50
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=50 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_dig_stop[63-0] ______________________________
+
+CLK_FREQ = 63, test = 0
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("CLK_FREQ", [3,50,63])
+    def test_dig_stop(CLK_FREQ, test):
+>       runner(CLK_FREQ=CLK_FREQ)
+
+/src/test_runner.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+CLK_FREQ = 63
+
+    def runner(CLK_FREQ: int = 200):
+        parameter = {"CLK_FREQ": CLK_FREQ}
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:26: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s dig_stopwatch -g2012 -Pdig_stopwatch.CLK_FREQ=63 -f /code/rundir/sim_build/cmds.f /code/rtl/dig_stopwatch.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_dig_stop[3-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[50-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_dig_stop[63-0] - SystemExit: 1
+============================== 3 failed in 0.92s ===============================
+Cleaning up Docker resources...

@@ -1,0 +1,3 @@
+/code/rtl/microcode_sequencer.sv:1: warning: macro systemverilog undefined (and assumed null) at this point.
+/code/rtl/microcode_sequencer.sv:1: syntax error
+I give up.
