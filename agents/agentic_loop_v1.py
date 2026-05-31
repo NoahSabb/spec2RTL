@@ -3,9 +3,9 @@ import tempfile
 import os
 import concurrent.futures
 import logging
- 
+
 # ------------------------------- SIMULATION -------------------------------
- 
+
 def run_simulation(verilog_code: str, testbench: str = None) -> dict:
     """Fallback simulation using iverilog when harness not available."""
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -29,24 +29,22 @@ def run_simulation(verilog_code: str, testbench: str = None) -> dict:
         output = sim_result.stdout + sim_result.stderr
         failed = sim_result.returncode != 0 or "error" in output.lower() or "fatal" in output.lower()
         return {"passed": not failed, "errors": sim_result.stderr, "output": sim_result.stdout, "stage": "simulation"}
- 
+
 def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
     """
     Run the real CVDP harness by overwriting the RTL file and executing
     the pre-generated harness shell script. Returns structured result
     with stdout captured for the Reflector.
-    
+
     harness_dir: path to harness/1/ directory (e.g. work_x/cvdp_copilot_gcd/harness/1)
     rtl_filename: the .sv or .v filename (e.g. gcd_top.sv)
     """
     import glob
 
-    # 1. Overwrite the RTL file with candidate Verilog
     rtl_path = os.path.join(harness_dir, "rtl", rtl_filename)
     with open(rtl_path, "w") as f:
         f.write(verilog_code.strip() + "\n")
 
-    # 2. Find the harness shell script
     scripts = glob.glob(os.path.join(harness_dir, "run_docker_harness_*.sh"))
     if not scripts:
         return {
@@ -57,7 +55,6 @@ def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
         }
     script = scripts[0]
 
-    # 3. Run it and capture output
     result = subprocess.run(
         ["bash", script],
         capture_output=True,
@@ -67,7 +64,6 @@ def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
 
     output = result.stdout + result.stderr
 
-    # 4. Read detailed sim log for full cocotb output
     sim_log_path = os.path.join(harness_dir, "rundir", "sim.log")
     if os.path.exists(sim_log_path):
         with open(sim_log_path) as f:
@@ -82,98 +78,134 @@ def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
         "output": output,
         "stage": "harness"
     }
-    
+
 # ------------------------------- REFLECTOR -------------------------------
- 
+
 import anthropic
- 
- 
+
+
 def reflect(client: anthropic.Anthropic, spec: str, verilog_code: str, sim_result: dict) -> str:
     """
     Analyzes simulation errors and produces fix guidance.
     Does NOT see test vectors - only sees error messages and signal behavior.
     """
-    
+
     prompt = f"""You are an expert RTL hardware engineer analyzing a failed Verilog simulation.
- 
+
 ## Specification
 {spec}
- 
+
 ## Current Verilog Implementation
 {verilog_code}
- 
+
 ## Simulation Failure
 Stage: {sim_result['stage']}
 Errors: {sim_result['errors']}
 Output: {sim_result['output']}
- 
+
 Respond in exactly this format:
 ## Hypothesis
 One sentence: what signal or logic block is wrong and why.
- 
+
 ## Required Change
 The single most important RTL change needed. Name the exact signal, always/logic block, or port. Do not suggest more than one change.
 """
- 
+
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=1000,
         messages=[{"role": "user", "content": prompt}]
     )
-    
+
     return response.content[0].text
- 
+
 # ------------------------------- COORDINATOR -------------------------------
- 
-def coordinate(client: anthropic.Anthropic, context: list, reflection: str, verilog_code: str, iteration: int) -> str:
-    
+
+def coordinate(client: anthropic.Anthropic, context: list, reflection: str,
+               verilog_code: str, iteration: int, sim_result: dict) -> dict:
+    """
+    Maintains self-evolving context across iterations. Returns a dict with:
+      - decision: "CONTINUE" or "RESTART"
+      - guidance: updated context / fix instructions for the generator
+      - insights: (on RESTART only) high-level lessons distilled from failed attempts
+    """
+
+    # Record this iteration's outcome before asking coordinator to decide
     context.append({
         "iteration": iteration,
-        "verilog": verilog_code,
-        "guidance": reflection,
+        "verilog_snippet": verilog_code[:300],  # keep context window manageable
+        "guidance_given": reflection,
+        "outcome": "FAILED",  # we only call coordinate on failure
+        "stage": sim_result.get("stage", "unknown"),
+        "errors_summary": (sim_result.get("errors", "") + sim_result.get("output", ""))[:400],
     })
-    
+
     history = ""
     for entry in context:
         history += f"""
-Iteration {entry['iteration']}:
-- Guidance: {entry['guidance']}
+Iteration {entry['iteration']} [{entry['outcome']}]:
+  Stage: {entry['stage']}
+  Error summary: {entry['errors_summary']}
+  Guidance that was tried: {entry['guidance_given']}
 """
- 
-    prompt = f"""You are guiding a Verilog code generator to fix a failing RTL design.
- 
+
+    prompt = f"""You are coordinating a Verilog debugging loop. Study the iteration history below and decide whether to CONTINUE refining the current implementation or RESTART from scratch.
+
 ## Debugging History
 {history}
- 
+
+## Decision Rules
+- Choose RESTART if: the same root error persists for 2+ consecutive iterations despite different guidance, OR the error pattern shows a fundamentally wrong architectural approach that cannot be patched incrementally.
+- Choose CONTINUE if: each iteration shows a different or progressing error, OR this is only the first iteration of this failure type.
+
 You are talking directly to a Verilog code generator that has the full RTL in front of it.
 - Never reference filenames or file paths.
-- Never say the implementation is missing or needs to be provided.
-- Never ask to "see the code" or "obtain the RTL."
-- Always assume the generator has the complete current Verilog and needs specific signal-level guidance.
-- Always give concrete, actionable RTL-level instructions.
- 
-Based on the history above, provide guidance for the next fix attempt.
- 
-Respond with:
-## Updated Context
-What has been tried, what failed, and exactly what the generator should do differently this iteration. Be specific about signal names, always/logic blocks, or module ports.
- 
+- Always give concrete, actionable RTL-level instructions (signal names, always/logic blocks, ports).
+
+Respond in EXACTLY this format (no extra text):
+## DECISION
+CONTINUE  (or RESTART)
+
+## GUIDANCE
+<If CONTINUE: specific signal-level fix instructions for next attempt.>
+<If RESTART: high-level architectural insight from the failures — what approach is fundamentally wrong and what different approach the generator should try from scratch.>
+
 ## FORBIDDEN
-- <one specific approach that was tried and failed>
-- <another specific approach that was tried and failed>
-(one bullet per failed attempt, be precise)
+<One bullet per approach that has already been tried and failed. Be precise about what was tried.>
 """
- 
+
     response = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=1000,
         messages=[{"role": "user", "content": prompt}]
     )
-    
-    return response.content[0].text
- 
+
+    raw = response.content[0].text
+
+    # Parse decision
+    decision = "CONTINUE"
+    if "## DECISION" in raw:
+        decision_line = raw.split("## DECISION")[-1].split("##")[0].strip().upper()
+        if "RESTART" in decision_line:
+            decision = "RESTART"
+
+    guidance = ""
+    if "## GUIDANCE" in raw:
+        guidance = raw.split("## GUIDANCE")[-1].split("## FORBIDDEN")[0].strip()
+
+    forbidden = ""
+    if "## FORBIDDEN" in raw:
+        forbidden = raw.split("## FORBIDDEN")[-1].strip()
+
+    return {
+        "decision": decision,
+        "guidance": guidance,
+        "forbidden": forbidden,
+        "raw": raw,
+    }
+
 # ------------------------------- MAIN LOOP -------------------------------
- 
+
 def extract_verilog(response) -> str:
     if isinstance(response, tuple):
         d = response[0]
@@ -181,56 +213,80 @@ def extract_verilog(response) -> str:
             response = d["direct_text"]
     if not isinstance(response, str):
         return ""
-    # Strip markdown code fences
     import re
     match = re.search(r'```(?:verilog|systemverilog|sv)?\s*\n(.*?)```', response, re.DOTALL)
     if match:
         return match.group(1).strip()
     return response.strip()
- 
+
+
 def run_single_process(generator, client, spec, max_iterations=10,
                        harness_dir=None, rtl_filename=None):
     context = []
+    restart_count = 0
+    max_restarts = 3
+
     verilog = extract_verilog(generator.prompt(spec, category=3, files=["design.v"]))
- 
-    for iteration in range(1, max_iterations + 1):
-        # Fast lint first — free
+
+    iteration = 0
+    while iteration < max_iterations:
+        iteration += 1
+
         if harness_dir and rtl_filename and os.path.exists(harness_dir):
-            # Real harness feedback
             sim_result = run_harness(verilog, harness_dir, rtl_filename)
         else:
-            # Fallback to fake testbench if harness not available
             logging.warning("Harness not found, falling back to generated testbench")
             testbench = generate_testbench(client, spec, verilog)
             sim_result = run_simulation(verilog, testbench)
- 
+
         if sim_result["passed"]:
-            return {"passed": True, "verilog": verilog, "iterations": iteration}
- 
+            return {"passed": True, "verilog": verilog, "iterations": iteration,
+                    "restarts": restart_count}
+
         reflection = reflect(client, spec, verilog, sim_result)
-        coord_output = coordinate(client, context, reflection, verilog, iteration)
- 
-        # ── LOGGING ──
+        coord = coordinate(client, context, reflection, verilog, iteration, sim_result)
+
         logging.info(f"=== ITERATION {iteration} REFLECTION ===\n{reflection}")
-        logging.info(f"=== ITERATION {iteration} COORDINATOR ===\n{coord_output}")
- 
-        forbidden = coord_output.split("## FORBIDDEN")[-1].strip() if "## FORBIDDEN" in coord_output else ""
-        context_section = coord_output.split("## Updated Context")[-1].split("## FORBIDDEN")[0].strip() if "## Updated Context" in coord_output else coord_output
- 
-        fix_prompt = f"## DO NOT DO ANY OF THESE:\n{forbidden}\n\n## Specification\n{spec}\n\n## Previous Attempt\n{verilog}\n\n## What To Fix:\n{context_section}"
+        logging.info(f"=== ITERATION {iteration} COORDINATOR: {coord['decision']} ===\n{coord['raw']}")
+
+        if coord["decision"] == "RESTART" and restart_count < max_restarts:
+            restart_count += 1
+            logging.info(f"=== RESTART #{restart_count} triggered at iteration {iteration} ===")
+
+            # Distill insights from failed context into a fresh spec-level prompt
+            restart_prompt = (
+                f"{spec}\n\n"
+                f"## Lessons from failed attempts\n{coord['guidance']}\n\n"
+                f"## Do NOT use these approaches\n{coord['forbidden']}"
+            )
+            verilog = extract_verilog(generator.prompt(restart_prompt, category=3, files=["design.v"]))
+
+            # Clear context so coordinator reasons fresh from this new attempt
+            context = []
+            logging.info(f"=== RESTART #{restart_count} new verilog (first 300 chars) ===\n{verilog[:300]}")
+            continue
+
+        # CONTINUE path: give the generator the evolving context
+        fix_prompt = (
+            f"## DO NOT DO ANY OF THESE:\n{coord['forbidden']}\n\n"
+            f"## Specification\n{spec}\n\n"
+            f"## Previous Attempt\n{verilog}\n\n"
+            f"## What To Fix:\n{coord['guidance']}"
+        )
         verilog = extract_verilog(generator.prompt(fix_prompt, category=3, files=["design.v"]))
- 
-        logging.info(f"=== ITERATION {iteration} NEW VERILOG (first 500 chars) ===\n{verilog[:500]}")
- 
-    return {"passed": False, "verilog": verilog, "iterations": max_iterations}
- 
- 
+
+        logging.info(f"=== ITERATION {iteration} NEW VERILOG (first 300 chars) ===\n{verilog[:300]}")
+
+    return {"passed": False, "verilog": verilog, "iterations": iteration,
+            "restarts": restart_count}
+
+
 def run_parallel(generator, client, spec, num_processes=5, max_iterations=10,
                  harness_dir=None, rtl_filename=None):
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_processes) as executor:
         futures = [
             executor.submit(run_single_process, generator, client, spec,
-                          max_iterations, harness_dir, rtl_filename)
+                            max_iterations, harness_dir, rtl_filename)
             for _ in range(num_processes)
         ]
         for future in concurrent.futures.as_completed(futures):
@@ -239,24 +295,24 @@ def run_parallel(generator, client, spec, num_processes=5, max_iterations=10,
                 for f in futures:
                     f.cancel()
                 return result
- 
+
     return futures[-1].result()
- 
+
 # ------------------------------- TESTBENCH -------------------------------
- 
+
 def generate_testbench(client: anthropic.Anthropic, spec: str, verilog_code: str) -> str:
     """
     Generate a simple self-checking Verilog testbench for the given RTL.
     Checks functional correctness without using specific test vectors from CVDP.
     """
     prompt = f"""You are an expert RTL verification engineer.
- 
+
 ## Specification
 {spec}
- 
+
 ## Verilog Implementation
 {verilog_code}
- 
+
 Write a simple self-checking Verilog testbench that:
 1. Instantiates the module above
 2. Applies a clock if needed
@@ -265,14 +321,14 @@ Write a simple self-checking Verilog testbench that:
 5. Uses $error or $fatal if outputs are wrong
 6. Keeps it simple — no cocotb, no Python, pure Verilog only
 7. Must finish with $finish
- 
+
 Only respond with the Verilog testbench code, nothing else.
 """
- 
+
     response = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=2000,
         messages=[{"role": "user", "content": prompt}]
     )
- 
+
     return response.content[0].text.strip()
