@@ -319,4 +319,41 @@ Autonomous pipeline: full data build → cluster copy → QLoRA training → R2 
 
 **Job 244 submitted:** medium partition, PD state at submission
 
-<!-- PIPELINE_STATUS: TRAINING JOBID=244 -->
+## 2026-05-31 — TRAINING RUNNING: job 293 active on slinky-3
+
+**Jobs 244–292 summary (all failed before training started):**
+- 244/245: `torchrun`/`python` not on PATH → fixed with dynamic discovery, then `/usr/local/bin/python3`
+- 257: `/usr/local/bin/torchrun` didn't exist on training node (probe ran on different node)
+- 260: torchrun found via dynamic discovery; confirmed at `/usr/local/bin/torchrun`; failed on `No module named 'datasets'`
+- 265/268/270: various PATH and PYTHONPATH fixes failed — root cause: `datasets`, `transformers`, `peft`, `accelerate` are NOT in the container at all (confirmed by probe job)
+- 271/273/274/278: pip install approach iterated — pinned versions fought container's newer ones; unversioned installs installed incompatible versions (transformers 5.9.0, datasets 4.8.5 — ABI-broken with nightly torch)
+- 281: correct pins (`transformers==4.46.0`, `accelerate==0.34.0`, `peft==0.13.0`, unversioned `datasets`) — all imports passed; failed on missing `bitsandbytes` metadata
+- 285: added `bitsandbytes` to pip install — model loaded, data formatted; failed on `MASTER_ADDR` not set
+- 293: added `MASTER_ADDR=localhost MASTER_PORT=29500` — **training started successfully**
+
+**Job 293 status (as of 2026-05-31T22:27 UTC):**
+- Node: slinky-3, partition: medium
+- Started: 22:00:55 UTC; training loop began: 22:09:55 UTC (~9 min setup/model load)
+- Progress: 50/4025 steps (~1%), pace ~13 s/it and stabilizing
+- ETA: ~14.5 hours → done ~2026-06-01T12:30 UTC
+- Wall limit: 24h → safe margin
+
+**Final working pip install block:**
+```bash
+pip install -q --no-deps --break-system-packages "trl==0.13.0"
+pip install -q --break-system-packages \
+  datasets "transformers==4.46.0" "accelerate==0.34.0" "peft==0.13.0" \
+  huggingface-hub tokenizers multiprocess xxhash
+pip install -q --break-system-packages bitsandbytes
+pip install -q --break-system-packages tyro rich awscli
+```
+
+**Key learnings for future jobs on this cluster:**
+- Container does NOT have: datasets, transformers, peft, accelerate, trl, bitsandbytes (metadata only)
+- Container DOES have: torch (nightly 2.6.0a0), cuda, nccl
+- Must pin: transformers==4.46.0, accelerate==0.34.0, peft==0.13.0 (newer versions break nightly torch ABI)
+- Must set: MASTER_ADDR, MASTER_PORT, LOCAL_RANK, RANK, WORLD_SIZE for single-process distributed init
+- Use plain `python3` (not hardcoded path) with `export PATH=/usr/local/bin:/usr/bin:$PATH` at top of srun block
+
+<!-- PIPELINE_STATUS: TRAINING JOBID=293 RUNNING step~50/4025 ETA~2026-06-01T12:30Z -->
+

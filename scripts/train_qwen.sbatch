@@ -40,26 +40,29 @@ srun \
   --container-mounts=/home/noahsabb:/home/noahsabb,/home/_shared:/home/_shared \
   bash -c '
     set -e
+    export PATH=/usr/local/bin:/usr/bin:$PATH
 
     echo "=== GPU sanity check ==="
     python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\", flush=True)"
 
     echo "=== Installing packages ==="
-    # The NGC 24.12-py3 container already ships matched versions of:
-    # torch, transformers, bitsandbytes, peft, accelerate, datasets, safetensors, etc.
-    # Upgrading ANY of these breaks the nightly-torch ABI. Use --no-deps everywhere.
-    # --break-system-packages required by PEP 668 in newer container builds.
-    #
-    # trl (SFTTrainer) is the one package not in the container.
-    # tyro + rich are trl's small non-container runtime deps.
     pip install -q --no-deps --break-system-packages "trl==0.13.0"
+    pip install -q --break-system-packages \
+      datasets \
+      "transformers==4.46.0" \
+      "accelerate==0.34.0" \
+      "peft==0.13.0" \
+      huggingface-hub tokenizers multiprocess xxhash
+    pip install -q --break-system-packages bitsandbytes
     pip install -q --break-system-packages tyro rich awscli
 
     echo "=== Starting training ==="
-    python3 -m torch.distributed.run \
-      --standalone \
-      --nproc-per-node=1 \
-      /home/noahsabb/spec2rtl/scripts/train_qwen.py \
+    export MASTER_ADDR=localhost
+    export MASTER_PORT=29500
+    export LOCAL_RANK=0
+    export RANK=0
+    export WORLD_SIZE=1
+    python3 /home/noahsabb/spec2rtl/scripts/train_qwen.py \
         --data   /home/noahsabb/data/final_finetune.jsonl \
         --out    /home/noahsabb/checkpoints/spec2rtl \
         --epochs 5 \
