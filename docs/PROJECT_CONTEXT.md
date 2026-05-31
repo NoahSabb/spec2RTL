@@ -51,7 +51,7 @@ The paper used 256 A100s for training. We have 1 H100 × 60 hours. So:
 
 1. We use **QLoRA** instead of full SFT (memory-efficient fine-tuning)
 2. We train on **CraftRTL** (high-quality synthetic Verilog dataset from HuggingFace) instead of their 1.7M custom corpus
-3. We fine-tune only on **spec-to-RTL** task (not editing/debugging) — a deliberate scope decision, since our Reflector/Coordinator handle the debugging reasoning
+3. We fine-tune on **all three tasks: spec-to-RTL, debugging, and editing** — unlike the paper which used spec-to-RTL only. Rationale: the debugging and editing tasks teach the model to recover from incorrect implementations and fill in partial code, which directly supports the agentic loop's iterative self-correction behavior even though the Reflector/Coordinator handle the high-level reasoning.
 4. Our Generator is currently **Claude Sonnet 4.6** (placeholder until fine-tuned Qwen is ready)
 5. Our Reflector and Coordinator use **Claude Haiku** instead of Claude Sonnet (cost savings)
 

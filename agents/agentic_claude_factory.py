@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 
 class Agentic_Claude_Instance:
     def __init__(self, context: Any = None, key: Optional[str] = None, model: str = "claude-sonnet-4-6",
-        num_processes: int = 1, max_iterations: int = 5):
+        num_processes: int = 1, max_iterations: int = 6):
 
         self.context = context
         self.model = model

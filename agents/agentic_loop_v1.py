@@ -40,6 +40,7 @@ def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
     rtl_filename: the .sv or .v filename (e.g. gcd_top.sv)
     """
     import glob
+    import re
 
     rtl_path = os.path.join(harness_dir, "rtl", rtl_filename)
     with open(rtl_path, "w") as f:
@@ -64,13 +65,29 @@ def run_harness(verilog_code: str, harness_dir: str, rtl_filename: str) -> dict:
 
     output = result.stdout + result.stderr
 
+    # sim.log is often empty; the real failures are in sim_build/*.result.xml
+    xml_failures = []
+    for xml_file in glob.glob(os.path.join(harness_dir, "rundir", "sim_build", "*.result.xml")):
+        try:
+            with open(xml_file) as f:
+                xml_content = f.read()
+            # Pull out error_msg attributes — these contain the actual assertion failures
+            for msg in re.findall(r'error_msg="([^"]*)"', xml_content):
+                xml_failures.append(msg.replace("&#10;", "\n").replace("&#9;", "\t"))
+        except Exception:
+            pass
+
+    if xml_failures:
+        output += "\n\n=== TEST FAILURES ===\n" + "\n---\n".join(xml_failures)
+
     sim_log_path = os.path.join(harness_dir, "rundir", "sim.log")
     if os.path.exists(sim_log_path):
         with open(sim_log_path) as f:
             sim_log = f.read()
-        output = output + "\n" + sim_log
+        if sim_log.strip():
+            output += "\n\n=== SIM LOG ===\n" + sim_log
 
-    passed = result.returncode == 0 and "FAILED" not in output
+    passed = result.returncode == 0 and not xml_failures and "FAILED" not in output
 
     return {
         "passed": passed,
@@ -122,7 +139,7 @@ The single most important RTL change needed. Name the exact signal, always/logic
 # ------------------------------- COORDINATOR -------------------------------
 
 def coordinate(client: anthropic.Anthropic, context: list, reflection: str,
-               verilog_code: str, iteration: int, sim_result: dict) -> dict:
+               verilog_code: str, iteration: int, sim_result: dict, spec: str = "") -> dict:
     """
     Maintains self-evolving context across iterations. Returns a dict with:
       - decision: "CONTINUE" or "RESTART"
@@ -133,11 +150,11 @@ def coordinate(client: anthropic.Anthropic, context: list, reflection: str,
     # Record this iteration's outcome before asking coordinator to decide
     context.append({
         "iteration": iteration,
-        "verilog_snippet": verilog_code[:300],  # keep context window manageable
+        "verilog_snippet": verilog_code[:300],
         "guidance_given": reflection,
-        "outcome": "FAILED",  # we only call coordinate on failure
+        "outcome": "FAILED",
         "stage": sim_result.get("stage", "unknown"),
-        "errors_summary": (sim_result.get("errors", "") + sim_result.get("output", ""))[:400],
+        "errors_summary": sim_result.get("output", "")[:2000],
     })
 
     history = ""
@@ -244,34 +261,37 @@ def run_single_process(generator, client, spec, max_iterations=10,
                     "restarts": restart_count}
 
         reflection = reflect(client, spec, verilog, sim_result)
-        coord = coordinate(client, context, reflection, verilog, iteration, sim_result)
+        coord = coordinate(client, context, reflection, verilog, iteration, sim_result, spec=spec)
 
         logging.info(f"=== ITERATION {iteration} REFLECTION ===\n{reflection}")
         logging.info(f"=== ITERATION {iteration} COORDINATOR: {coord['decision']} ===\n{coord['raw']}")
+
+        # Truncate raw error to 1500 chars for generator prompts — enough to see the failure
+        raw_error = sim_result.get("output", "")[-1500:] if sim_result.get("output") else ""
 
         if coord["decision"] == "RESTART" and restart_count < max_restarts:
             restart_count += 1
             logging.info(f"=== RESTART #{restart_count} triggered at iteration {iteration} ===")
 
-            # Distill insights from failed context into a fresh spec-level prompt
             restart_prompt = (
                 f"{spec}\n\n"
                 f"## Lessons from failed attempts\n{coord['guidance']}\n\n"
-                f"## Do NOT use these approaches\n{coord['forbidden']}"
+                f"## Do NOT use these approaches\n{coord['forbidden']}\n\n"
+                f"## Last seen error\n{raw_error}"
             )
             verilog = extract_verilog(generator.prompt(restart_prompt, category=3, files=["design.v"]))
 
-            # Clear context so coordinator reasons fresh from this new attempt
             context = []
             logging.info(f"=== RESTART #{restart_count} new verilog (first 300 chars) ===\n{verilog[:300]}")
             continue
 
-        # CONTINUE path: give the generator the evolving context
+        # CONTINUE path: generator sees spec + previous RTL + actual error + targeted guidance
         fix_prompt = (
-            f"## DO NOT DO ANY OF THESE:\n{coord['forbidden']}\n\n"
             f"## Specification\n{spec}\n\n"
-            f"## Previous Attempt\n{verilog}\n\n"
-            f"## What To Fix:\n{coord['guidance']}"
+            f"## Previous Attempt\n```verilog\n{verilog}\n```\n\n"
+            f"## Actual Test Failure\n{raw_error}\n\n"
+            f"## What To Fix\n{coord['guidance']}\n\n"
+            f"## Do NOT repeat these approaches\n{coord['forbidden']}"
         )
         verilog = extract_verilog(generator.prompt(fix_prompt, category=3, files=["design.v"]))
 

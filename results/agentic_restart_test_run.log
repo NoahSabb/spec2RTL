@@ -1,0 +1,441 @@
+INFO:root:Custom model factory set, subjective model cache cleared
+INFO:root:Created Agentic Claude Instance. Model: claude-sonnet-4-6, Processes: 1, Max iterations: 5
+Queue timeout is disabled by default. Set QUEUE_TIMEOUT environment variable to enable it.
+LLM-based subjective scoring is enabled
+Generated Docker network name: cvdp-bridge-agentic_test_10-c31f89c5
+Creating Docker network for all Docker containers in this run...
+Creating Docker network 'cvdp-bridge-agentic_test_10-c31f89c5'
+Successfully created Docker network 'cvdp-bridge-agentic_test_10-c31f89c5'
+
+=== Starting Preparation Phase ===
+Starting cvdp_copilot_GFCM_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_GFCM/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wSi9xzBLPNnf1tvrJ'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wTS4mkbk7dsMyavQo'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_GFCM/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wUWZ6zYr2hcQmA1jd'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wVN9nc98YviA3PtcK'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_GFCM/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wWAXMXCGByV1YpSFC'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wWj1b9aM9NmczZvg1'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_GFCM/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wXPh3a2GaXUs2hjUh'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wXwRuo1SSkKu6Joqi'}
+ERROR:root:Error in repository preparation for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wXwRuo1SSkKu6Joqi'}
+Unexpected error in preparation for cvdp_copilot_GFCM_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wXwRuo1SSkKu6Joqi'}
+Starting cvdp_copilot_axi_register_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_axi_register_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_axi_register/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wYbNhvQQFc9PfKVtw'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wZ9rUMrj72rs5QTMX'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_axi_register/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wZrH8AQcRPuo89dF8'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5waQmGHCdB7NQQhLdT'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_axi_register/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wb5hG173KVTEXpsVh'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wbevRyTSp9fGvHEec'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_axi_register/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wcYFkamm73dsUwt26'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wd51956YzNMV7pwfn'}
+ERROR:root:Error in repository preparation for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wd51956YzNMV7pwfn'}
+Unexpected error in preparation for cvdp_copilot_axi_register_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wd51956YzNMV7pwfn'}
+Starting cvdp_copilot_decode_firstbit_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_decode_firstbit_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_decode_firstbit/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wdo9xh99ozB2XGR41'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5weSMdg48JUQeAqYoe'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_decode_firstbit/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wfufAjTDbE9D3rtdQ'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wgeoYfrdruHqA26Zt'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_decode_firstbit/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5whKywYpTdr3EXy6ZY'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wi2A4Uz33sm3rxWmi'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_decode_firstbit/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wj9NrMCuoWSRuVDey'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wjnKY4Pne7QDaY556'}
+ERROR:root:Error in repository preparation for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wjnKY4Pne7QDaY556'}
+Unexpected error in preparation for cvdp_copilot_decode_firstbit_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wjnKY4Pne7QDaY556'}
+Starting cvdp_copilot_digital_dice_roller_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_digital_dice_roller_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_dice_roller/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wkUVn232j7AhxUCuR'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wm3inZzngbTLBzwbk'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_dice_roller/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wmzGtLj8QE47k7Vun'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wnpdqoEC94267gWLF'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_dice_roller/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wobWpitnngzhYQbiv'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wpGhNLGEctDkPEfrm'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_dice_roller/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wpwdCQeLbR7P7WMum'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wqYqtEw63Ds3z1Dpb'}
+ERROR:root:Error in repository preparation for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wqYqtEw63Ds3z1Dpb'}
+Unexpected error in preparation for cvdp_copilot_digital_dice_roller_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wqYqtEw63Ds3z1Dpb'}
+Starting cvdp_copilot_digital_stopwatch_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_digital_stopwatch_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_stopwatch/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wrHk7NSt7umxJJwJL'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wsZ9GHobXnc21FGbT'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_stopwatch/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wtFoonFxkhX6S93zc'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wtrXXFH1RP8pbBwou'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_stopwatch/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wuYweyCeHCfVobs7z'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wvMpKEniFgRsHxHyN'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_digital_stopwatch/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wxW3qWfFHKZoDmJn4'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wz9X2kTKr3YYXFmBd'}
+ERROR:root:Error in repository preparation for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wz9X2kTKr3YYXFmBd'}
+Unexpected error in preparation for cvdp_copilot_digital_stopwatch_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5wz9X2kTKr3YYXFmBd'}
+Starting cvdp_copilot_fifo_async_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_fifo_async_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_fifo_async/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x1B2xuEo92bPdKUua'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x1hHYrHeM9j1A5rXS'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_fifo_async/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x2QCcUDn81wGPZ9Vj'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x2xw2aChcvu8WDDF4'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_fifo_async/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x3e7d7TjFBVvys7N3'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x4CMEJ7PokD3SX5Qn'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_fifo_async/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x4vWS6DsNx45zu9oJ'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x5YDLmesuBPNf4NCM'}
+ERROR:root:Error in repository preparation for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x5YDLmesuBPNf4NCM'}
+Unexpected error in preparation for cvdp_copilot_fifo_async_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x5YDLmesuBPNf4NCM'}
+Starting cvdp_copilot_gcd_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_gcd/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x6z2ZR9WZkpYDQyr6'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x7ZG2hZbaiwJ7Rz4u'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_gcd/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x8Ku2FyCJ4WZcGqAd'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x8us9wt9DrSVwUs29'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_gcd/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5x9d2q7sWAW9h3JsjB'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xADFMZt4gZMoiFBZ1'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_gcd/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xAzt7cMKD7cHHMYQk'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xBokG7B84c5ZjxpNM'}
+ERROR:root:Error in repository preparation for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xBokG7B84c5ZjxpNM'}
+Unexpected error in preparation for cvdp_copilot_gcd_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xBokG7B84c5ZjxpNM'}
+Starting cvdp_copilot_perf_counters_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_perf_counters_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_perf_counters/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xDQF61d1LB2k2xuDj'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xDyiWkSvqXkvWpfcT'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_perf_counters/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xEsYcej7dKPnvSc54'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xFQ3kmUEwbhpw6Awg'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_perf_counters/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xHNcNMw5yLLrcMLVZ'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xJvsiCMe3gi51uEGp'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_perf_counters/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xKgX3atVyASZVPMe7'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xLEkeYBiJqZJXqRGx'}
+ERROR:root:Error in repository preparation for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xLEkeYBiJqZJXqRGx'}
+Unexpected error in preparation for cvdp_copilot_perf_counters_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xLEkeYBiJqZJXqRGx'}
+Starting cvdp_copilot_restoring_division_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_restoring_division_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_restoring_division/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xLvBd7TdgswGoYiUy'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xMURKhqKoGCvuaATh'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_restoring_division/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xNCKkr6696DJbSksa'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xQCNegrspX44C3XB3'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_restoring_division/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xRtaVvEvRcr6Guu8E'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xSS4tc3uS6aZhHko3'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_restoring_division/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xTN8KRUFZo7oUnXBo'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xU7mXoAxd3oEX9LeD'}
+ERROR:root:Error in repository preparation for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xU7mXoAxd3oEX9LeD'}
+Unexpected error in preparation for cvdp_copilot_restoring_division_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xU7mXoAxd3oEX9LeD'}
+Starting cvdp_copilot_vending_machine_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_restart_test/cvdp_copilot_vending_machine_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_vending_machine/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xUxNVRQPou5rwVMh8'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xVconz6JuZcATG7wV'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_vending_machine/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xWLTxmp4LsGQAUqJi'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xWxvCw8VZGWWUEBxw'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_vending_machine/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xXfay6BE1UoKqwwH9'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xYCqPTJfLRu8ibVaY'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_restart_test/cvdp_copilot_vending_machine/harness/1, RTL file: None
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error in prompt: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xYwykDBrC46hSqydg'}
+WARNING:root:Harness not found, falling back to generated testbench
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xZrJXQinJcpSkbPYm'}
+ERROR:root:Error in repository preparation for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xZrJXQinJcpSkbPYm'}
+Unexpected error in preparation for cvdp_copilot_vending_machine_0001: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011Cba5xZrJXQinJcpSkbPYm'}
+All preparation tasks completed successfully
+=== Preparation Phase Complete ===
+
+Writing preparation results...
+
+=== Starting Execution Phase ===
+WARNING: 10 items failed in previous phase
+  - cvdp_copilot_GFCM_0001
+  - cvdp_copilot_axi_register_0001
+  - cvdp_copilot_decode_firstbit_0001
+  - cvdp_copilot_digital_dice_roller_0001
+  - cvdp_copilot_digital_stopwatch_0001
+  - cvdp_copilot_fifo_async_0001
+  - cvdp_copilot_gcd_0001
+  - cvdp_copilot_perf_counters_0001
+  - cvdp_copilot_restoring_division_0001
+  - cvdp_copilot_vending_machine_0001
+All execution tasks completed successfully
+=== Execution Phase Complete ===
+
+
+=== Benchmark Report ===
+Dataset: ../data/agentic_test_10.jsonl
+Generated: 2026-05-30 22:22:12
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_agentic_restart_test/report.txt
+Text report generated: work_agentic_restart_test/report.txt
+Benchmark execution time: Min: 0.0 - Max: 0.0 - Avg: 0.0
+Cleaning up Docker network: cvdp-bridge-agentic_test_10-c31f89c5
+Removing Docker network 'cvdp-bridge-agentic_test_10-c31f89c5'
+Successfully removed Docker network 'cvdp-bridge-agentic_test_10-c31f89c5'

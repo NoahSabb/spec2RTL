@@ -267,13 +267,16 @@ Scoring rubric:
 Respond with ONLY a single integer (1, 2, 3, 4, or 5). No explanation."""
 
 
+JUDGE_MODEL = "claude-haiku-4-5-20251001"  # keep Haiku for judge (binary pass/fail, Haiku is fine)
+
+
 def score_pair(client: anthropic.Anthropic, verilog: str, spec: str,
                retries: int = 3) -> int | None:
     """Return LLM-as-Judge score (1-5) or None on failure."""
     for attempt in range(retries):
         try:
             resp = client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model=JUDGE_MODEL,
                 max_tokens=8,
                 system=JUDGE_SYSTEM,
                 messages=[{"role": "user", "content": JUDGE_USER_TMPL.format(
@@ -346,11 +349,14 @@ Write the design specification for this module. Include:
 Write ONLY the specification text, no code."""
 
 
+SPEC_GEN_MODEL = "claude-haiku-4-5-20251001"  # overridden by --spec-model
+
+
 def generate_spec(client: anthropic.Anthropic, verilog: str, retries: int = 3) -> str | None:
     for attempt in range(retries):
         try:
             resp = client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model=SPEC_GEN_MODEL,
                 max_tokens=1024,
                 system=SPEC_SYSTEM,
                 messages=[{"role": "user", "content": SPEC_USER_TMPL.format(verilog=verilog)}],
@@ -643,7 +649,10 @@ def final_quality_filter(samples: list[dict]) -> list[dict]:
             clean.append(s)
         else:
             fail_count += 1
-    log.info(f"  Kept {len(clean)}/{len(samples)} ({100*len(clean)//len(samples)}%), dropped {fail_count}")
+    if samples:
+        log.info(f"  Kept {len(clean)}/{len(samples)} ({100*len(clean)//len(samples)}%), dropped {fail_count}")
+    else:
+        log.info("  No samples to filter")
     return clean
 
 
@@ -671,7 +680,17 @@ def main():
                         help="Skip HuggingFace download, use cached modules")
     parser.add_argument("--skip-verilator", action="store_true",
                         help="Skip Verilator lint gate (use if Verilator not installed)")
+    parser.add_argument("--spec-model", type=str, default="claude-haiku-4-5-20251001",
+                        help="Model for spec generation. Use claude-sonnet-4-6 for best quality.")
+    parser.add_argument("--seed-jsonl", type=str, default=None,
+                        help="Path to a high-quality seed JSONL (messages format) to prepend "
+                             "before the generated data. These bypass all quality gates.")
     args = parser.parse_args()
+
+    # Apply --spec-model globally before any API calls
+    global SPEC_GEN_MODEL
+    SPEC_GEN_MODEL = args.spec_model
+    log.info(f"Spec generation model: {args.spec_model}")
 
     random.seed(args.seed)
 
@@ -722,42 +741,71 @@ def main():
         log.info(f"  Saved {len(valid_modules)} validated modules to cache")
 
     # ---- Stage 1b: Generate specs ----
-    # Cache key includes module count so a limited run never poisons a full run.
+    # Content-addressed cache: merge ALL existing spec_pairs_*.json files so
+    # previously generated specs are never re-paid-for across runs, regardless
+    # of --limit. Matching is by Verilog text content, not module count.
     spec_cache = CACHE_DIR / f"spec_pairs_{len(valid_modules)}.json"
 
-    if spec_cache.exists():
-        log.info("Loading spec pairs from cache...")
-        with open(spec_cache) as f:
-            spec_pairs = [tuple(p) for p in json.load(f)]
-        log.info(f"  Loaded {len(spec_pairs)} cached spec pairs")
-    else:
-        spec_pairs = generate_specs_batch(client, valid_modules, workers=args.workers)
+    existing_specs: dict[str, str] = {}
+    for prior in sorted(CACHE_DIR.glob("spec_pairs_*.json")):
+        with open(prior) as fh:
+            for entry in json.load(fh):
+                if len(entry) >= 2:
+                    existing_specs.setdefault(entry[0], entry[1])
+    log.info(f"Merged {len(existing_specs)} specs from existing caches")
 
-        # Gate 3: Jaccard decontamination (spec vs. CVDP test specs — most meaningful)
-        benchmark_specs = load_benchmark_specs(args.benchmark)
-        spec_pairs = decontaminate_specs(spec_pairs, benchmark_specs,
-                                         threshold=args.decontam_threshold)
+    remaining = [m for m in valid_modules if m not in existing_specs]
+    log.info(f"  {len(remaining)} modules still need spec generation")
 
-        with open(spec_cache, "w") as f:
-            json.dump(spec_pairs, f)
-        log.info(f"  Saved {len(spec_pairs)} decontaminated spec pairs to cache")
+    if remaining:
+        new_pairs = generate_specs_batch(client, remaining, workers=args.workers)
+        for v, s in new_pairs:
+            existing_specs[v] = s
+
+    spec_pairs = [(v, existing_specs[v]) for v in valid_modules if v in existing_specs]
+
+    # Gate 3: Jaccard decontamination
+    benchmark_specs = load_benchmark_specs(args.benchmark)
+    spec_pairs = decontaminate_specs(spec_pairs, benchmark_specs,
+                                     threshold=args.decontam_threshold)
+
+    with open(spec_cache, "w") as f:
+        json.dump(spec_pairs, f)
+    log.info(f"Saved {len(spec_pairs)} decontaminated spec pairs to {spec_cache.name}")
 
     # ---- Stage 1c: LLM-as-Judge scoring (Gate 4) ----
+    # Content-addressed: merge all scored_pairs_*.json so judge calls are never
+    # repeated across runs. Only unscored spec pairs hit the API.
     scored_cache = CACHE_DIR / f"scored_pairs_{len(valid_modules)}.json"
 
-    if scored_cache.exists():
-        log.info("Loading scored pairs from cache...")
-        with open(scored_cache) as f:
-            scored_triples = [tuple(p) for p in json.load(f)]
-        log.info(f"  Loaded {len(scored_triples)} cached scored pairs")
-    else:
-        scored_triples = score_pairs_batch(
-            client, spec_pairs, workers=args.workers,
+    existing_scored: dict[str, tuple] = {}  # verilog -> (spec, score)
+    for prior in sorted(CACHE_DIR.glob("scored_pairs_*.json")):
+        with open(prior) as fh:
+            for entry in json.load(fh):
+                if len(entry) >= 3:
+                    existing_scored.setdefault(entry[0], (entry[1], int(entry[2])))
+    log.info(f"Merged {len(existing_scored)} scored pairs from existing caches")
+
+    unscored = [(v, s) for v, s in spec_pairs if v not in existing_scored]
+    log.info(f"  {len(unscored)} spec pairs still need judge scoring")
+
+    if unscored:
+        new_scored = score_pairs_batch(
+            client, unscored, workers=args.workers,
             min_score=args.min_judge_score
         )
-        with open(scored_cache, "w") as f:
-            json.dump(scored_triples, f)
-        log.info(f"  Saved {len(scored_triples)} scored pairs to cache")
+        for v, s, score in new_scored:
+            existing_scored[v] = (s, score)
+
+    scored_triples = [
+        (v, existing_scored[v][0], existing_scored[v][1])
+        for v, s in spec_pairs
+        if v in existing_scored
+    ]
+
+    with open(scored_cache, "w") as f:
+        json.dump(scored_triples, f)
+    log.info(f"Saved {len(scored_triples)} scored pairs to {scored_cache.name}")
 
     # Convert back to plain (verilog, spec) for debugging/editing tasks
     # (they don't need per-pair scores since we're starting from already-scored correct code)
@@ -796,6 +844,15 @@ def main():
 
     # ---- Stage 4: Final iverilog quality gate on all outputs ----
     clean_samples = final_quality_filter(all_samples)
+
+    # ---- Stage 4b: Prepend high-quality seed data ----
+    seed_samples = []
+    if args.seed_jsonl and Path(args.seed_jsonl).exists():
+        with open(args.seed_jsonl) as f:
+            seed_samples = [json.loads(l) for l in f if l.strip()]
+        log.info(f"Loaded {len(seed_samples)} seed samples from {args.seed_jsonl}")
+        clean_samples = seed_samples + clean_samples
+        log.info(f"  Total after prepending seed: {len(clean_samples)}")
 
     # ---- Stage 5: Write output ----
     out_path = Path(args.out)

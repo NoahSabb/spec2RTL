@@ -130,3 +130,11 @@ kubectl cp slurm/<my-pod>:/home/noahsabb/results.tar.gz . -c login
 - **NCCL / multi-GPU**: the workers have RoCE v2 over 8× ConnectX-7 NDR (400 GbE). NCCL env is pre-injected by Kyverno policy on GPU jobs. Don't override `NCCL_IB_*` or `NCCL_SOCKET_IFNAME` unless I know what I'm doing.
 - **Container caching**: enroot caches imported containers under `/run/enroot/${UID}` (per-job ephemeral). The first pull of a large image takes minutes; subsequent jobs reuse the cache for the duration of the worker pod's life.
 - **Out-of-memory / OOM**: SLURM allocates the full node's memory by default when you take a GPU. If a job crashes with OOM, it's usually CUDA OOM (model too big for GPU memory), not host OOM.
+
+## Container-specific gotchas (NGC 24.12-py3)
+- Use `python3`, not `python` — `python` is not on PATH in this container
+- Use `python3 -m torch.distributed.run`, not `torchrun` — torchrun is not on PATH
+- Do NOT pip install/upgrade: torch, transformers, bitsandbytes, peft, accelerate, 
+  datasets — container ships versions matched to nightly torch; overwriting breaks ABI
+- Install trl with: `pip install -q --no-deps --break-system-packages "trl==0.13.0"`
+- Other small deps: `pip install -q --break-system-packages tyro rich awscli`

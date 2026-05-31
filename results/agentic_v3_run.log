@@ -1,0 +1,401 @@
+INFO:root:Custom model factory set, subjective model cache cleared
+INFO:root:Created Agentic Claude Instance. Model: claude-sonnet-4-6, Processes: 1, Max iterations: 10
+Queue timeout is disabled by default. Set QUEUE_TIMEOUT environment variable to enable it.
+LLM-based subjective scoring is enabled
+Generated Docker network name: cvdp-bridge-agentic_test_10-2e7e28bb
+Creating Docker network for all Docker containers in this run...
+Creating Docker network 'cvdp-bridge-agentic_test_10-2e7e28bb'
+Successfully created Docker network 'cvdp-bridge-agentic_test_10-2e7e28bb'
+
+=== Starting Preparation Phase ===
+Starting cvdp_copilot_GFCM_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_GFCM/harness/1, RTL file: glitch_free_mux.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1LATExBcPUiRSStCV'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1PztWJA8Yuhg4JF9R'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_GFCM/harness/1, RTL file: glitch_free_mux.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1QbrUZxrMuwPvb8rc'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1U2EPxGUVQ4DJNZwK'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_GFCM/harness/1, RTL file: glitch_free_mux.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1UbDToSEibkGX6LXN'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1XzbpVLU5qDuicGWB'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_GFCM/harness/1, RTL file: glitch_free_mux.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1Z17wTXkLKULKvfuy'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1cR1Hr51s9gRk2DKR'}
+ERROR:root:Error in repository preparation for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1cR1Hr51s9gRk2DKR'}
+Unexpected error in preparation for cvdp_copilot_GFCM_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1cR1Hr51s9gRk2DKR'}
+Starting cvdp_copilot_axi_register_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_axi_register_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_axi_register/harness/1, RTL file: axi_register.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1dA9t1yFRRCsSVqae'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1hPu1izyDV6bxpAyW'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_axi_register/harness/1, RTL file: axi_register.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1iJiN3XogLxscZ58h'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1o2ENp6JtjvqDSqPN'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_axi_register/harness/1, RTL file: axi_register.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1pAwDJ4qF55nNJK8h'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1tgoVHYYY8uPPfSuj'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_axi_register/harness/1, RTL file: axi_register.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1uSC9FSbj39CSD36S'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1yn91F8x3ATLDvhfD'}
+ERROR:root:Error in repository preparation for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1yn91F8x3ATLDvhfD'}
+Unexpected error in preparation for cvdp_copilot_axi_register_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1yn91F8x3ATLDvhfD'}
+Starting cvdp_copilot_decode_firstbit_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_decode_firstbit_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_decode_firstbit/harness/1, RTL file: cvdp_copilot_decode_firstbit.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB1zMcfvCCtTUZBHMAw'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB25Z9VpM9v4BsWVPNZ'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_decode_firstbit/harness/1, RTL file: cvdp_copilot_decode_firstbit.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB26FKaX6pAcjPThea2'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2ADSp3QAHWmfBZfKx'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_decode_firstbit/harness/1, RTL file: cvdp_copilot_decode_firstbit.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2AkgzUJ83Rc3XtRTM'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2ErzUgpePna2NU1KY'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_decode_firstbit/harness/1, RTL file: cvdp_copilot_decode_firstbit.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2FYfXsRHAuSR17KYy'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2KfDbcPk387T2UcNz'}
+ERROR:root:Error in repository preparation for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2KfDbcPk387T2UcNz'}
+Unexpected error in preparation for cvdp_copilot_decode_firstbit_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2KfDbcPk387T2UcNz'}
+Starting cvdp_copilot_digital_dice_roller_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_digital_dice_roller_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_dice_roller/harness/1, RTL file: digital_dice_roller.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2LDCtcjKnmcGzwsdc'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2PEXdEjq6iEnERcg7'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_dice_roller/harness/1, RTL file: digital_dice_roller.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2Po1UsYnGisaN7yqR'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2SyW73XmF3VXk4mFQ'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_dice_roller/harness/1, RTL file: digital_dice_roller.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2TZjAAoqxpbF3ZuFw'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2WkDTzNCS4q4Jrzhe'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_dice_roller/harness/1, RTL file: digital_dice_roller.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2XLw2xvd9mbFvLzNE'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2aYAr9RsAWnz67mmJ'}
+ERROR:root:Error in repository preparation for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2aYAr9RsAWnz67mmJ'}
+Unexpected error in preparation for cvdp_copilot_digital_dice_roller_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2aYAr9RsAWnz67mmJ'}
+Starting cvdp_copilot_digital_stopwatch_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_digital_stopwatch_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_stopwatch/harness/1, RTL file: dig_stopwatch.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2b98uJeccRHS9R89T'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2eYmnKqBuMV5jDpT5'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_stopwatch/harness/1, RTL file: dig_stopwatch.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2fGSGL98M5UV7kkWS'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2igZhmtm2r9gCpXQf'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_stopwatch/harness/1, RTL file: dig_stopwatch.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2jd86dW92pU3RG66M'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2nqqqgHsoecBgeQTp'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_digital_stopwatch/harness/1, RTL file: dig_stopwatch.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2oW2pzu2B3sqKHiHi'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2riG6zeqHdSfVdYLG'}
+ERROR:root:Error in repository preparation for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2riG6zeqHdSfVdYLG'}
+Unexpected error in preparation for cvdp_copilot_digital_stopwatch_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2riG6zeqHdSfVdYLG'}
+Starting cvdp_copilot_fifo_async_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_fifo_async_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_fifo_async/harness/1, RTL file: fifo_async.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2sMxPcs2xj6wwLf4o'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2vduKD9H5G4HimNmh'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_fifo_async/harness/1, RTL file: fifo_async.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2wEcyPj1uTzQk6uwG'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB2zkx6fnwSwZUGwfQS'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_fifo_async/harness/1, RTL file: fifo_async.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB31TcrZDLZqZhi4pUj'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB34c8FWpDkaGtkAsCB'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_fifo_async/harness/1, RTL file: fifo_async.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB35MmXKwZGf2mPNtoK'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3AWqHBg2HfS5jdYDi'}
+ERROR:root:Error in repository preparation for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3AWqHBg2HfS5jdYDi'}
+Unexpected error in preparation for cvdp_copilot_fifo_async_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3AWqHBg2HfS5jdYDi'}
+Starting cvdp_copilot_gcd_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_gcd_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_gcd/harness/1, RTL file: gcd_top.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3BnydxMuqhkPK4fZb'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3FXTHLYYZiVs7q2tK'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_gcd/harness/1, RTL file: gcd_top.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3G7gBtwGcFsiEwV9v'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3KpvAa1d5tErsAV4y'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_gcd/harness/1, RTL file: gcd_top.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3LQteej9qjXgSNGoE'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3QQWA5UjPRFjkniGU'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_gcd/harness/1, RTL file: gcd_top.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3QzE3i8CCYEdMhudR'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3Uq9nbs5x79qZ6A5L'}
+ERROR:root:Error in repository preparation for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3Uq9nbs5x79qZ6A5L'}
+Unexpected error in preparation for cvdp_copilot_gcd_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3Uq9nbs5x79qZ6A5L'}
+Starting cvdp_copilot_perf_counters_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_perf_counters_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_perf_counters/harness/1, RTL file: cvdp_copilot_perf_counters.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3VRsY7omKUYKqgsc7'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3arYuPKCUUnaJz7ti'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_perf_counters/harness/1, RTL file: cvdp_copilot_perf_counters.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3bTGbfmkAfC64RXNe'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3fwPigkrgSpRSNL2E'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_perf_counters/harness/1, RTL file: cvdp_copilot_perf_counters.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3gW87VSjXKcU7eEeq'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3mAAisWw1auKSoTLR'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_perf_counters/harness/1, RTL file: cvdp_copilot_perf_counters.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3nhwG6J5iiuQu86LG'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3sG2ZTZ9MBKX5vMf5'}
+ERROR:root:Error in repository preparation for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3sG2ZTZ9MBKX5vMf5'}
+Unexpected error in preparation for cvdp_copilot_perf_counters_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3sG2ZTZ9MBKX5vMf5'}
+Starting cvdp_copilot_restoring_division_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_restoring_division_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_restoring_division/harness/1, RTL file: restore_division.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3sywBjjzqLxD6EiFv'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3xKdUpxQcsP1jtMmz'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_restoring_division/harness/1, RTL file: restore_division.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB3y7WWTBp6Yraz1vdk'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB43TT5XkHECSSiYBwV'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_restoring_division/harness/1, RTL file: restore_division.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB44Knx6o3gQjdqWT3N'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB48XJPoz1CFBTC1o7A'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_restoring_division/harness/1, RTL file: restore_division.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB494Yk1rCsaGra1BWV'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4DA7BhhFd4FLVyDJj'}
+ERROR:root:Error in repository preparation for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4DA7BhhFd4FLVyDJj'}
+Unexpected error in preparation for cvdp_copilot_restoring_division_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4DA7BhhFd4FLVyDJj'}
+Starting cvdp_copilot_vending_machine_0001 repository execution...
+Creating harness environment for datapoint: work_agentic_v3/cvdp_copilot_vending_machine_0001
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_vending_machine/harness/1, RTL file: vending_machine.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4DpJ5wjNYqTPoLuN6'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4HzZYfqEemU1zJYNe'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_vending_machine/harness/1, RTL file: vending_machine.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4JpRbDE4334LJUTfp'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4PANRJssZYX6eNdzK'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_vending_machine/harness/1, RTL file: vending_machine.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4PirKpQEsUjJe3KuV'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4UzrFdLZjAQKExiR7'}
+Exception occurred. Retrying LLM API.
+Requesting valid response to model...
+INFO:root:Created Claude Model using the provided key. Using model: claude-sonnet-4-6
+INFO:root:Harness dir: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/cvdp_benchmark/work_agentic_v3/cvdp_copilot_vending_machine/harness/1, RTL file: vending_machine.sv
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error in prompt: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4Vc4jvkydzXE8KUff'}
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+ERROR:root:Error during model prompt for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4Zun7wjAfP1herpUd'}
+ERROR:root:Error in repository preparation for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4Zun7wjAfP1herpUd'}
+Unexpected error in preparation for cvdp_copilot_vending_machine_0001: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'You have reached your specified API usage limits. You will regain access on 2026-06-01 at 00:00 UTC.'}, 'request_id': 'req_011CbaB4Zun7wjAfP1herpUd'}
+All preparation tasks completed successfully
+=== Preparation Phase Complete ===
+
+Writing preparation results...
+
+=== Starting Execution Phase ===
+WARNING: 10 items failed in previous phase
+  - cvdp_copilot_GFCM_0001
+  - cvdp_copilot_axi_register_0001
+  - cvdp_copilot_decode_firstbit_0001
+  - cvdp_copilot_digital_dice_roller_0001
+  - cvdp_copilot_digital_stopwatch_0001
+  - cvdp_copilot_fifo_async_0001
+  - cvdp_copilot_gcd_0001
+  - cvdp_copilot_perf_counters_0001
+  - cvdp_copilot_restoring_division_0001
+  - cvdp_copilot_vending_machine_0001
+All execution tasks completed successfully
+=== Execution Phase Complete ===
+
+
+=== Benchmark Report ===
+Dataset: /Users/noahsabbavarapu/Documents/GitHub/spec2RTL/data/agentic_test_10.jsonl
+Generated: 2026-05-30 23:29:07
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: claude-sonnet-4-6
+=======================
+
+Generating text report: work_agentic_v3/report.txt
+Text report generated: work_agentic_v3/report.txt
+Benchmark execution time: Min: 0.0 - Max: 0.0 - Avg: 0.0
+Cleaning up Docker network: cvdp-bridge-agentic_test_10-2e7e28bb
+Removing Docker network 'cvdp-bridge-agentic_test_10-2e7e28bb'
+Successfully removed Docker network 'cvdp-bridge-agentic_test_10-2e7e28bb'
