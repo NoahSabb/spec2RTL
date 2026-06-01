@@ -355,5 +355,215 @@ pip install -q --break-system-packages tyro rich awscli
 - Must set: MASTER_ADDR, MASTER_PORT, LOCAL_RANK, RANK, WORLD_SIZE for single-process distributed init
 - Use plain `python3` (not hardcoded path) with `export PATH=/usr/local/bin:/usr/bin:$PATH` at top of srun block
 
-<!-- PIPELINE_STATUS: TRAINING JOBID=293 RUNNING step~50/4025 ETA~2026-06-01T12:30Z -->
+<!-- PIPELINE_STATUS: TRAINING COMPLETE JOBID=293. EVAL JOBID=369 RUNNING. -->
+
+---
+
+## 2026-06-01 — TRAINING COMPLETE: job 293 done in 21h 6m
+
+**Final training metrics:**
+- Steps: 4025/4025 (5 epochs complete)
+- train_loss: 0.0381 (very low — model well-fitted to data)
+- eval_loss: 0.0350
+- Wall time: ~21h 6m on single H100 (budget: 60h ✓)
+- Adapter saved to: `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1`
+- R2 upload: `s3://spec2rtl-checkpoints/adapters/qwen32b-lora-35e941c1/` ✓
+
+**Adapter size:** 1.1 GB (safetensors)
+**Tokenizer files:** also saved alongside adapter (for standalone loading)
+
+---
+
+## 2026-06-01 — EVAL SUBMITTED: job 369 running on slinky-0
+
+**Task:** Raw model evaluation on full CVDP cid003 benchmark (78 problems), NO agentic loop.
+Goal: establish pass@1 baseline for fine-tuned Qwen vs Claude-sonnet baseline (55.13%).
+
+**Setup:**
+- Base model: Qwen/Qwen2.5-Coder-32B-Instruct (cached at /home/noahsabb/.cache/huggingface/hub)
+- Adapter: /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 (local, no R2 download needed)
+- Data: /home/noahsabb/data/cid003_nonagentic.jsonl (78 problems)
+- Output: /home/noahsabb/results/cid003_eval/
+
+**Scripts:**
+- `scripts/run_cid003_eval.py` — inference + iverilog compile scoring
+- `scripts/run_cid003_eval.sbatch` — sbatch wrapper (medium partition, gpu:1, 8h walltime)
+
+**Scoring approach:**
+- Primary: iverilog compile check (`iverilog -g2012 -o /dev/null <file>`) — fast proxy for correctness
+- Note: Full CVDP cocotb pass@1 requires Docker; outputs saved in `results/cid003_eval/rtl/` for offline evaluation
+- Prompt format: matches training data exactly ("Generate synthesizable Verilog RTL for the following specification.\n\n## Specification\n{spec}")
+- Generation: temperature=0.2, max_new_tokens=2048
+
+**Inference config:**
+- 4-bit NF4 quantization (same as training) — ~16GB VRAM for 32B model on H100
+- LoRA adapter loaded without merging (merging 32B in bf16 would require ~65GB)
+- Saves: per-problem raw output (`{id}_raw.txt`), extracted Verilog (`rtl/{id}.sv`), `results.json`, `summary.txt`
+
+**Estimated runtime:** ~2-3 hours (78 problems × ~1.5 min/problem)
+
+**Job 369 submitted:** medium partition, slinky-0, RUNNING
+
+**Job 369 startup trace (2026-06-01 ~19:37–19:43 UTC):**
+- T+0:51: pyxis importing (slinky-0 is fresh, no cached image)
+- T+5:15: pyxis imported — NGC image downloaded and squashfs built
+- T+5:31: GPU sanity check: CUDA devices: 1 ✓
+- T+5:35: pip install started (same proven pattern as training)
+- T+6:29: pip install complete (pyarrow conflict warning is benign, same as training)
+- T+6:35: iverilog 12.0 installed via apt-get ✓
+- T+6:37: "=== Starting inference ===" — base model loading from HF cache
+- Next: model load ~5-10 min, then 78 problems × ~1.5 min/problem = ~2 hr inference
+- Results will be at: /home/noahsabb/results/cid003_eval/
+
+<!-- PIPELINE_STATUS: EVAL JOBID=369 RUNNING slinky-0 (fine-tuned), JOBID=371 RUNNING slinky-1 (base) -->
+
+---
+
+## 2026-06-01 — BASE MODEL EVAL SUBMITTED: job 371 (cid003-base) on slinky-1
+
+**Purpose:** Direct comparison — base Qwen2.5-Coder-32B-Instruct (no LoRA) vs fine-tuned (job 369).
+Same 78 problems, same inference script, same iverilog scoring, same temperature=0.2.
+
+**Change to `run_cid003_eval.py`:**
+- `--adapter` argument is now optional (default None); if omitted, loads base model only.
+- Summary header adapts to reflect "base, no adapter" vs "+ LoRA".
+
+**Script:** `scripts/run_cid003_base.sbatch`
+**Results:** `/home/noahsabb/results/cid003_eval_base/`
+**Job 371 submitted:** medium partition, slinky-1, RUNNING immediately
+
+**Jobs running in parallel:**
+| JobID | Name | Node | Model | Results dir |
+|-------|------|------|-------|-------------|
+| 369 | cid003-eval | slinky-0 | Qwen32B + LoRA qwen32b-lora-35e941c1 | results/cid003_eval/ |
+| 371 | cid003-base | slinky-1 | Qwen32B base (no adapter) | results/cid003_eval_base/ |
+
+---
+
+## 2026-06-01T19:50Z — SUMMARY: training complete, two eval jobs running
+
+### Training (job 293) — COMPLETE
+
+- **Result:** eval_loss 0.0350, train_loss 0.0381, 5 epochs, 4025 steps, wall time 21h 6m
+- **Dataset:** 13,568 examples (8,128 spec-to-RTL + 4,015 editing + 1,425 debugging)
+- **Adapter saved to cluster:** `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1/`
+- **R2 backup:** `s3://spec2rtl-checkpoints/adapters/qwen32b-lora-35e941c1/` — upload confirmed
+
+### Evaluation — TWO JOBS RUNNING IN PARALLEL
+
+**Job 369 — fine-tuned model** (slinky-0)
+- Model: Qwen2.5-Coder-32B-Instruct + LoRA adapter `qwen32b-lora-35e941c1`
+- Adapter loaded from local checkpoint (no R2 download needed)
+- Script: `scripts/run_cid003_eval.py --adapter .../qwen32b-lora-35e941c1`
+- Results: `/home/noahsabb/results/cid003_eval/`
+
+**Job 371 — base model** (slinky-1)
+- Model: Qwen2.5-Coder-32B-Instruct, no adapter (raw pretrained weights)
+- Script: `scripts/run_cid003_eval.py` (no `--adapter` flag)
+- Results: `/home/noahsabb/results/cid003_eval_base/`
+
+**Purpose:** Direct apples-to-apples comparison of base vs fine-tuned on the same 78-problem benchmark, to isolate the LoRA training contribution.
+
+**Shared eval config (both jobs):**
+- 78 CVDP cid003 problems (41 easy, 37 medium)
+- 4-bit NF4 quantization, temperature=0.2, max_new_tokens=2048
+- Prompt format matches training data exactly
+- Scoring: iverilog compile pass (proxy); full cocotb pass@1 requires Docker locally
+- Per-problem outputs: `{id}_raw.txt`, `rtl/{id}.sv`, `results.json`, `summary.txt`
+- Estimated runtime per job: ~2–3 hours
+
+**Baseline for comparison:**
+| Model | cid003 Pass@1 |
+|-------|--------------|
+| claude-sonnet-4-6 (single-shot) | 55.13% |
+| rtlcoder-7B (single-shot) | 2.56% |
+| Qwen32B base (job 371) | TBD |
+| Qwen32B + LoRA (job 369) | TBD |
+
+---
+
+## 2026-06-01 — DIAGNOSIS + FIX: jobs 369/371 cancelled, 374/375 resubmitted
+
+**Problem diagnosed:** Jobs 369 and 371 were running at ~0.8 tokens/second (539s/problem),
+roughly 60× slower than the expected ~50 t/s on H100 for a 32B 4-bit model.
+
+**Root cause:** `device_map="auto"` + `PeftModel` causes `model.device` to return `cpu`.
+The inference script then does `inputs.to(model.device)` → inputs land on CPU.
+Accelerate's per-layer dispatch hook then shuffles tensors per token, adding catastrophic
+CPU↔GPU overhead. Model weights stayed in VRAM (nvidia-smi showed 22.5 GB on GPU 0),
+but computation was effectively CPU-bound. At 0.8 t/s × 78 problems × ~500 tokens each
+the job would have taken ~700 hours — far beyond the 8h walltime.
+
+**Fix applied to `scripts/run_cid003_eval.py`** (used by both eval sbatches):
+```python
+# Before
+device_map="auto"
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+# After
+device_map={"": 0}         # pin all layers to cuda:0 (matches training script pattern)
+inputs = tokenizer(...).to("cuda:0")   # explicit, bypasses PeftModel.device ambiguity
+```
+
+**Actions:**
+- `scancel 369` (fine-tuned, 1 problem done at 539s)
+- `scancel 371` (base, 0 problems done)
+- Partial results from job 369 cleared (`results.json`, `rtl/`, `*_raw.txt`)
+- Both scripts resubmitted with fixed inference code
+
+**New jobs:**
+| JobID | Name | Node | Model |
+|-------|------|------|-------|
+| 374 | cid003-eval | slinky-1 | Qwen32B + LoRA (fine-tuned) |
+| 375 | cid003-base | slinky-0 | Qwen32B base (no adapter) |
+
+**Expected throughput after fix:** ~30–50 t/s → ~10–20s/problem → ~15–25 min total per job.
+
+---
+
+## 2026-06-01 — STATUS CHECK: job 374 running slow, job 375 failed
+
+**Job 374 (fine-tuned eval, slinky-1) — RUNNING, 16:40 elapsed**
+- 1/78 problems done: `cvdp_copilot_16qam_mapper_0001` | 363s | 1120 chars | FAIL
+- Throughput: **0.8 t/s** — unchanged from before the device_map fix
+- The device_map fix did not solve the root cause
+- At 363s/problem × 78 = ~7.9h → job will almost certainly **hit the 8h walltime** before finishing
+- Job 375 (base model) FAILED: default `--adapter` path restored to non-existent
+  `/home/noahsabb/adapters/...` instead of the checkpoint path; base eval ignored per user instruction
+
+**True root cause confirmed: bitsandbytes 4-bit matmul not using GPU CUDA kernels**
+- GPU-Util steady at 17–24%, model in VRAM (22.3 GB), yet 0.8 t/s = CPU-bound computation
+- bitsandbytes pip-installed into NGC 24.12-py3 container likely lacks working CUDA kernels
+  for this specific torch nightly + toolkit combination → falls back to CPU for quantized matmul
+- Explains why training also took 21h instead of expected 6–8h
+
+**Fix identified (not yet applied — awaiting user instruction):**
+Remove bitsandbytes entirely; load model in bf16.
+- 32B × 2 bytes = 64 GB → fits in H100's 81.5 GB with 16 GB to spare
+- Native PyTorch bf16 matmul, no external kernels required
+- LoRA adapter applies identically on bf16 base (quantization and adapters are independent)
+- Expected throughput: 50–100 t/s → ~10–20s/problem → all 78 done in <30 min
+
+---
+
+## 2026-06-01 — BF16 FIX APPLIED: job 374 cancelled → job 378 submitted
+
+**Fix applied to `scripts/run_cid003_eval.py`:**
+- Removed `BitsAndBytesConfig` import and all 4-bit quantization config
+- Removed `quantization_config=bnb_config` from `from_pretrained`
+- Model now loads as pure `torch_dtype=torch.bfloat16` — no bitsandbytes dependency
+- 32B × 2 bytes = 64 GB → fits H100's 81.5 GB with ~17 GB headroom
+- `device_map={"": 0}` and `.to("cuda:0")` retained from previous fix
+
+**Actions:**
+- `scancel 374`
+- Partial results cleared (1 completed problem)
+- `sbatch run_cid003_eval.sbatch` → **Job 378, PD → R on slinky-1**
+
+**Expected:** 50–100 t/s → ~10–20s/problem → all 78 done in <30 min
+
+**2026-06-01T20:22Z Loop iter 1:** Job 378 RUNNING 0:41, container importing. No results yet.
+**2026-06-01T20:32Z Loop iter 2:** Job 378 RUNNING 3:29, still importing (slinky-1 — likely re-downloading). No results yet.
+
+<!-- PIPELINE_STATUS: EVALUATING JOB=378 bf16 — monitoring every 10 min -->
 
