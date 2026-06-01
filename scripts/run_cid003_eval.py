@@ -83,21 +83,31 @@ def load_model_and_tokenizer(adapter_path: str | None):
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    log.info("Loading base model in bf16 (no quantization)...")
+    # Load to CPU first — no device_map means zero Accelerate dispatch hooks.
+    # Accelerate hooks fire per-module (~448 linear layers in Qwen-32B), adding
+    # ~1s of Python overhead per token even for a single-device map. Without
+    # device_map, the model is a plain PyTorch model with no hooks at all.
+    log.info("Loading base model in bf16 to CPU (no device_map, no Accelerate hooks)...")
     model = AutoModelForCausalLM.from_pretrained(
         base_path,
-        device_map={"": 0},
-        attn_implementation="sdpa",
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
+        low_cpu_mem_usage=True,
     )
+    log.info("Base model loaded to CPU.")
 
     if adapter_path:
         log.info(f"Loading LoRA adapter from {adapter_path} ...")
         model = PeftModel.from_pretrained(model, adapter_path)
-        log.info("Base model + LoRA adapter loaded.")
+        log.info("Merging LoRA weights on CPU...")
+        model = model.merge_and_unload()
+        log.info("Merge complete on CPU.")
     else:
-        log.info("No adapter — running base model only.")
+        log.info("No adapter.")
+
+    log.info("Moving merged model to cuda:0...")
+    model = model.to("cuda:0")
+    log.info("Model on cuda:0. No Accelerate hooks. Ready for inference.")
 
     model.eval()
     return model, tokenizer

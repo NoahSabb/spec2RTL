@@ -2,7 +2,7 @@
 #SBATCH --partition=medium
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
-#SBATCH --time=08:00:00
+#SBATCH --time=24:00:00
 #SBATCH --output=/home/noahsabb/logs/cid003-eval-%j.out
 #SBATCH --job-name=cid003-eval
 
@@ -40,7 +40,7 @@ srun \
     python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\", flush=True)"
 
     echo "=== Installing packages ==="
-    # Same proven install order as training (job 293)
+    # Core ML packages (proven order from job 293)
     pip install -q --no-deps --break-system-packages "trl==0.13.0"
     pip install -q --break-system-packages \
       datasets \
