@@ -1,19 +1,22 @@
 #!/bin/bash
-#SBATCH --partition=medium
+#SBATCH --partition=small
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
-#SBATCH --time=24:00:00
-#SBATCH --output=/home/noahsabb/logs/cid003-base-%j.out
-#SBATCH --job-name=cid003-base
+#SBATCH --time=01:30:00
+#SBATCH --output=/home/noahsabb/logs/grpo-dryrun-%j.out
+#SBATCH --job-name=grpo-dryrun
+
+# Dry run: 5 problems, 2 GRPO steps.
+# Verifies: iverilog reward function, model fits in VRAM, TRL API compatibility.
+# Takes ~5-15 min after model load.
 
 set -e
-mkdir -p /home/noahsabb/logs /home/noahsabb/results
+mkdir -p /home/noahsabb/logs
 
 export HF_HOME=/home/noahsabb/.cache/huggingface
 export TOKENIZERS_PARALLELISM=false
 
-echo "=== Base model eval (no LoRA adapter) ==="
-echo "Results: /home/noahsabb/results/cid003_eval_base/"
+echo "=== GRPO dry run: 5 problems, 2 steps ==="
 
 srun \
   --gres=gpu:1 \
@@ -25,7 +28,7 @@ srun \
     export PATH=/usr/local/bin:/usr/bin:$PATH
 
     echo "=== GPU sanity check ==="
-    python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\", flush=True)"
+    python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\")"
 
     echo "=== Installing packages ==="
     pip install -q --no-deps --break-system-packages "trl==0.13.0"
@@ -36,14 +39,14 @@ srun \
       "peft==0.13.0" \
       huggingface-hub tokenizers multiprocess xxhash
     pip install -q --break-system-packages bitsandbytes
-    pip install -q --break-system-packages tyro rich
+    pip install -q --break-system-packages tyro rich awscli
 
-    echo "=== Installing iverilog for scoring ==="
+    echo "=== Installing iverilog ==="
     apt-get update -qq && apt-get install -y -qq iverilog 2>/dev/null || \
-      echo "WARNING: iverilog install failed — compile check will be skipped"
+      echo "WARNING: iverilog install failed"
     iverilog -V 2>&1 | head -1 || echo "iverilog not available"
 
-    echo "=== Starting inference (base model, no adapter) ==="
+    echo "=== Starting GRPO dry run ==="
     export HF_HOME=/home/noahsabb/.cache/huggingface
     export TOKENIZERS_PARALLELISM=false
     export MASTER_ADDR=localhost
@@ -52,11 +55,13 @@ srun \
     export RANK=0
     export WORLD_SIZE=1
 
-    python3 /home/noahsabb/spec2rtl/scripts/run_cid003_eval.py \
-        --data    /home/noahsabb/data/cid003_nonagentic.jsonl \
-        --adapter "" \
-        --out     /home/noahsabb/results/cid003_eval_base
+    python3 /home/noahsabb/spec2rtl/scripts/train_grpo.py \
+        --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 \
+        --out     /tmp/grpo_dry_run \
+        --dry-run \
+        --max-problems 5 \
+        --max-steps 2 \
+        --no-r2-upload
 
-    echo "=== Job complete ==="
-    echo "Results at: /home/noahsabb/results/cid003_eval_base/"
+    echo "=== DRY RUN COMPLETE ==="
   '

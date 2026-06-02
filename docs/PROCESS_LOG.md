@@ -683,3 +683,48 @@ Note: iverilog compile pass was 64.1% — the additional failures in the cocotb 
 
 <!-- PIPELINE_STATUS: EVALUATING JOB=378 bf16 — monitoring every 10 min -->
 
+---
+
+## 2026-06-02 — BASE MODEL EVAL COMPLETE: job 409 (cid003-base)
+
+**Task:** Raw eval of Qwen2.5-Coder-32B-Instruct base (no LoRA) on full CVDP cid003, same 78 problems, same inference script as job 384.
+
+**Job 409:** medium partition, slinky-X, 24h walltime. Completed in ~2h 29m.
+- Same bf16 load-to-CPU → `.to("cuda:0")` path as job 384 (no device_map, no Accelerate hooks)
+- CUDA warmup same pattern as job 384: first 4 problems slow (926s, 768s, 151s, 422s), then 22–79s per problem
+- New memory diagnostics confirmed: dtype=torch.bfloat16, allocated=65.5 GB, free=19.5 GB — KV cache fits easily
+
+### iverilog compile pass@1
+
+| Category | Base (no LoRA) | Fine-tuned (LoRA r=32) | Delta |
+|----------|---------------|----------------------|-------|
+| Overall  | 53/78 = 67.9% | 50/78 = 64.1%        | Base +3.8pp |
+| Easy (41) | 30/41 = 73.2% | 30/41 = 73.2%       | Tied |
+| Medium (37) | 23/37 = 62.2% | 20/37 = 54.1%     | Base +8.1pp |
+
+### cocotb functional pass@1 (full harness)
+
+Run: `RTL_DIR=~/Downloads/cid003_eval_base/rtl OSS_SIM_IMAGE=cvdp-sim:latest python run_benchmark.py -f ../data/cid003_nonagentic.jsonl -l -m qwen32b-base -c ../agents/pregenerated_factory.py -p work_qwen32b_base_raw -t 4`
+
+| Category | Base (no LoRA) | Fine-tuned (LoRA r=32) | Delta |
+|----------|---------------|----------------------|-------|
+| Overall  | 11/78 = 14.10% | 15/78 = 19.23%      | Fine-tuned **+5.13pp** |
+| Easy (41) | 9/41 = 21.95% | 10/41 = 24.39%      | Fine-tuned +2.44pp |
+| Medium (37) | 2/37 = 5.41% | 5/37 = 13.51%      | Fine-tuned **+8.10pp** |
+
+### Generation timing
+
+| | Base | Fine-tuned |
+|--|------|-----------|
+| Total | 8,965s (~2h 29m) | 6,025s (~1h 40m) |
+| Avg/problem | 115s | 77s |
+
+### Key findings
+
+- Fine-tuned wins on functional correctness (+5.13pp cocotb), especially medium problems (+8.10pp). This is the metric that matters.
+- Base wins on iverilog compile rate (+3.8pp) — base generates more conservative Verilog; fine-tuned attempts more complex constructs that sometimes fail iverilog but produce functionally correct logic when they compile.
+- Fine-tuned is 33% faster (77s vs 115s avg) — training shifted outputs toward more concise Verilog.
+- Both are well below the Claude Sonnet baseline (55.13%) and paper ACE-RTL full system (96.15%). Agentic loop is the critical next step.
+
+<!-- PIPELINE_STATUS: BASE EVAL COMPLETE job=409, cocotb=14.10% (11/78), iverilog=67.9% (53/78) -->
+

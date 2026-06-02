@@ -107,9 +107,18 @@ def load_model_and_tokenizer(adapter_path: str | None):
 
     log.info("Moving merged model to cuda:0...")
     model = model.to("cuda:0")
-    log.info("Model on cuda:0. No Accelerate hooks. Ready for inference.")
-
     model.eval()
+
+    dtype = next(model.parameters()).dtype
+    alloc_gb = torch.cuda.memory_allocated() / 1e9
+    resv_gb  = torch.cuda.memory_reserved()  / 1e9
+    total_gb = torch.cuda.get_device_properties(0).total_memory / 1e9
+    free_gb  = total_gb - alloc_gb
+    log.info(
+        f"Model on cuda:0 — dtype={dtype}, "
+        f"allocated={alloc_gb:.1f} GB, reserved={resv_gb:.1f} GB, "
+        f"total={total_gb:.1f} GB, free(alloc)={free_gb:.1f} GB"
+    )
     return model, tokenizer
 
 
@@ -127,6 +136,10 @@ def build_prompt(spec: str, tokenizer) -> str:
 def generate(model, tokenizer, prompt: str, temperature: float, max_new_tokens: int) -> str:
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda:0")
     input_len = inputs["input_ids"].shape[-1]
+
+    alloc_gb = torch.cuda.memory_allocated() / 1e9
+    resv_gb  = torch.cuda.memory_reserved()  / 1e9
+    log.info(f"  pre-generate VRAM: allocated={alloc_gb:.1f} GB, reserved={resv_gb:.1f} GB, input_tokens={input_len}")
 
     with torch.no_grad():
         output_ids = model.generate(
