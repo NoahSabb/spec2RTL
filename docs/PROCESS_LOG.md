@@ -728,3 +728,148 @@ Run: `RTL_DIR=~/Downloads/cid003_eval_base/rtl OSS_SIM_IMAGE=cvdp-sim:latest pyt
 
 <!-- PIPELINE_STATUS: BASE EVAL COMPLETE job=409, cocotb=14.10% (11/78), iverilog=67.9% (53/78) -->
 
+---
+
+## 2026-06-02 — GRPO RL TRAINING: speed fix applied, dry run submitted as job 533
+
+**Problem with prior dry run (job 456):**
+- Dry run passed (memory + reward OK) but timing was 793–1564 s/step
+- Root cause: max_new_tokens=2048 × G=4 completions = excessive generation per step
+- At that pace, full 78-problem × 3-epoch run = ~70+ hours → far exceeds any walltime
+
+**Fix applied:**
+- `scripts/train_grpo.py`: default `--max-new-tokens` 2048 → **512**, default `--num-generations` 4 → **2**
+- `scripts/run_grpo_dryrun.sbatch`: partition small → **medium**; explicit `--max-new-tokens 512 --num-generations 2` added
+- `scripts/run_grpo.sbatch`: same token/generation flags updated for full training run
+
+**Speed projection:**
+- 4× fewer tokens (512 vs 2048) × 2× fewer completions (2 vs 4) = ~8× faster generation
+- Expected step time: 793–1564s / 8 = ~100–200s/step
+- Full run: 78 problems × 3 epochs × ~150s/step ≈ 9.75h + ~15min load + ~1.5h eval ≈ **11.5h total** (within 20h)
+
+**Dry run job 533:** medium partition, 5 problems, 2 steps — submitted 2026-06-02
+- Threshold: step < 300s → auto-submit full training job
+- If still slow (>300s): reduce max-new-tokens to 256 and retry
+
+**Dry run job 533 results:**
+- Step 1: gen=378s (CUDA warmup suspected, but confirmed not warmup — step 2 was same)
+- Step 2: gen=382s → both steps > 300s threshold
+- Dry run PASSED (memory OK, reward OK) but timing too slow for full job
+- Root cause: 16qam problems generate near-max tokens; at ~1-3 t/s in training context with G=2, each step ≈ 380s
+
+**Fix: reduced max_new_tokens 512 → 256** (all three scripts updated)
+- Expected step time: ~190s (halved from 380s) → well under 300s threshold
+- Full job projection: 234 steps × 190s ≈ 12.4h + setup + eval ≈ 15h (within 20h budget)
+
+**Dry run job 538 results (max_new_tokens=256):**
+- Step 1: gen=281s ✓ (under 300s)
+- Step 2: gen=216s ✓ (under 300s, steady-state)
+- DRY RUN PASSED
+
+**Full job timing projection (job 545):**
+- 234 steps (78 problems × 3 epochs) × avg ~248s/step ≈ 16.1h training
+- Plus ~15min model load + ~1.5h eval ≈ **~18h total** (within 24h walltime)
+
+**Full training job 545 submitted:** medium partition, slinky-1, rl-grpo-v1, RUNNING immediately (container cached)
+- max_new_tokens=256, num_generations=2, epochs=3, lr=5e-6
+- Adapter → /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1/
+- R2 backup → s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v1/
+- Auto-eval (Phase 2) → /home/noahsabb/results/cid003_eval_rl_v1/
+
+**Job 545 outcome:** CUDA OOM during backward pass at step 36 (not generation). Cancelled.
+
+**OOM fixes applied and resubmitted as job 564:**
+1. `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` — reduces fragmentation OOM (both outer sbatch env and srun inner env)
+2. `torch.cuda.empty_cache()` after `optimizer.step()` in `compute_grpo_step` — releases cached allocator memory after each gradient step
+3. LoRA rank r=32 → r=16 for RL adapter — SFT adapter (r=32) is now merged into base weights first, then a fresh r=16 LoRA is attached via `get_peft_model`; cuts optimizer state from ~2.1 GB to ~1.1 GB (saves ~1 GB VRAM)
+   - Target modules: q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj (same as SFT)
+   - lora_alpha=32, lora_dropout=0.05
+
+**Job 564:** medium partition, slinky-1, RUNNING immediately (container cached)
+
+**Job 564 outcome:** Node failure on slinky-1 at step 109/234 — not OOM, physical node crash. Epoch 1 checkpoint (step 78) was saved before crash. Job auto-requeued by SLURM; manually cancelled (superseded by v2).
+
+**Changes for v2 (job 589):**
+1. `#SBATCH --exclude=slinky-1` — avoids the failed node
+2. `--checkpoint-steps 78` passed to train_grpo.py — saves adapter checkpoint every 78 steps (end of each epoch) at `checkpoint-step78`, `checkpoint-step156`, `checkpoint-step234`
+3. R2 upload path in train_grpo.py now derived dynamically from `--out` dir name (was hardcoded to v1)
+4. All output paths updated: `qwen32b-lora-rl-v2`, `cid003_eval_rl_v2`, log `rl-grpo-v2-%j.out`
+
+**Job 589:** cancelled before starting — missing `--mem=128G` fix.
+
+**Additional fix for job 591:** `--mem=0` → `--mem=128G` (avoids unbounded host memory allocation that can cause SLURM to kill the job on a busy node)
+
+**Job 591:** cancelled before training (mem fix missed in train_qwen.sbatch; resubmitted cleanly as 593).
+
+**Both sbatch files fixed:**
+- `scripts/run_grpo.sbatch`: `--mem=0` → `--mem=128G`, `--exclude=slinky-1`, `--checkpoint-steps 78`, job-name=rl-grpo-v2
+- `scripts/train_qwen.sbatch`: `--mem=0` → `--mem=128G` (for future SFT reruns)
+
+**Job 593:** medium partition, rl-grpo-v2, PD (Priority) — slinky-1 excluded, mem=128G
+
+---
+
+## 2026-06-03 — GRPO RL TRAINING COMPLETE: job 593 (rl-grpo-v2)
+
+**Job 593:** medium partition, slinky-0, wall time **5h 26m 14s**
+
+### Training metrics (per epoch)
+
+| Epoch | mean_reward | clean_compile | loss | elapsed |
+|-------|-------------|--------------|------|---------|
+| 1 | 0.071 | 7.1% | 0.0525 | 5265s (~87 min incl. model load) |
+| 2 | 0.096 | 9.6% | −0.0166 | 3032s (~50 min) |
+| 3 | 0.077 | 7.7% | 0.0464 | 3018s (~50 min) |
+
+Checkpoints saved at steps 78, 156, 234 ✓
+Final adapter: `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2/` ✓
+R2 backup: `s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v2/` ✓
+
+### Eval results — iverilog compile pass@1
+
+| Category | Score |
+|----------|-------|
+| **Overall** | **57/78 = 73.1%** |
+| Easy (41) | 35/41 = 85.4% |
+| Medium (37) | 22/37 = 59.5% |
+
+### Full comparison table
+
+| Model | iverilog pass@1 | cocotb pass@1 |
+|-------|----------------|--------------|
+| Base Qwen32B (no adapter) | 53/78 = 67.9% | 11/78 = 14.10% |
+| SFT fine-tuned (LoRA r=32, 5 epochs) | 50/78 = 64.1% | 15/78 = 19.23% |
+| **RL GRPO (LoRA r=16, 3 epochs, v2)** | **57/78 = 73.1%** | TBD (needs Docker) |
+
+**RL vs Base: +5.2pp iverilog | RL vs SFT: +9.0pp iverilog**
+
+Note: cocotb functional pass@1 for RL adapter requires Docker + CVDP harness locally (RTL files at `/home/noahsabb/results/cid003_eval_rl_v2/rtl/`).
+
+---
+
+## 2026-06-03 — COCOTB HARNESS EVAL COMPLETE: rl-grpo-v2
+
+Run: `RTL_DIR=~/Downloads/cid003_eval_rl_v2 OSS_SIM_IMAGE=cvdp-sim:latest python run_benchmark.py -f ../data/cid003_nonagentic.jsonl -l -m qwen32b-lora-rl-v2 -c ../agents/pregenerated_factory.py -p work_qwen32b_lora_rl_v2 -t 4`
+
+### cocotb functional pass@1
+
+| Category | Score |
+|----------|-------|
+| **Overall** | **23/78 = 29.49%** |
+| Easy (41) | 15/41 = 36.59% |
+| Medium (37) | 8/37 = 21.62% |
+
+### Full pipeline comparison — cocotb pass@1
+
+| Model | Overall | Easy | Medium |
+|-------|---------|------|--------|
+| Base Qwen32B (no adapter) | 11/78 = 14.10% | 9/41 = 21.95% | 2/37 = 5.41% |
+| SFT fine-tuned (LoRA r=32, 5 ep) | 15/78 = 19.23% | 10/41 = 24.39% | 5/37 = 13.51% |
+| **RL GRPO v2 (LoRA r=16, 3 ep)** | **23/78 = 29.49%** | **15/41 = 36.59%** | **8/37 = 21.62%** |
+
+**RL vs Base: +15.4pp | RL vs SFT: +10.3pp | RL vs Claude Sonnet standalone (55.13%): −25.6pp**
+
+The RL adapter substantially outperforms both baselines on functional correctness. The gap to the Claude Sonnet baseline (55.13%) represents the remaining opportunity for the agentic loop (Reflector + Coordinator iteration).
+
+<!-- PIPELINE_STATUS: FULL HARNESS EVAL COMPLETE rl-grpo-v2, cocotb=29.49% (23/78) -->
+

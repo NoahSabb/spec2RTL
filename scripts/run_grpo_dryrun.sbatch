@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --partition=small
+#SBATCH --partition=medium
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
 #SBATCH --time=01:30:00
@@ -56,11 +56,13 @@ srun \
     export WORLD_SIZE=1
 
     python3 /home/noahsabb/spec2rtl/scripts/train_grpo.py \
-        --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 \
-        --out     /tmp/grpo_dry_run \
+        --adapter          /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 \
+        --out              /tmp/grpo_dry_run \
         --dry-run \
-        --max-problems 5 \
-        --max-steps 2 \
+        --max-problems     5 \
+        --max-steps        2 \
+        --max-new-tokens   256 \
+        --num-generations  2 \
         --no-r2-upload
 
     echo "=== DRY RUN COMPLETE ==="

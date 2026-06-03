@@ -3,9 +3,10 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
 #SBATCH --time=24:00:00
-#SBATCH --output=/home/noahsabb/logs/rl-grpo-v1-%j.out
-#SBATCH --job-name=rl-grpo-v1
-#SBATCH --mem=0
+#SBATCH --output=/home/noahsabb/logs/rl-grpo-v2-%j.out
+#SBATCH --job-name=rl-grpo-v2
+#SBATCH --mem=128G
+#SBATCH --exclude=slinky-1
 
 # ── Prereqs ───────────────────────────────────────────────────────────────────
 # Before submitting:
@@ -17,16 +18,17 @@
 
 set -e
 mkdir -p /home/noahsabb/logs \
-         /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1 \
-         /home/noahsabb/results/cid003_eval_rl_v1
+         /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2 \
+         /home/noahsabb/results/cid003_eval_rl_v2
 
 export HF_HOME=/home/noahsabb/.cache/huggingface
 export TOKENIZERS_PARALLELISM=false
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export CLOUDFLARE_R2_ENDPOINT=https://a5000aacae3e74e21534569c0bf2909b.r2.cloudflarestorage.com
 [ -f /home/noahsabb/.r2_creds ] && source /home/noahsabb/.r2_creds
 
-echo "=== Job: rl-grpo-v1  JOB_ID=${SLURM_JOB_ID}  NODE=${SLURM_NODELIST} ==="
-echo "=== Phase 1: GRPO training (3 epochs, 78 problems, 4 completions/step) ==="
+echo "=== Job: rl-grpo-v2  JOB_ID=${SLURM_JOB_ID}  NODE=${SLURM_NODELIST} ==="
+echo "=== Phase 1: GRPO training (3 epochs, 78 problems, 2 completions/step, r=16 LoRA) ==="
 
 srun \
   --gres=gpu:1 \
@@ -59,6 +61,7 @@ srun \
     echo "=== Starting GRPO training ==="
     export HF_HOME=/home/noahsabb/.cache/huggingface
     export TOKENIZERS_PARALLELISM=false
+    export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
     export MASTER_ADDR=localhost
     export MASTER_PORT=29500
     export LOCAL_RANK=0
@@ -68,26 +71,27 @@ srun \
     export CLOUDFLARE_R2_ENDPOINT=https://a5000aacae3e74e21534569c0bf2909b.r2.cloudflarestorage.com
 
     python3 /home/noahsabb/spec2rtl/scripts/train_grpo.py \
-        --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 \
-        --out     /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1 \
-        --epochs  3 \
-        --lr      5e-6 \
-        --max-new-tokens 2048 \
-        --num-generations 4
+        --adapter          /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-35e941c1 \
+        --out              /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2 \
+        --epochs           3 \
+        --lr               5e-6 \
+        --max-new-tokens   256 \
+        --num-generations  2 \
+        --checkpoint-steps 78
 
     echo "=== Training complete ==="
-    echo "Adapter saved to: /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1/"
-    ls -lh /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1/ || true
+    echo "Adapter saved to: /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2/"
+    ls -lh /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2/ || true
 
     echo ""
     echo "=== Phase 2: Eval on cid003 (same script as job 384) ==="
 
     python3 /home/noahsabb/spec2rtl/scripts/run_cid003_eval.py \
-        --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1 \
-        --out     /home/noahsabb/results/cid003_eval_rl_v1
+        --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2 \
+        --out     /home/noahsabb/results/cid003_eval_rl_v2
 
     echo "=== Job complete ==="
     echo ""
     echo "Results:"
-    cat /home/noahsabb/results/cid003_eval_rl_v1/summary.txt 2>/dev/null || true
+    cat /home/noahsabb/results/cid003_eval_rl_v2/summary.txt 2>/dev/null || true
   '

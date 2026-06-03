@@ -7,7 +7,7 @@ a custom GRPO loop using a tiered iverilog compilation reward.
 
 TRL's GRPOTrainer is NOT used — it requires TRL ≥0.14 which conflicts with the
 container's pinned transformers==4.46.0.  This script implements GRPO directly:
-  1. For each problem, generate G completions (G=4) sequentially.
+  1. For each problem, generate G completions (G=2) sequentially.
   2. Score each with iverilog (tiered: 1.0 / 0.3 / 0.0).
   3. Normalize rewards → advantages.
   4. Forward pass (with grad) for each completion → accumulate GRPO gradients.
@@ -18,10 +18,12 @@ sampling ratio is always 1.0 and the algorithm reduces to REINFORCE with
 normalized baseline — a valid and stable choice at LR=5e-6 over 3 epochs.
 
 Memory design (single H100 80 GB):
-  - bf16 base model + LoRA: ~64 GB (bitsandbytes CUDA kernels broken in NGC 24.12)
+  - SFT adapter (r=32) is merged into base then discarded; fresh r=16 LoRA is trained
+  - r=16 cuts optimizer state from ~2.1 GB to ~1.1 GB vs r=32
+  - PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True reduces fragmentation-OOM
   - No device_map: zero Accelerate dispatch hooks (avoids the 1 t/s throughput bug)
   - gradient_checkpointing: caps activation memory; only stores one layer at a time
-  - G=4 completions generated sequentially, logprobs computed one-at-a-time
+  - G=2 completions generated sequentially, logprobs computed one-at-a-time
 
 Reward tiers:
   1.0  —  clean iverilog compile (returncode 0)
@@ -52,7 +54,7 @@ from pathlib import Path
 
 import torch
 import torch.nn.functional as F
-from peft import PeftModel
+from peft import PeftModel, LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer, get_cosine_schedule_with_warmup
 
 logging.basicConfig(
@@ -112,8 +114,8 @@ def parse_args():
                    default="/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v1")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--lr", type=float, default=5e-6)
-    p.add_argument("--max-new-tokens", type=int, default=2048)
-    p.add_argument("--num-generations", type=int, default=4,
+    p.add_argument("--max-new-tokens", type=int, default=256)
+    p.add_argument("--num-generations", type=int, default=2,
                    help="Completions per problem per step (G in GRPO)")
     p.add_argument("--temperature", type=float, default=0.9)
     p.add_argument("--epsilon", type=float, default=0.2,
@@ -122,6 +124,8 @@ def parse_args():
                    help="Cap dataset size (dry run)")
     p.add_argument("--max-steps", type=int, default=-1,
                    help="Cap total training steps, -1 = run all epochs")
+    p.add_argument("--checkpoint-steps", type=int, default=0,
+                   help="Save adapter checkpoint every N global steps (0 = epoch-end only)")
     p.add_argument("--no-r2-upload", action="store_true")
     p.add_argument("--dry-run", action="store_true",
                    help="Quick validation: 5 problems, 2 steps, no checkpoint save")
@@ -188,8 +192,25 @@ def load_model_and_tokenizer(adapter_path):
     )
     log.info("Base model loaded.")
 
-    log.info(f"Loading LoRA adapter from {adapter_path} (is_trainable=True)...")
-    model = PeftModel.from_pretrained(base_model, adapter_path, is_trainable=True)
+    # Merge the SFT adapter (r=32) into the base weights, then discard the adapter.
+    # This frees the r=32 optimizer-state budget and lets us start a fresh r=16 LoRA
+    # whose AdamW states cost ~1.1 GB instead of ~2.1 GB.
+    log.info(f"Loading SFT adapter from {adapter_path} (frozen) — merging into base...")
+    sft_model = PeftModel.from_pretrained(base_model, adapter_path, is_trainable=False)
+    base_model = sft_model.merge_and_unload()
+    log.info("SFT adapter merged and unloaded.")
+
+    log.info("Attaching fresh r=16 LoRA for RL training...")
+    lora_config = LoraConfig(
+        r=16,
+        lora_alpha=32,
+        target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
+                        "gate_proj", "up_proj", "down_proj"],
+        lora_dropout=0.05,
+        bias="none",
+        task_type="CAUSAL_LM",
+    )
+    model = get_peft_model(base_model, lora_config)
 
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     total = sum(p.numel() for p in model.parameters())
@@ -359,6 +380,7 @@ def compute_grpo_step(model, prompt_ids, comp_ids_list, advantages, optimizer):
         [p for p in model.parameters() if p.requires_grad], max_norm=1.0
     )
     optimizer.step()
+    torch.cuda.empty_cache()
     return step_loss
 
 
@@ -429,6 +451,13 @@ def train(model, tokenizer, problems, args):
 
             epoch_loss += step_loss
             global_step += 1
+
+            if (not args.dry_run and args.checkpoint_steps > 0
+                    and global_step % args.checkpoint_steps == 0):
+                ckpt = out_dir / f"checkpoint-step{global_step}"
+                model.save_pretrained(str(ckpt))
+                tokenizer.save_pretrained(str(ckpt))
+                log.info(f"Step checkpoint saved: {ckpt}")
 
             lr_now = scheduler.get_last_lr()[0]
             log.info(
@@ -524,7 +553,8 @@ def main():
     log.info("Adapter saved.")
 
     if not args.no_r2_upload:
-        upload_to_r2(str(out_dir), "s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v1/")
+        adapter_name = Path(args.out).name
+        upload_to_r2(str(out_dir), f"s3://spec2rtl-checkpoints/adapters/{adapter_name}/")
 
 
 if __name__ == "__main__":
