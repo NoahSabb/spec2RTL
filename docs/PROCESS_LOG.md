@@ -1070,3 +1070,38 @@ Note: `cvdp_copilot_factorial` harness timed out at 600s and was scored as FAIL.
 
 <!-- PIPELINE_STATUS: AGENTIC LOOP v2 LOCAL TEST COMPLETE 3/5 pass on test set -->
 
+---
+
+## 2026-06-03 — AGENTIC EVAL v2: job 839 running on slinky-2
+
+**Task:** Full 78-problem agentic eval using Qwen RL v2 adapter + loop v2.
+
+**Setup:**
+- Generator: Qwen2.5-Coder-32B + RL v2 adapter (merged bf16, no device_map)
+- Initial RTL: pre-generated RL v2 outputs from `/home/noahsabb/results/cid003_eval_rl_v2/rtl/`
+- Compile loop: up to 3 iterations using iverilog 12.0 feedback
+- Cocotb loop: up to 2 iterations using pre-saved cocotb error messages
+- Output: `/home/noahsabb/results/cid003_eval_agentic_v2/rtl/` (78 .sv files)
+- JSONL log: `/home/noahsabb/logs/agentic_full_run.jsonl`
+
+**Previous job failures (fixed):**
+- Job 830: bash -c quoting error ($(python3 -c ...) syntax)
+- Job 834: apt-get update missing → iverilog not installed
+- Job 836: `subprocess.run(["which", ...])` raises FileNotFoundError in container → fixed with `shutil.which`
+- Job 839: all fixes applied, running correctly
+
+**Job 839 startup trace:**
+- T+0: container cached (slinky-2 had image from job 836)
+- T+6:54: pip installed, iverilog 12.0 installed
+- T+7:54: model loading from HF cache (shards: 2.7s for 14 shards, cached from earlier)
+- T+10:24: RL v2 LoRA merged on CPU
+- T+12:36: model on cuda:0 (65.5 GB / 85.0 GB total)
+- T+29:45: problem 1 (16qam_mapper_0001) done: compile FAIL → repair PASS (585s) → cocotb repair ×2 (330s + 104s) = 1018s total
+- T+35: problem 2 (16qam_mapper_0006) starting
+
+**ETA:** 16qam problems are worst-case outliers (~1000s each). Average expected ~400-600s/problem for remaining 76. Estimated completion: ~10-12h from start → 2026-06-04T08:00–10:00Z.
+
+**After job:** download rtl/ dir, run CVDP cocotb harness locally, report final pass@1.
+
+<!-- PIPELINE_STATUS: AGENTIC EVAL v2 JOB=839 RUNNING slinky-2 medium, ETA 2026-06-04T08:00Z -->
+
