@@ -928,5 +928,145 @@ Expected full-run average: ~148s/step (same 3× ratio as v2 dry-run-to-full obse
 - R2 backup: s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v3/
 - Auto-eval: Phase 2 → /home/noahsabb/results/cid003_eval_rl_v3/
 
-<!-- PIPELINE_STATUS: TRAINING JOBID=708 RUNNING slinky-2 (rl-grpo-v3) -->
+## 2026-06-03 — RL GRPO v3 COMPLETE: job 708 done in 11h 59m 46s
+
+**Job 708:** medium partition, slinky-2, wall time 11:59:46
+
+### Training metrics (per epoch)
+
+| Epoch | mean_reward | clean_compile | loss | elapsed |
+|-------|-------------|--------------|------|---------|
+| 1 | 0.377 | 37.5% | −0.1238 | 13,213s (~3.7h) |
+| 2 | 0.385 | 38.5% | −0.1989 | 10,696s (~3.0h) |
+| 3 | 0.386 | 38.5% | −0.1310 | 10,668s (~3.0h) |
+
+Training clean compile rate of 37–38.5% vs RL v2's 7–10% reflects the much stronger RL v2 starting point.
+
+Epoch checkpoints saved at:
+- `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/epoch1/` ✓
+- `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/epoch2/` ✓
+- `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/epoch3/` ✓
+
+Final adapter: `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/` ✓
+R2 backup: `s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v3/` ✓
+
+### Eval results — iverilog compile pass@1
+
+| Category | Score |
+|----------|-------|
+| **Overall** | **57/78 = 73.1%** |
+| Easy (41) | 34/41 = 82.9% |
+| Medium (37) | 23/37 = 62.2% |
+
+### Full pipeline comparison — iverilog pass@1
+
+| Model | Overall | Easy | Medium |
+|-------|---------|------|--------|
+| Base Qwen32B (no adapter) | 53/78 = 67.9% | 30/41 = 73.2% | 23/37 = 62.2% |
+| SFT fine-tuned (LoRA r=32, 5 ep) | 50/78 = 64.1% | 30/41 = 73.2% | 20/37 = 54.1% |
+| RL GRPO v2 (LoRA r=16, 3 ep) | 57/78 = 73.1% | 35/41 = 85.4% | 22/37 = 59.5% |
+| **RL GRPO v3 (LoRA r=16, 3 ep)** | **57/78 = 73.1%** | **34/41 = 82.9%** | **23/37 = 62.2%** |
+
+v3 matches v2 on overall iverilog (73.1%). Distribution shifted slightly: better on Medium (+2.7pp) but marginally weaker on Easy (−2.5pp). Both beat base and SFT.
+
+### Full pipeline comparison — cocotb functional pass@1
+
+| Model | Overall | Easy | Medium |
+|-------|---------|------|--------|
+| Base Qwen32B (no adapter) | 11/78 = 14.10% | 9/41 = 21.95% | 2/37 = 5.41% |
+| SFT fine-tuned (LoRA r=32, 5 ep) | 15/78 = 19.23% | 10/41 = 24.39% | 5/37 = 13.51% |
+| **RL GRPO v2 (LoRA r=16, 3 ep)** | **23/78 = 29.49%** | **15/41 = 36.59%** | **8/37 = 21.62%** |
+| RL GRPO v3 (LoRA r=16, 3 ep) | TBD — needs Docker + CVDP harness | | |
+
+## 2026-06-03 — COCOTB HARNESS EVAL COMPLETE: rl-grpo-v3
+
+Run: `RTL_DIR=~/Downloads/cid003_eval_rl_v3/rtl OSS_SIM_IMAGE=cvdp-sim:latest python run_benchmark.py -f ../data/cid003_nonagentic.jsonl -l -m qwen32b-lora-rl-v3 -c ../agents/pregenerated_factory.py -p work_qwen32b_lora_rl_v3 -t 4`
+
+Note: `cvdp_copilot_factorial` harness timed out at 600s and was scored as FAIL.
+
+### cocotb functional pass@1
+
+| Category | Score |
+|----------|-------|
+| **Overall** | **22/78 = 28.21%** |
+| Easy (41) | 15/41 = 36.59% |
+| Medium (37) | 7/37 = 18.92% |
+
+### Final four-model comparison
+
+#### iverilog compile pass@1
+
+| Model | Overall | Easy | Medium |
+|-------|---------|------|--------|
+| Base Qwen32B (no adapter) | 53/78 = 67.9% | 30/41 = 73.2% | 23/37 = 62.2% |
+| SFT fine-tuned (LoRA r=32, 5 ep) | 50/78 = 64.1% | 30/41 = 73.2% | 20/37 = 54.1% |
+| RL GRPO v2 (LoRA r=16, 3 ep) | **57/78 = 73.1%** | **35/41 = 85.4%** | 22/37 = 59.5% |
+| RL GRPO v3 (LoRA r=16, 3 ep) | **57/78 = 73.1%** | 34/41 = 82.9% | **23/37 = 62.2%** |
+
+#### cocotb functional pass@1
+
+| Model | Overall | Easy | Medium |
+|-------|---------|------|--------|
+| Base Qwen32B (no adapter) | 11/78 = 14.10% | 9/41 = 21.95% | 2/37 = 5.41% |
+| SFT fine-tuned (LoRA r=32, 5 ep) | 15/78 = 19.23% | 10/41 = 24.39% | 5/37 = 13.51% |
+| **RL GRPO v2 (LoRA r=16, 3 ep)** | **23/78 = 29.49%** | **15/41 = 36.59%** | **8/37 = 21.62%** |
+| RL GRPO v3 (LoRA r=16, 3 ep) | 22/78 = 28.21% | 15/41 = 36.59% | 7/37 = 18.92% |
+
+**v3 vs v2:** Overall −1.28pp, Easy tied, Medium −2.70pp. v3 did not improve over v2.
+
+**Interpretation:** Both v2 and v3 show identical iverilog compile rates (73.1%), and the functional regression on medium problems in v3 is within noise (one fewer problem). The starting point for v3 (RL v2 adapter) was already well-optimised for the iverilog-only reward signal — diminishing returns set in after v2. The remaining gap to Claude Sonnet (55.13%) likely requires the agentic loop (Reflector + Coordinator) rather than further solo-generation RL.
+
+### Output files
+- `cvdp_benchmark/work_qwen32b_lora_rl_v3/report.txt` — full per-problem breakdown
+- `/home/noahsabb/results/cid003_eval_rl_v3/rtl/` — 78 generated .sv files
+
+<!-- PIPELINE_STATUS: FULL HARNESS EVAL COMPLETE rl-grpo-v3, cocotb=28.21% (22/78) -->
+
+---
+
+## 2026-06-03 — AGENTIC LOOP v2: implemented and tested
+
+**Objective:** Improve the agentic loop from v1 to pass more cocotb tests via targeted repair.
+
+**Design changes (agents/v2/ — NOT modifying existing agents/):**
+
+| Change | v1 | v2 |
+|--------|----|----|
+| Error parsing | Raw last 1500 chars | Structured: iverilog line+type, cocotb assertion values, failed test names |
+| Repair prompt | spec + prev RTL + raw error + coordinator guidance | spec + full prev RTL + parsed error block + reflector fix instruction |
+| Loop structure | 10 iter + 3 restarts + Coordinator | 5 iter, no restarts, no Coordinator overhead |
+| JSON logging | None | Every iteration: problem_id, iteration, passed, stage, parsed_error, reflection |
+| Initial RTL | Always generates fresh | Accepts pre-existing RTL (e.g. from RL v2 cluster eval) |
+
+**Files created:**
+- `agents/v2/agentic_loop_v2.py` — improved loop core
+- `agents/v2/claude_gen_factory.py` — Claude Sonnet generator (local testing)
+- `agents/v2/run_local_test.py` — standalone test runner
+- `agents/v2/agentic_factory_v2.py` — benchmark-runner-compatible factory
+
+**Local test: 5 problems from RL v2 eval (passed iverilog, failed cocotb)**
+
+| Problem | Baseline (RL v2) | v2 Loop | Iterations |
+|---------|-----------------|---------|-----------|
+| cvdp_copilot_moving_average_0001 | FAIL | **PASS** | 2 |
+| cvdp_copilot_morse_code_0001 | FAIL | **PASS** | 2 |
+| cvdp_copilot_piso_0001 | FAIL | **PASS** | 3 |
+| cvdp_copilot_fsm_seq_detector_0001 | FAIL | FAIL | 5 |
+| cvdp_copilot_clock_divider_0003 | FAIL | FAIL | 5 |
+
+**Result: 3/5 = 60% pass rate on test set (was 0/5 baseline)**
+
+**Failure analysis:**
+- `fsm_seq_detector`: Loop made progress (fixed module name mismatch, partially fixed FSM overlap logic) but 3/5 tests still failing at iter 5. Needs more iterations or a better FSM reconstruction strategy.
+- `clock_divider`: Reflector correctly identified the toggle issue but kept reasoning incorrectly about expected period (no testbench context → ambiguity in what "divide by 2" means in terms of ns vs cycles). Loop got confused by its own corrections.
+
+**Iteration log:** `logs/agentic_loop_test.jsonl`
+
+**Recommended next step:** Full 78-problem run on cluster.
+- Generator: RL v2 adapter at `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2`
+- Use `agentic_factory_v2.py` (swap `ClaudeGenerator` for a Qwen vLLM factory)
+- Submit via sbatch: 78 problems × 5 iter × ~60–90s/iter ≈ 6–12h on 1 GPU
+- Expected overall pass@1 improvement from 29.49% baseline
+
+<!-- PIPELINE_STATUS: AGENTIC LOOP v2 LOCAL TEST COMPLETE 3/5 pass on test set -->
 
