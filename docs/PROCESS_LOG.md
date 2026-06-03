@@ -873,3 +873,60 @@ The RL adapter substantially outperforms both baselines on functional correctnes
 
 <!-- PIPELINE_STATUS: FULL HARNESS EVAL COMPLETE rl-grpo-v2, cocotb=29.49% (23/78) -->
 
+---
+
+## 2026-06-03 — RL GRPO v3: scripts written, dry run submitted as job 686
+
+**Objective:** Second round of GRPO RL starting from the RL v2 adapter, pushing cocotb
+functional accuracy higher with a hybrid reward signal and 4 completions per step.
+
+**Key changes vs v2:**
+- Starting adapter: RL v2 (`qwen32b-lora-rl-v2`), not SFT — two-adapter merge (SFT then RL v2 into base)
+- G=4 completions per problem (was 2)
+- max_new_tokens=512 (was 256)
+- lr=3e-6 (was 5e-6) — lower to avoid overwriting good RL v2 weights
+- Hybrid reward: iverilog first, cocotb if Docker available
+  - hard_fail=0.0, soft_fail=0.2, clean+cocotb_fail=0.5, clean+cocotb_pass=1.0
+  - Fallback (no Docker): hard=0.0, soft=0.3, clean=1.0
+- Epoch checkpoints at epoch1/, epoch2/, epoch3/ (steps 78, 156, 234)
+- Output: /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/
+- R2 backup: s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v3/
+
+**Scripts:**
+- `scripts/train_grpo_v3.py` — training script with hybrid reward
+- `scripts/run_grpo_v3_dryrun.sbatch` — dry run (5 problems, 2 steps)
+- `scripts/run_grpo_v3.sbatch` — full training job
+
+**Timing risk note:** G=4×512tok = 4× more generation than v2 (G=2×256).
+v2 actual was ~83s/step; v3 pessimistic ~332s/step × 234 = ~21.6h training alone.
+Optimistic: ~166s/step × 234 = ~10.8h (most problems generate <<512 tokens).
+24h walltime should cover either case including eval (~2h).
+
+**Dry run job 686:** medium partition, slinky-2, RUNNING immediately.
+Threshold: both steps < 600s → auto-submit full training job.
+If steps > 600s: reduce --max-new-tokens to 384 and retry dry run.
+
+## 2026-06-03 — DRY RUN COMPLETE: job 686 PASSED → full job 708 submitted
+
+**Dry run results (job 686, slinky-2, wall time 23:17):**
+- Docker: NOT available on compute node (expected) → iverilog-only fallback reward
+- Two-adapter merge: SFT (r=32) + RL v2 (r=16) both merged cleanly ✓
+- VRAM: 66.1 GB / 85.0 GB (19.0 GB free) ✓
+- Trainable params: 134,217,728 / 32,898,094,080 (0.408%) ✓
+- Step 1 (16qam_mapper_0001): gen=439s, train=5.7s → **444s total ✓ (<600s)**
+- Step 2 (16qam_mapper_0006): gen=443s, train=6.7s → **450s total ✓ (<600s)**
+- Rewards: all 0.0 on 16qam problems (known hard outliers — not a bug)
+- DRY RUN PASSED
+
+**Timing note:** 16qam problems are the slowest in the dataset (maximum-length outputs).
+Expected full-run average: ~148s/step (same 3× ratio as v2 dry-run-to-full observed).
+234 steps × 148s ≈ 9.6h training + 2h eval + 15min setup ≈ **12h total (within 24h walltime)**.
+
+**Full training job 708:** medium partition, slinky-2, RUNNING immediately (container cached from dry run).
+- Config: G=4, max_new_tokens=512, lr=3e-6, epochs=3, r=16 LoRA on SFT+RL-v2-merged base
+- Checkpoints: epoch1/, epoch2/, epoch3/ under /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v3/
+- R2 backup: s3://spec2rtl-checkpoints/adapters/qwen32b-lora-rl-v3/
+- Auto-eval: Phase 2 → /home/noahsabb/results/cid003_eval_rl_v3/
+
+<!-- PIPELINE_STATUS: TRAINING JOBID=708 RUNNING slinky-2 (rl-grpo-v3) -->
+
