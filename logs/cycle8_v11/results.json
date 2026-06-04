@@ -1,0 +1,62 @@
+{
+  "cvdp_copilot_thermostat_0001": {
+    "id": "cvdp_copilot_thermostat_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "total_iters": 3,
+    "elapsed_s": 84.5,
+    "ref_in_tok": 25039,
+    "ref_out_tok": 6547
+  },
+  "cvdp_copilot_sync_lifo_0001": {
+    "id": "cvdp_copilot_sync_lifo_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 46.3,
+    "ref_in_tok": 9435,
+    "ref_out_tok": 2108
+  },
+  "cvdp_copilot_sorter_0001": {
+    "id": "cvdp_copilot_sorter_0001",
+    "passed": false,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 4,
+    "elapsed_s": 163.3,
+    "ref_in_tok": 33566,
+    "ref_out_tok": 8782
+  },
+  "cvdp_copilot_nbit_swizzling_0001": {
+    "id": "cvdp_copilot_nbit_swizzling_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 51.3,
+    "ref_in_tok": 12541,
+    "ref_out_tok": 2762
+  },
+  "cvdp_copilot_microcode_sequencer_0001": {
+    "id": "cvdp_copilot_microcode_sequencer_0001",
+    "passed": false,
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "total_iters": 4,
+    "elapsed_s": 138.3,
+    "ref_in_tok": 45039,
+    "ref_out_tok": 9467
+  }
+}

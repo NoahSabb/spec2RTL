@@ -1,0 +1,62 @@
+{
+  "cvdp_copilot_gcd_0001": {
+    "id": "cvdp_copilot_gcd_0001",
+    "passed": false,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 4,
+    "elapsed_s": 180.8,
+    "ref_in_tok": 38960,
+    "ref_out_tok": 10413
+  },
+  "cvdp_copilot_configurable_digital_low_pass_filter_0014": {
+    "id": "cvdp_copilot_configurable_digital_low_pass_filter_0014",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 68.8,
+    "ref_in_tok": 10650,
+    "ref_out_tok": 2633
+  },
+  "cvdp_copilot_moving_average_0001": {
+    "id": "cvdp_copilot_moving_average_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 52.0,
+    "ref_in_tok": 8980,
+    "ref_out_tok": 1943
+  },
+  "cvdp_copilot_piso_0001": {
+    "id": "cvdp_copilot_piso_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 38.0,
+    "ref_in_tok": 9277,
+    "ref_out_tok": 1565
+  },
+  "cvdp_copilot_car_parking_management_0001": {
+    "id": "cvdp_copilot_car_parking_management_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 47.8,
+    "ref_in_tok": 10966,
+    "ref_out_tok": 3064
+  }
+}

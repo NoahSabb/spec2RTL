@@ -1,0 +1,14 @@
+======================================================================
+Agentic Loop v11 — Cycle 8
+======================================================================
+Problems: 5 | Passed: 3 | Failed: 2
+Pass rate: 3/5 = 60.0%
+Avg time/problem: 97s | Total: 353s
+API cost: $0.822 (125,620 in / 29,666 out)
+
+Results by problem:
+  FAIL  cvdp_copilot_microcode_sequencer_0001  iters=4  138s  
+  PASS  cvdp_copilot_nbit_swizzling_0001  iters=2  51s  
+  FAIL  cvdp_copilot_sorter_0001  iters=4  163s  
+  PASS  cvdp_copilot_sync_lifo_0001  iters=2  46s  
+  PASS  cvdp_copilot_thermostat_0001  iters=3  84s  
