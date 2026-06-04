@@ -103,5 +103,20 @@
     "gen_in_tok": 4504,
     "gen_out_tok": 561,
     "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_filo_0005.sv"
+  },
+  "cvdp_copilot_hebbian_rule_0017": {
+    "id": "cvdp_copilot_hebbian_rule_0017",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 7,
+    "elapsed_s": 291.9,
+    "ref_in_tok": 41183,
+    "ref_out_tok": 5383,
+    "gen_in_tok": 37023,
+    "gen_out_tok": 13759,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_hebbian_rule_0017.sv"
   }
 }

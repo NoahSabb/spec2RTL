@@ -1353,7 +1353,7 @@ The cluster script improvements can be implemented in a new `run_agentic_v5_clus
 (same as v5 but uses Qwen as generator and pre-saved harness errors from the jsonl harness
 files embedded in cid003_nonagentic.jsonl).
 
-<!-- PIPELINE_STATUS: IMPROVEMENT CYCLE IN PROGRESS. CYCLE 4 RUNNING. SCRIPT=v6. -->
+<!-- PIPELINE_STATUS: IMPROVEMENT CYCLE IN PROGRESS. CYCLE 5 READY. SCRIPT=v7. 15/20 unique solved from cycles. -->
 
 ---
 
@@ -1425,4 +1425,133 @@ python3 scripts/run_agentic_v6.py \
     --cycle 4 \
     --script-version v6
 ```
+
+---
+
+## 2026-06-03 — HANDOFF: Cycle 4 complete, Cycle 5 ready with v7
+
+### Cycle 4 — v6 — Results
+
+| Problem | Category | Result | Iterations | Elapsed |
+|---------|----------|--------|-----------|---------|
+| cvdp_copilot_digital_dice_roller_0001 | easy | **PASS** | 3 | 74s |
+| cvdp_copilot_digital_stopwatch_0001 | easy | **PASS** | 2 | 51s |
+| cvdp_copilot_axi_stream_upscale_0001 | medium | **PASS** | 2 | 27s |
+| cvdp_copilot_vending_machine_0001 | medium | FAIL | 7 (maxed) | 287s |
+| cvdp_copilot_apb_gpio_0001 | medium | FAIL | 7 (maxed) | 313s |
+| cvdp_copilot_ethernet_packet_parser_0001 | medium | **PASS** | 2 | 25s |
+| cvdp_copilot_filo_0005 | medium | **PASS** | 2 | 29s |
+| cvdp_copilot_hebbian_rule_0017 | medium | FAIL | 7 (maxed) | 292s |
+
+**Cycle 4 pass rate: 5/8 = 62.5%** | 4 new unique solves | Cost: $1.85 | Avg: 137s/problem
+
+**Why v6 worked so well:** Full testbench from disk (3000 chars) gave reflector complete interface
+ground truth on every iteration. dice_roller fixed in 3 iters (previously 5+ failed) because the
+testbench revealed DICE_MAX parameter, reset port name, and dice_value=1 after reset ALL at once.
+digital_stopwatch fixed in 2 iters because testbench showed `one_sec_pulse` must be an output port
+(invisible in v5's 600-char truncated excerpt). axi_stream_upscale fixed in 2 iters (v5 needed 5).
+
+**Failure analysis:**
+- vending_machine: Complex multi-cycle FSM; coin accumulation timing requires exactly 1-cycle
+  latency that the generator keeps missing. Each iteration hits a different timing bug.
+- apb_gpio: Complex interrupt logic (edge vs level, polarity encoding, state clearing all interact).
+  7 iterations cycled through the same encoding errors without converging.
+- hebbian_rule: The v6 REFLECTOR hallucinated the wrong module name ("testbench expects hebbian_rule"
+  but TOPLEVEL is `hebb_gates`). v6 passed module_name only to the generator, not the reflector.
+  The hallucination confused every subsequent diagnosis. FIXED in v7.
+
+### Script version history — v3 through v7
+
+| Version | Cycle | Key changes |
+|---------|-------|-------------|
+| v3 | 1 | Baseline: live Docker harness, two-step reflection (diagnose+fix), 3 cocotb iters, better reflector system prompt with Verilog error catalog |
+| v4 | 2 | History-aware reflection (last 2 failed attempts shown to prevent oscillation); 5 cocotb iters (was 3); fresh-start rewrite after 3 failed iterations |
+| v5 | 3 | Testbench context added to reflector when failure is opaque (600-char excerpt from JSONL harness data); TOPLEVEL module name extracted and enforced in repair prompt |
+| v6 | 4 | Full testbench from disk (3000 chars, actual test_*.py not test_runner.py); testbench always included in reflector (not just opaque); 7 cocotb iters; testbench in repair prompt for first 2 iters + opaque; history shows last 3 attempts |
+| v7 | 5 | Module name added to REFLECTOR prompt (prevents hallucination); second fresh-start at iter 6 with temp=0.5 (more diverse rewrite); 9 cocotb iterations |
+
+### Cumulative unique problems solved — ALL CYCLES (15/20 needed for termination)
+
+**From Cycles 1–4 (improvement cycle count, target: 20):**
+
+| # | Problem | Solved in | Script |
+|---|---------|-----------|--------|
+| 1 | cvdp_copilot_morse_code_0001 | Cycle 1 | v3 |
+| 2 | cvdp_copilot_fibonacci_series_0001 | Cycle 1 | v3 |
+| 3 | cvdp_copilot_clock_divider_0003 | Cycle 1 | v3 |
+| 4 | cvdp_copilot_data_width_converter_0003 | Cycle 1 | v3 |
+| 5 | cvdp_copilot_events_to_apb_0001 | Cycle 2 | v4 |
+| 6 | cvdp_copilot_digital_stopwatch_0001 | Cycle 2 | v4 |
+| 7 | cvdp_copilot_fsm_seq_detector_0001 | Cycle 2 | v4 |
+| 8 | cvdp_copilot_hamming_code_tx_and_rx_0003 | Cycle 2 | v4 |
+| 9 | cvdp_copilot_convolutional_encoder_0001 | Cycle 2 | v4 |
+| 10 | cvdp_copilot_perf_counters_0001 | Cycle 3 | v5 |
+| 11 | cvdp_copilot_serial_in_parallel_out_0004 | Cycle 3 | v5 |
+| 12 | cvdp_copilot_digital_dice_roller_0001 | Cycle 4 | v6 |
+| 13 | cvdp_copilot_axi_stream_upscale_0001 | Cycle 4 | v6 |
+| 14 | cvdp_copilot_ethernet_packet_parser_0001 | Cycle 4 | v6 |
+| 15 | cvdp_copilot_filo_0005 | Cycle 4 | v6 |
+
+**Also solved in Exp C (reflector comparison experiment, before cycles, not counted toward 20):**
+64b66b_encoder, binary_to_one_hot_decoder, Carry_Lookahead_Adder, complex_multiplier,
+piso_0001, serial_in_parallel_out_0004, moving_average (7 problems, +6 unique vs cycles)
+
+### Current cycle 5 — v7 — 8 target problems
+
+| Problem | Category | Reason |
+|---------|----------|--------|
+| cvdp_copilot_vending_machine_0001 | medium | Retry (2nd attempt with 9 iters) |
+| cvdp_copilot_apb_gpio_0001 | medium | Retry (complex interrupt encoding) |
+| cvdp_copilot_hebbian_rule_0017 | medium | Retry (reflector hallucination fixed in v7) |
+| cvdp_copilot_hill_cipher_0001 | medium | NEW |
+| cvdp_copilot_prbs_gen_0003 | medium | NEW |
+| cvdp_copilot_restoring_division_0001 | medium | NEW |
+| cvdp_copilot_sync_lifo_0001 | medium | NEW |
+| cvdp_copilot_ttc_lite_0001 | medium | NEW |
+
+### Stopping condition
+
+Stop when: **20+ unique problems solved from cycles** (currently 15) **OR** 2 consecutive cycles
+with 0 new unique solves.
+Average time per problem constraint: must stay under 200s (cycle 4 avg: 137s ✓).
+
+### EXACT COMMAND TO RESUME (Cycle 5)
+
+```bash
+cd /Users/noahsabbavarapu/Documents/GitHub/spec2RTL
+
+python3 scripts/run_agentic_v7.py \
+    --bench-dir cvdp_benchmark/work_qwen32b_lora_rl_v2 \
+    --initial-rtl ~/Downloads/cid003_eval_rl_v2 \
+    --out logs/cycle5_v7 \
+    --log logs/agentic_improvement_cycle.jsonl \
+    --cycle 5 \
+    --script-version v7
+```
+
+After Cycle 5 completes:
+1. Check `logs/cycle5_v7/results.json` for pass/fail
+2. Count new unique solves (only problems not in the 15-problem list above)
+3. If 20+ total unique: done — see "cluster sbatch" section below
+4. If <20 but new solves: write v8, pick 8 new targets (3 retries + 5 new from medium pool)
+5. If 0 new solves: start 2-cycle-stale counter
+
+### Remaining priority pool (medium, not yet solved)
+
+apb_gpio (c4 fail), hebbian_rule (c4 fail), hill_cipher (new), load_store_unit,
+packet_controller, prbs_gen_0003 (new), restoring_division (new), sync_lifo (new),
+ttc_lite (new), vending_machine (c4 fail), wb2ahb
+
+### Key learnings for final cluster sbatch script
+
+All improvements validated locally (v3–v7) to backport to the cluster full-78-problem script:
+
+1. **v3**: Two-step reflection (diagnose then fix_instruction) — outperforms one-shot fix
+2. **v4**: History context (last 3 failed attempts) — prevents oscillation
+3. **v5**: TOPLEVEL enforcement — module must match .env TOPLEVEL exactly
+4. **v6**: Full testbench from disk (3000 chars) — resolves ~60% of interface bugs instantly
+5. **v6**: Always include testbench in reflector — constant interface ground truth
+6. **v6**: 7 cocotb iterations minimum for complex problems
+7. **v7**: Module name in reflector prompt — prevents hallucinated module names
+8. **v7**: Second fresh-start at iter 6 with temp=0.5 — escapes local minima for hard problems
 

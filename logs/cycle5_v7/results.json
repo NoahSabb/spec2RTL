@@ -1,0 +1,17 @@
+{
+  "cvdp_copilot_vending_machine_0001": {
+    "id": "cvdp_copilot_vending_machine_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 9,
+    "elapsed_s": 493.1,
+    "ref_in_tok": 62408,
+    "ref_out_tok": 6480,
+    "gen_in_tok": 53482,
+    "gen_out_tok": 28775,
+    "rtl_path": "logs/cycle5_v7/rtl/cvdp_copilot_vending_machine_0001.sv"
+  }
+}

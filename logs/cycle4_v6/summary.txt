@@ -1,0 +1,15 @@
+======================================================================
+CYCLE 4 — Script v6 — Local Test
+======================================================================
+Problems tested: 8
+Passed (harness): 5/8 = 62.5%
+
+Passed: ['cvdp_copilot_digital_dice_roller_0001', 'cvdp_copilot_digital_stopwatch_0001', 'cvdp_copilot_axi_stream_upscale_0001', 'cvdp_copilot_ethernet_packet_parser_0001', 'cvdp_copilot_filo_0005']
+Failed: ['cvdp_copilot_vending_machine_0001', 'cvdp_copilot_apb_gpio_0001', 'cvdp_copilot_hebbian_rule_0017']
+
+Avg time/problem: 137s | Total cycle: 1100s
+
+API usage (reflector = Sonnet, generator = Sonnet local):
+  Reflector: 154,914 in / 19,637 out → $0.759
+  Generator: 131,819 in / 46,516 out → $1.093
+  Total cost: $1.852
