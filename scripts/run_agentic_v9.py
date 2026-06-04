@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 """
-Agentic loop v8 — LOCAL test version.
+Agentic loop v9 — LOCAL test version.
 
-Key changes vs v7:
-  - Max iterations capped at 6 total: 3 compile repair + 3 cocotb repair.
-    All 15 previously solved problems passed within 4 iters (max was 4);
-    a cap of 6 covers every historical case with margin.
-  - Removed fresh-start logic (was triggered at iter 4 and 7 — unreachable with max 3).
-  - All v7 improvements retained: module name in reflector prompt, full testbench
-    from disk (3000 chars), always testbench in reflector, history (last 3 attempts).
+Key changes vs v8:
+  - Cocotb repair iterations: 3 → 4 (total cap 3+4=7).
+    Cycle 5 showed multi-bug medium problems (apb_gpio, restoring_division, ttc_lite)
+    exhausted 3 cocotb iters with measurable per-iter progress — one more pass needed.
+  - All other v8 behaviour retained: module name in reflector, full testbench from disk,
+    always testbench in reflector, history (last 3 attempts).
+  - vending_machine and sync_lifo dropped permanently (3+ failures / needs full rewrite).
 
 Usage:
-    python3 scripts/run_agentic_v8.py \\
+    python3 scripts/run_agentic_v9.py \\
         --bench-dir cvdp_benchmark/work_qwen32b_lora_rl_v2 \\
         --initial-rtl ~/Downloads/cid003_eval_rl_v2 \\
-        --out logs/cycle5_v8 \\
+        --out logs/cycle6_v9 \\
         --log logs/agentic_improvement_cycle.jsonl \\
-        --cycle 5 --script-version v8
+        --cycle 6 --script-version v9
 """
 
 import argparse
@@ -75,13 +75,13 @@ def parse_args():
                    default="cvdp_benchmark/work_qwen32b_lora_rl_v2")
     p.add_argument("--initial-rtl",
                    default=os.path.expanduser("~/Downloads/cid003_eval_rl_v2"))
-    p.add_argument("--out", default="logs/cycle5_v8")
+    p.add_argument("--out", default="logs/cycle6_v9")
     p.add_argument("--log", default="logs/agentic_improvement_cycle.jsonl")
     p.add_argument("--max-compile-iter", type=int, default=3)
-    p.add_argument("--max-cocotb-iter", type=int, default=3)
+    p.add_argument("--max-cocotb-iter", type=int, default=4)
     p.add_argument("--temperature", type=float, default=0.3)
-    p.add_argument("--cycle", type=int, default=5)
-    p.add_argument("--script-version", default="v8")
+    p.add_argument("--cycle", type=int, default=6)
+    p.add_argument("--script-version", default="v9")
     return p.parse_args()
 
 
@@ -783,17 +783,14 @@ def run_problem(
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-CYCLE5_TARGETS = [
-    # 3 retries from Cycle 4 failures
-    "cvdp_copilot_vending_machine_0001",        # complex FSM — retry with module-name fix
-    "cvdp_copilot_apb_gpio_0001",               # complex interrupt encoding
-    "cvdp_copilot_hebbian_rule_0017",           # reflector was hallucinating wrong module name; fixed
-    # 5 new from priority medium pool
-    "cvdp_copilot_hill_cipher_0001",
-    "cvdp_copilot_prbs_gen_0003",
-    "cvdp_copilot_restoring_division_0001",
-    "cvdp_copilot_sync_lifo_0001",
-    "cvdp_copilot_ttc_lite_0001",
+CYCLE6_TARGETS = [
+    # 4 retries — all made per-iter progress in cycle 5 but hit the 3-cocotb cap
+    "cvdp_copilot_restoring_division_0001",  # 3 sequential bugs fixed; 4th iter should close it
+    "cvdp_copilot_apb_gpio_0001",            # address→int_state→edge_detect fixed; 1 bug left
+    "cvdp_copilot_hebbian_rule_0017",        # top-level module structural miss; close in iter 2-3
+    "cvdp_copilot_ttc_lite_0001",            # AXI read timing race; consistent diagnosis across 3 iters
+    # 1 new from remaining medium pool
+    "cvdp_copilot_wb2ahb_0001",              # Wishbone-to-AHB bridge; clear protocol spec
 ]
 
 
@@ -803,7 +800,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     Path(args.log).parent.mkdir(parents=True, exist_ok=True)
 
-    problems_to_run = args.problems or CYCLE5_TARGETS
+    problems_to_run = args.problems or CYCLE6_TARGETS
 
     all_probs = load_problems(DATA_FILE)
     client = anthropic.Anthropic()

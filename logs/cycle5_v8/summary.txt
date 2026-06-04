@@ -1,0 +1,15 @@
+======================================================================
+CYCLE 5 — Script v8 — Local Test
+======================================================================
+Problems tested: 8
+Passed (harness): 2/8 = 25.0%
+
+Passed: ['cvdp_copilot_hill_cipher_0001', 'cvdp_copilot_prbs_gen_0003']
+Failed: ['cvdp_copilot_vending_machine_0001', 'cvdp_copilot_apb_gpio_0001', 'cvdp_copilot_hebbian_rule_0017', 'cvdp_copilot_restoring_division_0001', 'cvdp_copilot_sync_lifo_0001', 'cvdp_copilot_ttc_lite_0001']
+
+Avg time/problem: 93s | Total cycle: 747s
+
+API usage (reflector = Sonnet, generator = Sonnet local):
+  Reflector: 113,448 in / 15,014 out → $0.566
+  Generator: 90,972 in / 27,475 out → $0.685
+  Total cost: $1.251

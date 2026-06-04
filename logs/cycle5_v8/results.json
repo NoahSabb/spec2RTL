@@ -1,0 +1,122 @@
+{
+  "cvdp_copilot_vending_machine_0001": {
+    "id": "cvdp_copilot_vending_machine_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 121.0,
+    "ref_in_tok": 19707,
+    "ref_out_tok": 1979,
+    "gen_in_tok": 16011,
+    "gen_out_tok": 5675,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_vending_machine_0001.sv"
+  },
+  "cvdp_copilot_apb_gpio_0001": {
+    "id": "cvdp_copilot_apb_gpio_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 112.5,
+    "ref_in_tok": 18682,
+    "ref_out_tok": 2120,
+    "gen_in_tok": 15175,
+    "gen_out_tok": 5292,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_apb_gpio_0001.sv"
+  },
+  "cvdp_copilot_hebbian_rule_0017": {
+    "id": "cvdp_copilot_hebbian_rule_0017",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 104.7,
+    "ref_in_tok": 15489,
+    "ref_out_tok": 2400,
+    "gen_in_tok": 13422,
+    "gen_out_tok": 4415,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_hebbian_rule_0017.sv"
+  },
+  "cvdp_copilot_hill_cipher_0001": {
+    "id": "cvdp_copilot_hill_cipher_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 3,
+    "elapsed_s": 52.6,
+    "ref_in_tok": 10373,
+    "ref_out_tok": 1250,
+    "gen_in_tok": 8764,
+    "gen_out_tok": 1780,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_hill_cipher_0001.sv"
+  },
+  "cvdp_copilot_prbs_gen_0003": {
+    "id": "cvdp_copilot_prbs_gen_0003",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 3,
+    "elapsed_s": 105.2,
+    "ref_in_tok": 9633,
+    "ref_out_tok": 1465,
+    "gen_in_tok": 7867,
+    "gen_out_tok": 1272,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_prbs_gen_0003.sv"
+  },
+  "cvdp_copilot_restoring_division_0001": {
+    "id": "cvdp_copilot_restoring_division_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 98.1,
+    "ref_in_tok": 13745,
+    "ref_out_tok": 2070,
+    "gen_in_tok": 10592,
+    "gen_out_tok": 3278,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_restoring_division_0001.sv"
+  },
+  "cvdp_copilot_sync_lifo_0001": {
+    "id": "cvdp_copilot_sync_lifo_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 80.1,
+    "ref_in_tok": 10966,
+    "ref_out_tok": 2139,
+    "gen_in_tok": 8386,
+    "gen_out_tok": 2475,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_sync_lifo_0001.sv"
+  },
+  "cvdp_copilot_ttc_lite_0001": {
+    "id": "cvdp_copilot_ttc_lite_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 3,
+    "elapsed_s": 73.0,
+    "ref_in_tok": 14853,
+    "ref_out_tok": 1591,
+    "gen_in_tok": 10755,
+    "gen_out_tok": 3288,
+    "rtl_path": "logs/cycle5_v8/rtl/cvdp_copilot_ttc_lite_0001.sv"
+  }
+}

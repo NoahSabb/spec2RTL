@@ -1,0 +1,77 @@
+{
+  "cvdp_copilot_restoring_division_0001": {
+    "id": "cvdp_copilot_restoring_division_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 40.6,
+    "ref_in_tok": 4352,
+    "ref_out_tok": 800,
+    "gen_in_tok": 3866,
+    "gen_out_tok": 1046,
+    "rtl_path": "logs/cycle6_v9/rtl/cvdp_copilot_restoring_division_0001.sv"
+  },
+  "cvdp_copilot_apb_gpio_0001": {
+    "id": "cvdp_copilot_apb_gpio_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 4,
+    "elapsed_s": 154.1,
+    "ref_in_tok": 25445,
+    "ref_out_tok": 2936,
+    "gen_in_tok": 19747,
+    "gen_out_tok": 7471,
+    "rtl_path": "logs/cycle6_v9/rtl/cvdp_copilot_apb_gpio_0001.sv"
+  },
+  "cvdp_copilot_hebbian_rule_0017": {
+    "id": "cvdp_copilot_hebbian_rule_0017",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 4,
+    "elapsed_s": 147.7,
+    "ref_in_tok": 24276,
+    "ref_out_tok": 3200,
+    "gen_in_tok": 19403,
+    "gen_out_tok": 6798,
+    "rtl_path": "logs/cycle6_v9/rtl/cvdp_copilot_hebbian_rule_0017.sv"
+  },
+  "cvdp_copilot_ttc_lite_0001": {
+    "id": "cvdp_copilot_ttc_lite_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 4,
+    "elapsed_s": 89.1,
+    "ref_in_tok": 19932,
+    "ref_out_tok": 1787,
+    "gen_in_tok": 13239,
+    "gen_out_tok": 4362,
+    "rtl_path": "logs/cycle6_v9/rtl/cvdp_copilot_ttc_lite_0001.sv"
+  },
+  "cvdp_copilot_wb2ahb_0001": {
+    "id": "cvdp_copilot_wb2ahb_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 4,
+    "elapsed_s": 151.4,
+    "ref_in_tok": 23625,
+    "ref_out_tok": 2857,
+    "gen_in_tok": 17510,
+    "gen_out_tok": 7440,
+    "rtl_path": "logs/cycle6_v9/rtl/cvdp_copilot_wb2ahb_0001.sv"
+  }
+}
