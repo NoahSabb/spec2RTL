@@ -1,0 +1,15 @@
+======================================================================
+CYCLE 7 — Script v10 — Local Test
+======================================================================
+Problems tested: 5
+Passed (harness): 4/5 = 80.0%
+
+Passed: ['cvdp_copilot_ttc_lite_0001', 'cvdp_copilot_wb2ahb_0001', 'cvdp_copilot_load_store_unit_0001', 'cvdp_copilot_packet_controller_0001']
+Failed: ['cvdp_copilot_hebbian_rule_0017']
+
+Avg time/problem: 76s | Total cycle: 381s
+
+API usage (reflector = Sonnet, generator = Sonnet local):
+  Reflector: 55,357 in / 6,522 out → $0.264
+  Generator: 45,108 in / 17,288 out → $0.395
+  Total cost: $0.659

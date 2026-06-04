@@ -1606,22 +1606,140 @@ Targets (8 problems):
 
 Remaining medium pool (not yet solved): apb_gpio, hebbian_rule, load_store_unit, packet_controller, restoring_division, sync_lifo, ttc_lite, vending_machine, wb2ahb
 
-### EXACT COMMAND TO RESUME (Cycle 6)
+### Cycle 6 — v9 — Results
+
+| Problem | Category | Result | Iterations | Elapsed | Last diagnosis |
+|---------|----------|--------|-----------|---------|----------------|
+| cvdp_copilot_restoring_division_0001 | medium | **PASS** | 4 | ~100s | (solved at iter 4 — confirmed 4th cocotb iter was the unlock) |
+| cvdp_copilot_apb_gpio_0001 | medium | FAIL | 4 (maxed) | 154s | Interrupt polarity inverted for level-sensitive path |
+| cvdp_copilot_hebbian_rule_0017 | medium | FAIL | 4 (maxed) | 148s | FSM re-enters State_0 between training pairs, resetting weights |
+| cvdp_copilot_ttc_lite_0001 | medium | FAIL | 4 (maxed) | 89s | match_flag cleared on status write but interrupt regen in separate always block |
+| cvdp_copilot_wb2ahb_0001 | medium | FAIL | 4 (maxed) | 151s | data_o not cleared in IDLE after write test; stale registered output |
+
+**Cycle 6 pass rate: 1/5 = 20.0%** | 1 new unique solve | Cost: $1.095 | Avg: 117s/problem
+
+**restoring_division lesson:** Exactly confirmed the 4-cocotb bump — 3 iters in C5 left one bug; iter 4 in C6 closed it.
+**apb_gpio pattern:** Now 3 consecutive full cycles (C4, C5, C6). Each run finds a new bug (never the same one twice), suggesting the generator introduces fresh bugs while fixing old ones. Dropping.
+
+**Key insight for v10:** Retry problems (ttc_lite, wb2ahb, hebbian_rule) each have a specific, concrete final diagnosis. Instead of restarting from RL v2 each cycle, point `--initial-rtl` at `logs/cycle6_v9/rtl/` for retries so they build on partially-fixed code rather than rediscovering and re-fixing already-known bugs.
+
+### Cumulative unique problems solved — ALL CYCLES (18/20 needed for termination)
+
+| # | Problem | Solved in | Script |
+|---|---------|-----------|--------|
+| 1–15 | (see above) | Cycles 1–4 | v3–v6 |
+| 16 | cvdp_copilot_hill_cipher_0001 | Cycle 5 | v8 |
+| 17 | cvdp_copilot_prbs_gen_0003 | Cycle 5 | v8 |
+| 18 | cvdp_copilot_restoring_division_0001 | Cycle 6 | v9 |
+
+**2 more unique solves needed to hit stopping threshold (20).**
+
+### Cycle 7 — v10 — Plan
+
+Script v10: same 3+4=7 iter cap, but retries use cycle 6 best RTL as `--initial-rtl` (avoids re-fixing already-diagnosed bugs from scratch).
+
+Targets (5 problems):
+- 3 retries using `logs/cycle6_v9/rtl/` as starting RTL: hebbian_rule, ttc_lite, wb2ahb
+- 2 new (fresh from RL v2): load_store_unit, packet_controller
+- Drop permanently: apb_gpio (3 consecutive full cycles, each run introduces new bugs)
+
+### Cycle 7 — v10 — Results  ← STOPPING CONDITION MET
+
+| Problem | Category | Result | Iters | Elapsed | Note |
+|---------|----------|--------|-------|---------|------|
+| cvdp_copilot_ttc_lite_0001 | medium | **PASS** | 0 | 3s | Passed on initial harness check — cycle-6 RTL was already correct |
+| cvdp_copilot_wb2ahb_0001 | medium | **PASS** | 2 | 31s | 2 iters from partial fix vs 4 from scratch |
+| cvdp_copilot_load_store_unit_0001 | medium | **PASS** | 2 | 42s | New problem, solved in 2 iters |
+| cvdp_copilot_packet_controller_0001 | medium | **PASS** | 4 | 143s | New problem, solved in 4 iters |
+| cvdp_copilot_hebbian_rule_0017 | medium | FAIL | 4 (maxed) | 162s | FSM architecture too complex — permanently dropping |
+
+**Cycle 7 pass rate: 4/5 = 80.0%** | 4 new unique solves | Cost: $0.659 | Avg: 76s/problem ✓
+
+**v10 confirmed:** ttc_lite passed with 0 additional iters (cycle-6 RTL was already passing). wb2ahb passed in 2 iters (vs 4 from scratch in cycle 6). Starting from partially-fixed RTL directly eliminated the re-diagnosis overhead.
+
+### FINAL CUMULATIVE: 22 UNIQUE PROBLEMS SOLVED — STOPPING CONDITION MET (≥20)
+
+| # | Problem | Cycle | Script |
+|---|---------|-------|--------|
+| 1 | cvdp_copilot_morse_code_0001 | 1 | v3 |
+| 2 | cvdp_copilot_fibonacci_series_0001 | 1 | v3 |
+| 3 | cvdp_copilot_clock_divider_0003 | 1 | v3 |
+| 4 | cvdp_copilot_data_width_converter_0003 | 1 | v3 |
+| 5 | cvdp_copilot_events_to_apb_0001 | 2 | v4 |
+| 6 | cvdp_copilot_digital_stopwatch_0001 | 2 | v4 |
+| 7 | cvdp_copilot_fsm_seq_detector_0001 | 2 | v4 |
+| 8 | cvdp_copilot_hamming_code_tx_and_rx_0003 | 2 | v4 |
+| 9 | cvdp_copilot_convolutional_encoder_0001 | 2 | v4 |
+| 10 | cvdp_copilot_perf_counters_0001 | 3 | v5 |
+| 11 | cvdp_copilot_serial_in_parallel_out_0004 | 3 | v5 |
+| 12 | cvdp_copilot_digital_dice_roller_0001 | 4 | v6 |
+| 13 | cvdp_copilot_axi_stream_upscale_0001 | 4 | v6 |
+| 14 | cvdp_copilot_ethernet_packet_parser_0001 | 4 | v6 |
+| 15 | cvdp_copilot_filo_0005 | 4 | v6 |
+| 16 | cvdp_copilot_hill_cipher_0001 | 5 | v8 |
+| 17 | cvdp_copilot_prbs_gen_0003 | 5 | v8 |
+| 18 | cvdp_copilot_restoring_division_0001 | 6 | v9 |
+| 19 | cvdp_copilot_ttc_lite_0001 | 7 | v10 |
+| 20 | cvdp_copilot_wb2ahb_0001 | 7 | v10 |
+| 21 | cvdp_copilot_load_store_unit_0001 | 7 | v10 |
+| 22 | cvdp_copilot_packet_controller_0001 | 7 | v10 |
+
+<!-- PIPELINE_STATUS: IMPROVEMENT CYCLE COMPLETE. 22/22+ unique solved. Best script: v10. -->
+
+### Cluster run sbatch (full 78-problem run with best script)
+
+The cluster version of v10 requires backporting all improvements to `run_agentic_v10_cluster.py`
+(swap Claude generator for Qwen vLLM; keep Sonnet reflector via API). Key config:
+- Generator: Qwen2.5-Coder-32B + RL v2 at `/home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2`
+- Reflector: Claude Sonnet 4.6 via `ANTHROPIC_API_KEY`
+- Initial RTL: `/home/noahsabb/results/cid003_eval_rl_v2/rtl/` (already on cluster)
+- max_compile_iter=3, max_cocotb_iter=4, temperature=0.3
 
 ```bash
-cd /Users/noahsabbavarapu/Documents/GitHub/spec2RTL
+sbatch scripts/run_agentic_v10_cluster.sbatch
+```
 
-python3 scripts/run_agentic_v9.py \
-    --bench-dir cvdp_benchmark/work_qwen32b_lora_rl_v2 \
-    --initial-rtl ~/Downloads/cid003_eval_rl_v2 \
-    --out logs/cycle6_v9 \
-    --log logs/agentic_improvement_cycle.jsonl \
-    --cycle 6 --script-version v9
+`run_agentic_v10_cluster.sbatch` template:
+```bash
+#!/bin/bash
+#SBATCH --partition=medium
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=128G
+#SBATCH --time=24:00:00
+#SBATCH --output=agentic-v10-%j.out
+#SBATCH --job-name=agentic-v10
+#SBATCH --exclude=slinky-1
+
+export PATH=/usr/local/bin:/usr/bin:$PATH
+export MASTER_ADDR=localhost
+export MASTER_PORT=29500
+export ANTHROPIC_API_KEY=<your-key>
+
+srun --gres=gpu:1 --cpus-per-task=16 \
+  --container-image='nvcr.io#nvidia/pytorch:24.12-py3' \
+  bash -c '
+    pip install -q --no-deps --break-system-packages "trl==0.13.0"
+    pip install -q --break-system-packages \
+      datasets "transformers==4.46.0" "accelerate==0.34.0" "peft==0.13.0" \
+      huggingface-hub tokenizers multiprocess xxhash
+    pip install -q --break-system-packages bitsandbytes
+    pip install -q --break-system-packages anthropic
+
+    python3 /home/noahsabb/spec2rtl/scripts/run_agentic_v10_cluster.py \
+      --bench-dir /home/noahsabb/cvdp_benchmark/work_qwen32b_lora_rl_v2 \
+      --initial-rtl /home/noahsabb/results/cid003_eval_rl_v2/rtl \
+      --fallback-rtl /home/noahsabb/results/cid003_eval_rl_v2/rtl \
+      --out /home/noahsabb/results/cid003_eval_agentic_v10 \
+      --log /home/noahsabb/logs/agentic_v10_full.jsonl \
+      --adapter /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2 \
+      --max-compile-iter 3 --max-cocotb-iter 4 --temperature 0.3
+  '
 ```
 
 ### Key learnings for final cluster sbatch script
 
-All improvements validated locally (v3–v8) to backport to the cluster full-78-problem script:
+All improvements validated locally (v3–v10) to backport to the cluster full-78-problem script:
 
 1. **v3**: Two-step reflection (diagnose then fix_instruction) — outperforms one-shot fix
 2. **v4**: History context (last 3 failed attempts) — prevents oscillation
@@ -1631,4 +1749,40 @@ All improvements validated locally (v3–v8) to backport to the cluster full-78-
 6. **v7**: Module name in reflector prompt — prevents hallucinated module names
 7. **v8**: Iteration cap 3+3=6 total covers all easy/medium single-bug problems efficiently
 8. **v9**: 3+4=7 total needed for multi-bug medium problems (each iter fixes one bug, need 4 cocotb passes)
+9. **v10**: Two-directory RTL lookup — retries build on partially-fixed RTL from previous cycle
+
+---
+
+## 2026-06-04T04:28Z — CLUSTER JOB SUBMITTED: agentic-v10-full (job 885)
+
+**Task:** Full 78-problem agentic loop run using Qwen RL v2 + Claude Sonnet reflector (v10).
+
+**Scripts written:**
+- `scripts/run_agentic_v10_cluster.py` — v10 architecture with Qwen generator
+- `scripts/run_agentic_v10_cluster.sbatch` — medium partition, gpu:1, cpus-per-task=16, mem=128G, exclude=slinky-1, 24h
+
+**Key design:**
+- Generator: Qwen2.5-Coder-32B + RL v2 adapter (bf16, merged, cuda:0)
+- Reflector: Claude Sonnet 4.6 (all v10 improvements: two-step, history ×3, module name, testbench 3000 chars from JSONL)
+- Initial RTL: `/home/noahsabb/results/cid003_eval_rl_v2/rtl/` (78 pre-generated files)
+- Cocotb errors: `/home/noahsabb/data/cocotb_errors_rl_v2.json` (pre-saved, no Docker needed)
+- max_compile_iter=3, max_cocotb_iter=4, temperature=0.3, max_new_tokens=2048
+- Note: bench_dir not on cluster — testbench read from JSONL harness data
+
+**Job 885:**
+- Partition: medium | Node: slinky-0 | Started: 2026-06-04T04:28:33Z
+- Walltime: 24h | State: RUNNING
+- Output: `/home/noahsabb/logs/agentic-v10-full-885.out`
+- Results: `/home/noahsabb/results/cid003_eval_agentic_v10_full/`
+- Log: `/home/noahsabb/logs/agentic_v10_full.jsonl`
+
+**Estimated runtime:** 78 problems × ~300-500s avg = 6.5–10.8h → completion ~10:30–15:30 UTC
+**After job:** download `rtl/` dir, run CVDP cocotb harness locally, report final pass@1.
+
+**Job 885 cancelled:** ran as root (not noahsabb) — file ownership issue. Resubmitted via `runuser -u noahsabb`.
+
+**Job 886:** noahsabb | slinky-2 | medium | started 2026-06-04T04:31Z | 24h walltime | RUNNING
+- Output: `/home/noahsabb/logs/agentic-v10-full-886.out`
+
+<!-- PIPELINE_STATUS: AGENTIC V10 JOB=886 RUNNING slinky-2 medium noahsabb, started 04:31Z, ETA ~10:30-15:30Z -->
 

@@ -1,0 +1,77 @@
+{
+  "cvdp_copilot_ttc_lite_0001": {
+    "id": "cvdp_copilot_ttc_lite_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 0,
+    "elapsed_s": 3.4,
+    "ref_in_tok": 0,
+    "ref_out_tok": 0,
+    "gen_in_tok": 0,
+    "gen_out_tok": 0,
+    "rtl_path": "logs/cycle7_v10/rtl/cvdp_copilot_ttc_lite_0001.sv"
+  },
+  "cvdp_copilot_wb2ahb_0001": {
+    "id": "cvdp_copilot_wb2ahb_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 30.8,
+    "ref_in_tok": 5860,
+    "ref_out_tok": 290,
+    "gen_in_tok": 4529,
+    "gen_out_tok": 1807,
+    "rtl_path": "logs/cycle7_v10/rtl/cvdp_copilot_wb2ahb_0001.sv"
+  },
+  "cvdp_copilot_hebbian_rule_0017": {
+    "id": "cvdp_copilot_hebbian_rule_0017",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 4,
+    "elapsed_s": 161.6,
+    "ref_in_tok": 25777,
+    "ref_out_tok": 3109,
+    "gen_in_tok": 20277,
+    "gen_out_tok": 6176,
+    "rtl_path": "logs/cycle7_v10/rtl/cvdp_copilot_hebbian_rule_0017.sv"
+  },
+  "cvdp_copilot_load_store_unit_0001": {
+    "id": "cvdp_copilot_load_store_unit_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 42.4,
+    "ref_in_tok": 6814,
+    "ref_out_tok": 778,
+    "gen_in_tok": 6384,
+    "gen_out_tok": 1734,
+    "rtl_path": "logs/cycle7_v10/rtl/cvdp_copilot_load_store_unit_0001.sv"
+  },
+  "cvdp_copilot_packet_controller_0001": {
+    "id": "cvdp_copilot_packet_controller_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 4,
+    "elapsed_s": 142.7,
+    "ref_in_tok": 16906,
+    "ref_out_tok": 2345,
+    "gen_in_tok": 13918,
+    "gen_out_tok": 7571,
+    "rtl_path": "logs/cycle7_v10/rtl/cvdp_copilot_packet_controller_0001.sv"
+  }
+}
