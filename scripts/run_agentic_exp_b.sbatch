@@ -11,6 +11,7 @@
 #SBATCH --output=/home/noahsabb/logs/agentic-exp-b-%j.out
 
 set -e
+source /home/noahsabb/.bashrc 2>/dev/null || true
 mkdir -p /home/noahsabb/logs
 
 export HF_HOME=/home/noahsabb/.cache/huggingface
@@ -34,7 +35,8 @@ srun \
     export LOCAL_RANK=0
     export RANK=0
     export WORLD_SIZE=1
-    # ANTHROPIC_API_KEY is forwarded from submission environment by SLURM
+    source /home/noahsabb/.bashrc 2>/dev/null || true
+    # ANTHROPIC_API_KEY sourced from ~/.bashrc
 
     echo "=== GPU sanity check ==="
     python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\", flush=True)"

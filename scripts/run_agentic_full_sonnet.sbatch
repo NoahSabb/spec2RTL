@@ -1,14 +1,14 @@
 #!/bin/bash
-# Experiment C: Claude Sonnet as reflector, Qwen as generator
-# 10 test problems, pre-generated RL v2 RTL as starting point
-#SBATCH --job-name=agentic-exp-c
+# Full 78-problem agentic run — Claude Sonnet reflector + Qwen RL v2 generator
+# Chosen based on reflector comparison: Sonnet 7/10=70% vs Haiku 2/10=20% vs Qwen 0/10=0%
+#SBATCH --job-name=agentic-sonnet-full
 #SBATCH --partition=medium
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=128G
-#SBATCH --time=04:00:00
+#SBATCH --time=08:00:00
 #SBATCH --exclude=slinky-1
-#SBATCH --output=/home/noahsabb/logs/agentic-exp-c-%j.out
+#SBATCH --output=/home/noahsabb/logs/agentic-sonnet-full-%j.out
 
 set -e
 source /home/noahsabb/.bashrc 2>/dev/null || true
@@ -26,6 +26,7 @@ srun \
   --container-mounts=/home/noahsabb:/home/noahsabb,/home/_shared:/home/_shared \
   bash -c '
     set -e
+    source /home/noahsabb/.bashrc 2>/dev/null || true
     export PATH=/usr/local/bin:/usr/bin:$PATH
     export HF_HOME=/home/noahsabb/.cache/huggingface
     export TOKENIZERS_PARALLELISM=false
@@ -35,8 +36,6 @@ srun \
     export LOCAL_RANK=0
     export RANK=0
     export WORLD_SIZE=1
-    source /home/noahsabb/.bashrc 2>/dev/null || true
-    # ANTHROPIC_API_KEY sourced from ~/.bashrc
 
     echo "=== GPU sanity check ==="
     python3 -c "import torch; print(f\"CUDA devices: {torch.cuda.device_count()}\", flush=True)"
@@ -55,18 +54,18 @@ srun \
       echo "WARNING: iverilog install failed — compile checks skipped"
     iverilog -V 2>&1 | head -1 || echo "iverilog not available"
 
-    echo "=== Starting Experiment C: Sonnet reflector + Qwen generator (10 problems) ==="
+    echo "=== Starting full 78-problem run: Sonnet reflector + Qwen generator ==="
     python3 /home/noahsabb/spec2rtl/scripts/run_agentic_sonnet.py \
       --adapter       /home/noahsabb/checkpoints/spec2rtl/qwen32b-lora-rl-v2 \
-      --data          /home/noahsabb/data/cid003_test10.jsonl \
+      --data          /home/noahsabb/data/cid003_nonagentic.jsonl \
       --initial-rtl   /home/noahsabb/results/cid003_eval_rl_v2/rtl \
       --cocotb-errors /home/noahsabb/data/cocotb_errors_rl_v2.json \
-      --out           /home/noahsabb/results/cid003_eval_agentic_exp_c \
-      --log           /home/noahsabb/logs/agentic_exp_c.jsonl \
+      --out           /home/noahsabb/results/cid003_eval_agentic_sonnet_full \
+      --log           /home/noahsabb/logs/agentic_sonnet_full.jsonl \
       --max-compile-iter 3 \
       --max-cocotb-iter  2 \
       --temperature 0.3 \
       --max-new-tokens 2048
 
-    echo "=== Exp C complete: $(date -u) ==="
+    echo "=== Full run complete: $(date -u) ==="
   '

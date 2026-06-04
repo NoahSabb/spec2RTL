@@ -1105,3 +1105,67 @@ Note: `cvdp_copilot_factorial` harness timed out at 600s and was scored as FAIL.
 
 <!-- PIPELINE_STATUS: AGENTIC EVAL v2 JOB=839 RUNNING slinky-2 medium, ETA 2026-06-04T08:00Z -->
 
+---
+
+## 2026-06-04 — REFLECTOR COMPARISON EXPERIMENTS COMPLETE: Sonnet wins 7/10
+
+**Objective:** Compare Qwen, Claude Haiku, and Claude Sonnet as the reflector in the agentic loop
+before committing to a full 78-problem cluster run.
+
+**Test set:** 10 problems that (1) passed iverilog but failed cocotb in the RL v2 raw eval,
+and (2) had the shortest generation time (smallest file size proxy). 9 easy, 1 medium:
+- cvdp_copilot_64b66b_encoder_0001 (easy)
+- cvdp_copilot_binary_to_one_hot_decoder_0001 (easy)
+- cvdp_copilot_Carry_Lookahead_Adder_0001 (easy)
+- cvdp_copilot_hebbian_rule_0017 (medium)
+- cvdp_copilot_serial_in_parallel_out_0004 (easy)
+- cvdp_copilot_convolutional_encoder_0001 (easy)
+- cvdp_copilot_perf_counters_0001 (easy)
+- cvdp_copilot_piso_0001 (easy)
+- cvdp_copilot_complex_multiplier_0001 (easy)
+- cvdp_copilot_moving_average_0001 (easy)
+
+All three experiments used the same RL v2 pre-generated RTL as starting point.
+SLURM jobs 859 (A, slinky-2), 860 (B, slinky-0), 861 (C, slinky-0).
+
+### Results — cocotb functional pass@1
+
+| Approach | Pass rate (10 problems) | Avg time/problem | Est. cost (78 problems) |
+|----------|------------------------|------------------|------------------------|
+| Exp A: Qwen reflector | **0/10 = 0%** | 227s | $0 |
+| Exp B: Haiku reflector | **2/10 = 20%** | 91s | $0.41 |
+| Exp C: Sonnet reflector | **7/10 = 70%** | 165s | $1.51 |
+
+**Baseline (RL v2 raw, no agentic loop): 0/10 = 0%** — all 10 were selected because they failed.
+
+**Sonnet fixed:** 64b66b_encoder, binary_to_one_hot_decoder, Carry_Lookahead_Adder,
+complex_multiplier, piso, serial_in_parallel_out, moving_average.
+**Haiku fixed:** binary_to_one_hot_decoder, Carry_Lookahead_Adder only.
+**Qwen fixed:** none (0/10).
+
+### API cost detail
+
+| Model | Input tok (10 prob) | Output tok (10 prob) | Cost 10 | Cost 78 (est.) |
+|-------|--------------------|--------------------|---------|---------------|
+| Haiku | 22,136 | 8,578 | $0.052 | $0.406 |
+| Sonnet | 22,263 | 8,488 | $0.194 | $1.514 |
+
+### Recommendation: Claude Sonnet as reflector
+
+Sonnet delivers 70% pass rate on this test set (+70pp over Qwen baseline at only $1.51 for 78 problems.
+The performance gap Sonnet vs Haiku (70% vs 20%) is large enough to justify the 3.7× cost increase.
+Haiku is faster (91s vs 165s/problem) but its repair quality is much weaker.
+
+**Estimated full-run timing (78 problems × Sonnet):** ~3.5–4h wall time (within medium 5d limit).
+
+**Full-run sbatch:** `scripts/run_agentic_full_sonnet.sbatch`
+
+### Output files
+- `logs/agentic_experiments.jsonl` — per-experiment metrics (3 entries)
+- `data/cid003_test10.jsonl` — the 10 test problems
+- `scripts/run_agentic_haiku.py`, `scripts/run_agentic_sonnet.py` — reflector scripts
+- `scripts/run_agentic_exp_{a,b,c}.sbatch` — experiment sbatch files
+- `scripts/run_agentic_full_sonnet.sbatch` — full 78-problem run sbatch
+
+<!-- PIPELINE_STATUS: REFLECTOR EXPERIMENTS COMPLETE. BEST=sonnet (7/10=70%). NEXT: submit run_agentic_full_sonnet.sbatch -->
+

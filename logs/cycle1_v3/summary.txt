@@ -1,0 +1,15 @@
+======================================================================
+CYCLE 1 — Script v3 — Local Test
+======================================================================
+Problems tested: 8
+Passed (harness): 4/8 = 50.0%
+
+Passed: ['cvdp_copilot_morse_code_0001', 'cvdp_copilot_fibonacci_series_0001', 'cvdp_copilot_clock_divider_0003', 'cvdp_copilot_data_width_converter_0003']
+Failed: ['cvdp_copilot_GFCM_0001', 'cvdp_copilot_digital_dice_roller_0001', 'cvdp_copilot_events_to_apb_0001', 'cvdp_copilot_digital_stopwatch_0001']
+
+Avg time/problem: 46s | Total cycle: 372s
+
+API usage (reflector = Sonnet, generator = Sonnet local):
+  Reflector: 52,290 in / 7,420 out → $0.268
+  Generator: 39,452 in / 13,374 out → $0.319
+  Total cost: $0.587

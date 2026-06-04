@@ -1,0 +1,62 @@
+{
+  "cvdp_copilot_GFCM_0001": {
+    "id": "cvdp_copilot_GFCM_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 123.6,
+    "ref_in_tok": 16636,
+    "ref_out_tok": 3167,
+    "gen_in_tok": 13265,
+    "gen_out_tok": 3782,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_GFCM_0001.sv"
+  },
+  "cvdp_copilot_digital_dice_roller_0001": {
+    "id": "cvdp_copilot_digital_dice_roller_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 100.0,
+    "ref_in_tok": 10776,
+    "ref_out_tok": 2325,
+    "gen_in_tok": 8404,
+    "gen_out_tok": 2782,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_digital_dice_roller_0001.sv"
+  },
+  "cvdp_copilot_events_to_apb_0001": {
+    "id": "cvdp_copilot_events_to_apb_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 3,
+    "elapsed_s": 56.5,
+    "ref_in_tok": 9385,
+    "ref_out_tok": 1204,
+    "gen_in_tok": 7909,
+    "gen_out_tok": 2573,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_events_to_apb_0001.sv"
+  },
+  "cvdp_copilot_digital_stopwatch_0001": {
+    "id": "cvdp_copilot_digital_stopwatch_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 45.6,
+    "ref_in_tok": 2851,
+    "ref_out_tok": 444,
+    "gen_in_tok": 2000,
+    "gen_out_tok": 587,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_digital_stopwatch_0001.sv"
+  }
+}
