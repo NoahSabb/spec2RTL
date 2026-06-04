@@ -103,5 +103,20 @@
     "gen_in_tok": 2227,
     "gen_out_tok": 514,
     "rtl_path": "logs/cycle3_v5/rtl/cvdp_copilot_fibonacci_series_0001.sv"
+  },
+  "cvdp_copilot_vending_machine_0001": {
+    "id": "cvdp_copilot_vending_machine_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 244.4,
+    "ref_in_tok": 28390,
+    "ref_out_tok": 3153,
+    "gen_in_tok": 27014,
+    "gen_out_tok": 14727,
+    "rtl_path": "logs/cycle3_v5/rtl/cvdp_copilot_vending_machine_0001.sv"
   }
 }

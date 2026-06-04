@@ -1,0 +1,107 @@
+{
+  "cvdp_copilot_digital_dice_roller_0001": {
+    "id": "cvdp_copilot_digital_dice_roller_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 3,
+    "elapsed_s": 74.3,
+    "ref_in_tok": 6344,
+    "ref_out_tok": 985,
+    "gen_in_tok": 5139,
+    "gen_out_tok": 754,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_digital_dice_roller_0001.sv"
+  },
+  "cvdp_copilot_digital_stopwatch_0001": {
+    "id": "cvdp_copilot_digital_stopwatch_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 51.3,
+    "ref_in_tok": 3987,
+    "ref_out_tok": 623,
+    "gen_in_tok": 3248,
+    "gen_out_tok": 614,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_digital_stopwatch_0001.sv"
+  },
+  "cvdp_copilot_axi_stream_upscale_0001": {
+    "id": "cvdp_copilot_axi_stream_upscale_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 27.4,
+    "ref_in_tok": 4071,
+    "ref_out_tok": 780,
+    "gen_in_tok": 3594,
+    "gen_out_tok": 586,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_axi_stream_upscale_0001.sv"
+  },
+  "cvdp_copilot_vending_machine_0001": {
+    "id": "cvdp_copilot_vending_machine_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 7,
+    "elapsed_s": 286.6,
+    "ref_in_tok": 46148,
+    "ref_out_tok": 5006,
+    "gen_in_tok": 38065,
+    "gen_out_tok": 14095,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_vending_machine_0001.sv"
+  },
+  "cvdp_copilot_apb_gpio_0001": {
+    "id": "cvdp_copilot_apb_gpio_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": false,
+    "total_iters": 7,
+    "elapsed_s": 313.4,
+    "ref_in_tok": 45281,
+    "ref_out_tok": 5599,
+    "gen_in_tok": 36956,
+    "gen_out_tok": 15303,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_apb_gpio_0001.sv"
+  },
+  "cvdp_copilot_ethernet_packet_parser_0001": {
+    "id": "cvdp_copilot_ethernet_packet_parser_0001",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 25.4,
+    "ref_in_tok": 3357,
+    "ref_out_tok": 586,
+    "gen_in_tok": 3290,
+    "gen_out_tok": 844,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_ethernet_packet_parser_0001.sv"
+  },
+  "cvdp_copilot_filo_0005": {
+    "id": "cvdp_copilot_filo_0005",
+    "categories": [
+      "cid003",
+      "medium"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 29.3,
+    "ref_in_tok": 4543,
+    "ref_out_tok": 675,
+    "gen_in_tok": 4504,
+    "gen_out_tok": 561,
+    "rtl_path": "logs/cycle4_v6/rtl/cvdp_copilot_filo_0005.sv"
+  }
+}

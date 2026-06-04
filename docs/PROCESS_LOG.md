@@ -1353,5 +1353,76 @@ The cluster script improvements can be implemented in a new `run_agentic_v5_clus
 (same as v5 but uses Qwen as generator and pre-saved harness errors from the jsonl harness
 files embedded in cid003_nonagentic.jsonl).
 
-<!-- PIPELINE_STATUS: IMPROVEMENT CYCLE IN PROGRESS. 9/55 FAILED PROBLEMS SOLVED. CYCLE 3 READY. SCRIPT=v5. -->
+<!-- PIPELINE_STATUS: IMPROVEMENT CYCLE IN PROGRESS. CYCLE 4 RUNNING. SCRIPT=v6. -->
+
+---
+
+## 2026-06-03 — AGENTIC IMPROVEMENT CYCLE: Cycle 3 complete, Cycle 4 running with v6
+
+### Cycle 3 — v5 — Results
+
+| Problem | Category | Result | Iterations | Elapsed |
+|---------|----------|--------|-----------|---------|
+| cvdp_copilot_GFCM_0001 | easy | FAIL | 5 (maxed) | 121s |
+| cvdp_copilot_digital_dice_roller_0001 | easy | FAIL | 5 (maxed) | 82s |
+| cvdp_copilot_perf_counters_0001 | easy | **PASS** | 2 | 19s |
+| cvdp_copilot_digital_stopwatch_0001 | easy | FAIL | 5 (maxed) | 134s |
+| cvdp_copilot_serial_in_parallel_out_0004 | easy | **PASS** | 2 | 13s |
+| cvdp_copilot_axi_stream_upscale_0001 | medium | FAIL | 5 (maxed) | 106s |
+| cvdp_copilot_fibonacci_series_0001 | easy | **PASS** | 2 | 17s |
+| cvdp_copilot_vending_machine_0001 | medium | FAIL | 5 (maxed) | 244s |
+
+**Cycle 3 pass rate: 3/8 = 37.5%** | Cumulative unique solved: 12 | Cost: $1.17
+
+**Regression note:** digital_stopwatch REGRESSED from cycle 2 (v4 passed in 2 iters, v5 failed in 5).
+Root cause: v5 testbench extraction limited to 600 chars from JSONL; didn't reveal that `one_sec_pulse`
+must be declared as an `output` port (visible in testbench's `dut.one_sec_pulse` access). Generator
+produced RTL with one_sec_pulse as internal reg, different from cycle 2's generator output.
+
+**axi_stream_upscale failure analysis:** Each of 5 iterations hit a DIFFERENT bug (async reset →
+valid gating → bit placement → s_axis_ready formula → m_axis_valid update). Complex multi-bug
+problem needs more iterations.
+
+**vending_machine failure analysis:** Same pattern — each iter fixes one bug, reveals another.
+Multi-cycle FSM interdependencies require either more iterations or a deeper initial analysis.
+
+**digital_dice_roller failure root cause (confirmed):** v5 testbench excerpt (600 chars) showed
+`dut.DICE_MAX.value` access but the generator STILL kept missing it in fixes, because the reflector
+was identifying `reset_n → reset` as the primary bug and the generator only applied that fix.
+Multiple simultaneous bugs need ALL bugs enumerated in the diagnosis at once.
+
+### Script version v6 — improvements for Cycle 4
+
+Changes vs v5:
+1. **Full testbench from disk** (3000 chars) — reads actual `test_*.py` (not test_runner.py) from
+   harness directory; v5 read from JSONL (600 chars). Immediate fix for digital_dice_roller (DICE_MAX),
+   digital_stopwatch (one_sec_pulse output port).
+2. **Always include testbench in reflector** — not just on opaque failures; gives reflector ground
+   truth interface on every iteration.
+3. **7 cocotb iterations** (up from 5) — axi_stream_upscale and vending_machine need more passes.
+4. **Testbench in repair prompt** for first 2 iterations AND opaque failures — ensures generator
+   sees interface requirements early and on every uncertain failure.
+5. **History shows last 3 attempts** (was 2) — reduces oscillation for complex problems.
+6. **Fresh-start always includes full testbench** — ensures rewrite starts with complete interface spec.
+
+### Cycle 4 — v6 — Target problems
+
+Retries (4): digital_dice_roller, digital_stopwatch, axi_stream_upscale, vending_machine
+New (4): apb_gpio, ethernet_packet_parser, filo_0005, hebbian_rule_0017
+
+Dropping: GFCM (failed 3 consecutive cycles — genuinely hard timing problem, deferred)
+
+**Resume command for Cycle 4:**
+
+```bash
+cd /Users/noahsabbavarapu/Documents/GitHub/spec2RTL
+
+python3 scripts/run_agentic_v6.py \
+    --bench-dir cvdp_benchmark/work_qwen32b_lora_rl_v2 \
+    --initial-rtl ~/Downloads/cid003_eval_rl_v2 \
+    --out logs/cycle4_v6 \
+    --log logs/agentic_improvement_cycle.jsonl \
+    --cycle 4 \
+    --script-version v6
+```
 
