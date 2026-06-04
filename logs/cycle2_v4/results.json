@@ -58,5 +58,65 @@
     "gen_in_tok": 2000,
     "gen_out_tok": 587,
     "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_digital_stopwatch_0001.sv"
+  },
+  "cvdp_copilot_fsm_seq_detector_0001": {
+    "id": "cvdp_copilot_fsm_seq_detector_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 4,
+    "elapsed_s": 104.6,
+    "ref_in_tok": 8366,
+    "ref_out_tok": 1745,
+    "gen_in_tok": 8635,
+    "gen_out_tok": 4961,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_fsm_seq_detector_0001.sv"
+  },
+  "cvdp_copilot_hamming_code_tx_and_rx_0003": {
+    "id": "cvdp_copilot_hamming_code_tx_and_rx_0003",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 2,
+    "elapsed_s": 14.3,
+    "ref_in_tok": 3405,
+    "ref_out_tok": 241,
+    "gen_in_tok": 2415,
+    "gen_out_tok": 587,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_hamming_code_tx_and_rx_0003.sv"
+  },
+  "cvdp_copilot_perf_counters_0001": {
+    "id": "cvdp_copilot_perf_counters_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 86.1,
+    "ref_in_tok": 9559,
+    "ref_out_tok": 2208,
+    "gen_in_tok": 8359,
+    "gen_out_tok": 2338,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_perf_counters_0001.sv"
+  },
+  "cvdp_copilot_convolutional_encoder_0001": {
+    "id": "cvdp_copilot_convolutional_encoder_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": true,
+    "total_iters": 4,
+    "elapsed_s": 57.1,
+    "ref_in_tok": 4812,
+    "ref_out_tok": 1701,
+    "gen_in_tok": 4851,
+    "gen_out_tok": 1182,
+    "rtl_path": "logs/cycle2_v4/rtl/cvdp_copilot_convolutional_encoder_0001.sv"
   }
 }

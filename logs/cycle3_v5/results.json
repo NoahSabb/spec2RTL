@@ -1,0 +1,32 @@
+{
+  "cvdp_copilot_GFCM_0001": {
+    "id": "cvdp_copilot_GFCM_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 121.2,
+    "ref_in_tok": 16343,
+    "ref_out_tok": 2967,
+    "gen_in_tok": 13233,
+    "gen_out_tok": 4031,
+    "rtl_path": "logs/cycle3_v5/rtl/cvdp_copilot_GFCM_0001.sv"
+  },
+  "cvdp_copilot_digital_dice_roller_0001": {
+    "id": "cvdp_copilot_digital_dice_roller_0001",
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "passed": false,
+    "total_iters": 5,
+    "elapsed_s": 82.2,
+    "ref_in_tok": 11297,
+    "ref_out_tok": 2213,
+    "gen_in_tok": 9242,
+    "gen_out_tok": 2186,
+    "rtl_path": "logs/cycle3_v5/rtl/cvdp_copilot_digital_dice_roller_0001.sv"
+  }
+}
