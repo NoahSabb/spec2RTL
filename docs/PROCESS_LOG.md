@@ -1950,5 +1950,3 @@ This alone projects 42 + 12 = 54 passes = 69.2% (beating 55.13% baseline by +14p
 
 <!-- PIPELINE_STATUS: FAILURE ANALYSIS COMPLETE. v11 IMPLEMENTATION NEXT. -->
 
-Cycle 8 (v11): 3/5 = 60.0% — 3 new solves (thermostat, sync_lifo, nbit_swizzling)
-

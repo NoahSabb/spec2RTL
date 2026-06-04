@@ -1,0 +1,38 @@
+{
+  "cvdp_copilot_morse_code_0001": {
+    "id": "cvdp_copilot_morse_code_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 51.5,
+    "ref_in_tok": 13032,
+    "ref_out_tok": 3180
+  },
+  "cvdp_copilot_digital_stopwatch_0001": {
+    "id": "cvdp_copilot_digital_stopwatch_0001",
+    "passed": false,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 4,
+    "elapsed_s": 125.7,
+    "ref_in_tok": 28799,
+    "ref_out_tok": 6150
+  },
+  "cvdp_copilot_convolutional_encoder_0001": {
+    "id": "cvdp_copilot_convolutional_encoder_0001",
+    "passed": true,
+    "categories": [
+      "cid003",
+      "easy"
+    ],
+    "total_iters": 2,
+    "elapsed_s": 35.4,
+    "ref_in_tok": 8882,
+    "ref_out_tok": 1739
+  }
+}
