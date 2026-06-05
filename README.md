@@ -4,6 +4,8 @@
 
 **Final result: 46/78 = 58.97% pass@1 — beating Claude Sonnet 4.6 standalone (55.13%) by +3.84pp.**
 
+**Model weights:** [Noahsabb/spec2rtl-qwen32b-lora-rl-v2](https://huggingface.co/Noahsabb/spec2rtl-qwen32b-lora-rl-v2) on HuggingFace Hub
+
 ---
 
 ## Table of Contents
@@ -12,11 +14,12 @@
 2. [Approach & Architecture](#approach--architecture)
 3. [Results & Evaluation](#results--evaluation)
 4. [Technical Details](#technical-details)
-5. [How to Use](#how-to-use)
-6. [Development Process & Iteration](#development-process--iteration)
-7. [Limitations & Future Work](#limitations--future-work)
-8. [AI Usage Disclosure](#ai-usage-disclosure)
-9. [References](#references)
+5. [Model Weights](#model-weights)
+6. [How to Use](#how-to-use)
+7. [Development Process & Iteration](#development-process--iteration)
+8. [Limitations & Future Work](#limitations--future-work)
+9. [AI Usage Disclosure](#ai-usage-disclosure)
+10. [References](#references)
 
 ---
 
@@ -197,6 +200,41 @@ Each problem runs through:
 - **Storage:** `/home/noahsabb` on Weka shared filesystem; checkpoints backed up to Cloudflare R2
 - **Partition:** `medium` (5-day max walltime)
 - **Total GPU-hours used:** ~40h SFT + ~5.4h RL v2 + ~12h RL v3 + ~5h agentic eval ≈ 62h
+
+---
+
+## Model Weights
+
+The RL v2 LoRA adapter (the Generator used in the final agentic system) is publicly available on HuggingFace Hub:
+
+**[Noahsabb/spec2rtl-qwen32b-lora-rl-v2](https://huggingface.co/Noahsabb/spec2rtl-qwen32b-lora-rl-v2)**
+
+| | |
+|--|--|
+| Base model | Qwen/Qwen2.5-Coder-32B-Instruct |
+| Adapter type | QLoRA (PEFT) |
+| LoRA rank / alpha | r=16, α=32 |
+| Adapter size | ~513 MB |
+| Training stage | SFT (r=32) → merged → GRPO RL v2 (r=16) |
+
+Quick load:
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import PeftModel
+import torch
+
+tokenizer = AutoTokenizer.from_pretrained("Noahsabb/spec2rtl-qwen32b-lora-rl-v2")
+model = AutoModelForCausalLM.from_pretrained(
+    "Qwen/Qwen2.5-Coder-32B-Instruct",
+    torch_dtype=torch.bfloat16,
+    low_cpu_mem_usage=True,
+)
+model = PeftModel.from_pretrained(model, "Noahsabb/spec2rtl-qwen32b-lora-rl-v2")
+model = model.merge_and_unload().to("cuda:0").eval()
+```
+
+See the [HuggingFace model card](https://huggingface.co/Noahsabb/spec2rtl-qwen32b-lora-rl-v2) for full inference code and parameter details.
 
 ---
 
